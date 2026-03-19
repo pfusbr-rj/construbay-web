@@ -155,6 +155,7 @@ export default function Footer() {
                   required
                 >
                   <option value="" disabled className="bg-brand-dark text-white/40">Project Type</option>
+                  <option value="New Construction" className="bg-brand-dark">New Construction</option>
                   <option value="Full Home Remodel" className="bg-brand-dark">Full Home Remodel</option>
                   <option value="ADU or Addition" className="bg-brand-dark">ADU or Addition</option>
                   <option value="Custom Pool" className="bg-brand-dark">Custom Pool</option>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 const projectTypes = [
+  "New Construction",
   "Full Home Remodel",
   "ADU / Home Addition",
   "Custom Pool",

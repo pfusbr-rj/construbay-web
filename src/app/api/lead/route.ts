@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
@@ -56,6 +59,69 @@ export async function POST(req: NextRequest) {
         { error: "Failed to save. Please call (415) 968-9494." },
         { status: 500 }
       );
+    }
+
+    // Send email notification
+    try {
+      await resend.emails.send({
+        from: "ConstruBay Leads <onboarding@resend.dev>",
+        to: "paulo@construbay.com",
+        subject: `New Lead: ${projectType} — ${fullName}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <div style="background: #2C2520; padding: 20px; text-align: center;">
+              <h1 style="color: #C9A84C; margin: 0; font-size: 24px;">New Lead from ConstruBay.com</h1>
+            </div>
+            <div style="padding: 24px; background: #f9f9f9;">
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 8px 12px; font-weight: bold; color: #333; border-bottom: 1px solid #eee;">Name</td>
+                  <td style="padding: 8px 12px; color: #555; border-bottom: 1px solid #eee;">${fullName}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 12px; font-weight: bold; color: #333; border-bottom: 1px solid #eee;">Phone</td>
+                  <td style="padding: 8px 12px; color: #555; border-bottom: 1px solid #eee;">
+                    <a href="tel:${phone}" style="color: #C9A84C;">${phone}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 12px; font-weight: bold; color: #333; border-bottom: 1px solid #eee;">Email</td>
+                  <td style="padding: 8px 12px; color: #555; border-bottom: 1px solid #eee;">
+                    <a href="mailto:${email}" style="color: #C9A84C;">${email || "Not provided"}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 12px; font-weight: bold; color: #333; border-bottom: 1px solid #eee;">Project Type</td>
+                  <td style="padding: 8px 12px; color: #555; border-bottom: 1px solid #eee;">${projectType}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 12px; font-weight: bold; color: #333; border-bottom: 1px solid #eee;">Budget</td>
+                  <td style="padding: 8px 12px; color: #555; border-bottom: 1px solid #eee;">${budgetRange || "Not specified"}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 12px; font-weight: bold; color: #333; border-bottom: 1px solid #eee;">Timeline</td>
+                  <td style="padding: 8px 12px; color: #555; border-bottom: 1px solid #eee;">${timeline || "Not specified"}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 12px; font-weight: bold; color: #333; border-bottom: 1px solid #eee;">Location</td>
+                  <td style="padding: 8px 12px; color: #555; border-bottom: 1px solid #eee;">${propertyCity || ""} ${propertyZip || ""}</td>
+                </tr>
+                ${message ? `
+                <tr>
+                  <td style="padding: 8px 12px; font-weight: bold; color: #333; border-bottom: 1px solid #eee;">Message</td>
+                  <td style="padding: 8px 12px; color: #555; border-bottom: 1px solid #eee;">${message}</td>
+                </tr>
+                ` : ""}
+              </table>
+            </div>
+            <div style="background: #2C2520; padding: 16px; text-align: center;">
+              <p style="color: #C9A84C; margin: 0; font-size: 12px;">ConstruBay — CSLB #1106798 — (415) 968-9494</p>
+            </div>
+          </div>
+        `,
+      });
+    } catch (emailErr) {
+      console.error("Email notification failed:", emailErr);
     }
 
     return NextResponse.json({ success: true });
