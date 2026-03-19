@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
     try {
       await resend.emails.send({
         from: "ConstruBay Leads <onboarding@resend.dev>",
-        to: "paulo@construbay.com",
+        to: "pf.us.br@gmail.com",
         subject: `New Lead: ${projectType} — ${fullName}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
