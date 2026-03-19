@@ -1,13 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
 export async function POST(req: NextRequest) {
   try {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      console.error("Missing Supabase env vars");
+      return NextResponse.json(
+        { error: "Server configuration error." },
+        { status: 500 }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseKey);
     const body = await req.json();
 
     const {
@@ -44,60 +51,19 @@ export async function POST(req: NextRequest) {
     });
 
     if (dbError) {
-      console.error("Supabase insert error:", dbError);
+      console.error("Supabase insert error:", JSON.stringify(dbError));
       return NextResponse.json(
-        { error: "Failed to save lead." },
+        { error: "Failed to save. Please call (415) 968-9494." },
         { status: 500 }
       );
     }
 
-    // Send email notification via Google Apps Script or similar
-    // For now, we use a simple fetch to a Google Apps Script Web App
-    // You can set this up later. The lead is safely stored in Supabase.
-    try {
-      await sendEmailNotification({
-        fullName,
-        phone,
-        email,
-        projectType,
-        budgetRange,
-        timeline,
-        propertyCity,
-        propertyZip,
-        message,
-      });
-    } catch (emailErr) {
-      // Don't fail the request if email fails — lead is in Supabase
-      console.error("Email notification failed:", emailErr);
-    }
-
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error("Lead API error:", err);
     return NextResponse.json(
       { error: "Invalid request." },
       { status: 400 }
     );
   }
-}
-
-async function sendEmailNotification(lead: Record<string, string>) {
-  // Simple email via Supabase Edge Function or webhook
-  // For now, we'll use the Supabase database trigger approach
-  // The lead data is already in Supabase — you can set up
-  // email notifications from the Supabase dashboard under
-  // Database > Webhooks, or use a Supabase Edge Function.
-
-  // Alternative: Use Resend, SendGrid, or Google Apps Script
-  // If you have a webhook URL, uncomment and set it:
-  //
-  // const WEBHOOK_URL = process.env.EMAIL_WEBHOOK_URL;
-  // if (WEBHOOK_URL) {
-  //   await fetch(WEBHOOK_URL, {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(lead),
-  //   });
-  // }
-
-  console.log("New lead received:", lead.fullName, lead.phone, lead.projectType);
 }

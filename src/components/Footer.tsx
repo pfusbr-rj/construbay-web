@@ -142,7 +142,8 @@ export default function Footer() {
                 />
                 <input
                   type="email"
-                  placeholder="Email (optional)"
+                  placeholder="Email"
+                  required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-transparent border border-brand-tan/40 text-white placeholder:text-white/40 px-4 py-3 focus:outline-none focus:border-brand-tan transition-colors"

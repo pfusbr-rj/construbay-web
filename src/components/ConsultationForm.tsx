@@ -62,7 +62,7 @@ export default function ConsultationForm() {
   const canNext = () => {
     if (step === 1) return form.projectType !== "";
     if (step === 2) return form.budgetRange !== "" && form.timeline !== "";
-    if (step === 3) return form.fullName !== "" && form.phone !== "";
+    if (step === 3) return form.fullName !== "" && form.phone !== "" && form.email !== "";
     return true;
   };
 
@@ -238,7 +238,8 @@ export default function ConsultationForm() {
           />
           <input
             type="email"
-            placeholder="Email (optional)"
+            placeholder="Email *"
+            required
             value={form.email}
             onChange={(e) => update("email", e.target.value)}
             className="w-full bg-white border border-gray-300 text-brand-dark px-4 py-3 rounded-lg focus:outline-none focus:border-[#C9A84C] transition-colors"
