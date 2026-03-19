@@ -9,8 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brand: {
+          dark: "#2C2520",
+          tan: "#B5A48B",
+          cream: "#F5F0E8",
+          button: "#8B7D6B",
+        },
+      },
+      fontFamily: {
+        caveat: ["var(--font-caveat)", "cursive"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
     },
   },
