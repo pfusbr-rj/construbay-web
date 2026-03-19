@@ -16,9 +16,40 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "General Contractor | Construbay | Mill Valley",
+  metadataBase: new URL("https://www.construbay.com"),
+  title: {
+    default: "General Contractor | Construbay | Mill Valley",
+    template: "%s | Construbay",
+  },
   description:
     "Construbay specializes in high-end custom finishes for luxury homes. Kitchen remodeling, bathroom remodeling, custom homes in Mill Valley and Del Mar.",
+  alternates: {
+    canonical: "https://www.construbay.com",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.construbay.com",
+    siteName: "Construbay",
+    title: "General Contractor | Construbay | Mill Valley",
+    description:
+      "Luxury remodels & custom homes in Mill Valley and Del Mar. Kitchen, bathroom, and whole-home renovations.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add your Google Search Console verification code here
+    // google: "your-verification-code",
+  },
 };
 
 const localBusinessSchema = {

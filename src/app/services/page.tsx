@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Services | Construbay | Mill Valley",
   description:
     "Complete remodeling, kitchen remodeling, bathroom remodeling, home interior, flooring services by Construbay in Mill Valley and Del Mar.",
+  alternates: {
+    canonical: "https://www.construbay.com/services",
+  },
 };
 
 const kitchenSteps = [
