@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const serviceOptions = [
   "Home Remodeling",
@@ -31,8 +32,15 @@ export default function RequestABidPage() {
   return (
     <div className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#3a2f28] via-brand-dark to-[#1a1512]">
-        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero/hero-bg-3.jpg"
+          alt="Construction background"
+          fill
+          className="object-cover blur-sm"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Card */}

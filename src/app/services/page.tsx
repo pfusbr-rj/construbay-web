@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Services | Construbay | Mill Valley",
@@ -82,8 +83,14 @@ export default function ServicesPage() {
           </div>
 
           {/* Kitchen Image */}
-          <div className="aspect-[4/3] lg:aspect-auto bg-gradient-to-br from-[#4a3f35] to-[#2a2420] border border-brand-tan/20 flex items-center justify-center text-brand-tan/30 text-sm">
-            Kitchen Image
+          <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[400px] overflow-hidden">
+            <Image
+              src="/images/services/office-kitchen.jpg"
+              alt="Kitchen remodeling"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
           </div>
         </div>
       </section>
@@ -92,8 +99,14 @@ export default function ServicesPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Bathroom Image */}
-          <div className="aspect-[3/4] bg-gradient-to-br from-[#4a4540] to-[#2a2520] border border-brand-tan/20 flex items-center justify-center text-brand-tan/30 text-sm">
-            Bathroom Image
+          <div className="relative aspect-[3/4] overflow-hidden">
+            <Image
+              src="/images/services/bathroom-service.jpg"
+              alt="Bathroom remodeling service"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            />
           </div>
 
           {/* Home Interior */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -8,31 +9,38 @@ const projects = [
     name: "The Nelson's Project",
     description:
       "Tearing out a wall to expand a bathroom and reconfiguring a kitchen layout so the cabinets, fridge, sink, and range are in different locations.",
-    images: 6,
+    images: [
+      "/images/projects/nelson1.jpg",
+      "/images/projects/nelson2.jpg",
+    ],
   },
   {
     id: "grove",
     name: "20131 Grove Street",
     description:
       "Whole house remodel combination of all rooms, an additional new room, the entire house.",
-    images: 6,
+    images: [
+      "/images/projects/grove1.jpg",
+      "/images/projects/grove2.jpg",
+      "/images/projects/grove3.jpg",
+      "/images/projects/grove4.jpg",
+      "/images/projects/grove5.jpg",
+      "/images/projects/grove6.jpg",
+    ],
   },
   {
     id: "jefferson",
     name: "The Jefferson's Lake House",
     description:
       "Stages of remodeling: planning, budgeting, demolition, construction, and cleanup.",
-    images: 6,
+    images: [
+      "/images/projects/jefferson1.jpg",
+      "/images/projects/jefferson2.jpg",
+      "/images/projects/jefferson3.jpg",
+      "/images/projects/jefferson4.jpg",
+      "/images/projects/jefferson5.jpg",
+    ],
   },
-];
-
-const gradients = [
-  "from-[#4a3f35] to-[#2a2420]",
-  "from-[#3a3530] to-[#252018]",
-  "from-[#4a4540] to-[#2a2520]",
-  "from-[#3a302a] to-[#201a15]",
-  "from-[#453d35] to-[#2f2820]",
-  "from-[#3d3832] to-[#28221c]",
 ];
 
 export default function ProjectsPage() {
@@ -80,12 +88,18 @@ export default function ProjectsPage() {
 
             {/* Image Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {Array.from({ length: project.images }).map((_, i) => (
+              {project.images.map((src, i) => (
                 <div
-                  key={i}
-                  className={`aspect-[4/3] bg-gradient-to-br ${gradients[i % gradients.length]} border border-brand-tan/20 flex items-center justify-center text-brand-tan/20 text-xs`}
+                  key={src}
+                  className="relative aspect-[4/3] overflow-hidden"
                 >
-                  {project.name} - Photo {i + 1}
+                  <Image
+                    src={src}
+                    alt={`${project.name} - Photo ${i + 1}`}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
                 </div>
               ))}
             </div>

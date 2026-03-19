@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   "Kitchen remodeling",
@@ -17,35 +18,19 @@ const services = [
 const features = [
   {
     title: "Vast Experience",
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
+    iconSrc: "/images/icons/vast-experience.png",
   },
   {
     title: "Professional Team",
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-      </svg>
-    ),
+    iconSrc: "/images/icons/professional-team.png",
   },
   {
     title: "High Finish",
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
-      </svg>
-    ),
+    iconSrc: "/images/icons/high-finish.png",
   },
   {
     title: "Sustainable & Accountable",
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
+    iconSrc: "/images/icons/sustainable.png",
   },
 ];
 
@@ -69,8 +54,15 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-[#3a2f28] to-[#1a1512]">
-          <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/hero-bg-1.jpg"
+            alt="Luxury home remodel"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
@@ -102,11 +94,23 @@ export default function HomePage() {
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <div className="aspect-[4/3] bg-gradient-to-br from-[#4a3f35] to-[#2a2420] border border-brand-tan/20 flex items-center justify-center text-brand-tan/30 text-sm">
-            Kitchen Remodel Image
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/services/services-1.jpg"
+              alt="Construction flooring work"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
-          <div className="aspect-[4/3] bg-gradient-to-br from-[#3a3530] to-[#252018] border border-brand-tan/20 flex items-center justify-center text-brand-tan/30 text-sm">
-            Construction Image
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/services/kitchen.jpg"
+              alt="Luxurious kitchen remodel"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
         </div>
 
@@ -135,7 +139,13 @@ export default function HomePage() {
               key={f.title}
               className="border border-brand-tan/40 p-8 text-center flex flex-col items-center gap-4"
             >
-              <div className="text-brand-tan">{f.icon}</div>
+              <Image
+                src={f.iconSrc}
+                alt={f.title}
+                width={48}
+                height={48}
+                className="w-12 h-12"
+              />
               <h3 className="text-white text-sm tracking-wider uppercase">{f.title}</h3>
             </div>
           ))}
@@ -162,8 +172,14 @@ export default function HomePage() {
               service. Let&apos;s build your dream home&mdash;together.
             </p>
           </div>
-          <div className="aspect-[4/3] bg-gradient-to-br from-[#4a4540] to-[#2a2520] border border-brand-tan/20 flex items-center justify-center text-brand-tan/30 text-sm">
-            Bathroom / Skylight Image
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/services/bathroom-about.jpg"
+              alt="Modern bathroom with skylight"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
         </div>
       </section>
@@ -172,12 +188,28 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <h2 className="text-4xl text-brand-tan font-semibold mb-12">Recent Projects</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div
-              key={i}
-              className="aspect-square bg-gradient-to-br from-[#3a3530] to-[#252018] border border-brand-tan/20 flex items-center justify-center text-brand-tan/20 text-xs"
-            >
-              Project {i + 1}
+          {[
+            { src: "/images/gallery/kitchen06.jpg", alt: "Kitchen remodel 6" },
+            { src: "/images/gallery/kitchen04.jpg", alt: "Kitchen remodel 4" },
+            { src: "/images/gallery/kitchen05.jpg", alt: "Kitchen remodel 5" },
+            { src: "/images/gallery/kitchen03.jpg", alt: "Kitchen remodel 3" },
+            { src: "/images/gallery/bathroom05.jpg", alt: "Bathroom remodel 5" },
+            { src: "/images/gallery/bathroom07.jpg", alt: "Bathroom remodel 7" },
+            { src: "/images/gallery/bathroom02.jpg", alt: "Bathroom remodel 2" },
+            { src: "/images/gallery/kitchen01.jpg", alt: "Kitchen remodel 1" },
+            { src: "/images/gallery/bathroom06.jpg", alt: "Bathroom remodel 6" },
+            { src: "/images/gallery/kitchen02.jpg", alt: "Kitchen remodel 2" },
+            { src: "/images/gallery/bathroom04.jpg", alt: "Bathroom remodel 4" },
+            { src: "/images/gallery/bathroom03.jpg", alt: "Bathroom remodel 3" },
+          ].map((img) => (
+            <div key={img.src} className="relative aspect-square overflow-hidden">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              />
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -11,17 +12,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <svg
-              className="w-8 h-8 text-brand-tan"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.84L18 11v8h-2v-6H8v6H6v-8l6-5.16z" />
-            </svg>
-            <span className="text-white text-xl font-semibold tracking-wide">
-              Construbay
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="Construbay"
+              width={180}
+              height={48}
+              className="h-10 sm:h-12 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
