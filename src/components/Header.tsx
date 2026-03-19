@@ -12,7 +12,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo.png"
               alt="Construbay"
@@ -21,6 +21,7 @@ export default function Header() {
               className="h-10 sm:h-12 w-auto"
               priority
             />
+            <span className="text-[#C9A84C] text-xs font-medium hidden sm:inline">CSLB #1106798</span>
           </Link>
 
           {/* Desktop Nav */}

@@ -18,11 +18,11 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.construbay.com"),
   title: {
-    default: "General Contractor | Construbay | Mill Valley",
-    template: "%s | Construbay",
+    default: "ConstruBay | Licensed General Contractor — Marin & Sonoma County | CSLB #1106798",
+    template: "%s | ConstruBay",
   },
   description:
-    "Construbay specializes in high-end custom finishes for luxury homes. Kitchen remodeling, bathroom remodeling, custom homes in Mill Valley and Del Mar.",
+    "Licensed general contractor serving Marin and Sonoma County. Full remodels, ADUs, custom pools, kitchen and bath, permit expediting. CSLB #1106798. Free estimates — (415) 968-9494.",
   alternates: {
     canonical: "https://www.construbay.com",
   },
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.construbay.com",
-    siteName: "Construbay",
-    title: "General Contractor | Construbay | Mill Valley",
+    siteName: "ConstruBay",
+    title: "ConstruBay | Licensed General Contractor — Marin & Sonoma County | CSLB #1106798",
     description:
-      "Luxury remodels & custom homes in Mill Valley and Del Mar. Kitchen, bathroom, and whole-home renovations.",
+      "Licensed general contractor serving Marin and Sonoma County. Full remodels, ADUs, custom pools, kitchen and bath, permit expediting. CSLB #1106798. Free estimates — (415) 968-9494.",
   },
   robots: {
     index: true,
@@ -60,30 +60,71 @@ export const metadata: Metadata = {
   },
 };
 
-const localBusinessSchema = {
+const jsonLdSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Construbay",
-  description:
-    "High-end custom finishes for luxury homes. Kitchen and bathroom remodeling, custom homes.",
-  url: "https://construbay.com",
-  telephone: "+1-415-968-9494",
-  email: "paulo@construbay.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "18 El Paseo Ln",
-    addressLocality: "Mill Valley",
-    addressRegion: "CA",
-    postalCode: "94941",
-    addressCountry: "US",
-  },
-  areaServed: ["Mill Valley", "Del Mar"],
-  serviceType: [
-    "Kitchen Remodeling",
-    "Bathroom Remodeling",
-    "Custom Homes",
-    "Home Remodeling",
-  ],
+  "@graph": [
+    {
+      "@type": "GeneralContractor",
+      "@id": "https://www.construbay.com/#contractor",
+      "name": "ConstruBay",
+      "description": "Licensed general contractor specializing in luxury residential construction, ADUs, custom pools, and home remodels in Marin and Sonoma Counties. CSLB #1106798.",
+      "url": "https://www.construbay.com",
+      "telephone": "+14159689494",
+      "email": "paulo@construbay.com",
+      "license": "CSLB #1106798",
+      "priceRange": "$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 El Paseo Ln",
+        "addressLocality": "Mill Valley",
+        "addressRegion": "CA",
+        "postalCode": "94941",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.9061,
+        "longitude": -122.5450
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Mill Valley"},
+        {"@type": "City", "name": "Tiburon"},
+        {"@type": "City", "name": "Sausalito"},
+        {"@type": "City", "name": "San Rafael"},
+        {"@type": "City", "name": "Novato"},
+        {"@type": "City", "name": "Petaluma"},
+        {"@type": "City", "name": "Santa Rosa"},
+        {"@type": "City", "name": "Sebastopol"},
+        {"@type": "City", "name": "Sonoma"},
+        {"@type": "County", "name": "Marin County"},
+        {"@type": "County", "name": "Sonoma County"}
+      ],
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "sameAs": [
+        "https://www.facebook.com/construbay",
+        "https://www.instagram.com/construbaymarin",
+        "https://www.yelp.com/biz/construbay-mill-valley",
+        "https://www.houzz.com/professionals/construbay"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Construction Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ADU Construction"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full Home Remodel"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Pool Construction"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen Remodeling"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permit Expediting"}}
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.construbay.com/#website",
+      "url": "https://www.construbay.com",
+      "name": "ConstruBay"
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -97,7 +138,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
+            __html: JSON.stringify(jsonLdSchema),
           }}
         />
       </head>

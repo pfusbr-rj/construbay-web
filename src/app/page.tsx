@@ -57,7 +57,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero/hero-bg-1.jpg"
-            alt="Luxury home remodel"
+            alt="Luxury home remodel in Marin County by ConstruBay — CSLB #1106798"
             fill
             className="object-cover"
             priority
@@ -67,27 +67,30 @@ export default function HomePage() {
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <h1 className="font-caveat text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6">
-            Luxury Remodels &amp; Custom Homes
+            Luxury Remodels, ADUs &amp; Custom Construction in Marin &amp; Sonoma County
           </h1>
-          <p className="font-caveat text-2xl sm:text-3xl text-brand-tan italic mb-10">
-            There are no problems, only solutions.
+          <p className="text-xl sm:text-2xl text-white/90 mb-10">
+            AI-assisted permit planning to avoid delays. Licensed general contractor &mdash; CSLB #1106798.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-white/90 mb-10 text-lg">
             <div>
               <span className="font-semibold">Mill Valley</span>{" "}
+              &middot;{" "}
               <a href="tel:4159689494" className="hover:text-brand-tan transition-colors">(415) 968-9494</a>
-            </div>
-            <div>
-              <span className="font-semibold">Del Mar</span>{" "}
-              <a href="tel:6198373177" className="hover:text-brand-tan transition-colors">(619) 837-3177</a>
+              {" "}&middot;{" "}
+              <span>Marin &amp; Sonoma County</span>
             </div>
           </div>
           <Link
             href="/request-a-bid"
-            className="inline-block border-2 border-white text-white text-sm tracking-[0.2em] uppercase px-10 py-4 hover:bg-white/10 transition-colors"
+            className="inline-block bg-[#C9A84C] text-white font-bold text-lg px-12 py-[18px] rounded-full hover:opacity-90 transition-opacity"
+            style={{ fontSize: "18px", fontWeight: 700, padding: "18px 48px", borderRadius: "50px" }}
           >
-            Request a Bid
+            Schedule a Consultation
           </Link>
+          <p className="mt-6 text-white/85 text-sm">
+            Licensed &amp; Insured &middot; CSLB #1106798 &middot; Mill Valley Based &middot; 10+ Years Experience
+          </p>
         </div>
       </section>
 
@@ -97,7 +100,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
               src="/images/services/services-1.jpg"
-              alt="Construction flooring work"
+              alt="Construction flooring work in Mill Valley, Marin County by ConstruBay — CSLB #1106798"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -106,7 +109,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
               src="/images/services/kitchen.jpg"
-              alt="Luxurious kitchen remodel"
+              alt="Custom kitchen remodel in Mill Valley, Marin County by ConstruBay — CSLB #1106798"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -158,12 +161,12 @@ export default function HomePage() {
           <div>
             <h2 className="text-5xl font-bold text-white mb-2">About Us</h2>
             <h3 className="text-2xl text-brand-tan mb-1">Construbay</h3>
-            <p className="text-brand-tan/80 mb-6">Construbay | Mill Valley &amp; Del Mar</p>
+            <p className="text-brand-tan/80 mb-6">Construbay | Mill Valley &amp; Marin/Sonoma County</p>
             <p className="text-white/80 leading-relaxed">
               At Construbay, we specialize in high-end custom finishes for luxury homes.
-              With over years of experience in the industry, we are known for our meticulous
+              With over 10 years of experience in the industry, we are known for our meticulous
               attention to detail and exceptional craftsmanship, particularly in bathroom and
-              kitchen renovations. Serving clients across Mill Valley and Del Mar, we are
+              kitchen renovations. Serving clients across Mill Valley and Marin and Sonoma Counties, we are
               committed to providing a seamless and stress-free experience from start to
               finish. Whether you&apos;re embarking on a home renovation or building your dream
               home from the ground up, our expert team is dedicated to guiding you through
@@ -175,7 +178,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
               src="/images/services/bathroom-about.jpg"
-              alt="Modern bathroom with skylight"
+              alt="Modern bathroom remodel in Mill Valley, Marin County by ConstruBay — CSLB #1106798"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -189,18 +192,18 @@ export default function HomePage() {
         <h2 className="text-4xl text-brand-tan font-semibold mb-12">Recent Projects</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
           {[
-            { src: "/images/gallery/kitchen06.jpg", alt: "Kitchen remodel 6" },
-            { src: "/images/gallery/kitchen04.jpg", alt: "Kitchen remodel 4" },
-            { src: "/images/gallery/kitchen05.jpg", alt: "Kitchen remodel 5" },
-            { src: "/images/gallery/kitchen03.jpg", alt: "Kitchen remodel 3" },
-            { src: "/images/gallery/bathroom05.jpg", alt: "Bathroom remodel 5" },
-            { src: "/images/gallery/bathroom07.jpg", alt: "Bathroom remodel 7" },
-            { src: "/images/gallery/bathroom02.jpg", alt: "Bathroom remodel 2" },
-            { src: "/images/gallery/kitchen01.jpg", alt: "Kitchen remodel 1" },
-            { src: "/images/gallery/bathroom06.jpg", alt: "Bathroom remodel 6" },
-            { src: "/images/gallery/kitchen02.jpg", alt: "Kitchen remodel 2" },
-            { src: "/images/gallery/bathroom04.jpg", alt: "Bathroom remodel 4" },
-            { src: "/images/gallery/bathroom03.jpg", alt: "Bathroom remodel 3" },
+            { src: "/images/gallery/kitchen06.jpg", alt: "Custom kitchen remodel in Mill Valley, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/kitchen04.jpg", alt: "Custom kitchen remodel in Tiburon, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/kitchen05.jpg", alt: "Custom kitchen remodel in Sausalito, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/kitchen03.jpg", alt: "Custom kitchen remodel in San Rafael, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/bathroom05.jpg", alt: "Luxury bathroom remodel in Mill Valley, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/bathroom07.jpg", alt: "Luxury bathroom remodel in Tiburon, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/bathroom02.jpg", alt: "Luxury bathroom remodel in Sausalito, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/kitchen01.jpg", alt: "Custom kitchen remodel in Novato, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/bathroom06.jpg", alt: "Luxury bathroom remodel in San Rafael, Marin County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/kitchen02.jpg", alt: "Custom kitchen remodel in Petaluma, Sonoma County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/bathroom04.jpg", alt: "Luxury bathroom remodel in Santa Rosa, Sonoma County by ConstruBay — CSLB #1106798" },
+            { src: "/images/gallery/bathroom03.jpg", alt: "Luxury bathroom remodel in Sebastopol, Sonoma County by ConstruBay — CSLB #1106798" },
           ].map((img) => (
             <div key={img.src} className="relative aspect-square overflow-hidden">
               <Image

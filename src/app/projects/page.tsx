@@ -88,14 +88,14 @@ export default function ProjectsPage() {
 
             {/* Image Gallery */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {project.images.map((src, i) => (
+              {project.images.map((src) => (
                 <div
                   key={src}
                   className="relative aspect-[4/3] overflow-hidden"
                 >
                   <Image
                     src={src}
-                    alt={`${project.name} - Photo ${i + 1}`}
+                    alt={`${project.name} remodel in Mill Valley, Marin County by ConstruBay — CSLB #1106798`}
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 50vw, 33vw"

@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Services | Construbay | Mill Valley",
   description:
-    "Complete remodeling, kitchen remodeling, bathroom remodeling, home interior, flooring services by Construbay in Mill Valley and Del Mar.",
+    "Complete remodeling, kitchen remodeling, bathroom remodeling, home interior, flooring services by ConstruBay in Mill Valley, Marin and Sonoma County.",
   alternates: {
     canonical: "https://www.construbay.com/services",
   },
