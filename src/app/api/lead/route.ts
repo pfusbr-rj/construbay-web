@@ -64,8 +64,8 @@ export async function POST(req: NextRequest) {
     // Send email notification
     try {
       await resend.emails.send({
-        from: "ConstruBay Leads <onboarding@resend.dev>",
-        to: "pf.us.br@gmail.com",
+        from: "ConstruBay Leads <leads@construbay.com>",
+        to: "paulo@construbay.com",
         subject: `New Lead: ${projectType} — ${fullName}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
