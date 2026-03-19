@@ -62,7 +62,7 @@ export default function HomePage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
