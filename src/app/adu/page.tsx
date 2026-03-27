@@ -2,6 +2,12 @@
 
 import { useState, useEffect } from 'react'
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
+
 const LOGO = '/images/logo.png'
 const WA_LINK = 'https://wa.me/14159689494?text=Hi%2C%20I%27m%20interested%20in%20building%20an%20ADU%20on%20my%20property.%20Can%20we%20chat%3F'
 
@@ -17,8 +23,8 @@ export default function ADULandingPage() {
   }, [])
 
   const track = (event: string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', event, { event_category: 'conversion' })
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event, { event_category: 'conversion' })
     }
   }
 
@@ -61,32 +67,27 @@ export default function ADULandingPage() {
 
       {/* HEADER — logo is plain img, NOT a link */}
       <header style={{ background:navy, borderBottom:'1px solid rgba(203,178,106,0.2)', height:64, display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 32px', position:'sticky', top:0, zIndex:100 }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={LOGO} alt="ConstruBay" style={{ height:38, objectFit:'contain' }} />
         <a href="tel:4159689494" onClick={() => track('call_click')} style={{ color:gold, fontWeight:700, fontSize:17, textDecoration:'none', border:'1.5px solid rgba(203,178,106,0.4)', padding:'8px 18px', borderRadius:4 }}>
           (415) 968-9494
         </a>
       </header>
 
-      {/* HERO — split layout */}
+      {/* HERO */}
       <section id="form-top" style={{ display:'grid', gridTemplateColumns:'1fr 460px', minHeight:'calc(100vh - 64px)' }}>
-
         {/* LEFT */}
         <div style={{ display:'flex', flexDirection:'column', justifyContent:'center', padding:'72px 56px', borderRight:'1px solid rgba(203,178,106,0.12)' }}>
           <div style={{ marginBottom:32 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={LOGO} alt="ConstruBay" style={{ height:72, objectFit:'contain' }} />
           </div>
-          <div style={{ fontSize:11, fontWeight:700, letterSpacing:3, textTransform:'uppercase', color:'rgba(203,178,106,0.6)', marginBottom:20 }}>
-            Marin · Sonoma · Napa County · CSLB #1106798
-          </div>
+          <div style={{ fontSize:11, fontWeight:700, letterSpacing:3, textTransform:'uppercase', color:'rgba(203,178,106,0.6)', marginBottom:20 }}>Marin · Sonoma · Napa County · CSLB #1106798</div>
           <h1 style={{ fontSize:'clamp(38px,5vw,66px)', fontWeight:800, color:'#fff', lineHeight:1.05, letterSpacing:-1, marginBottom:20 }}>
             Your Backyard Could Be{' '}
-            <span style={{ background:grad, WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text', display:'block' }}>
-              Earning $4,500/Month
-            </span>
+            <span style={{ background:grad, WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text', display:'block' }}>Earning $4,500/Month</span>
           </h1>
-          <p style={{ fontSize:18, fontWeight:300, color:'rgba(255,255,255,0.65)', lineHeight:1.7, maxWidth:480, marginBottom:36 }}>
-            Build a fully permitted ADU and add $150,000+ to your home value. One team handles design, permits, construction, and move-in. Free site visit — no obligation.
-          </p>
+          <p style={{ fontSize:18, fontWeight:300, color:'rgba(255,255,255,0.65)', lineHeight:1.7, maxWidth:480, marginBottom:36 }}>Build a fully permitted ADU and add $150,000+ to your home value. One team handles design, permits, construction, and move-in. Free site visit — no obligation.</p>
           <div style={{ display:'flex', flexWrap:'wrap', gap:10 }}>
             {['5.0★ Google & Yelp','10+ Years North Bay','Zero Permit Rejections','Free Site Visit'].map(t => (
               <span key={t} style={{ fontSize:12, fontWeight:600, color:'rgba(203,178,106,0.8)', border:'1px solid rgba(203,178,106,0.25)', padding:'6px 14px', borderRadius:100 }}>✓ {t}</span>
@@ -98,13 +99,12 @@ export default function ADULandingPage() {
         <div style={{ background:panel, padding:'52px 40px', display:'flex', flexDirection:'column', justifyContent:'center' }}>
           <div style={{ fontSize:10, fontWeight:700, letterSpacing:3, textTransform:'uppercase', color:gold, marginBottom:8 }}>Free Site Visit — No Obligation</div>
           <h2 style={{ fontSize:24, fontWeight:800, color:'#fff', lineHeight:1.2, marginBottom:6 }}>Get Your Free ADU Assessment</h2>
-          <p style={{ fontSize:13, color:'rgba(255,255,255,0.4)', lineHeight:1.6, marginBottom:22 }}>We come to your property, assess your lot, and show you exactly what's possible — free, no pressure.</p>
-
+          <p style={{ fontSize:13, color:'rgba(255,255,255,0.4)', lineHeight:1.6, marginBottom:22 }}>We come to your property, assess your lot, and show you exactly what&apos;s possible — free, no pressure.</p>
           {status === 'success' ? (
             <div style={{ background:'rgba(203,178,106,0.08)', border:'1px solid rgba(203,178,106,0.3)', borderRadius:8, padding:24, textAlign:'center' }}>
               <div style={{ fontSize:32, marginBottom:10 }}>✓</div>
               <h3 style={{ fontSize:18, fontWeight:700, color:gold, marginBottom:8 }}>Request Received!</h3>
-              <p style={{ fontSize:13, color:'rgba(255,255,255,0.5)', lineHeight:1.6 }}>We'll call you within 2 hours. Scroll down to pick a time on our calendar.</p>
+              <p style={{ fontSize:13, color:'rgba(255,255,255,0.5)', lineHeight:1.6 }}>We&apos;ll call you within 2 hours. Scroll down to pick a time on our calendar.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
@@ -133,7 +133,6 @@ export default function ADULandingPage() {
               <p style={{ textAlign:'center', marginTop:8, fontSize:11, color:'rgba(255,255,255,0.2)' }}>We respond within 2 hours · No spam · No pressure</p>
             </form>
           )}
-
           <div style={{ display:'flex', alignItems:'center', gap:12, margin:'18px 0' }}>
             <div style={{ flex:1, height:1, background:'rgba(203,178,106,0.15)' }} />
             <span style={{ fontSize:10, fontWeight:700, color:'rgba(203,178,106,0.4)', letterSpacing:1.5, textTransform:'uppercase' }}>Or connect directly</span>
@@ -141,10 +140,7 @@ export default function ADULandingPage() {
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
             <a href="tel:4159689494" onClick={() => track('call_click')} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'12px 14px', borderRadius:5, background:gold, color:navy, fontWeight:700, fontSize:14, textDecoration:'none' }}>📞 Call Now</a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" onClick={() => track('whatsapp_click')} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'12px 14px', borderRadius:5, background:'transparent', color:gold, border:'1.5px solid #cbb26a', fontWeight:700, fontSize:14, textDecoration:'none' }}>
-              <img src="/images/icons/whatsapp.png" alt="" style={{ height:18, borderRadius:2 }} onError={e => { (e.target as HTMLImageElement).style.display='none' }} />
-              WhatsApp
-            </a>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" onClick={() => track('whatsapp_click')} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'12px 14px', borderRadius:5, background:'transparent', color:gold, border:'1.5px solid #cbb26a', fontWeight:700, fontSize:14, textDecoration:'none' }}>WhatsApp</a>
           </div>
         </div>
       </section>
@@ -161,9 +157,8 @@ export default function ADULandingPage() {
 
       {/* ADU TYPES */}
       <section style={{ padding:'80px 48px', maxWidth:1100, margin:'0 auto' }}>
-        <div style={{ fontSize:10, fontWeight:700, letterSpacing:3, textTransform:'uppercase', color:'rgba(203,178,106,0.55)', marginBottom:10 }}>ADU Types We Build</div>
         <h2 style={{ fontSize:'clamp(28px,3.5vw,44px)', fontWeight:800, color:'#fff', lineHeight:1.1, marginBottom:12 }}>Every Type of ADU, Fully Permitted</h2>
-        <p style={{ fontSize:16, color:'rgba(255,255,255,0.45)', maxWidth:600, lineHeight:1.75, marginBottom:48, fontWeight:300 }}>We build every kind of ADU across Marin, Sonoma & Napa County. One licensed team handles everything from design to move-in.</p>
+        <p style={{ fontSize:16, color:'rgba(255,255,255,0.45)', maxWidth:600, lineHeight:1.75, marginBottom:48, fontWeight:300 }}>We build every kind of ADU across Marin, Sonoma &amp; Napa County. One licensed team handles everything.</p>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:2, background:'rgba(203,178,106,0.08)', borderRadius:10, overflow:'hidden', border:'1px solid rgba(203,178,106,0.1)' }}>
           {[
             { icon:'🏡', title:'Detached ADU', desc:'A completely separate structure in your backyard. Maximum privacy and rental value.', tag:'Up to 1,200 sq ft · Full kitchen & bath' },
@@ -184,14 +179,12 @@ export default function ADULandingPage() {
       {/* PROCESS */}
       <section style={{ borderTop:'1px solid rgba(203,178,106,0.1)', borderBottom:'1px solid rgba(203,178,106,0.1)', padding:'80px 48px' }}>
         <div style={{ maxWidth:1000, margin:'0 auto' }}>
-          <div style={{ fontSize:10, fontWeight:700, letterSpacing:3, textTransform:'uppercase', color:'rgba(203,178,106,0.55)', marginBottom:10 }}>How It Works</div>
-          <h2 style={{ fontSize:'clamp(28px,3.5vw,44px)', fontWeight:800, color:'#fff', lineHeight:1.1, marginBottom:12 }}>From Free Visit to Move-In Day</h2>
-          <p style={{ fontSize:16, color:'rgba(255,255,255,0.45)', maxWidth:500, lineHeight:1.75, marginBottom:40, fontWeight:300 }}>We manage every step so you don't have to.</p>
+          <h2 style={{ fontSize:'clamp(28px,3.5vw,44px)', fontWeight:800, color:'#fff', lineHeight:1.1, marginBottom:40 }}>From Free Visit to Move-In Day</h2>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:1, background:'rgba(203,178,106,0.08)', borderRadius:10, overflow:'hidden' }}>
             {[
-              { n:'01', title:'Free Site Visit', desc:"We come to your property, assess your lot, and show you exactly what's possible — no charge." },
+              { n:'01', title:'Free Site Visit', desc:"We come to your property and show you exactly what's possible — no charge." },
               { n:'02', title:'Design & Plans', desc:'Full architectural drawings tailored to your lot, budget, and style.' },
-              { n:'03', title:'Permits', desc:'We submit clean plans to the county. Our track record: zero permit rejections.' },
+              { n:'03', title:'Permits', desc:'We submit clean plans to the county. Zero permit rejections on every project.' },
               { n:'04', title:'Construction', desc:'Our licensed crew builds your ADU top to bottom. Weekly updates, on schedule.' },
             ].map(s => (
               <div key={s.n} style={{ background:panel, padding:'32px 24px' }}>
@@ -206,9 +199,8 @@ export default function ADULandingPage() {
 
       {/* CALENDLY */}
       <section id="book" style={{ padding:'80px 48px', maxWidth:900, margin:'0 auto', textAlign:'center' }}>
-        <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(203,178,106,0.08)', border:'1px solid rgba(203,178,106,0.2)', color:gold, fontSize:10, fontWeight:700, letterSpacing:2, textTransform:'uppercase', padding:'7px 16px', borderRadius:100, marginBottom:20 }}>Pick Your Time</div>
-        <h2 style={{ fontSize:'clamp(26px,3.5vw,40px)', fontWeight:800, color:'#fff', marginBottom:12, lineHeight:1.2 }}>Book Your Free Site Visit</h2>
-        <p style={{ fontSize:16, color:'rgba(255,255,255,0.4)', maxWidth:520, margin:'0 auto 36px', lineHeight:1.75, fontWeight:300 }}>Pick a time that works for you. We come to your property anywhere in Marin, Sonoma or Napa County.</p>
+        <h2 style={{ fontSize:'clamp(26px,3.5vw,40px)', fontWeight:800, color:'#fff', marginBottom:12 }}>Book Your Free Site Visit</h2>
+        <p style={{ fontSize:16, color:'rgba(255,255,255,0.4)', maxWidth:520, margin:'0 auto 36px', lineHeight:1.75, fontWeight:300 }}>Pick a time that works for you. We come to you anywhere in Marin, Sonoma or Napa County.</p>
         <div style={{ background:panel, border:'1px solid rgba(203,178,106,0.15)', borderRadius:10, overflow:'hidden' }}>
           <div className="calendly-inline-widget" data-url="https://calendly.com/construbay/initial-contractor-consultation-construbay?hide_gdpr_banner=1&primary_color=cbb26a&text_color=ffffff&background_color=080f1c" style={{ minWidth:320, height:680 }} />
         </div>
@@ -216,23 +208,23 @@ export default function ADULandingPage() {
 
       {/* BOTTOM CTA */}
       <section style={{ background:grad, padding:'72px 40px', textAlign:'center' }}>
-        <h2 style={{ fontSize:'clamp(28px,4vw,48px)', fontWeight:800, color:navy, marginBottom:12, lineHeight:1.1 }}>Ready to See What's Possible on Your Lot?</h2>
-        <p style={{ fontSize:17, color:'rgba(10,22,40,0.65)', maxWidth:500, margin:'0 auto 36px', lineHeight:1.7 }}>Free site visit. No pressure. No obligation. We come to you anywhere in Marin, Sonoma or Napa County.</p>
+        <h2 style={{ fontSize:'clamp(28px,4vw,48px)', fontWeight:800, color:navy, marginBottom:12, lineHeight:1.1 }}>Ready to See What&apos;s Possible on Your Lot?</h2>
+        <p style={{ fontSize:17, color:'rgba(10,22,40,0.65)', maxWidth:500, margin:'0 auto 36px', lineHeight:1.7 }}>Free site visit. No pressure. No obligation. Marin, Sonoma or Napa County.</p>
         <div style={{ display:'flex', gap:14, justifyContent:'center', flexWrap:'wrap' }}>
-          <a href="tel:4159689494" style={{ background:navy, color:gold, fontWeight:800, fontSize:15, padding:'16px 36px', borderRadius:5, textDecoration:'none', display:'flex', alignItems:'center', gap:10 }}>📞 Call (415) 968-9494</a>
-          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ background:'transparent', color:navy, border:`2px solid ${navy}`, fontWeight:800, fontSize:15, padding:'16px 36px', borderRadius:5, textDecoration:'none', display:'flex', alignItems:'center', gap:10 }}>WhatsApp Us</a>
+          <a href="tel:4159689494" style={{ background:navy, color:gold, fontWeight:800, fontSize:15, padding:'16px 36px', borderRadius:5, textDecoration:'none' }}>📞 Call (415) 968-9494</a>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ background:'transparent', color:navy, border:'2px solid #0a1628', fontWeight:800, fontSize:15, padding:'16px 36px', borderRadius:5, textDecoration:'none' }}>WhatsApp Us</a>
         </div>
-        <p style={{ fontSize:12, color:'rgba(10,22,40,0.45)', marginTop:20 }}>CSLB #1106798 · Licensed & Insured · Mill Valley, CA</p>
+        <p style={{ fontSize:12, color:'rgba(10,22,40,0.45)', marginTop:20 }}>CSLB #1106798 · Licensed &amp; Insured · Mill Valley, CA</p>
       </section>
 
       {/* FOOTER — construbay.com is plain text, NOT a link */}
       <footer style={{ background:'#04080f', borderTop:'1px solid rgba(203,178,106,0.1)', padding:'36px 40px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:20 }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={LOGO} alt="ConstruBay" style={{ height:32, objectFit:'contain' }} />
         <div style={{ fontSize:13, color:'rgba(203,178,106,0.35)', textAlign:'center', lineHeight:1.8 }}>
-          <a href="tel:4159689494" style={{ color:gold, textDecoration:'none' }}>(415) 968-9494</a>
-          {' · '}
-          <span style={{ color:'rgba(203,178,106,0.4)' }}>construbay.com</span>
-          <br />Mill Valley, CA · Marin · Sonoma · Napa County
+          <a href="tel:4159689494" style={{ color:gold, textDecoration:'none' }}>(415) 968-9494</a>{' · '}
+          <span style={{ color:'rgba(203,178,106,0.4)' }}>construbay.com</span><br />
+          Mill Valley, CA · Marin · Sonoma · Napa County
         </div>
         <div style={{ fontSize:12, color:'rgba(203,178,106,0.25)', textAlign:'right', lineHeight:1.7 }}>CSLB #1106798<br />Licensed · Bonded · Insured</div>
       </footer>
@@ -240,7 +232,7 @@ export default function ADULandingPage() {
       {/* MOBILE STICKY BAR */}
       <div className="adu-mob-bar">
         <a href="tel:4159689494" onClick={() => track('call_click')} style={{ background:gold, color:navy, fontWeight:800, fontSize:14, padding:13, borderRadius:5, textDecoration:'none', textAlign:'center', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>📞 Call Now</a>
-        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" onClick={() => track('whatsapp_click')} style={{ background:'transparent', border:`1.5px solid ${gold}`, color:gold, fontWeight:800, fontSize:14, padding:13, borderRadius:5, textDecoration:'none', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>WhatsApp</a>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" onClick={() => track('whatsapp_click')} style={{ background:'transparent', border:'1.5px solid #cbb26a', color:gold, fontWeight:800, fontSize:14, padding:13, borderRadius:5, textDecoration:'none', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>WhatsApp</a>
       </div>
 
       <style>{`
@@ -260,4 +252,4 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
       {children}
     </div>
   )
-                                                                             }
+}
