@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  staticPageGenerationTimeout: 180,
   async redirects() {
     return [
       // Old Wix job pages → homepage (301 permanent)
