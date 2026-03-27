@@ -7,7 +7,7 @@ declare global {
   }
 }
 
-const LOGO = '/images/logo.png'
+const LOGO = '/images/logo_vector-02.png'
 const WA_LINK = 'https://wa.me/14159689494?text=Hi%2C%20I%27m%20interested%20in%20building%20an%20ADU%20on%20my%20property.%20Can%20we%20chat%3F'
 const CALENDLY_URL = 'https://calendly.com/construbay/adu-planning-session-design-permits-budget'
 const PHONE = 'tel:4159689494'
@@ -184,7 +184,7 @@ export default function ADULandingPage() {
         </div>
       )}
 
-      <header style={{ background: navy, borderBottom: '1px solid rgba(203,178,106,0.2)', height: isMobile ? 56 : 72, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: isMobile ? '0 16px' : '0 32px', position: 'sticky', top: 0, zIndex: 100 }}>
+      <header style={{ background: navy, height: isMobile ? 56 : 72, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: isMobile ? '0 16px' : '0 32px', position: 'sticky', top: 0, zIndex: 100 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={LOGO} alt="ConstruBay" style={{ height: isMobile ? 34 : 52, objectFit: 'contain' }} />
         <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: isMobile ? 13 : 16, textDecoration: 'none', border: '1.5px solid rgba(203,178,106,0.4)', padding: isMobile ? '6px 10px' : '7px 16px', borderRadius: 4 }}>
@@ -267,6 +267,13 @@ export default function ADULandingPage() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap');
         nav:not(header nav), footer { display: none !important; }
+        /* Hide social media sidebar */
+        [class*="social"], [class*="Social"], [id*="social"],
+        a[href*="facebook.com"], a[href*="instagram.com"], a[href*="twitter.com"],
+        a[href*="linkedin.com"], a[href*="tiktok.com"],
+        div[style*="position: fixed"][style*="left"],
+        div[style*="position:fixed"][style*="left"] { display: none !important; }
+        html, body { overflow-x: hidden; }
         input::placeholder { color: rgba(255,255,255,0.22); }
         input:focus, select:focus { border-color: rgba(203,178,106,0.55) !important; background: rgba(255,255,255,0.07) !important; }
         @media (max-width: 768px) { input, select { font-size: 16px !important; } }
