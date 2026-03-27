@@ -124,13 +124,13 @@ export default function ADULandingPage() {
             Marin · Sonoma · Napa County · CSLB #1106798
           </div>
           <h1 style={{ fontSize: 'clamp(30px,4.5vw,54px)', fontWeight: 800, color: '#fff', lineHeight: 1.1, letterSpacing: -1, margin: '0 0 10px' }}>
-            Build an ADU &amp; Add{' '}
-            <span style={{ background: grad, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-              $150K+ to Your Home
+            Your Backyard Could Be{' '}
+            <span style={{ background: grad, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>
+              Earning $4,500/Month
             </span>
           </h1>
           <p style={{ fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, maxWidth: 560, margin: '0 auto 16px' }}>
-            Free site visit. Design, permits &amp; construction by one licensed team. Zero permit rejections.
+            Build a fully permitted ADU and add $150,000+ to your home value. One team handles design, permits, construction, and move-in. Free site visit — no obligation.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8, marginBottom: 24 }}>
             {['5.0★ Google &amp; Yelp', '10+ Years North Bay', 'Zero Permit Rejections', 'Free Site Visit'].map(t => (
