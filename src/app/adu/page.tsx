@@ -111,7 +111,7 @@ export default function ADULandingPage() {
   )
 
   return (
-    <div style={{ fontFamily: "'DM Sans',sans-serif", background: navy, color: gold, minHeight: '100vh' }}>
+    <div style={{ fontFamily: "'DM Sans',sans-serif", background: navy, color: gold, minHeight: '100vh', paddingBottom: '90px', WebkitOverflowScrolling: 'touch' }}>
 
       {/* ── HEADER: logo left, phone right ── */}
       <header style={{ background: navy, padding: isMobile ? '12px 16px' : '14px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 100 }}>
