@@ -128,7 +128,7 @@ export default function ADULandingPage() {
         </div>
       )}
 
-      <header style={{ background: navy, height: isMobile ? 56 : 68, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: isMobile ? '0 16px' : '0 32px', position: 'sticky', top: 0, zIndex: 100 }}>
+      <header id="adu-header" style={{ background: navy, height: isMobile ? 56 : 68, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: isMobile ? '0 16px' : '0 32px', position: 'sticky', top: 0, zIndex: 100 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={LOGO} alt="ConstruBay" style={{ height: isMobile ? 36 : 54, objectFit: 'contain' }} />
         <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: isMobile ? 13 : 15, textDecoration: 'none', border: '1.5px solid rgba(203,178,106,0.4)', padding: isMobile ? '6px 10px' : '7px 16px', borderRadius: 4 }}>
@@ -171,7 +171,7 @@ export default function ADULandingPage() {
               Build a fully permitted ADU and add $150,000+ to your home value. One team handles design, permits, construction, and move-in. Free site visit — no obligation.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8, marginBottom: 22 }}>
-              {['5.0★ Google & Yelp','10+ Years North Bay','Zero Permit Rejections','Free Site Visit'].map(t => (
+              {['5.0★ Google','10+ Years North Bay','Zero Permit Rejections','Free Site Visit'].map(t => (
                 <span key={t} style={{ fontSize: 11, fontWeight: 600, color: 'rgba(203,178,106,0.75)', border: '1px solid rgba(203,178,106,0.22)', padding: '5px 12px', borderRadius: 100 }}>✓ {t}</span>
               ))}
             </div>
@@ -199,8 +199,11 @@ export default function ADULandingPage() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap');
         /* Hide root layout nav, footer, and ALL social media sidebars */
-        nav:not(header nav), footer,
+        /* Hide root layout header, nav, footer and social links completely */
+        body > div > header, body > div > nav, body > div > footer,
+        nav:not(#adu-header nav), header:not(#adu-header),
         [class*="social"],[class*="Social"],[id*="social"],
+        a[href*="houzz.com"], a[href*="yelp.com"],
         a[href*="facebook.com"]:not(form a), a[href*="instagram.com"]:not(form a),
         a[href*="twitter.com"]:not(form a), a[href*="linkedin.com"]:not(form a),
         a[href*="tiktok.com"]:not(form a) { display: none !important; }
