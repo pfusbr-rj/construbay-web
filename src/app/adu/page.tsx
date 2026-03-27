@@ -168,27 +168,27 @@ export default function ADULandingPage() {
               </Field>
             </div>
             <div style={{ marginBottom: 10 }}>
-              <Field label="Property Street Address">
-                <input style={inputStyle} type="text" value={form.propertyAddress} onChange={e => set('propertyAddress')(e.target.value)} placeholder="123 Main Street" />
+              <Field label="Property Street Address *">
+                <input style={inputStyle} type="text" value={form.propertyAddress} onChange={e => set('propertyAddress')(e.target.value)} placeholder="123 Main Street" required />
               </Field>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 10 }}>
-              <Field label="City">
-                <input style={inputStyle} type="text" value={form.propertyCity} onChange={e => set('propertyCity')(e.target.value)} placeholder="Mill Valley, Tiburon..." />
+              <Field label="City *">
+                <input style={inputStyle} type="text" value={form.propertyCity} onChange={e => set('propertyCity')(e.target.value)} placeholder="Mill Valley, Tiburon..." required />
               </Field>
-              <Field label="ZIP Code">
-                <input style={inputStyle} type="text" value={form.propertyZip} onChange={e => set('propertyZip')(e.target.value)} placeholder="94941" />
+              <Field label="ZIP Code *">
+                <input style={inputStyle} type="text" value={form.propertyZip} onChange={e => set('propertyZip')(e.target.value)} placeholder="94941" required />
               </Field>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 14 }}>
-              <Field label="ADU Type">
-                <select style={selectStyle} value={form.aduType} onChange={e => set('aduType')(e.target.value)}>
+              <Field label="ADU Type *">
+                <select style={selectStyle} value={form.aduType} onChange={e => set('aduType')(e.target.value)} required>
                   <option value="">Select a type...</option>
                   {['Detached ADU — new backyard structure', 'Garage Conversion', 'Attached Addition', 'Junior ADU (JADU)', 'Not sure — need guidance'].map(o => <option key={o} style={{ background: navy }}>{o}</option>)}
                 </select>
               </Field>
-              <Field label="Timeline">
-                <select style={selectStyle} value={form.timeline} onChange={e => set('timeline')(e.target.value)}>
+              <Field label="Timeline *">
+                <select style={selectStyle} value={form.timeline} onChange={e => set('timeline')(e.target.value)} required>
                   <option value="">When to start?</option>
                   {['ASAP — ready to move', '1–3 months', '3–6 months', 'Just exploring'].map(o => <option key={o} style={{ background: navy }}>{o}</option>)}
                 </select>
