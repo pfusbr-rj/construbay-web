@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 768px) {
+  .social-sidebar {
+    display: none !important;
+  }
+}
+
 :root {
   --background: #2C2520;
   --foreground: #FFFFFF;
