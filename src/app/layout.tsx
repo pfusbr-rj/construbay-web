@@ -163,7 +163,7 @@ gtag('config', 'G-E5R2DP0WG0');`,
           display: "flex",
           flexDirection: "column",
           gap: "16px",
-        }} className="social-sidebar">
+        }} className="social-sidebar hidden md:flex">
           {[
             {
               href: "https://www.instagram.com/construbaymarin/",

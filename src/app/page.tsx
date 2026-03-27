@@ -66,7 +66,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center">
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center">
         <div className="absolute inset-0">
           <Image
             src="/images/hero/hero-bg-1.jpg"
@@ -79,7 +79,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 px-4 max-w-4xl mx-auto text-center w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
-          <h1 className={`${cormorant.className} font-light text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-6 leading-none whitespace-nowrap`} style={{ textAlign: 'center', width: '100%', display: 'block' }}>
+          <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-none`} style={{ textAlign: 'center', width: '100%', display: 'block' }}>
             Built Without Compromise
           </h1>
           <p className={`${montserrat.className} text-white/70 mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px', textAlign: 'center', width: '100%', display: 'block' }}>
