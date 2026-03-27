@@ -94,6 +94,19 @@ function StarIcon() {
 export default function HomePage() {
   return (
     <>
+      {/* Social Sidebar */}
+      <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
+        <a href="https://instagram.com/construbay" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#cbb26a] opacity-70 hover:opacity-100 transition-opacity">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://facebook.com/construbay" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#cbb26a] opacity-70 hover:opacity-100 transition-opacity">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://wa.me/14159689494" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-[#cbb26a] opacity-70 hover:opacity-100 transition-opacity">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </a>
+      </div>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
@@ -109,10 +122,10 @@ export default function HomePage() {
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <h1 className="font-caveat text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6">
-            Luxury Remodels, ADUs &amp; Custom Construction in Marin &amp; Sonoma County
+            Legacy Built Without Compromise
           </h1>
           <p className="text-xl sm:text-2xl text-white/90 mb-10">
-            AI-assisted permit planning to avoid delays. Licensed general contractor &mdash; CSLB #1106798.
+            Licensed luxury general contractor &mdash; Marin, Sonoma &amp; Napa
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-white/90 mb-10 text-lg">
             <div>
@@ -123,13 +136,15 @@ export default function HomePage() {
               <span>Marin &amp; Sonoma County</span>
             </div>
           </div>
-          <Link
-            href="/request-a-bid"
+          <a
+            href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#C9A84C] text-white font-bold text-lg px-12 py-[18px] rounded-full hover:opacity-90 transition-opacity"
             style={{ fontSize: "18px", fontWeight: 700, padding: "18px 48px", borderRadius: "50px" }}
           >
             Schedule a Consultation
-          </Link>
+          </a>
           <p className="mt-6 text-white/85 text-sm">
             Licensed &amp; Insured &middot; CSLB #1106798 &middot; Mill Valley Based &middot; 10+ Years Experience
           </p>
