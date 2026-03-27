@@ -10,24 +10,33 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-brand-tan/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-16 sm:h-24">
           {/* Logo + Phone */}
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo_vector-02.png"
                 alt="ConstruBay"
-                width={200}
-                height={60}
-                className="w-auto"
-                style={{ height: '60px' }}
+                width={240}
+                height={80}
+                className="w-auto hidden sm:block"
+                style={{ height: '80px' }}
+                priority
+              />
+              <Image
+                src="/images/logo_vector-02.png"
+                alt="ConstruBay"
+                width={160}
+                height={52}
+                className="w-auto block sm:hidden"
+                style={{ height: '52px' }}
                 priority
               />
             </Link>
             <a
               href="tel:4159689494"
-              className="hidden sm:block text-sm tracking-widest hover:opacity-70 transition-opacity"
-              style={{ color: '#cbb26a', letterSpacing: '0.15em' }}
+              className="hidden sm:block hover:opacity-70 transition-opacity"
+              style={{ color: '#cbb26a', fontSize: '18px', letterSpacing: '0.1em', fontWeight: '300' }}
             >
               (415) 968-9494
             </a>
