@@ -190,7 +190,7 @@ export default function ADULandingPage() {
 
       {/* ── MOBILE STICKY BAR ── */}
       {isMobile && (
-        <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 199, background: '#04080f', borderTop: '1px solid rgba(203,178,106,0.15)', padding: '10px 16px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+        <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 199, background: '#04080f', borderTop: '1px solid rgba(203,178,106,0.15)', padding: '10px 16px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, transform: 'translateZ(0)', WebkitTransform: 'translateZ(0)' }}>
           <a href={PHONE} onClick={() => track('call_click')} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, padding: '13px', borderRadius: 6, background: gold, color: navy, fontWeight: 800, fontSize: 14, textDecoration: 'none' }}>📞 Call Now</a>
           <a href={WA_LINK} target="_blank" rel="noopener noreferrer" onClick={() => track('whatsapp_click')} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, padding: '13px', borderRadius: 6, background: 'transparent', border: '1.5px solid #cbb26a', color: gold, fontWeight: 800, fontSize: 14, textDecoration: 'none' }}>WhatsApp</a>
         </div>
