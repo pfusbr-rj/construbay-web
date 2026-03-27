@@ -78,7 +78,7 @@ export default function HomePage() {
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%)' }} />
         </div>
 
-        <div className="relative z-10 px-4 max-w-4xl" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
+        <div className="relative z-10 px-4 max-w-4xl mx-auto text-center w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
           <h1 className={`${cormorant.className} font-light text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-6 leading-none whitespace-nowrap`} style={{ textAlign: 'center', width: '100%', display: 'block' }}>
             Built Without Compromise
           </h1>

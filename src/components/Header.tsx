@@ -11,17 +11,27 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-brand-tan/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo.png"
-              alt="Construbay"
-              width={180}
-              height={48}
-              className="h-10 sm:h-12 w-auto"
-              priority
-            />
-          </Link>
+          {/* Logo + Phone */}
+          <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo_vector-02.png"
+                alt="ConstruBay"
+                width={200}
+                height={60}
+                className="w-auto"
+                style={{ height: '60px' }}
+                priority
+              />
+            </Link>
+            <a
+              href="tel:4159689494"
+              className="hidden sm:block text-sm tracking-widest hover:opacity-70 transition-opacity"
+              style={{ color: '#cbb26a', letterSpacing: '0.15em' }}
+            >
+              (415) 968-9494
+            </a>
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
