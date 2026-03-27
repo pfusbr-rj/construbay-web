@@ -35,7 +35,6 @@ export default function ADULandingPage() {
   const [isMobile, setIsMobile] = useState(false)
   const [form, setForm] = useState({ firstName: '', lastName: '', phone: '', email: '', propertyAddress: '', propertyCity: '', propertyZip: '', aduType: '', timeline: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-  const [showExit, setShowExit] = useState(false)
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768)
@@ -43,13 +42,6 @@ export default function ADULandingPage() {
     window.addEventListener('resize', check)
     return () => window.removeEventListener('resize', check)
   }, [])
-
-  useEffect(() => {
-    if (isMobile) return
-    const handler = (e: MouseEvent) => { if (e.clientY <= 0) setShowExit(true) }
-    document.addEventListener('mouseleave', handler, { once: true })
-    return () => document.removeEventListener('mouseleave', handler)
-  }, [isMobile])
 
   const track = (event: string) => {
     if (typeof window !== 'undefined' && window.gtag) window.gtag('event', event, { event_category: 'conversion' })
@@ -120,32 +112,27 @@ export default function ADULandingPage() {
 
   return (
     <div style={{ fontFamily: "'DM Sans',sans-serif", background: navy, color: gold, minHeight: '100vh' }}>
-      {showExit && (
-        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 999, background: grad, color: navy, textAlign: 'center', padding: '14px 48px', fontWeight: 700, fontSize: 15 }}>
-          🏠 Wait — get your FREE ADU site visit before you go!{' '}
-          <a href="#form-top" style={{ color: navy, fontWeight: 800, textDecoration: 'underline' }} onClick={() => setShowExit(false)}>Book Now</a>
-          <button onClick={() => setShowExit(false)} style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', fontSize: 22, cursor: 'pointer', color: navy, fontWeight: 700 }}>×</button>
-        </div>
-      )}
 
-      <header id="adu-header" style={{ background: navy, height: isMobile ? 56 : 68, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: isMobile ? '0 16px' : '0 32px', position: 'sticky', top: 0, zIndex: 100 }}>
+      {/* ── TOP LOGO BAR — centered logo + phone ── */}
+      <div style={{ background: navy, padding: isMobile ? '16px 20px 12px' : '20px 40px 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={LOGO} alt="ConstruBay" style={{ height: isMobile ? 36 : 54, objectFit: 'contain' }} />
-        <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: isMobile ? 13 : 15, textDecoration: 'none', border: '1.5px solid rgba(203,178,106,0.4)', padding: isMobile ? '6px 10px' : '7px 16px', borderRadius: 4 }}>
+        <img src={LOGO} alt="ConstruBay" style={{ height: isMobile ? 44 : 60, objectFit: 'contain' }} />
+        <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: isMobile ? 14 : 16, textDecoration: 'none', letterSpacing: 0.3 }}>
           (415) 968-9494
         </a>
-      </header>
+      </div>
 
+      {/* ── MAIN CONTENT ── */}
       {isMobile ? (
-        <div id="form-top" style={{ padding: '18px 16px 110px' }}>
-          <div style={{ textAlign: 'center', marginBottom: 18 }}>
+        <div style={{ padding: '12px 16px 110px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 16 }}>
             <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase', color: 'rgba(203,178,106,0.5)', marginBottom: 7 }}>Marin · Sonoma · Napa · CSLB #1106798</div>
             <h1 style={{ fontSize: 'clamp(24px,7.5vw,34px)', fontWeight: 800, color: '#fff', lineHeight: 1.1, letterSpacing: -0.5, margin: '0 0 7px' }}>
               Your Backyard Could Be{' '}
               <span style={{ background: grad, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'block' }}>Earning $4,500/Month</span>
             </h1>
             <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', lineHeight: 1.55, margin: '0 0 10px' }}>Free site visit. Licensed team — design, permits &amp; build.</p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 5 }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 5, marginBottom: 4 }}>
               {['5.0★ Google','Zero Rejections','Free Visit'].map(t => (
                 <span key={t} style={{ fontSize: 10, fontWeight: 600, color: 'rgba(203,178,106,0.75)', border: '1px solid rgba(203,178,106,0.22)', padding: '3px 9px', borderRadius: 100 }}>✓ {t}</span>
               ))}
@@ -160,8 +147,8 @@ export default function ADULandingPage() {
           </div>
         </div>
       ) : (
-        <section id="form-top" style={{ padding: '0 20px 48px', maxWidth: 1140, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', padding: '28px 0 18px' }}>
+        <div style={{ padding: '0 20px 48px', maxWidth: 1140, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', padding: '20px 0 18px' }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase', color: 'rgba(203,178,106,0.55)', marginBottom: 10 }}>Marin · Sonoma · Napa County · CSLB #1106798</div>
             <h1 style={{ fontSize: 'clamp(30px,4.5vw,54px)', fontWeight: 800, color: '#fff', lineHeight: 1.1, letterSpacing: -1, margin: '0 0 10px' }}>
               Your Backyard Could Be{' '}
@@ -186,9 +173,10 @@ export default function ADULandingPage() {
             </div>
             <FormBody mob={false} />
           </div>
-        </section>
+        </div>
       )}
 
+      {/* ── MOBILE STICKY BAR ── */}
       {isMobile && (
         <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 199, background: '#04080f', borderTop: '1px solid rgba(203,178,106,0.2)', padding: '10px 16px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
           <a href={PHONE} onClick={() => track('call_click')} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, padding: '13px', borderRadius: 6, background: gold, color: navy, fontWeight: 800, fontSize: 14, textDecoration: 'none' }}>📞 Call Now</a>
@@ -198,16 +186,15 @@ export default function ADULandingPage() {
 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap');
-        /* Hide root layout nav, footer, and ALL social media sidebars */
-        /* Hide root layout header, nav, footer and social links completely */
+        /* Kill EVERYTHING from root layout except our own div */
         body > div > header, body > div > nav, body > div > footer,
-        nav:not(#adu-header nav), header:not(#adu-header),
+        header:not(#adu-noop), nav:not(#adu-noop), footer { display: none !important; }
+        /* Kill any social/review sidebars */
         [class*="social"],[class*="Social"],[id*="social"],
         a[href*="houzz.com"], a[href*="yelp.com"],
         a[href*="facebook.com"]:not(form a), a[href*="instagram.com"]:not(form a),
-        a[href*="twitter.com"]:not(form a), a[href*="linkedin.com"]:not(form a),
-        a[href*="tiktok.com"]:not(form a) { display: none !important; }
-        html, body { overflow-x: hidden; }
+        a[href*="twitter.com"]:not(form a), a[href*="linkedin.com"]:not(form a) { display: none !important; }
+        html, body { overflow-x: hidden; margin: 0; padding: 0; }
         input::placeholder { color: rgba(255,255,255,0.22); }
         input:focus, select:focus { border-color: rgba(203,178,106,0.55) !important; background: rgba(255,255,255,0.07) !important; }
         @media (max-width: 768px) { input, select { font-size: 16px !important; } }
