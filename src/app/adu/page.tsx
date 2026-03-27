@@ -133,13 +133,19 @@ export default function ADULandingPage() {
             </h1>
             <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.5, margin: '0 0 8px' }}>Free site visit · Licensed team · Design, permits &amp; build</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 4 }}>
-              {['5.0★ Google','Zero Rejections','Free Visit'].map(t => (
+              {['5.0★ Google','Licensed & Insured','Free Visit'].map(t => (
                 <span key={t} style={{ fontSize: 9, fontWeight: 600, color: 'rgba(203,178,106,0.75)', border: '1px solid rgba(203,178,106,0.22)', padding: '3px 8px', borderRadius: 100 }}>✓ {t}</span>
               ))}
             </div>
           </div>
-          <div style={{ background: panel, border: '1px solid rgba(203,178,106,0.18)', borderRadius: 10, padding: '16px 14px', boxShadow: '0 16px 48px rgba(0,0,0,0.5)' }}>
-            <div style={{ marginBottom: 12 }}>
+          <div style={{ background: panel, border: '1px solid rgba(203,178,106,0.18)', borderRadius: 10, padding: '14px 14px', boxShadow: '0 16px 48px rgba(0,0,0,0.5)' }}>
+            {/* Logo + phone above mobile form */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12, paddingBottom: 12, borderBottom: '1px solid rgba(203,178,106,0.12)' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={LOGO} alt="ConstruBay" style={{ height: 30, objectFit: 'contain' }} />
+              <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>(415) 968-9494</a>
+            </div>
+            <div style={{ marginBottom: 10 }}>
               <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', color: gold, marginBottom: 2 }}>Free Site Visit — No Obligation</div>
               <h2 style={{ fontSize: 15, fontWeight: 800, color: '#fff', margin: 0 }}>Get Your Free ADU Assessment</h2>
             </div>
@@ -158,13 +164,19 @@ export default function ADULandingPage() {
               Build a fully permitted ADU and add $150,000+ to your home value. One team handles design, permits, construction, and move-in. Free site visit — no obligation.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 6, marginBottom: 16 }}>
-              {['5.0★ Google','10+ Years North Bay','Zero Permit Rejections','Free Site Visit'].map(t => (
+              {['5.0★ Google','10+ Years North Bay','Licensed & Insured','Free Site Visit'].map(t => (
                 <span key={t} style={{ fontSize: 10, fontWeight: 600, color: 'rgba(203,178,106,0.75)', border: '1px solid rgba(203,178,106,0.22)', padding: '4px 10px', borderRadius: 100 }}>✓ {t}</span>
               ))}
             </div>
           </div>
-          <div style={{ background: panel, border: '1px solid rgba(203,178,106,0.18)', borderRadius: 12, padding: '24px 28px 20px', maxWidth: 720, margin: '0 auto', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, flexWrap: 'wrap', gap: 6 }}>
+          <div style={{ background: panel, border: '1px solid rgba(203,178,106,0.18)', borderRadius: 12, padding: '20px 28px 20px', maxWidth: 720, margin: '0 auto', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}>
+            {/* Logo + phone above form */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, paddingBottom: 16, borderBottom: '1px solid rgba(203,178,106,0.12)' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={LOGO} alt="ConstruBay" style={{ height: 38, objectFit: 'contain' }} />
+              <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>(415) 968-9494</a>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14, flexWrap: 'wrap', gap: 6 }}>
               <div>
                 <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase', color: gold, marginBottom: 3 }}>Free Site Visit — No Obligation</div>
                 <h2 style={{ fontSize: 18, fontWeight: 800, color: '#fff', margin: 0 }}>Get Your Free ADU Assessment</h2>
