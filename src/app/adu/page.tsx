@@ -251,6 +251,9 @@ export default function ADULandingPage() {
         }
         input::placeholder { color: rgba(255,255,255,0.22); }
         input:focus, select:focus { border-color: rgba(203,178,106,0.55) !important; background: rgba(255,255,255,0.07) !important; }
+        /* Hide root layout nav and footer on this page */
+        body > div > nav, body > div > footer,
+        nav:not(header nav), footer { display: none !important; }
       `}</style>
     </div>
   )
