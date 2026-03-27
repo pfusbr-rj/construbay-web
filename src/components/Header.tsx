@@ -12,7 +12,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="Construbay"
@@ -21,7 +21,6 @@ export default function Header() {
               className="h-10 sm:h-12 w-auto"
               priority
             />
-            <span className="text-[#C9A84C] text-xs font-medium hidden sm:inline">CSLB #1106798</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -52,14 +51,6 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Call Now Button */}
-          <a
-            href="tel:4159689494"
-            className="hidden md:inline-block border border-white/80 text-white text-sm tracking-[0.15em] uppercase px-6 py-2 hover:bg-white/10 transition-colors"
-          >
-            Call Now
-          </a>
-
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white p-2"
@@ -84,7 +75,6 @@ export default function Header() {
               <Link href="/services" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Services</Link>
               <Link href="/projects" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Projects</Link>
               <Link href="/request-a-bid" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Contact</Link>
-              <a href="tel:4159689494" className="border border-white/80 text-white text-sm tracking-[0.15em] uppercase px-6 py-2 text-center hover:bg-white/10 transition-colors">Call Now</a>
             </nav>
           </div>
         )}

@@ -75,24 +75,24 @@ export default function HomePage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.75) 100%)' }} />
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
-          <h1 className={`${cormorant.className} font-light text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-6 leading-tight`}>
-            Legacy Built Without Compromise
+          <h1 className={`${cormorant.className} font-light text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-6 leading-none whitespace-nowrap`}>
+            Built Without Compromise
           </h1>
-          <p className={`${montserrat.className} text-base sm:text-lg text-white/80 mb-12 tracking-[0.2em] uppercase`}>
-            Luxury residential construction &mdash; Marin, Sonoma &amp; Napa
+          <p className={`${montserrat.className} text-white/70 mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px' }}>
+            Marin, Sonoma &amp; Napa
           </p>
           <a
             href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${montserrat.className} inline-block border border-white/80 text-white px-12 py-4 hover:bg-white/10 transition-colors`}
-            style={{ letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: '13px' }}
+            className={`${montserrat.className} inline-block border border-white/40 text-white py-4 hover:bg-white/10 transition-colors`}
+            style={{ letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: '13px', paddingLeft: '48px', paddingRight: '48px', borderWidth: '1px' }}
           >
-            Schedule a Consultation
+            Inquire
           </a>
         </div>
       </section>
