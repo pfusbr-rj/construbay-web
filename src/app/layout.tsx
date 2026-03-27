@@ -154,13 +154,7 @@ gtag('config', 'G-E5R2DP0WG0');`,
         className={`${inter.variable} ${caveat.variable} font-sans antialiased bg-brand-dark text-white`}
       >
         {/* Social Media Sidebar — desktop only */}
-        <div style={{
-          position: "fixed",
-          left: "20px",
-          top: "50%",
-          transform: "translateY(-50%)",
-          zIndex: 40,
-        }} className="social-sidebar hidden md:flex md:flex-col gap-4">
+        <div className="social-sidebar fixed left-5 top-1/2 -translate-y-1/2 z-40 gap-4 hidden md:flex md:flex-col">
           {[
             {
               href: "https://www.instagram.com/construbaymarin/",
