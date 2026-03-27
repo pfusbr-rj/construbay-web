@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
       message: message || null,
       property_city: propertyCity || null,
       property_zip: propertyZip || null,
-      source: "website",
+      source: source || "website",
     });
 
     if (dbError) {
