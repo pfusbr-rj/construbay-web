@@ -160,10 +160,8 @@ gtag('config', 'G-E5R2DP0WG0');`,
           top: "50%",
           transform: "translateY(-50%)",
           zIndex: 40,
-          display: "flex",
-          flexDirection: "column",
           gap: "16px",
-        }} className="social-sidebar hidden md:flex">
+        }} className="social-sidebar hidden md:flex md:flex-col">
           {[
             {
               href: "https://www.instagram.com/construbaymarin/",
