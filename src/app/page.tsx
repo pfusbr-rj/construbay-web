@@ -79,6 +79,18 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 px-4 max-w-4xl mx-auto text-center w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
+          <div style={{ marginBottom: '16px' }}>
+            <p style={{
+              fontSize: '42px',
+              fontWeight: '300',
+              color: '#cbb26a',
+              letterSpacing: '0.3em',
+              textTransform: 'uppercase',
+              textAlign: 'center',
+              fontFamily: 'Georgia, serif',
+              lineHeight: 1
+            }}>ConstruBay</p>
+          </div>
           <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-none text-center w-full mx-auto`}>
             Built Without Compromise
           </h1>
@@ -90,8 +102,8 @@ export default function HomePage() {
               href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${montserrat.className} inline-block border border-white/40 text-white py-4 hover:bg-white/10 transition-colors`}
-              style={{ letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: '13px', paddingLeft: '48px', paddingRight: '48px', borderWidth: '1px' }}
+              className={`${montserrat.className} inline-block transition-opacity hover:opacity-80`}
+              style={{ backgroundColor: '#cbb26a', color: '#0a1628', border: 'none', fontWeight: '500', fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', paddingLeft: '56px', paddingRight: '56px', paddingTop: '18px', paddingBottom: '18px' }}
             >
               Inquire
             </a>

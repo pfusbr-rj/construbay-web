@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -13,30 +12,28 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-24">
           {/* Logo + Phone */}
           <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/logo_vector-02.png"
-                alt="ConstruBay"
-                width={240}
-                height={80}
-                className="w-auto hidden sm:block"
-                style={{ height: '80px' }}
-                priority
-              />
-              <Image
-                src="/images/logo_vector-02.png"
-                alt="ConstruBay"
-                width={160}
-                height={52}
-                className="w-auto block sm:hidden"
-                style={{ height: '52px' }}
-                priority
-              />
+            <Link href="/" className="flex flex-col items-start">
+              <span style={{
+                fontSize: '26px',
+                fontWeight: '300',
+                color: '#cbb26a',
+                letterSpacing: '0.25em',
+                textTransform: 'uppercase',
+                fontFamily: 'Georgia, serif',
+                lineHeight: 1
+              }}>ConstruBay</span>
+              <span style={{
+                fontSize: '8px',
+                color: 'rgba(203,178,106,0.6)',
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                marginTop: '4px'
+              }}>Licensed General Contractor</span>
             </Link>
             <a
               href="tel:4159689494"
-              className="hidden sm:block hover:opacity-70 transition-opacity"
-              style={{ color: '#cbb26a', fontSize: '18px', letterSpacing: '0.1em', fontWeight: '300' }}
+              className="hover:opacity-70 transition-opacity"
+              style={{ color: '#cbb26a', fontSize: '17px', letterSpacing: '0.1em', fontWeight: '300' }}
             >
               (415) 968-9494
             </a>
