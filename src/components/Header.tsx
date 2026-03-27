@@ -17,11 +17,11 @@ export default function Header() {
               <Image
                 src="/images/logo_construbay.png"
                 alt="ConstruBay"
-                width={220}
-                height={60}
+                width={240}
+                height={70}
                 priority
                 className="w-auto"
-                style={{ height: '60px' }}
+                style={{ height: '70px' }}
               />
             </Link>
             <a
