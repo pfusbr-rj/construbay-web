@@ -3,7 +3,6 @@ import { Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SocialBar from "@/components/SocialBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -155,7 +154,6 @@ gtag('config', 'G-E5R2DP0WG0');`,
         className={`${inter.variable} ${caveat.variable} font-sans antialiased bg-brand-dark text-white`}
       >
         <Header />
-        <SocialBar />
         <main>{children}</main>
         <Footer />
       </body>
