@@ -116,7 +116,7 @@ export default function ADULandingPage() {
       {/* ── HEADER: logo left, phone right ── */}
       <header style={{ background: navy, padding: isMobile ? '12px 16px' : '14px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 100 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={LOGO} alt="ConstruBay" style={{ height: isMobile ? 36 : 48, objectFit: 'contain', maxWidth: isMobile ? 160 : 240 }} />
+        <img src={LOGO} alt="ConstruBay" style={{ height: isMobile ? 52 : 72, objectFit: 'contain', maxWidth: isMobile ? 200 : 300 }} />
         <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: isMobile ? 13 : 15, textDecoration: 'none', border: '1.5px solid rgba(203,178,106,0.4)', padding: isMobile ? '6px 10px' : '7px 16px', borderRadius: 4, whiteSpace: 'nowrap' as const }}>
           (415) 968-9494
         </a>
@@ -142,7 +142,7 @@ export default function ADULandingPage() {
             {/* Logo + phone above mobile form */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12, paddingBottom: 12, borderBottom: '1px solid rgba(203,178,106,0.12)' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={LOGO} alt="ConstruBay" style={{ height: 30, objectFit: 'contain' }} />
+              <img src={LOGO} alt="ConstruBay" style={{ height: 44, objectFit: 'contain' }} />
               <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>(415) 968-9494</a>
             </div>
             <div style={{ marginBottom: 10 }}>
@@ -173,7 +173,7 @@ export default function ADULandingPage() {
             {/* Logo + phone above form */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, paddingBottom: 16, borderBottom: '1px solid rgba(203,178,106,0.12)' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={LOGO} alt="ConstruBay" style={{ height: 38, objectFit: 'contain' }} />
+              <img src={LOGO} alt="ConstruBay" style={{ height: 56, objectFit: 'contain' }} />
               <a href={PHONE} onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>(415) 968-9494</a>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14, flexWrap: 'wrap', gap: 6 }}>
