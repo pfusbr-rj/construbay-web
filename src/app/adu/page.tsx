@@ -109,9 +109,9 @@ export default function ADULandingPage() {
       )}
 
       {/* HEADER */}
-      <header style={{ background: navy, borderBottom: '1px solid rgba(203,178,106,0.2)', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px', position: 'sticky', top: 0, zIndex: 100 }}>
+      <header style={{ background: navy, borderBottom: '1px solid rgba(203,178,106,0.2)', height: 72, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px', position: 'sticky', top: 0, zIndex: 100 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={LOGO} alt="ConstruBay" style={{ height: 34, objectFit: 'contain' }} />
+        <img src={LOGO} alt="ConstruBay" style={{ height: 52, objectFit: 'contain' }} />
         <a href="tel:4159689494" onClick={() => track('call_click')} style={{ color: gold, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '1.5px solid rgba(203,178,106,0.4)', padding: '7px 16px', borderRadius: 4 }}>
           (415) 968-9494
         </a>
