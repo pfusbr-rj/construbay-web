@@ -78,22 +78,24 @@ export default function HomePage() {
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.75) 100%)' }} />
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl">
-          <h1 className={`${cormorant.className} font-light text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-6 leading-none whitespace-nowrap`}>
+        <div className="relative z-10 px-4 max-w-4xl" style={{ textAlign: 'center', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+          <h1 className={`${cormorant.className} font-light text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-6 leading-none whitespace-nowrap`} style={{ textAlign: 'center', width: '100%', display: 'block' }}>
             Built Without Compromise
           </h1>
-          <p className={`${montserrat.className} text-white/70 mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px' }}>
+          <p className={`${montserrat.className} text-white/70 mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px', textAlign: 'center', width: '100%', display: 'block' }}>
             Marin, Sonoma &amp; Napa
           </p>
-          <a
-            href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${montserrat.className} inline-block border border-white/40 text-white py-4 hover:bg-white/10 transition-colors`}
-            style={{ letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: '13px', paddingLeft: '48px', paddingRight: '48px', borderWidth: '1px' }}
-          >
-            Inquire
-          </a>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <a
+              href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${montserrat.className} inline-block border border-white/40 text-white py-4 hover:bg-white/10 transition-colors`}
+              style={{ letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: '13px', paddingLeft: '48px', paddingRight: '48px', borderWidth: '1px' }}
+            >
+              Inquire
+            </a>
+          </div>
         </div>
       </section>
 
