@@ -205,32 +205,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className={`${cormorant.className} text-5xl md:text-6xl font-light text-white mb-8`}>About Us</h2>
-            <p className={`${montserrat.className} text-white/70 leading-relaxed text-sm`}>
-              At Construbay, we specialize in high-end custom finishes for luxury homes.
-              With over 10 years of experience in the industry, we are known for our meticulous
-              attention to detail and exceptional craftsmanship, particularly in bathroom and
-              kitchen renovations. Serving clients across Mill Valley and Marin, Sonoma, and Napa Counties,
-              we are committed to providing a seamless and stress-free experience from start to finish.
-              Trust Construbay to transform your vision into reality with superior quality, sophisticated
-              design, and unparalleled customer service.
-            </p>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src="/images/services/bathroom-about.jpg"
-              alt="Modern bathroom remodel in Mill Valley, Marin County by ConstruBay — CSLB #1106798"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
