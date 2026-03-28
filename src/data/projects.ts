@@ -26,6 +26,7 @@ export const projects: Project[] = [
       '/images/gallery/bagatellos/bagatellos-11.jpg',
     ],
     featured: true,
+    caseStudyUrl: '/projects/marion-avenue-mill-valley',
   },
   {
     id: '2',
@@ -45,6 +46,7 @@ export const projects: Project[] = [
       '/images/gallery/colaizzo/colaizzo-05.jpg',
     ],
     featured: true,
+    caseStudyUrl: '/projects/sycamore-sound-studio',
   },
   {
     id: '3',
@@ -69,5 +71,6 @@ export const projects: Project[] = [
       '/images/gallery/eugene-anya/eugene-anya-10.jpg',
     ],
     featured: true,
+    caseStudyUrl: '/projects/plymouth-whole-home-renovation',
   },
 ];

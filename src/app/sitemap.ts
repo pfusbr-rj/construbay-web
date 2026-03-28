@@ -49,6 +49,11 @@ const staticPages: SitemapEntry[] = [
   { path: '/larkspur-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/corte-madera-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/novato-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+
+  // Case study pages
+  { path: '/projects/marion-avenue-mill-valley', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/projects/sycamore-sound-studio', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/projects/plymouth-whole-home-renovation', priority: 0.8, changeFrequency: 'monthly' },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

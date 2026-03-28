@@ -13,4 +13,5 @@ export interface Project {
   heroImage: string;
   gallery: string[];
   featured: boolean;
+  caseStudyUrl?: string;
 }

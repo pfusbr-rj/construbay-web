@@ -65,6 +65,24 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
         }}>
           {project.type}{project.sqft ? ` — ${project.sqft.toLocaleString()} sq ft` : ''}
         </p>
+        {project.caseStudyUrl && (
+          <a
+            href={project.caseStudyUrl}
+            onClick={(e) => e.stopPropagation()}
+            className={`${montserrat.className} inline-block mt-5 hover:bg-[#cbb26a] hover:text-black transition-all duration-300`}
+            style={{
+              fontSize: '10px',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: '#cbb26a',
+              border: '1px solid #cbb26a',
+              padding: '8px 18px',
+              textDecoration: 'none',
+            }}
+          >
+            View Case Study →
+          </a>
+        )}
       </div>
     </div>
   );
