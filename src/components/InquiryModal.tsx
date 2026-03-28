@@ -152,7 +152,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                 What would you like to do next?
               </p>
               <a
-                href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
+                href="https://calendly.com/construbay/initial-consultation-construbay"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={montserrat.className}
