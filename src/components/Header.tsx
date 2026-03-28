@@ -10,8 +10,21 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-brand-tan/20" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 sm:h-32">
-          {/* Logo + Phone */}
+          {/* CSLB + Logo + Phone */}
           <div className="flex items-center gap-4">
+            <span className="hidden md:block" style={{
+              color: 'rgba(203,178,106,0.5)',
+              fontSize: '11px',
+              letterSpacing: '0.15em',
+              fontWeight: '300',
+              textTransform: 'uppercase',
+              fontFamily: 'Montserrat, sans-serif',
+              paddingRight: '1rem',
+              borderRight: '1px solid rgba(203,178,106,0.3)',
+              whiteSpace: 'nowrap',
+            }}>
+              CSLB #1106798
+            </span>
             <Link href="/" className="flex items-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -20,35 +33,22 @@ export default function Header() {
                 style={{ height: '110px', width: 'auto' }}
               />
             </Link>
-            <div className="hidden md:flex items-center" style={{ gap: '1rem', whiteSpace: 'nowrap' }}>
-              <a
-                href="tel:4159689494"
-                className="hover:opacity-70 transition-opacity"
-                style={{
-                  background: 'linear-gradient(135deg, #bb8b4a, #f7eb9e)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  fontSize: '24px',
-                  letterSpacing: '0.1em',
-                  fontWeight: '300',
-                }}
-              >
-                (415) 968-9494
-              </a>
-              <span style={{
-                color: 'rgba(203,178,106,0.5)',
-                fontSize: '11px',
-                letterSpacing: '0.15em',
+            <a
+              href="tel:4159689494"
+              className="hidden md:block hover:opacity-70 transition-opacity"
+              style={{
+                background: 'linear-gradient(135deg, #bb8b4a, #f7eb9e)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontSize: '24px',
+                letterSpacing: '0.1em',
                 fontWeight: '300',
-                textTransform: 'uppercase',
-                fontFamily: 'Montserrat, sans-serif',
-                paddingLeft: '1rem',
-                borderLeft: '1px solid rgba(203,178,106,0.3)',
-              }}>
-                CSLB #1106798
-              </span>
-            </div>
+                whiteSpace: 'nowrap',
+              }}
+            >
+              (415) 968-9494
+            </a>
           </div>
 
           {/* Desktop Nav */}
