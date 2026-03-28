@@ -137,6 +137,62 @@ export default function HomePage() {
       {/* Featured Projects Section */}
       <ProjectGrid projects={projects} mode="featured" />
 
+      {/* Pain Points Section */}
+      <section style={{ padding: '100px 0', backgroundColor: '#000000', borderTop: '1px solid rgba(203,178,106,0.1)' }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <p className={montserrat.className} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', textAlign: 'center', marginBottom: '20px' }}>
+            Why ConstruBay
+          </p>
+          <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: '300', color: '#ffffff', textAlign: 'center', marginBottom: '16px', letterSpacing: '0.04em' }}>
+            We Handle the Hard Part
+          </h2>
+          <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', textAlign: 'center', maxWidth: '560px', margin: '0 auto 72px', lineHeight: 1.8, letterSpacing: '0.05em' }}>
+            Luxury remodeling in Marin County is complex. Permits take months. Contractors disappear. Budgets spiral.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '48px' }}>
+            {[
+              {
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#cbb26a" strokeWidth="1">
+                    <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                title: 'Permit Delays',
+                body: 'We manage the entire Marin County permit process from application to final approval.',
+              },
+              {
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#cbb26a" strokeWidth="1">
+                    <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                title: 'Project Complexity',
+                body: 'One point of contact. Zero surprises. AI-powered project management keeps every detail on track.',
+              },
+              {
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#cbb26a" strokeWidth="1">
+                    <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                title: 'Budget Overruns',
+                body: 'Fixed-scope contracts with transparent pricing. Your project stays on budget.',
+              },
+            ].map((item) => (
+              <div key={item.title} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div>{item.icon}</div>
+                <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#cbb26a' }}>
+                  {item.title}
+                </h3>
+                <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.55)', lineHeight: 1.9, letterSpacing: '0.04em' }}>
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section style={{ padding: '120px 0', backgroundColor: '#000000' }}>
         <div className="max-w-5xl mx-auto px-6">
