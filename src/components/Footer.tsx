@@ -178,7 +178,7 @@ export default function Footer() {
 
         {/* City list */}
         <div className="mt-10 text-center text-white/60 text-sm">
-          Serving: Mill Valley &middot; Tiburon &middot; Sausalito &middot; San Rafael &middot; Novato &middot; Petaluma &middot; Santa Rosa &middot; Sebastopol &middot; Sonoma
+          Serving: Mill Valley &middot; Tiburon &middot; Sausalito &middot; San Rafael &middot; Novato &middot; Petaluma &middot; Sebastopol &middot; Marina &middot; Santa Rosa &middot; Sonoma
         </div>
 
         <div className="mt-12 pt-8 border-t border-brand-tan/20 text-center text-white/40 text-sm">
