@@ -27,4 +27,23 @@ export const projects: Project[] = [
     ],
     featured: true,
   },
+  {
+    id: '2',
+    slug: 'colaizzo-mill-valley',
+    clientName: 'Doug Colaizzo',
+    address: '70 Sycamore Ave',
+    city: 'Mill Valley',
+    type: 'Full Remodel',
+    description: 'A complete basement transformation into a world-class private music studio. Acoustic precision meets luxury design — soundproofed, custom-built, and finished to the highest standard.',
+    year: 2025,
+    heroImage: '/images/gallery/colaizzo/colaizzo-01.jpg',
+    gallery: [
+      '/images/gallery/colaizzo/colaizzo-01.jpg',
+      '/images/gallery/colaizzo/colaizzo-02.jpg',
+      '/images/gallery/colaizzo/colaizzo-03.jpg',
+      '/images/gallery/colaizzo/colaizzo-04.jpg',
+      '/images/gallery/colaizzo/colaizzo-05.jpg',
+    ],
+    featured: true,
+  },
 ];
