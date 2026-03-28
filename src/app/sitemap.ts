@@ -31,6 +31,10 @@ const staticPages: SitemapEntry[] = [
   { path: '/mill-valley-adu-builder', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/mill-valley-kitchen-remodel', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/tiburon-kitchen-remodel', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/san-rafael-kitchen-remodel', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/mill-valley-bathroom-remodel', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/tiburon-bathroom-remodel', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/marin-county-adu-builder', priority: 0.9, changeFrequency: 'monthly' },
 
   // Primary city pages
   { path: '/mill-valley-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
