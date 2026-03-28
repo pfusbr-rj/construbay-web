@@ -147,9 +147,9 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
             <p className={montserrat.className} style={{ fontSize: '12px', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.55)', lineHeight: 1.8, marginBottom: '40px' }}>
               Your project brief has been received. We review every inquiry personally and will be in touch within 24 hours to discuss your vision.
             </p>
-            <div style={{ borderTop: '1px solid rgba(203,178,106,0.2)', paddingTop: '32px' }}>
-              <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '16px' }}>
-                Ready to schedule now?
+            <div style={{ borderTop: '1px solid rgba(203,178,106,0.2)', paddingTop: '32px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+              <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '8px' }}>
+                What would you like to do next?
               </p>
               <a
                 href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
@@ -158,18 +158,38 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                 className={montserrat.className}
                 style={{
                   display: 'inline-block',
-                  border: '1px solid #cbb26a',
-                  color: '#cbb26a',
+                  backgroundColor: '#cbb26a',
+                  color: '#000000',
                   padding: '16px 48px',
                   fontSize: '11px',
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
                   textDecoration: 'none',
+                  width: '100%',
+                  textAlign: 'center',
                   transition: 'all 0.4s ease',
                 }}
               >
                 Reserve Your Consultation →
               </a>
+              <button
+                onClick={onClose}
+                className={montserrat.className}
+                style={{
+                  backgroundColor: 'transparent',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  color: 'rgba(255,255,255,0.5)',
+                  padding: '14px 48px',
+                  fontSize: '11px',
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase',
+                  cursor: 'pointer',
+                  width: '100%',
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                ← Return Home
+              </button>
             </div>
           </div>
         ) : (
