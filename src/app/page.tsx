@@ -98,12 +98,62 @@ export default function HomePage() {
               href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${montserrat.className} inline-block transition-opacity hover:opacity-80`}
-              style={{ backgroundColor: '#cbb26a', color: '#0a1628', border: 'none', fontWeight: '500', fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', paddingLeft: '56px', paddingRight: '56px', paddingTop: '18px', paddingBottom: '18px' }}
+              className={`${montserrat.className} group relative inline-flex items-center justify-center overflow-hidden`}
+              style={{
+                backgroundColor: 'transparent',
+                border: '1px solid #cbb26a',
+                color: '#cbb26a',
+                fontSize: '12px',
+                fontWeight: '300',
+                letterSpacing: '0.25em',
+                textTransform: 'uppercase',
+                padding: '18px 56px',
+                transition: 'color 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+                position: 'relative',
+                cursor: 'pointer',
+                minWidth: '240px',
+              }}
             >
-              Inquire
+              <span
+                className="absolute inset-0 origin-left scale-x-0 group-hover:scale-x-100"
+                style={{
+                  backgroundColor: '#cbb26a',
+                  transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+                }}
+              />
+              <span className="relative z-10 flex items-center gap-4 group-hover:text-[#0a1628]" style={{ transition: 'color 0.6s ease' }}>
+                Inquire
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
             </a>
           </div>
+        </div>
+        <div style={{
+          position: 'absolute',
+          bottom: '40px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '12px',
+          opacity: 0.7,
+        }}>
+          <p className={montserrat.className} style={{
+            fontSize: '9px',
+            letterSpacing: '0.3em',
+            textTransform: 'uppercase',
+            color: '#cbb26a',
+            margin: 0,
+          }}>Scroll</p>
+          <div style={{
+            width: '1px',
+            height: '60px',
+            background: 'linear-gradient(to bottom, #cbb26a, transparent)',
+            animation: 'scrollPulse 2s ease-in-out infinite',
+          }} />
         </div>
       </section>
 
@@ -242,6 +292,12 @@ export default function HomePage() {
           </p>
         </div>
       </footer>
+      <style>{`
+        @keyframes scrollPulse {
+          0%, 100% { opacity: 0.2; transform: scaleY(0.3); transform-origin: top; }
+          50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+        }
+      `}</style>
     </>
   );
 }
