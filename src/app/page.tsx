@@ -1,7 +1,10 @@
+'use client';
+import { useState } from 'react';
 import Image from "next/image";
 import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import ProjectGrid from '@/components/projects/ProjectGrid';
 import { projects } from '@/data/projects';
+import InquiryModal from '@/components/InquiryModal';
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
@@ -34,6 +37,8 @@ function StarIcon() {
 }
 
 export default function HomePage() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
@@ -66,10 +71,8 @@ export default function HomePage() {
             Marin, Sonoma &amp; Napa
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <a
-              href="https://calendly.com/construbay/adu-planning-session-design-permits-budget"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setModalOpen(true)}
               className={`${montserrat.className} group relative inline-flex items-center justify-center overflow-hidden`}
               style={{
                 backgroundColor: 'transparent',
@@ -80,9 +83,8 @@ export default function HomePage() {
                 letterSpacing: '0.25em',
                 textTransform: 'uppercase',
                 padding: '18px 56px',
-                transition: 'color 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
-                position: 'relative',
                 cursor: 'pointer',
+                position: 'relative',
                 minWidth: '240px',
               }}
             >
@@ -93,13 +95,13 @@ export default function HomePage() {
                   transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
                 }}
               />
-              <span className="relative z-10 flex items-center gap-4 group-hover:text-[#0a1628]" style={{ transition: 'color 0.6s ease' }}>
+              <span className="relative z-10 flex items-center gap-4 group-hover:text-[#000000]" style={{ transition: 'color 0.6s ease' }}>
                 Inquire
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
-            </a>
+            </button>
           </div>
         </div>
         <div style={{
@@ -249,6 +251,7 @@ export default function HomePage() {
           50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
         }
       `}</style>
+      <InquiryModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </>
   );
 }
