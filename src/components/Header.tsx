@@ -22,12 +22,12 @@ export default function Header() {
             </Link>
             <a
               href="tel:4159689494"
-              className="hover:opacity-70 transition-opacity"
+              className="hidden md:block hover:opacity-70 transition-opacity"
               style={{ color: '#cbb26a', fontSize: '24px', letterSpacing: '0.1em', fontWeight: '300' }}
             >
               (415) 968-9494
             </a>
-            <span style={{
+            <span className="hidden md:block" style={{
               color: 'rgba(203,178,106,0.5)',
               fontSize: '11px',
               letterSpacing: '0.15em',
