@@ -1,126 +1,103 @@
-import { Cormorant_Garamond, Montserrat } from 'next/font/google';
-import type { Metadata } from 'next';
-
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Design-Build Contractor Marin County | Integrated Design & Construction | ConstruBay',
-  description: 'Design-build general contractor in Marin County CA. Integrated design and construction for luxury residential projects. Single point of accountability. CSLB #1106798.',
+  title: 'Design-Build Contractor Marin County | ConstruBay CSLB #1106798',
+  description: 'Design-build general contractor in Marin County CA. Integrated design and construction. Single point of accountability. Fixed-price contracts. CSLB #1106798.',
   alternates: { canonical: 'https://www.construbay.com/design-build' },
-};
+}
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Design-Build Construction Services',
-  provider: {
-    '@type': 'GeneralContractor',
-    name: 'ConstruBay',
-    telephone: '+14159689494',
-    url: 'https://www.construbay.com',
-  },
-  areaServed: { '@type': 'County', name: 'Marin County' },
-  description: 'Design-build general contractor in Marin County CA. Single point of accountability for design and construction. CSLB #1106798.',
-};
-
-const benefits = [
-  { num: '01', title: 'Single Contract', body: 'One agreement covers design and construction. No finger-pointing between architect and contractor when problems arise. One team, one point of responsibility.' },
-  { num: '02', title: 'Faster Delivery', body: 'Design and construction overlap. We begin procurement and permit preparation while design is still being refined — saving weeks or months on your timeline.' },
-  { num: '03', title: 'Budget Certainty', body: 'We price the project during design — not after. Our team identifies cost implications as decisions are made, keeping your budget intact before construction starts.' },
-  { num: '04', title: 'Design Intent Protected', body: 'The team that designs it builds it. Your vision arrives at completion intact — not modified by a contractor who was not part of the original conversations.' },
-];
-
-const comparison = [
-  { label: 'Design responsibility', traditional: 'Architect only', designBuild: 'Integrated team' },
-  { label: 'Construction responsibility', traditional: 'Contractor only', designBuild: 'Integrated team' },
-  { label: 'Budget control', traditional: 'After design is complete', designBuild: 'Throughout design' },
-  { label: 'Change order risk', traditional: 'High', designBuild: 'Significantly reduced' },
-  { label: 'Points of contact', traditional: 'Multiple', designBuild: 'One' },
-  { label: 'Timeline', traditional: 'Sequential', designBuild: 'Overlapping' },
-];
+  provider: { '@type': 'GeneralContractor', name: 'ConstruBay', telephone: '+14159689494' },
+  areaServed: 'Marin County',
+  description: 'Design-build general contractor in Marin County CA. Single point of accountability. CSLB #1106798.',
+}
 
 export default function DesignBuildPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '140px' }}>
-        <div className="max-w-5xl mx-auto px-6">
+      <main style={{ background: '#000', color: '#fff', minHeight: '100vh' }}>
 
-          {/* Hero */}
-          <section style={{ paddingBottom: '80px', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '24px' }}>
-              Design-Build · Marin County
-            </p>
-            <h1 className={cormorant.className} style={{ fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: '300', color: '#ffffff', lineHeight: 1.05, marginBottom: '16px' }}>
-              Design-Build<br />in Marin County
-            </h1>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: '#cbb26a', letterSpacing: '0.15em', marginBottom: '36px' }}>
-              Integrated Design and Construction — Single Point of Accountability
-            </p>
-            <p className={cormorant.className} style={{ fontSize: 'clamp(18px, 2.2vw, 24px)', fontWeight: '300', color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, maxWidth: '700px' }}>
-              Traditional construction separates design from building — creating gaps where budgets blow out and timelines collapse. Our design-build approach integrates both under one roof. One contract, one team, one point of accountability from first sketch to final walkthrough.
-            </p>
-          </section>
+        {/* HERO */}
+        <section style={{ padding: '8rem 2rem 4rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <p style={{ color: '#cbb26a', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem' }}>Design-Build · Marin County</p>
+          <h1 style={{ fontFamily: 'Cormorant Garamond', fontWeight: 300, fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1rem', lineHeight: 1.1 }}>
+            Design-Build<br />in Marin County
+          </h1>
+          <p style={{ color: '#cbb26a', fontFamily: 'Cormorant Garamond', fontStyle: 'italic', fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', marginBottom: '1.5rem' }}>
+            Integrated Design and Construction — Single Point of Accountability
+          </p>
+          <p style={{ color: '#aaa', fontFamily: 'Montserrat', fontSize: '0.85rem', lineHeight: 1.8, maxWidth: '600px', marginBottom: '2rem' }}>
+            Traditional construction separates design from building — creating gaps where budgets blow out and timelines collapse. Our design-build approach integrates both under one roof. One contract, one team, one point of accountability from first sketch to final walkthrough.
+          </p>
+          <Link href="/request-a-bid" style={{ display: 'inline-block', background: '#cbb26a', color: '#000', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '1rem 2rem', textDecoration: 'none' }}>
+            Discuss Your Project
+          </Link>
+        </section>
 
-          {/* Benefits */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '16px' }}>
-              The Advantages
-            </p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '64px' }}>
-              Why Design-Build Works
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {benefits.map((b, i) => (
-                <div key={b.num} style={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: '40px', padding: '48px 0', borderTop: i === 0 ? '1px solid rgba(203,178,106,0.15)' : '1px solid rgba(203,178,106,0.08)', borderBottom: i === benefits.length - 1 ? '1px solid rgba(203,178,106,0.15)' : 'none' }}>
-                  <p className={cormorant.className} style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(203,178,106,0.5)' }}>{b.num}</p>
-                  <div>
-                    <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px' }}>{b.title}</h3>
-                    <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.6)', lineHeight: 1.9, letterSpacing: '0.04em' }}>{b.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Comparison Table */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '40px' }}>
-              Design-Build vs. Traditional
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'rgba(203,178,106,0.12)' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', backgroundColor: '#0a0a0a', padding: '14px 24px' }}>
-                {['', 'Traditional', 'Design-Build'].map((h, i) => (
-                  <span key={i} className={montserrat.className} style={{ fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: i === 2 ? '#cbb26a' : 'rgba(203,178,106,0.55)' }}>{h}</span>
-                ))}
+        {/* BENEFITS */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>The Advantages</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2rem' }}>
+            {[
+              { n: '01', t: 'Single Contract', b: 'One agreement covers design and construction. No finger-pointing between architect and contractor.' },
+              { n: '02', t: 'Faster Delivery', b: 'Design and construction overlap. We begin procurement and permit prep while design is still being refined.' },
+              { n: '03', t: 'Budget Certainty', b: 'We price the project during design — not after. No surprises when construction begins.' },
+              { n: '04', t: 'Design Intent Protected', b: 'The team that designs it builds it. Your vision arrives at completion intact.' },
+            ].map((item) => (
+              <div key={item.n} style={{ borderTop: '1px solid #333', paddingTop: '1.5rem' }}>
+                <p style={{ color: '#cbb26a', fontFamily: 'Montserrat', fontSize: '0.65rem', letterSpacing: '0.15em', marginBottom: '0.5rem' }}>{item.n}</p>
+                <p style={{ fontFamily: 'Montserrat', fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>{item.t}</p>
+                <p style={{ color: '#aaa', fontFamily: 'Montserrat', fontSize: '0.8rem', lineHeight: 1.7 }}>{item.b}</p>
               </div>
-              {comparison.map((row, i) => (
-                <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', backgroundColor: i % 2 === 0 ? '#000000' : '#050505', padding: '18px 24px', alignItems: 'center' }}>
-                  <span className={montserrat.className} style={{ fontSize: '11px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em' }}>{row.label}</span>
-                  <span className={montserrat.className} style={{ fontSize: '11px', fontWeight: '300', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.04em' }}>{row.traditional}</span>
-                  <span className={montserrat.className} style={{ fontSize: '11px', fontWeight: '300', color: '#cbb26a', letterSpacing: '0.04em' }}>{row.designBuild}</span>
-                </div>
+            ))}
+          </div>
+        </section>
+
+        {/* COMPARISON */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>Design-Build vs. Traditional</p>
+          <div style={{ border: '1px solid #1a1a1a' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', background: '#0a0a0a', padding: '0.75rem 1.5rem', gap: '1rem' }}>
+              {['', 'Traditional', 'Design-Build'].map((h, i) => (
+                <span key={i} style={{ fontFamily: 'Montserrat', fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: i === 2 ? '#cbb26a' : 'rgba(203,178,106,0.5)' }}>{h}</span>
               ))}
             </div>
-          </section>
+            {[
+              ['Design responsibility', 'Architect only', 'Integrated team'],
+              ['Construction responsibility', 'Contractor only', 'Integrated team'],
+              ['Budget control', 'After design is complete', 'Throughout design'],
+              ['Change order risk', 'High', 'Significantly reduced'],
+              ['Points of contact', 'Multiple', 'One'],
+              ['Timeline', 'Sequential', 'Overlapping'],
+            ].map((row, i) => (
+              <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '1rem 1.5rem', gap: '1rem', background: i % 2 === 0 ? '#000' : '#050505', borderTop: '1px solid #111' }}>
+                <span style={{ fontFamily: 'Montserrat', fontSize: '0.75rem', color: '#888' }}>{row[0]}</span>
+                <span style={{ fontFamily: 'Montserrat', fontSize: '0.75rem', color: '#555' }}>{row[1]}</span>
+                <span style={{ fontFamily: 'Montserrat', fontSize: '0.75rem', color: '#cbb26a' }}>{row[2]}</span>
+              </div>
+            ))}
+          </div>
+        </section>
 
-          {/* CTA */}
-          <section style={{ padding: '80px 0', textAlign: 'center' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '20px' }}>Start the Conversation</p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: '300', color: '#ffffff', marginBottom: '20px' }}>
-              Discuss Your Project
-            </h2>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 40px' }}>
-              Design-build works best when the conversation starts early. Reach out to discuss your project goals — even if you&apos;re still in the early thinking phase.
-            </p>
-            <a href="/request-a-bid" className={montserrat.className} style={{ display: 'inline-block', backgroundColor: '#cbb26a', color: '#000000', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 56px', textDecoration: 'none', fontWeight: '400' }}>
-              Discuss Your Project
-            </a>
-          </section>
+        {/* CTA */}
+        <section style={{ padding: '4rem 2rem', textAlign: 'center', borderTop: '1px solid #1a1a1a' }}>
+          <h2 style={{ fontFamily: 'Cormorant Garamond', fontWeight: 300, fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '1rem' }}>
+            Discuss Your Project
+          </h2>
+          <p style={{ color: '#aaa', fontFamily: 'Montserrat', fontSize: '0.8rem', marginBottom: '2rem', maxWidth: '500px', margin: '0 auto 2rem' }}>
+            Design-build works best when the conversation starts early — even if you&apos;re still in the thinking phase.
+          </p>
+          <Link href="/request-a-bid" style={{ display: 'inline-block', background: '#cbb26a', color: '#000', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '1rem 2rem', textDecoration: 'none' }}>
+            Discuss Your Project
+          </Link>
+        </section>
 
-        </div>
       </main>
     </>
-  );
+  )
 }

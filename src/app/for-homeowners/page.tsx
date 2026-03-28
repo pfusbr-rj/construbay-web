@@ -1,147 +1,106 @@
-import { Cormorant_Garamond, Montserrat } from 'next/font/google';
-import type { Metadata } from 'next';
-
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Luxury Home Remodeling for Marin County Homeowners | ConstruBay',
-  description: 'ConstruBay works directly with Marin County homeowners. Fixed-price contracts, daily updates, 10-year warranty. No surprises. CSLB #1106798.',
+  description: 'ConstruBay manages every phase of your Marin County home renovation. Fixed-price contracts, one point of contact, 10-year warranty. CSLB #1106798.',
   alternates: { canonical: 'https://www.construbay.com/for-homeowners' },
-};
+}
 
-const principles = [
-  {
-    num: '01',
-    title: 'Clarity',
-    body: 'Before a single nail is driven, you have a complete picture of what will be built, when it will be done, and exactly what it will cost. Our fixed-price contracts eliminate the guesswork that makes most remodeling projects painful. You will never receive a change order you did not explicitly approve.',
-  },
-  {
-    num: '02',
-    title: 'Certainty',
-    body: 'You receive a daily site report every evening — photos, progress notes, and what to expect tomorrow. Paulo Fernandes, the owner, is personally on-site for every key milestone. You can call or text him directly. No project managers, no middlemen, no voicemail.',
-  },
-  {
-    num: '03',
-    title: 'Craftsmanship',
-    body: 'We are not building square footage — we are building the home you have been imagining. Every finish, every joint, every transition is executed to a standard that endures. Our 10-year structural warranty is not marketing language. It is a commitment we stand behind on every project.',
-  },
-];
-
-const steps = [
-  { num: '01', title: 'Site Visit', body: 'Paulo visits your home, walks every space, and listens. No sales pitch — just an honest conversation about your goals and what is possible.' },
-  { num: '02', title: 'Fixed-Price Proposal', body: 'Within 5 business days you receive a complete fixed-price proposal with full scope, timeline, and investment — no line item vagueness.' },
-  { num: '03', title: 'Design & Permits', body: 'We handle architectural plans, engineering, and Marin County permit acquisition. Most permits are in hand within 4–6 weeks.' },
-  { num: '04', title: 'Build', body: 'Construction begins on the agreed date. You receive daily photo updates and have a direct line to Paulo throughout.' },
-  { num: '05', title: 'Walkthrough & Warranty', body: 'A thorough completion walkthrough. We return at 11 months — inside your 1-year warranty window — for a complimentary inspection.' },
-];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Luxury Home Remodeling for Homeowners',
+  provider: { '@type': 'GeneralContractor', name: 'ConstruBay', telephone: '+14159689494' },
+  areaServed: 'Marin County',
+  description: 'Fixed-price luxury home remodeling for Marin County homeowners. CSLB #1106798.',
+}
 
 export default function ForHomeownersPage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Luxury Home Remodeling for Homeowners',
-    provider: {
-      '@type': 'GeneralContractor',
-      name: 'ConstruBay',
-      telephone: '+14159689494',
-      url: 'https://www.construbay.com',
-    },
-    areaServed: { '@type': 'County', name: 'Marin County' },
-    description: 'Fixed-price luxury home remodeling for Marin County homeowners. Kitchen, bath, full home, ADU. CSLB #1106798.',
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '140px' }}>
-        <div className="max-w-5xl mx-auto px-6">
+      <main style={{ background: '#000', color: '#fff', minHeight: '100vh' }}>
 
-          {/* Hero */}
-          <section style={{ paddingBottom: '80px', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '24px' }}>
-              For Marin County Homeowners
-            </p>
-            <h1 className={cormorant.className} style={{ fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: '300', color: '#ffffff', lineHeight: 1.05, marginBottom: '20px' }}>
-              Your Vision.<br />Our Execution.<br />No Surprises.
-            </h1>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 2, maxWidth: '580px', letterSpacing: '0.04em' }}>
-              You have lived with the outdated kitchen long enough. The bathroom that never quite matched the home you always imagined. The addition you have been putting off for three years because you did not want to deal with the chaos, the surprises, or the contractor who disappears after the deposit clears.
-            </p>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 2, maxWidth: '580px', marginTop: '20px', letterSpacing: '0.04em' }}>
-              ConstruBay is built differently. We work with a small number of homeowners at a time — because the level of attention each project deserves demands it.
-            </p>
-          </section>
+        {/* HERO */}
+        <section style={{ padding: '8rem 2rem 4rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <p style={{ color: '#cbb26a', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem' }}>For Marin County Homeowners</p>
+          <h1 style={{ fontFamily: 'Cormorant Garamond', fontWeight: 300, fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1rem', lineHeight: 1.1 }}>
+            For Mill Valley<br />Homeowners
+          </h1>
+          <p style={{ color: '#cbb26a', fontFamily: 'Cormorant Garamond', fontStyle: 'italic', fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', marginBottom: '1.5rem' }}>
+            Your Vision. Our Execution. No Surprises.
+          </p>
+          <p style={{ color: '#aaa', fontFamily: 'Montserrat', fontSize: '0.85rem', lineHeight: 1.8, maxWidth: '600px', marginBottom: '2rem' }}>
+            You have lived with the outdated kitchen long enough. You have imagined the primary suite. You have worried about the contractor who disappears mid-project. We built ConstruBay for homeowners who expect the same precision from their contractor that they demand from their architect.
+          </p>
+          <Link href="/request-a-bid" style={{ display: 'inline-block', background: '#cbb26a', color: '#000', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '1rem 2rem', textDecoration: 'none' }}>
+            Start Your Project
+          </Link>
+        </section>
 
-          {/* Three Principles */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '64px' }}>
-              What You Can Expect
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {principles.map((p, i) => (
-                <div key={p.num} style={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: '40px', padding: '48px 0', borderTop: i === 0 ? '1px solid rgba(203,178,106,0.15)' : '1px solid rgba(203,178,106,0.08)', borderBottom: i === principles.length - 1 ? '1px solid rgba(203,178,106,0.15)' : 'none' }}>
-                  <div>
-                    <p className={cormorant.className} style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(203,178,106,0.5)' }}>{p.num}</p>
-                  </div>
-                  <div>
-                    <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px' }}>{p.title}</h3>
-                    <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.6)', lineHeight: 1.9, letterSpacing: '0.04em' }}>{p.body}</p>
-                  </div>
+        {/* THREE PRINCIPLES */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>What You Can Expect</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+            {[
+              {
+                n: '01',
+                t: 'Clarity',
+                sub: 'One Point of Contact. Every Phase.',
+                b: 'From permit application to final walkthrough — one number, one person, one accountable team. Daily updates. No surprises.',
+              },
+              {
+                n: '02',
+                t: 'Certainty',
+                sub: 'Fixed-Price Contracts. Your Budget Is Your Budget.',
+                b: 'We have never issued an involuntary change order. Your total investment is locked from day one.',
+              },
+              {
+                n: '03',
+                t: 'Craftsmanship',
+                sub: 'Every Detail Reviewed Before We Call It Complete.',
+                b: 'Paulo personally reviews every finish before the final walkthrough. If it is not right we make it right.',
+              },
+            ].map((item, i) => (
+              <div key={item.n} style={{ display: 'grid', gridTemplateColumns: '3rem 1fr', gap: '2rem', padding: '2.5rem 0', borderTop: i === 0 ? '1px solid #222' : '1px solid #111' }}>
+                <p style={{ color: 'rgba(203,178,106,0.4)', fontFamily: 'Cormorant Garamond', fontStyle: 'italic', fontSize: '0.85rem', paddingTop: '0.25rem' }}>{item.n}</p>
+                <div>
+                  <p style={{ color: '#cbb26a', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>{item.t}</p>
+                  <p style={{ fontFamily: 'Cormorant Garamond', fontSize: '1.2rem', marginBottom: '0.75rem', color: '#fff' }}>{item.sub}</p>
+                  <p style={{ color: '#aaa', fontFamily: 'Montserrat', fontSize: '0.8rem', lineHeight: 1.7 }}>{item.b}</p>
                 </div>
-              ))}
-            </div>
-          </section>
+              </div>
+            ))}
+          </div>
+        </section>
 
-          {/* How It Works */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '16px' }}>
-              The Process
+        {/* TESTIMONIAL */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <div style={{ borderLeft: '2px solid #cbb26a', paddingLeft: '2rem' }}>
+            <p style={{ fontFamily: 'Cormorant Garamond', fontSize: 'clamp(1.2rem, 2vw, 1.6rem)', fontWeight: 300, lineHeight: 1.7, marginBottom: '1.5rem' }}>
+              &ldquo;ConstruBay handled every detail with precision. The process was seamless from permit to final walkthrough.&rdquo;
             </p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '56px' }}>
-              How It Works
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'rgba(203,178,106,0.12)' }}>
-              {steps.map((step) => (
-                <div key={step.num} style={{ backgroundColor: '#000000', padding: '32px 36px', display: 'grid', gridTemplateColumns: '56px 1fr', gap: '28px', alignItems: 'start' }}>
-                  <p className={cormorant.className} style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(203,178,106,0.5)', paddingTop: '2px' }}>{step.num}</p>
-                  <div>
-                    <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ffffff', marginBottom: '8px' }}>{step.title}</h3>
-                    <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, letterSpacing: '0.04em' }}>{step.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Testimonial */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <div style={{ borderLeft: '2px solid #cbb26a', paddingLeft: '40px', maxWidth: '700px' }}>
-              <p className={cormorant.className} style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: '300', color: '#ffffff', lineHeight: 1.7, marginBottom: '28px' }}>
-                &ldquo;Paulo managed our entire whole-home renovation in Mill Valley with complete transparency. We knew the budget, the timeline, and what was happening every single day. The finished home exceeded everything we imagined.&rdquo;
-              </p>
-              <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#cbb26a' }}>
-                Nick Bagatello — Marion Avenue, Mill Valley
-              </p>
-            </div>
-          </section>
-
-          {/* CTA */}
-          <section style={{ padding: '80px 0', textAlign: 'center' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '20px' }}>Begin Here</p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: '300', color: '#ffffff', marginBottom: '20px' }}>
-              Schedule a Free Site Visit
-            </h2>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 40px' }}>
-              Paulo visits your home, listens to your goals, and provides a complete fixed-price proposal within 5 business days.
+            <p style={{ color: '#cbb26a', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+              Nick Bagatello — Mill Valley
             </p>
-            <a href="/request-a-bid" className={montserrat.className} style={{ display: 'inline-block', backgroundColor: '#cbb26a', color: '#000000', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 56px', textDecoration: 'none', fontWeight: '400' }}>
-              Start Your Project
-            </a>
-          </section>
+          </div>
+        </section>
 
-        </div>
+        {/* CTA */}
+        <section style={{ padding: '4rem 2rem', textAlign: 'center', borderTop: '1px solid #1a1a1a' }}>
+          <h2 style={{ fontFamily: 'Cormorant Garamond', fontWeight: 300, fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '1rem' }}>
+            Schedule a Free Site Visit
+          </h2>
+          <p style={{ color: '#aaa', fontFamily: 'Montserrat', fontSize: '0.8rem', marginBottom: '2rem', maxWidth: '500px', margin: '0 auto 2rem' }}>
+            Paulo visits your home, listens to your goals, and delivers a fixed-price proposal within 5 business days.
+          </p>
+          <Link href="/request-a-bid" style={{ display: 'inline-block', background: '#cbb26a', color: '#000', fontFamily: 'Montserrat', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '1rem 2rem', textDecoration: 'none' }}>
+            Start Your Project
+          </Link>
+        </section>
+
       </main>
     </>
-  );
+  )
 }

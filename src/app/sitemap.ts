@@ -19,30 +19,20 @@ const staticPages: SitemapEntry[] = [
   { path: '/locations', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
 
-  // Existing money pages
+  // High-priority money pages
   { path: '/adu', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/marin-county-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/luxury-home-remodel-marin-county', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/adu-builder-marin-county', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/investments', priority: 0.9, changeFrequency: 'monthly' },
+
+  // Primary city pages
   { path: '/mill-valley-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/tiburon-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/san-rafael-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/sausalito-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
 
-  // NEW high-priority pages (build these first)
-  { path: '/marin-county-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/luxury-home-remodel-marin-county', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/adu-builder-marin-county', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/kitchen-remodel-mill-valley', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/bathroom-remodel-marin-county', priority: 0.9, changeFrequency: 'monthly' },
-
-  // Core service pages
-  { path: '/kitchen-remodeling', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/bathroom-remodeling', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/full-home-remodeling', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/home-additions', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/outdoor-living', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/luxury-home-remodeling', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/design-build', priority: 0.8, changeFrequency: 'monthly' },
-
-  // New city pages (ultra luxury first)
+  // Secondary city pages
   { path: '/ross-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/belvedere-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/kentfield-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
@@ -50,35 +40,21 @@ const staticPages: SitemapEntry[] = [
   { path: '/corte-madera-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/novato-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
 
-  // Service and county pages
-  { path: '/marin-county-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
+  // Service pages
   { path: '/kitchen-remodeling', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/bathroom-remodeling', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/ross-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/belvedere-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/full-home-remodeling', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/outdoor-living', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/design-build', priority: 0.8, changeFrequency: 'monthly' },
+
+  // Audience pages
+  { path: '/for-homeowners', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/for-architects', priority: 0.8, changeFrequency: 'monthly' },
 
   // Case study pages
   { path: '/projects/marion-avenue-mill-valley', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/projects/sycamore-sound-studio', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/projects/plymouth-whole-home-renovation', priority: 0.8, changeFrequency: 'monthly' },
-
-  // Audience and service pages
-  { path: '/investments', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/for-homeowners', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/for-architects', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/full-home-remodeling', priority: 0.8, changeFrequency: 'monthly' },
-
-  // Additional city pages
-  { path: '/kentfield-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/larkspur-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/corte-madera-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/novato-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
-
-  // High-priority topic pages
-  { path: '/luxury-home-remodel-marin-county', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/adu-builder-marin-county', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/outdoor-living', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/design-build', priority: 0.8, changeFrequency: 'monthly' },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
