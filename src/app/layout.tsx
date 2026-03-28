@@ -116,7 +116,34 @@ const jsonLdSchema = {
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen Remodeling"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permit Expediting"}}
         ]
-      }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "The Mathews" },
+          "reviewBody": "Quick to respond! They gave us a free estimate in a timely manner. Hired them for several projects on our home. They do great work, clean, friendly, fun to work with on a daily basis."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Lars & Mary Williams" },
+          "reviewBody": "Great place to work at with great people. Energetic with a great foundation for growth. Organized and focused to perform at a high level of expectation for their customers."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Chris Parks" },
+          "reviewBody": "The job was very fast paced and fun. I dealt with different aspects of their business and the team was incredibly professional throughout."
+        }
+      ]
     },
     {
       "@type": "WebSite",

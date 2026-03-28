@@ -67,6 +67,9 @@ export default function HomePage() {
           <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-none text-center w-full mx-auto`}>
             Built Without Compromise
           </h1>
+          <p style={{ display: 'none' }} aria-hidden="false">
+            Luxury General Contractor serving Marin County, Sonoma County and Napa County. CSLB #1106798. Mill Valley, Tiburon, San Rafael, Sausalito.
+          </p>
           <p className={`${montserrat.className} mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px', textAlign: 'center', width: '100%', display: 'block', color: '#cbb26a' }}>
             Marin, Sonoma &amp; Napa
           </p>
@@ -234,8 +237,73 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'How much does a home remodel cost in Marin County?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Home remodel costs in Marin County range from $150,000 for kitchen or bathroom updates to $1M+ for full home transformations. Contact ConstruBay at (415) 968-9494 for a free estimate. CSLB #1106798.' }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Is ConstruBay licensed to work in Marin County?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Yes. ConstruBay holds California Contractors State License #1106798, fully licensed and insured to work throughout Marin, Sonoma and Napa Counties.' }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do you build ADUs in Marin County?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Yes. ConstruBay specializes in fully permitted ADU construction across Marin County including Mill Valley, Tiburon, San Rafael and Sausalito. We handle the entire permit process.' }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What areas does ConstruBay serve?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'ConstruBay serves Marin County (Mill Valley, Tiburon, Sausalito, San Rafael, Belvedere, Ross, Kentfield), Sonoma County (Santa Rosa, Petaluma, Healdsburg) and Napa County (Napa, St. Helena).' }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How long does a kitchen remodel take in Marin County?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'A luxury kitchen remodel in Marin County typically takes 8-16 weeks from start to finish. ConstruBay uses AI-powered project management to keep timelines tight and clients informed.' }
+                },
+              ]
+            })
+          }}
+        />
+        <div className="max-w-4xl mx-auto px-6">
+          <p className={`${montserrat.className}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px', textAlign: 'center' }}>
+            FAQ
+          </p>
+          <h2 className={`${cormorant.className}`} style={{ fontSize: '40px', fontWeight: 300, color: '#ffffff', textAlign: 'center', marginBottom: '48px' }}>
+            Frequently Asked Questions
+          </h2>
+          {[
+            { q: 'How much does a home remodel cost in Marin County?', a: 'Home remodel costs in Marin County range from $150,000 for kitchen or bathroom updates to $1M+ for full home transformations. Every project is unique — contact us for a free estimate.' },
+            { q: 'Is ConstruBay licensed to work in Marin County?', a: 'Yes. ConstruBay holds California Contractors State License #1106798, fully licensed and insured throughout Marin, Sonoma and Napa Counties.' },
+            { q: 'Do you build ADUs in Marin County?', a: 'Yes. We specialize in fully permitted ADU construction across Marin County. We handle the entire permit process from application to final approval.' },
+            { q: 'What areas does ConstruBay serve?', a: 'We serve Marin County (Mill Valley, Tiburon, Sausalito, San Rafael, Belvedere, Ross, Kentfield), Sonoma County (Santa Rosa, Petaluma, Healdsburg) and Napa County.' },
+            { q: 'How long does a kitchen remodel take in Marin County?', a: 'A luxury kitchen remodel in Marin County typically takes 8-16 weeks. We use AI-powered project management to keep timelines tight and clients informed throughout.' },
+          ].map((faq, i) => (
+            <div key={i} style={{ borderBottom: '1px solid rgba(203,178,106,0.15)', padding: '28px 0' }}>
+              <h3 className={`${cormorant.className}`} style={{ fontSize: '22px', fontWeight: 300, color: '#ffffff', marginBottom: '10px' }}>{faq.q}</h3>
+              <p className={`${montserrat.className}`} style={{ fontSize: '12px', fontWeight: 300, color: 'rgba(255,255,255,0.5)', lineHeight: 1.8 }}>{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-brand-tan/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 pb-8" style={{ borderBottom: '1px solid rgba(203,178,106,0.1)', marginBottom: '24px' }}>
+          <p className={`${montserrat.className}`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', textAlign: 'center', lineHeight: 2 }}>
+            Serving: <a href="/mill-valley-general-contractor" style={{ color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>Mill Valley</a> · <a href="/tiburon-general-contractor" style={{ color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>Tiburon</a> · <a href="/san-rafael-general-contractor" style={{ color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>San Rafael</a> · <a href="/sausalito-general-contractor" style={{ color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>Sausalito</a> · Belvedere · Ross · Kentfield · Corte Madera · Larkspur · Novato · Santa Rosa · Petaluma · Napa · St. Helena · Healdsburg
+          </p>
+        </div>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className={`${montserrat.className} text-white/40 text-xs tracking-[0.15em] uppercase`}>
             &copy; {new Date().getFullYear()} ConstruBay &mdash; All rights reserved

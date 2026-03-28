@@ -64,6 +64,12 @@ export default function Header() {
               Services
             </Link>
             <Link
+              href="/locations"
+              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
+            >
+              Locations
+            </Link>
+            <Link
               href="/projects"
               className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
             >
@@ -111,6 +117,7 @@ export default function Header() {
             <nav className="flex flex-col gap-4">
               <Link href="/" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Home</Link>
               <Link href="/services" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Services</Link>
+              <Link href="/locations" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Locations</Link>
               <Link href="/projects" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Projects</Link>
               <Link href="/about" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>About</Link>
               <Link href="/blog" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Blog</Link>
