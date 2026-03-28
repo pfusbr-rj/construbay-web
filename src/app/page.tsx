@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import ProjectGrid from '@/components/projects/ProjectGrid';
@@ -53,6 +52,7 @@ export default function HomePage() {
         <div className="relative z-10 px-4 max-w-4xl mx-auto text-center w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
 
           <div style={{ marginBottom: '-20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/svg/logo%20vector-02.svg"
               alt="ConstruBay"
