@@ -50,6 +50,13 @@ const staticPages: SitemapEntry[] = [
   { path: '/corte-madera-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/novato-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
 
+  // Service and county pages
+  { path: '/marin-county-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/kitchen-remodeling', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/bathroom-remodeling', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/ross-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/belvedere-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+
   // Case study pages
   { path: '/projects/marion-avenue-mill-valley', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/projects/sycamore-sound-studio', priority: 0.8, changeFrequency: 'monthly' },
