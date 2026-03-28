@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -14,6 +13,7 @@ export default function Header() {
           {/* Logo + Phone */}
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/svg/logo%20vector-02.svg"
                 alt="ConstruBay"
