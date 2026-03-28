@@ -26,6 +26,8 @@ const staticPages: SitemapEntry[] = [
   { path: '/adu-builder-marin-county', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/investments', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/bathroom-remodel-marin-county', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/marin-county-kitchen-remodeling', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/mill-valley-adu-builder', priority: 0.9, changeFrequency: 'monthly' },
 
   // Primary city pages
   { path: '/mill-valley-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
@@ -51,6 +53,8 @@ const staticPages: SitemapEntry[] = [
   { path: '/home-additions-marin-county', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/marin-county-permit-expediting', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/sausalito-luxury-home-remodel', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/tiburon-luxury-home-remodel', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/ross-luxury-home-remodel', priority: 0.8, changeFrequency: 'monthly' },
 
   // Audience pages
   { path: '/for-homeowners', priority: 0.8, changeFrequency: 'monthly' },
