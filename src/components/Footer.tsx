@@ -85,7 +85,9 @@ export default function Footer() {
               <Link href="/services" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Services</Link>
               <Link href="/projects" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Projects</Link>
               <Link href="/about" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">About</Link>
-              <Link href="/request-a-bid" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Pricing</Link>
+              <Link href="/investments" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Investments</Link>
+              <Link href="/for-homeowners" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">For Homeowners</Link>
+              <Link href="/for-architects" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">For Architects</Link>
               <Link href="/request-a-bid" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Contact</Link>
             </nav>
 

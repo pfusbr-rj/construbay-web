@@ -61,6 +61,17 @@ const staticPages: SitemapEntry[] = [
   { path: '/projects/marion-avenue-mill-valley', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/projects/sycamore-sound-studio', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/projects/plymouth-whole-home-renovation', priority: 0.8, changeFrequency: 'monthly' },
+
+  // Audience and service pages
+  { path: '/investments', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/for-homeowners', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/for-architects', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/full-home-remodeling', priority: 0.8, changeFrequency: 'monthly' },
+
+  // Additional city pages
+  { path: '/kentfield-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/larkspur-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/corte-madera-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
