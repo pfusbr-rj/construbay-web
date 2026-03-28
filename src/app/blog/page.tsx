@@ -188,7 +188,7 @@ export default function BlogPage() {
           <div style={{ flexShrink: 0 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/team/paulo-fernandes-01.png"
+              src="/images/paulo/paulo-fernandes-01.png"
               alt="Paulo Fernandes, ConstruBay"
               style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', border: '1px solid rgba(203,178,106,0.3)' }}
             />

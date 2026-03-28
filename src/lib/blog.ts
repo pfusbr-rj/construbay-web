@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2024-11-15',
     category: 'Permits & Planning',
     tags: ['permits', 'Marin County', 'building permit', 'timeline', 'contractor tips'],
-    coverImage: '/images/hero/hero-bg-1.jpg',
+    coverImage: '/images/blog/permit-guide-hero.jpg',
     readTime: 7,
     content: `Getting a building permit in Marin County is one of the most common frustrations homeowners face when planning a remodel. Unlike some Bay Area counties where permits move on a predictable schedule, Marin's 11 cities and unincorporated areas each run their own building departments — meaning the experience in Mill Valley can be completely different from San Rafael.
 
@@ -62,7 +62,7 @@ If you're planning a project and want a realistic permit forecast before you com
     publishedAt: '2024-10-28',
     category: 'ADUs',
     tags: ['ADU', 'cost', 'Marin County', 'accessory dwelling unit', 'budget'],
-    coverImage: '/images/hero/hero-bg-1.jpg',
+    coverImage: '/images/blog/adu-cost-hero.jpg',
     readTime: 9,
     content: `The ADU market in Marin County has matured significantly since California's 2020 ADU reform laws. What was once a complex, expensive, unpredictable process has become more standardized — but costs remain significantly higher here than in most of California.
 
@@ -114,7 +114,7 @@ We specialize in ADU projects throughout Marin. Every project starts with a free
     publishedAt: '2024-09-20',
     category: 'Industry Trends',
     tags: ['AI', 'permits', 'technology', 'future of construction', 'Marin County'],
-    coverImage: '/images/hero/hero-bg-1.jpg',
+    coverImage: '/images/blog/ai-construction-hero.jpg',
     readTime: 6,
     content: `There's a quiet revolution happening in municipal building departments across California. Cities like San Jose and Sacramento have begun piloting AI-assisted plan review tools that can flag code compliance issues in minutes rather than weeks. The question for Marin homeowners: is this coming here, and should you care?
 
@@ -150,7 +150,7 @@ That's been the ConstruBay approach from day one: combine the best available too
     publishedAt: '2024-08-12',
     category: 'Kitchen & Bath',
     tags: ['kitchen remodel', 'Tiburon', 'Marin County', 'luxury remodel', 'cost guide'],
-    coverImage: '/images/hero/hero-bg-1.jpg',
+    coverImage: '/images/blog/kitchen-tiburon-hero.jpg',
     readTime: 8,
     content: `Tiburon kitchens are a different category of project. The views, the clientele, the expectation of finish quality — everything pushes toward the high end. After completing several kitchen renovations in Tiburon and neighboring Belvedere, here's what we've learned about what makes these projects succeed.
 
@@ -194,7 +194,7 @@ If you're planning a kitchen remodel in Tiburon or southern Marin, we'd love to 
     publishedAt: '2024-07-08',
     category: 'Homeowner Guides',
     tags: ['choosing a contractor', 'Marin County', 'general contractor', 'vetting', 'homeowner tips'],
-    coverImage: '/images/hero/hero-bg-1.jpg',
+    coverImage: '/images/blog/choose-contractor-hero.jpg',
     readTime: 10,
     content: `Marin County has a contractor problem. Not a shortage — there are plenty of people willing to take your money. The problem is finding one who will do what they said, when they said it, for what they quoted.
 
@@ -267,7 +267,7 @@ We're happy to answer any of these questions about our own company. That's the s
     publishedAt: '2024-06-01',
     category: 'Industry Trends',
     tags: ['Sonoma County', 'remodel trends', '2024', 'home renovation', 'wine country'],
-    coverImage: '/images/hero/hero-bg-1.jpg',
+    coverImage: '/images/blog/sonoma-remodel-hero.jpg',
     readTime: 7,
     content: `Sonoma County's remodeling market tells a story in two parts: the continued recovery from the 2017 and 2019 fires, and a broader renovation wave driven by homeowners who bought or stayed through the pandemic years and are now ready to invest in their spaces.
 

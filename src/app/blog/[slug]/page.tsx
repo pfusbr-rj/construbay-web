@@ -160,7 +160,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/team/paulo-fernandes-01.png"
+              src="/images/paulo/paulo-fernandes-01.png"
               alt={post.author}
               style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', border: '1px solid rgba(203,178,106,0.3)' }}
             />
