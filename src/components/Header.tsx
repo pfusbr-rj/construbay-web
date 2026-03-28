@@ -8,10 +8,10 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-brand-tan/20" style={{ backgroundColor: '#000000' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full pl-8 pr-6 lg:pl-12 lg:pr-8">
         <div className="flex items-center justify-between h-24 sm:h-32">
           {/* CSLB + Logo + Phone */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-8">
             <span className="hidden md:block" style={{
               color: 'rgba(203,178,106,0.5)',
               fontSize: '11px',
