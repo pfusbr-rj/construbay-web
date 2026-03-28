@@ -330,6 +330,18 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
               </div>
             )}
 
+            {step === 1 && (
+              <p className={montserrat.className} style={{
+                fontSize: '10px',
+                letterSpacing: '0.1em',
+                color: 'rgba(255,255,255,0.3)',
+                textAlign: 'center',
+                marginTop: '8px',
+              }}>
+                * All fields required to continue
+              </p>
+            )}
+
             {/* Navigation */}
             <div style={{ display: 'flex', justifyContent: step > 1 ? 'space-between' : 'flex-end', marginTop: '48px', gap: '16px' }}>
               {step > 1 && (
@@ -353,7 +365,12 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
               )}
               <button
                 onClick={() => step < 3 ? setStep(step + 1) : handleSubmit()}
-                disabled={isSubmitting || (step === 1 && (!formData.full_name || !formData.email || !formData.phone || !formData.project_address))}
+                disabled={isSubmitting || (step === 1 && (
+                  !formData.full_name?.trim() ||
+                  !formData.email?.trim() ||
+                  !formData.phone?.trim() ||
+                  !formData.project_address?.trim()
+                ))}
                 className={montserrat.className}
                 style={{
                   flex: step === 1 ? 1 : 'unset',
