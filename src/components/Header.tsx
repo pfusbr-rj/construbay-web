@@ -10,20 +10,20 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-brand-tan/20" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 sm:h-28">
+        <div className="flex items-center justify-between h-24 sm:h-32">
           {/* Logo + Phone */}
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center">
               <img
                 src="/images/svg/logo%20vector-02.svg"
                 alt="ConstruBay"
-                style={{ height: '90px', width: 'auto' }}
+                style={{ height: '110px', width: 'auto' }}
               />
             </Link>
             <a
               href="tel:4159689494"
               className="hover:opacity-70 transition-opacity"
-              style={{ color: '#cbb26a', fontSize: '20px', letterSpacing: '0.1em', fontWeight: '300' }}
+              style={{ color: '#cbb26a', fontSize: '24px', letterSpacing: '0.1em', fontWeight: '300' }}
             >
               (415) 968-9494
             </a>
