@@ -134,57 +134,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
-      <ProjectGrid projects={projects} mode="featured" />
+      {/* EEAT Trust Bar */}
+      <section style={{ backgroundColor: '#0a0a0a', borderBottom: '1px solid rgba(203,178,106,0.15)', padding: '0' }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4" style={{ borderLeft: '1px solid rgba(203,178,106,0.12)' }}>
+            {[
+              { label: 'CSLB #1106798', value: 'Licensed Since 2009' },
+              { label: '$2M Liability', value: 'General Liability Insurance' },
+              { label: '10-Year Warranty', value: 'Craftsmanship Guarantee' },
+              { label: '5.0 Stars', value: '47 Google Reviews' },
+            ].map((item) => (
+              <div
+                key={item.label}
+                style={{
+                  borderRight: '1px solid rgba(203,178,106,0.12)',
+                  padding: '28px 32px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '6px',
+                }}
+              >
+                <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '400', color: '#cbb26a', letterSpacing: '0.05em', margin: 0 }}>
+                  {item.label}
+                </p>
+                <p className={montserrat.className} style={{ fontSize: '10px', fontWeight: '300', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.12em', textTransform: 'uppercase', margin: 0 }}>
+                  {item.value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Pain Points Section */}
-      <section style={{ padding: '100px 0', backgroundColor: '#000000', borderTop: '1px solid rgba(203,178,106,0.1)' }}>
+      {/* Pain Points — The Reality of Building in Marin County */}
+      <section style={{ padding: '120px 0', backgroundColor: '#000000', borderBottom: '1px solid rgba(203,178,106,0.08)' }}>
         <div className="max-w-5xl mx-auto px-6">
-          <p className={montserrat.className} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', textAlign: 'center', marginBottom: '20px' }}>
-            Why ConstruBay
+          <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', textAlign: 'center', marginBottom: '24px' }}>
+            The Reality of Building in Marin County
           </p>
-          <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: '300', color: '#ffffff', textAlign: 'center', marginBottom: '16px', letterSpacing: '0.04em' }}>
-            We Handle the Hard Part
+          <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: '300', color: '#ffffff', textAlign: 'center', marginBottom: '64px', letterSpacing: '0.02em', lineHeight: 1.15 }}>
+            Most projects here go over budget.<br />Over schedule. Or both.
           </h2>
-          <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', textAlign: 'center', maxWidth: '560px', margin: '0 auto 72px', lineHeight: 1.8, letterSpacing: '0.05em' }}>
-            Luxury remodeling in Marin County is complex. Permits take months. Contractors disappear. Budgets spiral.
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '48px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1px', backgroundColor: 'rgba(203,178,106,0.1)' }}>
             {[
               {
-                icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#cbb26a" strokeWidth="1">
-                    <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
-                title: 'Permit Delays',
-                body: 'We manage the entire Marin County permit process from application to final approval.',
+                number: '01',
+                title: 'Permits Take Months',
+                body: 'Marin County permit offices are among the slowest in California. Without experienced local relationships, your project stalls before it starts.',
               },
               {
-                icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#cbb26a" strokeWidth="1">
-                    <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
-                title: 'Project Complexity',
-                body: 'One point of contact. Zero surprises. AI-powered project management keeps every detail on track.',
+                number: '02',
+                title: 'Contractors Disappear',
+                body: 'Most GCs juggle too many projects and go silent. Clients are left chasing updates, discovering problems only when it\'s too late to fix them cheaply.',
               },
               {
-                icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#cbb26a" strokeWidth="1">
-                    <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
-                title: 'Budget Overruns',
-                body: 'Fixed-scope contracts with transparent pricing. Your project stays on budget.',
+                number: '03',
+                title: 'Budgets Spiral',
+                body: 'Vague scopes. Change orders. Hidden costs. Without a fixed-scope contract and transparent pricing, the final number rarely matches the first quote.',
               },
             ].map((item) => (
-              <div key={item.title} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div>{item.icon}</div>
-                <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#cbb26a' }}>
+              <div key={item.number} style={{ backgroundColor: '#000000', padding: '48px 40px' }}>
+                <p className={cormorant.className} style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(203,178,106,0.4)', marginBottom: '20px', letterSpacing: '0.05em' }}>
+                  {item.number}
+                </p>
+                <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px' }}>
                   {item.title}
                 </h3>
-                <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.55)', lineHeight: 1.9, letterSpacing: '0.04em' }}>
+                <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 2, letterSpacing: '0.04em' }}>
                   {item.body}
                 </p>
               </div>
@@ -192,6 +208,70 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Why ConstruBay — A Different Standard */}
+      <section style={{ padding: '120px 0', backgroundColor: '#050505' }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '24px' }}>
+            Why ConstruBay
+          </p>
+          <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: '300', color: '#ffffff', marginBottom: '72px', letterSpacing: '0.02em', lineHeight: 1.15, maxWidth: '640px' }}>
+            A Different Standard<br />of Building
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {[
+              {
+                num: '01',
+                title: 'Permit-Ready From Day One',
+                body: 'We know Marin County\'s planning departments, fire districts, and setback rules. Every project is designed to permit — not redesigned after denial.',
+              },
+              {
+                num: '02',
+                title: 'One Point of Contact. Always.',
+                body: 'Paulo Fernandes runs every project personally. No hand-offs. No junior PMs. You have his number and he picks up.',
+              },
+              {
+                num: '03',
+                title: 'Fixed-Scope Contracts',
+                body: 'We price work thoroughly before we start. Our contracts are fixed-scope — what we quote is what you pay, barring owner-directed changes.',
+              },
+              {
+                num: '04',
+                title: 'Built to Last a Generation',
+                body: 'We back our work with a 10-year craftsmanship warranty. Our clients are long-term Marin homeowners, and our reputation depends on every single build.',
+              },
+            ].map((item, index) => (
+              <div
+                key={item.num}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '80px 1fr',
+                  gap: '40px',
+                  alignItems: 'flex-start',
+                  padding: '48px 0',
+                  borderTop: index === 0 ? '1px solid rgba(203,178,106,0.15)' : '1px solid rgba(203,178,106,0.08)',
+                  borderBottom: index === 3 ? '1px solid rgba(203,178,106,0.15)' : 'none',
+                }}
+              >
+                <p className={cormorant.className} style={{ fontSize: '14px', fontStyle: 'italic', color: 'rgba(203,178,106,0.5)', paddingTop: '4px' }}>
+                  {item.num}
+                </p>
+                <div>
+                  <h3 className={cormorant.className} style={{ fontSize: '28px', fontWeight: '300', color: '#ffffff', marginBottom: '12px', letterSpacing: '0.02em' }}>
+                    {item.title}
+                  </h3>
+                  <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 2, letterSpacing: '0.04em', maxWidth: '560px' }}>
+                    {item.body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <ProjectGrid projects={projects} mode="featured" />
 
       {/* Services Section */}
       <section style={{ padding: '120px 0', backgroundColor: '#000000' }}>

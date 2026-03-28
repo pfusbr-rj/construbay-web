@@ -49,27 +49,23 @@ export default function Header() {
             <Link href="/request-a-bid" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Contact</Link>
             <Link
               href="/request-a-bid"
-              className="group relative inline-flex items-center overflow-hidden"
+              className="hover:bg-transparent hover:text-[#cbb26a] transition-all duration-300"
               style={{
+                backgroundColor: '#cbb26a',
+                color: '#000000',
                 border: '1px solid #cbb26a',
-                color: '#cbb26a',
                 fontSize: '11px',
-                fontWeight: '300',
+                fontWeight: '400',
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
                 padding: '10px 24px',
                 textDecoration: 'none',
                 fontFamily: 'Montserrat, sans-serif',
                 whiteSpace: 'nowrap',
+                display: 'inline-block',
               }}
             >
-              <span
-                className="absolute inset-0 origin-left scale-x-0 group-hover:scale-x-100"
-                style={{ backgroundColor: '#cbb26a', transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)' }}
-              />
-              <span className="relative z-10 group-hover:text-black" style={{ transition: 'color 0.4s ease' }}>
-                Request a Bid
-              </span>
+              Start a Project
             </Link>
           </nav>
 
