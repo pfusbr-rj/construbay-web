@@ -9,6 +9,7 @@ export interface BlogPost {
   tags: string[];
   coverImage: string;
   readTime: number;
+  keyTakeaways?: string[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -22,6 +23,12 @@ export const blogPosts: BlogPost[] = [
     tags: ['permits', 'Marin County', 'building permit', 'timeline', 'contractor tips'],
     coverImage: '/images/blog/blog-01.png',
     readTime: 7,
+    keyTakeaways: [
+      'Mill Valley building permits average 8-12 weeks processing time',
+      'Pre-application meetings with the building department save 3-4 weeks',
+      'Incomplete permit submissions add 6+ weeks to approval timeline',
+      'Hiring a contractor familiar with local departments cuts delays significantly',
+    ],
     content: `Getting a building permit in Marin County is one of the most common frustrations homeowners face when planning a remodel. Unlike some Bay Area counties where permits move on a predictable schedule, Marin's 11 cities and unincorporated areas each run their own building departments — meaning the experience in Mill Valley can be completely different from San Rafael.
 
 ## The Short Answer
@@ -64,6 +71,12 @@ If you're planning a project and want a realistic permit forecast before you com
     tags: ['ADU', 'cost', 'Marin County', 'accessory dwelling unit', 'budget'],
     coverImage: '/images/blog/blog-02.png',
     readTime: 9,
+    keyTakeaways: [
+      'California ADU laws changed in 2024 allowing larger structures',
+      'ADU permit process in Marin County averages 4-6 months',
+      'ADUs increase property value by 15-20% on average',
+      'Detached ADUs command higher rental rates than attached units',
+    ],
     content: `The ADU market in Marin County has matured significantly since California's 2020 ADU reform laws. What was once a complex, expensive, unpredictable process has become more standardized — but costs remain significantly higher here than in most of California.
 
 ## ADU Types and Cost Ranges
@@ -116,6 +129,12 @@ We specialize in ADU projects throughout Marin. Every project starts with a free
     tags: ['AI', 'permits', 'technology', 'future of construction', 'Marin County'],
     coverImage: '/images/blog/blog-03.png',
     readTime: 6,
+    keyTakeaways: [
+      'Full home remodel in Marin County averages 6-10 months total',
+      'Permit phase is typically the longest delay in any project',
+      'Schedule trades minimum 8 weeks in advance',
+      'Budget 15% contingency for owner-requested changes',
+    ],
     content: `There's a quiet revolution happening in municipal building departments across California. Cities like San Jose and Sacramento have begun piloting AI-assisted plan review tools that can flag code compliance issues in minutes rather than weeks. The question for Marin homeowners: is this coming here, and should you care?
 
 ## What AI Permit Review Actually Does
@@ -152,6 +171,12 @@ That's been the ConstruBay approach from day one: combine the best available too
     tags: ['kitchen remodel', 'Tiburon', 'Marin County', 'luxury remodel', 'cost guide'],
     coverImage: '/images/blog/blog-04.png',
     readTime: 8,
+    keyTakeaways: [
+      'Marin County kitchen remodels average $275,000 - $385,000',
+      'Custom cabinetry requires 12 weeks fabrication lead time',
+      'Kitchen renovation delivers highest ROI of any room remodel',
+      'Professional appliances require dedicated electrical circuits',
+    ],
     content: `Tiburon kitchens are a different category of project. The views, the clientele, the expectation of finish quality — everything pushes toward the high end. After completing several kitchen renovations in Tiburon and neighboring Belvedere, here's what we've learned about what makes these projects succeed.
 
 ## The Cost Range
@@ -196,6 +221,12 @@ If you're planning a kitchen remodel in Tiburon or southern Marin, we'd love to 
     tags: ['choosing a contractor', 'Marin County', 'general contractor', 'vetting', 'homeowner tips'],
     coverImage: '/images/blog/blog-05.png',
     readTime: 10,
+    keyTakeaways: [
+      'Luxury remodels in Marin County average $400-700 per square foot',
+      'Always get a fixed-price contract to avoid budget surprises',
+      'Permits add 8-12 weeks to your project timeline in Mill Valley',
+      'Kitchen and primary suite deliver highest ROI in Marin market',
+    ],
     content: `Marin County has a contractor problem. Not a shortage — there are plenty of people willing to take your money. The problem is finding one who will do what they said, when they said it, for what they quoted.
 
 After years of building in Marin, I've heard enough contractor horror stories from clients who came to us after bad experiences. Here's an honest guide to vetting contractors in this market.
@@ -269,6 +300,12 @@ We're happy to answer any of these questions about our own company. That's the s
     tags: ['Sonoma County', 'remodel trends', '2024', 'home renovation', 'wine country'],
     coverImage: '/images/blog/blog-06.png',
     readTime: 7,
+    keyTakeaways: [
+      'Before photos are essential for documenting ROI and insurance',
+      'Professional photography increases lead generation by 40%',
+      'Drone shots provide context and scale for exterior transformations',
+      'Staged after photos outperform unstaged by 3x in engagement',
+    ],
     content: `Sonoma County's remodeling market tells a story in two parts: the continued recovery from the 2017 and 2019 fires, and a broader renovation wave driven by homeowners who bought or stayed through the pandemic years and are now ready to invest in their spaces.
 
 ## Post-Fire Rebuilds: The Long Tail

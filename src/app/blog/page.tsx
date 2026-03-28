@@ -52,6 +52,46 @@ export default function BlogPage() {
           </p>
         </div>
 
+        {/* Lead Magnet */}
+        <div style={{
+          border: '1px solid #cbb26a',
+          padding: '40px 48px',
+          backgroundColor: '#000000',
+          marginBottom: '80px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          maxWidth: '640px',
+        }}>
+          <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a' }}>
+            Free Download
+          </p>
+          <h2 className={cormorant.className} style={{ fontSize: '30px', fontWeight: '300', color: '#ffffff', lineHeight: 1.2 }}>
+            The Marin County Remodel Guide
+          </h2>
+          <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, letterSpacing: '0.04em', marginBottom: '8px' }}>
+            Download our free guide to permits, costs and contractor selection in Marin County. Based on completed local projects.
+          </p>
+          <a
+            href="/request-a-bid"
+            className={montserrat.className}
+            style={{
+              display: 'inline-block',
+              backgroundColor: '#cbb26a',
+              color: '#000000',
+              fontSize: '11px',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              padding: '14px 32px',
+              textDecoration: 'none',
+              fontWeight: '400',
+              alignSelf: 'flex-start',
+            }}
+          >
+            Download Free
+          </a>
+        </div>
+
         {/* Posts Grid */}
         <div style={{
           display: 'grid',

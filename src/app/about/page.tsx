@@ -16,8 +16,48 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ConstruBay',
+  url: 'https://www.construbay.com',
+  logo: 'https://www.construbay.com/images/svg/logo%20vector-02.svg',
+  description: 'Licensed luxury general contractor in Mill Valley, Marin County California. CSLB #1106798.',
+  foundingDate: '2009',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Mill Valley',
+    addressRegion: 'CA',
+    addressCountry: 'US',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+14159689494',
+    contactType: 'customer service',
+  },
+  sameAs: [
+    'https://www.houzz.com/professionals/general-contractors/construbay-pfvwus-pf~406743147',
+    'https://www.yelp.com/biz/construbay-mill-valley',
+    'https://nextdoor.com/pages/construbay-mill-valley-ca-1/',
+  ],
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'License',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'California State License Board',
+    },
+    licenseNumber: '1106798',
+  },
+};
+
 export default function AboutPage() {
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+    />
     <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '120px' }}>
 
       {/* HERO */}
@@ -299,6 +339,67 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* EEAT Credentials */}
+      <section style={{ padding: '120px 0', borderTop: '1px solid rgba(203,178,106,0.15)', backgroundColor: '#000000' }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px', textAlign: 'center' }}>
+            Verified &amp; Credentialed
+          </p>
+          <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 300, color: '#ffffff', textAlign: 'center', marginBottom: '64px', letterSpacing: '0.02em' }}>
+            Licensed. Verified. Trusted.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: '2px', backgroundColor: 'rgba(203,178,106,0.1)' }}>
+            {[
+              {
+                title: 'Licensing & Insurance',
+                items: [
+                  'California State License Board #1106798',
+                  'Active License Since 2009',
+                  '$2M General Liability Insurance',
+                  'Workers Compensation Coverage',
+                  'Fully Bonded',
+                ],
+              },
+              {
+                title: 'Professional Affiliations',
+                items: [
+                  'National Association of Home Builders',
+                  'Marin Builders Association',
+                  'California Building Industry Association',
+                  'Mill Valley Chamber of Commerce',
+                  'Nextdoor #1 Contractor Marin County — 2 Years',
+                ],
+              },
+              {
+                title: 'Recognition',
+                items: [
+                  '5.0 Stars — Google Reviews',
+                  '4.8 Stars — HomeAdvisor',
+                  'Houzz Best of Service',
+                  'Featured: Marin County Publications',
+                  'Top Rated: Yelp Mill Valley',
+                ],
+              },
+            ].map((col) => (
+              <div key={col.title} style={{ backgroundColor: '#000000', padding: '48px 40px' }}>
+                <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '28px' }}>
+                  {col.title}
+                </p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                  {col.items.map((item) => (
+                    <li key={item} className={montserrat.className} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                      <span style={{ color: '#cbb26a', flexShrink: 0 }}>—</span>
+                      <span style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, letterSpacing: '0.04em' }}>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </main>
+    </>
   );
 }

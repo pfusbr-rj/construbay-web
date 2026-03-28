@@ -309,7 +309,7 @@ export default function MillValleyPage() {
               color: '#cbb26a',
               marginBottom: '20px',
             }}>
-              Start Your Project
+              Ready to Start Your Project?
             </p>
             <h2 className={cormorant.className} style={{
               fontSize: 'clamp(32px, 4vw, 52px)',
@@ -317,7 +317,7 @@ export default function MillValleyPage() {
               color: '#ffffff',
               marginBottom: '20px',
             }}>
-              Ready to Build in {city.name}?
+              Schedule a Free Site Visit
             </h2>
             <p className={montserrat.className} style={{
               fontSize: '13px',
@@ -325,43 +325,28 @@ export default function MillValleyPage() {
               color: 'rgba(255,255,255,0.5)',
               marginBottom: '40px',
               lineHeight: 1.8,
+              maxWidth: '520px',
+              margin: '0 auto 40px',
             }}>
-              Free consultations for qualified projects. Call us or use the inquiry form.
+              Schedule a free site visit with Paulo. We review your space, understand your goals and provide a fixed-price proposal within 5 business days.
             </p>
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a
-                href="tel:4159689494"
-                className={montserrat.className}
-                style={{
-                  border: '1px solid #cbb26a',
-                  color: '#cbb26a',
-                  fontSize: '11px',
-                  letterSpacing: '0.25em',
-                  textTransform: 'uppercase',
-                  padding: '16px 48px',
-                  textDecoration: 'none',
-                  display: 'inline-block',
-                }}
-              >
-                (415) 968-9494
-              </a>
-              <a
-                href="/"
-                className={montserrat.className}
-                style={{
-                  border: '1px solid rgba(255,255,255,0.2)',
-                  color: 'rgba(255,255,255,0.6)',
-                  fontSize: '11px',
-                  letterSpacing: '0.25em',
-                  textTransform: 'uppercase',
-                  padding: '16px 48px',
-                  textDecoration: 'none',
-                  display: 'inline-block',
-                }}
-              >
-                Request a Bid
-              </a>
-            </div>
+            <a
+              href="/request-a-bid"
+              className={montserrat.className}
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#cbb26a',
+                color: '#000000',
+                fontSize: '11px',
+                letterSpacing: '0.25em',
+                textTransform: 'uppercase',
+                padding: '18px 56px',
+                textDecoration: 'none',
+                fontWeight: '400',
+              }}
+            >
+              Schedule a Site Visit
+            </a>
           </section>
         </div>
       </main>

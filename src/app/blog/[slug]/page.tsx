@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { generateBlogMetadata } from '@/lib/seo';
+import KeyTakeaways from '@/components/KeyTakeaways';
 import type { Metadata } from 'next';
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
@@ -39,7 +40,6 @@ function renderContent(content: string) {
     } else if (line.trim() === '') {
       elements.push(<div key={key++} style={{ height: '16px' }} />);
     } else {
-      // Process bold text
       const parts = line.split(/(\*\*[^*]+\*\*)/g);
       const rendered = parts.map((part, i) => {
         if (part.startsWith('**') && part.endsWith('**')) {
@@ -70,28 +70,30 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
-  const jsonLd = {
+  const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    '@type': 'Article',
     headline: post.title,
     description: post.excerpt,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
     author: {
       '@type': 'Person',
-      name: post.author,
-      url: 'https://construbay.com/about',
+      name: 'Paulo Fernandes',
+      jobTitle: 'Licensed General Contractor',
+      description: 'CSLB #1106798. Founder of ConstruBay and PlanPass.ai. 15+ years luxury residential construction in Marin County.',
+      url: 'https://www.construbay.com/about',
     },
     publisher: {
       '@type': 'Organization',
       name: 'ConstruBay',
-      url: 'https://construbay.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://construbay.com/images/svg/logo%20vector-02.svg',
+        url: 'https://www.construbay.com/images/svg/logo%20vector-02.svg',
       },
     },
-    datePublished: post.publishedAt,
-    image: `https://construbay.com${post.coverImage}`,
-    url: `https://construbay.com/blog/${post.slug}`,
+    image: `https://www.construbay.com${post.coverImage}`,
+    url: `https://www.construbay.com/blog/${post.slug}`,
     keywords: post.tags.join(', '),
   };
 
@@ -99,7 +101,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
       <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '140px' }}>
@@ -125,7 +127,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             padding: '48px',
             maxWidth: '800px',
           }}>
-            {/* Category */}
             <p className={montserrat.className} style={{
               fontSize: '10px',
               letterSpacing: '0.3em',
@@ -154,7 +155,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             display: 'flex',
             alignItems: 'center',
             gap: '20px',
-            marginBottom: '56px',
+            marginBottom: '40px',
             paddingBottom: '32px',
             borderBottom: '1px solid rgba(203,178,106,0.15)',
           }}>
@@ -179,6 +180,24 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               </div>
             </div>
           </div>
+
+          {/* Author box */}
+          <div style={{
+            borderLeft: '3px solid #cbb26a',
+            background: '#0a0a0a',
+            padding: '1.5rem',
+            marginBottom: '2rem',
+          }}>
+            <p style={{ color: '#cbb26a', fontFamily: 'Montserrat, sans-serif', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Written by</p>
+            <p style={{ color: '#ffffff', fontFamily: 'Cormorant Garamond, serif', fontSize: '1.3rem', marginBottom: '0.25rem' }}>Paulo Fernandes</p>
+            <p style={{ color: '#cbb26a', fontFamily: 'Montserrat, sans-serif', fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Licensed General Contractor — CSLB #1106798</p>
+            <p style={{ color: '#aaaaaa', fontFamily: 'Montserrat, sans-serif', fontSize: '0.75rem', lineHeight: '1.6' }}>Founder of ConstruBay and PlanPass.ai. 15+ years of luxury residential construction experience in Marin County, California.</p>
+          </div>
+
+          {/* Key Takeaways */}
+          {post.keyTakeaways && post.keyTakeaways.length > 0 && (
+            <KeyTakeaways items={post.keyTakeaways} />
+          )}
 
           {/* Article body */}
           <article>
@@ -206,9 +225,63 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             ))}
           </div>
 
+          {/* Lead Magnet */}
+          <div style={{
+            marginTop: '64px',
+            border: '1px solid #cbb26a',
+            padding: '40px',
+            backgroundColor: '#000000',
+          }}>
+            <p className={montserrat.className} style={{
+              fontSize: '10px',
+              letterSpacing: '0.3em',
+              textTransform: 'uppercase',
+              color: '#cbb26a',
+              marginBottom: '12px',
+            }}>
+              Free Download
+            </p>
+            <h3 className={cormorant.className} style={{
+              fontSize: '28px',
+              fontWeight: '300',
+              color: '#ffffff',
+              marginBottom: '12px',
+              lineHeight: 1.2,
+            }}>
+              The Marin County Remodel Guide
+            </h3>
+            <p className={montserrat.className} style={{
+              fontSize: '12px',
+              fontWeight: '300',
+              color: 'rgba(255,255,255,0.5)',
+              marginBottom: '24px',
+              lineHeight: 1.8,
+              letterSpacing: '0.04em',
+            }}>
+              Download our free guide to permits, costs and contractor selection in Marin County. Based on completed local projects.
+            </p>
+            <a
+              href="/request-a-bid"
+              className={montserrat.className}
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#cbb26a',
+                color: '#000000',
+                fontSize: '11px',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                padding: '14px 32px',
+                textDecoration: 'none',
+                fontWeight: '400',
+              }}
+            >
+              Download Free
+            </a>
+          </div>
+
           {/* CTA */}
           <div style={{
-            marginTop: '80px',
+            marginTop: '64px',
             padding: '48px',
             border: '1px solid rgba(203,178,106,0.2)',
             textAlign: 'center',
