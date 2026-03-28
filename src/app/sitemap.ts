@@ -72,6 +72,13 @@ const staticPages: SitemapEntry[] = [
   { path: '/kentfield-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/larkspur-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/corte-madera-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/novato-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+
+  // High-priority topic pages
+  { path: '/luxury-home-remodel-marin-county', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/adu-builder-marin-county', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/outdoor-living', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/design-build', priority: 0.8, changeFrequency: 'monthly' },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
