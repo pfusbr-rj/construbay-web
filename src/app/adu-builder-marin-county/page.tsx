@@ -1,227 +1,155 @@
-import { Cormorant_Garamond, Montserrat } from 'next/font/google';
-import type { Metadata } from 'next';
-
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'ADU Builder Marin County | Accessory Dwelling Unit Construction | ConstruBay',
   description: 'Licensed ADU builder in Marin County CA. Fully permitted accessory dwelling units in Mill Valley, Tiburon, San Rafael. $280k-$600k. CSLB #1106798.',
   alternates: { canonical: 'https://www.construbay.com/adu-builder-marin-county' },
-};
+}
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': ['LocalBusiness', 'GeneralContractor'],
+      '@type': 'LocalBusiness',
       name: 'ConstruBay',
       description: 'Licensed ADU builder in Marin County CA. Detached ADUs, garage conversions, Junior ADUs. CSLB #1106798.',
       url: 'https://www.construbay.com/adu-builder-marin-county',
       telephone: '+14159689494',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Mill Valley',
-        addressRegion: 'CA',
-        postalCode: '94941',
-        addressCountry: 'US',
-      },
       areaServed: 'Marin County',
-      priceRange: '$$$',
     },
     {
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How much does an ADU cost in Marin County?',
-          acceptedAnswer: { '@type': 'Answer', text: 'ADUs in Marin County range from $80,000 for a Junior ADU to $600,000+ for a large detached unit. All ConstruBay ADU quotes include design, permits, construction and our 10-year warranty.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does ADU permitting take in Mill Valley?',
-          acceptedAnswer: { '@type': 'Answer', text: 'ADU permits in Mill Valley average 4–6 months. We have established relationships with the Mill Valley building department that help expedite the process.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I rent out my ADU in Marin County?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most Marin County jurisdictions allow ADU rentals. Average rental rates in Mill Valley and Tiburon range from $3,000–$5,000 per month depending on size and location.' },
-        },
+        { '@type': 'Question', name: 'How much does an ADU cost in Marin County?', acceptedAnswer: { '@type': 'Answer', text: 'ADUs in Marin County range from $80,000 for a Junior ADU to $600,000+ for a large detached unit. All quotes include design, permits, construction and our 10-year warranty.' } },
+        { '@type': 'Question', name: 'How long does ADU permitting take in Mill Valley?', acceptedAnswer: { '@type': 'Answer', text: 'ADU permits in Mill Valley average 4–6 months. We have established relationships with the Mill Valley building department that help expedite the process.' } },
+        { '@type': 'Question', name: 'Can I rent out my ADU in Marin County?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most Marin County jurisdictions allow ADU rentals. Average rental rates range from $3,000–$5,000 per month depending on size and location.' } },
       ],
     },
   ],
-};
+}
 
-const types = [
-  { num: '01', title: 'Detached ADU', body: 'A separate structure on your property. Maximum privacy and rental value. Up to 1,200 sqft in most Marin jurisdictions. Requires its own foundation, utilities and address.' },
-  { num: '02', title: 'Attached ADU', body: 'An addition to your existing home. Cost-effective and ideal for multigenerational living. Shares a wall with the main home while maintaining a separate entrance.' },
-  { num: '03', title: 'Garage Conversion', body: 'Convert an existing garage into a fully permitted living space. Often the fastest permit path in Marin County — the structure already exists, reducing both cost and timeline.' },
-  { num: '04', title: 'Junior ADU', body: 'Up to 500 sqft within your existing home footprint. Minimal permit requirements under California law. Ideal for creating rental income with lower upfront investment.' },
-];
+const CG = 'Cormorant Garamond'
+const MS = 'Montserrat'
 
 const table = [
   ['Standard ADU  up to 800 sq ft', '$280,000 – $420,000', '4–6 months'],
   ['Large ADU  800–1,200 sq ft', '$420,000 – $600,000', '6–8 months'],
   ['Garage Conversion', '$150,000 – $280,000', '3–5 months'],
   ['Junior ADU', '$80,000 – $150,000', '2–4 months'],
-];
-
-const facts = [
-  'California law now allows ADUs on most residential properties',
-  'Marin County permits ADUs up to 1,200 sqft detached',
-  'ADUs increase property value by 15–20% on average',
-  'Rental income from an ADU averages $3,000–$5,000/month in Marin',
-  'Permit process averages 4–6 months in Mill Valley',
-  'No owner-occupancy requirement for most Marin ADUs through 2026',
-];
-
-const steps = [
-  { num: '01', title: 'Site Evaluation', body: 'We visit your property, assess ADU feasibility, and review setbacks, lot coverage, and utility connections.' },
-  { num: '02', title: 'Design & Fixed-Price Proposal', body: 'Architectural drawings and a complete fixed-price proposal within 5 business days. No surprises.' },
-  { num: '03', title: 'Permit Submission', body: 'We prepare and submit all permit applications. We manage the review process and respond to any plan check comments.' },
-  { num: '04', title: 'Construction', body: 'Construction begins on the agreed date. Daily photo updates. Paulo personally on-site for every key milestone.' },
-  { num: '05', title: 'Final Inspection & Handover', body: 'We coordinate final building inspection, obtain your certificate of occupancy, and walk through every detail at completion.' },
-];
+]
 
 const faqs = [
-  { q: 'How much does an ADU cost in Marin County?', a: 'ADUs in Marin County range from $80,000 for a Junior ADU to $600,000+ for a large detached unit. All ConstruBay ADU quotes include design, permits, construction and our 10-year warranty.' },
+  { q: 'How much does an ADU cost in Marin County?', a: 'ADUs in Marin County range from $80,000 for a Junior ADU to $600,000+ for a large detached unit. All quotes include design, permits, construction and our 10-year warranty.' },
   { q: 'How long does ADU permitting take in Mill Valley?', a: 'ADU permits in Mill Valley average 4–6 months. We have established relationships with the Mill Valley building department that help expedite the process.' },
-  { q: 'Can I rent out my ADU in Marin County?', a: 'Yes. Most Marin County jurisdictions allow ADU rentals. Average rental rates in Mill Valley and Tiburon range from $3,000–$5,000 per month depending on size and location.' },
-];
+  { q: 'Can I rent out my ADU in Marin County?', a: 'Yes. Most Marin County jurisdictions allow ADU rentals. Average rental rates range from $3,000–$5,000 per month depending on size and location.' },
+]
 
 export default function AduBuilderMarinCountyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '140px' }}>
-        <div className="max-w-5xl mx-auto px-6">
+      <main style={{ background: '#000', color: '#fff', minHeight: '100vh' }}>
 
-          {/* Hero */}
-          <section style={{ paddingBottom: '80px', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '24px' }}>
-              ADU Construction · Marin County
-            </p>
-            <h1 className={cormorant.className} style={{ fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: '300', color: '#ffffff', lineHeight: 1.05, marginBottom: '16px' }}>
-              ADU Builder —<br />Marin County
-            </h1>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: '#cbb26a', letterSpacing: '0.15em', marginBottom: '36px' }}>
-              Fully Permitted Accessory Dwelling Units Across Marin County
-            </p>
-            <p className={cormorant.className} style={{ fontSize: 'clamp(18px, 2.2vw, 24px)', fontWeight: '300', color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, maxWidth: '700px' }}>
-              California&apos;s ADU laws have changed dramatically. Marin County homeowners can now build larger, more valuable accessory dwelling units than ever before. ConstruBay manages the entire process — design, permits, construction — delivering a fully permitted ADU on budget and on schedule.
-            </p>
-          </section>
+        {/* HERO */}
+        <section style={{ padding: '8rem 2rem 4rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem' }}>ADU Construction · Marin County</p>
+          <h1 style={{ fontFamily: CG, fontWeight: 300, fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, marginBottom: '1rem' }}>
+            ADU Builder —<br />Marin County
+          </h1>
+          <p style={{ color: '#cbb26a', fontFamily: CG, fontStyle: 'italic', fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', marginBottom: '1.5rem' }}>
+            Fully Permitted Accessory Dwelling Units Across Marin County
+          </p>
+          <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.85rem', lineHeight: 1.8, maxWidth: '650px', marginBottom: '2rem' }}>
+            California&apos;s ADU laws have changed dramatically. Marin County homeowners can now build larger, more valuable accessory dwelling units than ever before. ConstruBay manages the entire process — design, permits, construction — delivering a fully permitted ADU on budget and on schedule.
+          </p>
+          <Link href="/request-a-bid" style={{ display: 'inline-block', background: '#cbb26a', color: '#000', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '1rem 2rem', textDecoration: 'none' }}>
+            Start Your ADU Project
+          </Link>
+        </section>
 
-          {/* ADU Types */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '16px' }}>
-              Options
-            </p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '64px' }}>
-              ADU Types We Build
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {types.map((t, i) => (
-                <div key={t.num} style={{ display: 'grid', gridTemplateColumns: '72px 1fr', gap: '40px', padding: '48px 0', borderTop: i === 0 ? '1px solid rgba(203,178,106,0.15)' : '1px solid rgba(203,178,106,0.08)', borderBottom: i === types.length - 1 ? '1px solid rgba(203,178,106,0.15)' : 'none' }}>
-                  <p className={cormorant.className} style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(203,178,106,0.5)' }}>{t.num}</p>
-                  <div>
-                    <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px' }}>{t.title}</h3>
-                    <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.6)', lineHeight: 1.9, letterSpacing: '0.04em' }}>{t.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Investment Table */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '16px' }}>
-              2026 Pricing
-            </p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '40px' }}>
-              ADU Investment in Marin County
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'rgba(203,178,106,0.12)' }}>
-              <div className="grid grid-cols-3" style={{ backgroundColor: '#0a0a0a', padding: '14px 24px' }}>
-                {['Scope', 'Investment Range', 'Timeline'].map(h => (
-                  <span key={h} className={montserrat.className} style={{ fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.55)' }}>{h}</span>
-                ))}
-              </div>
-              {table.map((row, i) => (
-                <div key={i} className="grid grid-cols-3" style={{ backgroundColor: i % 2 === 0 ? '#000000' : '#050505', padding: '22px 24px', alignItems: 'center' }}>
-                  <span className={cormorant.className} style={{ fontSize: '20px', fontWeight: '300', color: '#ffffff' }}>{row[0]}</span>
-                  <span className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: '#cbb26a' }}>{row[1]}</span>
-                  <span className={montserrat.className} style={{ fontSize: '11px', fontWeight: '300', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.05em' }}>{row[2]}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Marin ADU Facts */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '48px' }}>
-              Marin County ADU Facts
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '0' }}>
-              {facts.map((fact, i) => (
-                <div key={i} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start', padding: '16px 0', borderBottom: '1px solid rgba(203,178,106,0.08)' }}>
-                  <span style={{ color: '#cbb26a', flexShrink: 0, fontSize: '14px', lineHeight: 1.5 }}>—</span>
-                  <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, letterSpacing: '0.04em' }}>{fact}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Process */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '16px' }}>
-              How It Works
-            </p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '48px' }}>
-              The ADU Build Process
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'rgba(203,178,106,0.12)' }}>
-              {steps.map((step) => (
-                <div key={step.num} style={{ backgroundColor: '#000000', padding: '32px 36px', display: 'grid', gridTemplateColumns: '56px 1fr', gap: '28px', alignItems: 'start' }}>
-                  <p className={cormorant.className} style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(203,178,106,0.5)', paddingTop: '2px' }}>{step.num}</p>
-                  <div>
-                    <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ffffff', marginBottom: '8px' }}>{step.title}</h3>
-                    <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, letterSpacing: '0.04em' }}>{step.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(28px, 3vw, 42px)', fontWeight: '300', color: '#ffffff', marginBottom: '48px' }}>
-              Frequently Asked Questions
-            </h2>
-            {faqs.map((faq, i) => (
-              <div key={i} style={{ borderBottom: '1px solid rgba(203,178,106,0.15)', padding: '32px 0' }}>
-                <h3 className={montserrat.className} style={{ fontSize: '13px', fontWeight: '400', color: '#ffffff', letterSpacing: '0.05em', marginBottom: '12px' }}>{faq.q}</h3>
-                <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.55)', lineHeight: 1.9 }}>{faq.a}</p>
+        {/* ADU TYPES */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>Options</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2rem' }}>
+            {[
+              { n: '01', t: 'Detached ADU', b: 'A separate structure on your property. Maximum privacy and rental value. Up to 1,200 sqft in most Marin jurisdictions.' },
+              { n: '02', t: 'Attached ADU', b: 'An addition to your existing home. Cost-effective and ideal for multigenerational living.' },
+              { n: '03', t: 'Garage Conversion', b: 'Convert an existing garage into a fully permitted living space. Often the fastest permit path in Marin County.' },
+              { n: '04', t: 'Junior ADU', b: 'Up to 500 sqft within your existing home footprint. Minimal permit requirements under California law.' },
+            ].map((item) => (
+              <div key={item.n} style={{ borderTop: '1px solid #333', paddingTop: '1.5rem' }}>
+                <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.65rem', letterSpacing: '0.15em', marginBottom: '0.5rem' }}>{item.n}</p>
+                <p style={{ fontFamily: MS, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>{item.t}</p>
+                <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', lineHeight: 1.7 }}>{item.b}</p>
               </div>
             ))}
-          </section>
+          </div>
+        </section>
 
-          {/* CTA */}
-          <section style={{ padding: '80px 0', textAlign: 'center' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '20px' }}>Ready to Build</p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: '300', color: '#ffffff', marginBottom: '20px' }}>
-              Start Your ADU Project
-            </h2>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 40px' }}>
-              Schedule a free site visit with Paulo. We assess your property&apos;s ADU potential and provide a complete fixed-price proposal within 5 business days.
-            </p>
-            <a href="/request-a-bid" className={montserrat.className} style={{ display: 'inline-block', backgroundColor: '#cbb26a', color: '#000000', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 56px', textDecoration: 'none', fontWeight: '400' }}>
-              Start Your ADU Project
-            </a>
-          </section>
+        {/* INVESTMENT TABLE */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>2026 Pricing</p>
+          <div style={{ border: '1px solid #1a1a1a' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', background: '#0a0a0a', padding: '0.75rem 1.25rem', gap: '1rem' }}>
+              {['Scope', 'Investment Range', 'Timeline'].map((h) => (
+                <span key={h} style={{ fontFamily: MS, fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)' }}>{h}</span>
+              ))}
+            </div>
+            {table.map((row, i) => (
+              <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '1.1rem 1.25rem', gap: '1rem', background: i % 2 === 0 ? '#000' : '#040404', borderTop: '1px solid #111' }}>
+                <span style={{ fontFamily: CG, fontSize: '1.1rem', fontWeight: 300 }}>{row[0]}</span>
+                <span style={{ fontFamily: MS, fontSize: '0.8rem', color: '#cbb26a' }}>{row[1]}</span>
+                <span style={{ fontFamily: MS, fontSize: '0.7rem', color: '#555' }}>{row[2]}</span>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        </div>
+        {/* MARIN ADU FACTS */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <h2 style={{ fontFamily: CG, fontWeight: 300, fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', marginBottom: '1.5rem' }}>Marin County ADU Facts</h2>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {[
+              'California law now allows ADUs on most residential properties',
+              'Marin County permits ADUs up to 1,200 sqft detached',
+              'ADUs increase property value 15–20% on average',
+              'Rental income averages $3,000–$5,000/month in Marin County',
+              'Permit process averages 4–6 months in Mill Valley',
+            ].map((fact, i) => (
+              <div key={i} style={{ display: 'flex', gap: '1rem', padding: '0.9rem 0', borderBottom: '1px solid #111' }}>
+                <span style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.8rem', flexShrink: 0 }}>—</span>
+                <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', lineHeight: 1.6 }}>{fact}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>FAQ</p>
+          {faqs.map((faq, i) => (
+            <div key={i} style={{ marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '1px solid #1a1a1a' }}>
+              <p style={{ fontFamily: CG, fontSize: '1.2rem', marginBottom: '0.75rem' }}>{faq.q}</p>
+              <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', lineHeight: 1.8 }}>{faq.a}</p>
+            </div>
+          ))}
+        </section>
+
+        {/* CTA */}
+        <section style={{ padding: '4rem 2rem', textAlign: 'center', borderTop: '1px solid #1a1a1a' }}>
+          <h2 style={{ fontFamily: CG, fontWeight: 300, fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '1rem' }}>
+            Start Your ADU Project
+          </h2>
+          <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', marginBottom: '2rem', maxWidth: '500px', margin: '0 auto 2rem' }}>
+            We assess your property&apos;s ADU potential and provide a complete fixed-price proposal within 5 business days.
+          </p>
+          <Link href="/request-a-bid" style={{ display: 'inline-block', background: '#cbb26a', color: '#000', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '1rem 2rem', textDecoration: 'none' }}>
+            Start Your ADU Project
+          </Link>
+        </section>
+
       </main>
     </>
-  );
+  )
 }

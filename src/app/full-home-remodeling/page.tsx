@@ -1,14 +1,11 @@
-import { Cormorant_Garamond, Montserrat } from 'next/font/google';
-import type { Metadata } from 'next';
-
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Full Home Remodeling Marin County 2026 | Whole House Renovation | ConstruBay',
   description: 'Whole house renovation in Marin County from $850K. Fixed-price contracts, permits included, 10-year warranty. Mill Valley, Tiburon, San Rafael. CSLB #1106798.',
   alternates: { canonical: 'https://www.construbay.com/full-home-remodeling' },
-};
+}
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -27,7 +24,6 @@ const jsonLd = {
         addressCountry: 'US',
       },
       areaServed: 'Marin County',
-      priceRange: '$$$$',
     },
     {
       '@type': 'FAQPage',
@@ -35,7 +31,7 @@ const jsonLd = {
         {
           '@type': 'Question',
           name: 'How much does a full home remodel cost in Marin County?',
-          acceptedAnswer: { '@type': 'Answer', text: 'A whole house renovation in Marin County typically ranges from $850,000 for a 2,000–2,500 sq ft home to $2,200,000 or more for homes 3,500–5,000 sq ft. These ranges include permits, materials, labor, and our 10-year structural warranty.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'A whole house renovation in Marin County ranges from $850,000 for a 2,000–2,500 sq ft home to $2,200,000+ for homes 3,500–5,000 sq ft. All ranges include permits, materials, labor, and our 10-year structural warranty.' },
         },
         {
           '@type': 'Question',
@@ -45,159 +41,138 @@ const jsonLd = {
       ],
     },
   ],
-};
+}
 
-const table = {
-  headers: ['Home Size', 'Investment Range', 'Timeline'],
-  rows: [
-    ['2,000–2,500 sq ft', '$850,000 – $1,200,000', '6–8 months'],
-    ['2,500–3,500 sq ft', '$1,100,000 – $1,600,000', '8–10 months'],
-    ['3,500–5,000 sq ft', '$1,400,000 – $2,200,000', '10–14 months'],
-  ],
-};
+const CG = 'Cormorant Garamond'
+const MS = 'Montserrat'
+
+const table = [
+  ['2,000–2,500 sq ft', '$850,000 – $1,200,000', '6–8 months'],
+  ['2,500–3,500 sq ft', '$1,100,000 – $1,600,000', '8–10 months'],
+  ['3,500–5,000 sq ft', '$1,400,000 – $2,200,000', '10–14 months'],
+]
 
 const included = [
-  ['Complete architectural plans and engineering', 'All fixtures, finishes and materials'],
-  ['Marin County permit acquisition and all fees', 'Full-time project superintendent'],
-  ['Structural and MEP engineering coordination', '10-year structural warranty'],
-  ['Daily site photography and progress reports', 'Post-completion walkthrough at 11 months'],
-];
+  'Complete architectural plans and engineering',
+  'Marin County permit acquisition and all fees',
+  'Structural and MEP engineering coordination',
+  'All fixtures, finishes and materials',
+  'Full-time project superintendent',
+  '10-year structural warranty',
+  'Daily site photography and progress reports',
+  'Post-completion walkthrough at 11 months',
+]
 
 const steps = [
-  { num: '01', title: 'Site Visit & Discovery', body: 'Paulo walks your home and listens. We discuss your vision, budget range, and timeline. No sales pressure — just an honest assessment of what is possible.' },
-  { num: '02', title: 'Fixed-Price Proposal', body: 'A complete scope, timeline, and fixed price within 5 business days. Every line item is accounted for — there will be no change order surprises.' },
-  { num: '03', title: 'Design & Permitting', body: 'We coordinate architectural and engineering plans, handle permit submissions, and manage all county review processes. Permits typically in hand within 4–6 weeks.' },
-  { num: '04', title: 'Construction', body: 'Daily site updates. Paulo is personally on-site for every critical phase. Tradespeople are vetted long-term partners, not whoever is available.' },
-  { num: '05', title: 'Completion & Warranty', body: 'Thorough walkthrough at completion. We return at 11 months for a complimentary inspection — well within your 1-year warranty coverage.' },
-];
+  { n: '01', t: 'Site Visit & Discovery', b: 'Paulo walks your home and listens. We discuss your vision, budget range, and timeline. No sales pressure — just an honest assessment of what is possible.' },
+  { n: '02', t: 'Fixed-Price Proposal', b: 'A complete scope, timeline, and fixed price within 5 business days. Every line item is accounted for — there will be no change order surprises.' },
+  { n: '03', t: 'Design & Permitting', b: 'We coordinate architectural and engineering plans, handle permit submissions, and manage all county review processes. Permits typically in hand within 4–6 weeks.' },
+  { n: '04', t: 'Construction', b: 'Daily site updates. Paulo is personally on-site for every critical phase. Tradespeople are vetted long-term partners, not whoever is available.' },
+  { n: '05', t: 'Completion & Warranty', b: 'Thorough walkthrough at completion. We return at 11 months for a complimentary inspection — well within your 1-year warranty coverage.' },
+]
 
 const faqs = [
-  {
-    q: 'How much does a full home remodel cost in Marin County?',
-    a: 'A whole house renovation in Marin County typically ranges from $850,000 for a 2,000–2,500 sq ft home to $2,200,000 or more for homes 3,500–5,000 sq ft. These ranges include permits, materials, labor, and our 10-year structural warranty.',
-  },
-  {
-    q: 'How long does a whole house renovation take?',
-    a: 'Most whole home renovations in Marin County take 6–14 months depending on scope and size. Permit acquisition adds 4–6 weeks before construction begins. We provide a detailed schedule before the project starts.',
-  },
-];
+  { q: 'How much does a full home remodel cost in Marin County?', a: 'A whole house renovation in Marin County ranges from $850,000 for a 2,000–2,500 sq ft home to $2,200,000+ for homes 3,500–5,000 sq ft. All ranges include permits, materials, labor, and our 10-year structural warranty.' },
+  { q: 'How long does a whole house renovation take?', a: 'Most whole home renovations in Marin County take 6–14 months depending on scope and size. Permit acquisition adds 4–6 weeks before construction begins. We provide a detailed schedule before the project starts.' },
+]
 
 export default function FullHomeRemodelingPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '140px' }}>
-        <div className="max-w-5xl mx-auto px-6">
+      <main style={{ background: '#000', color: '#fff', minHeight: '100vh' }}>
 
-          {/* Hero */}
-          <section style={{ paddingBottom: '80px', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '24px' }}>
-              Full Home Remodeling · Marin County
-            </p>
-            <h1 className={cormorant.className} style={{ fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: '300', color: '#ffffff', lineHeight: 1.05, marginBottom: '20px' }}>
-              Whole House Renovation<br />in Marin County
-            </h1>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 2, maxWidth: '620px', letterSpacing: '0.04em' }}>
-              A whole home renovation is the most complex project a homeowner undertakes. We make it manageable — with fixed pricing, a clear timeline, and a single point of accountability from first site visit to final walkthrough.
-            </p>
-          </section>
+        {/* HERO */}
+        <section style={{ padding: '8rem 2rem 4rem', maxWidth: '1200px', margin: '0 auto' }}>
+          <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem' }}>Full Home Remodeling · Marin County</p>
+          <h1 style={{ fontFamily: CG, fontWeight: 300, fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, marginBottom: '1rem' }}>
+            Full Home Remodeling<br />in Marin County
+          </h1>
+          <p style={{ color: '#cbb26a', fontFamily: CG, fontStyle: 'italic', fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', marginBottom: '1.5rem' }}>
+            Complete Whole-House Transformations in Mill Valley and Tiburon
+          </p>
+          <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.85rem', lineHeight: 1.8, maxWidth: '650px', marginBottom: '2rem' }}>
+            A whole home renovation is the most complex project a homeowner undertakes. We make it manageable — with fixed pricing, a clear timeline, and a single point of accountability from first site visit to final walkthrough.
+          </p>
+          <Link href="/request-a-bid" style={{ display: 'inline-block', background: '#cbb26a', color: '#000', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '1rem 2rem', textDecoration: 'none' }}>
+            Start Your Remodel
+          </Link>
+        </section>
 
-          {/* Investment Table */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '16px' }}>
-              2026 Pricing
-            </p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: '300', color: '#ffffff', marginBottom: '40px' }}>
-              Investment Ranges
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'rgba(203,178,106,0.12)' }}>
-              <div className="grid grid-cols-3" style={{ backgroundColor: '#0a0a0a', padding: '14px 24px' }}>
-                {table.headers.map(h => (
-                  <span key={h} className={montserrat.className} style={{ fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.55)' }}>{h}</span>
-                ))}
-              </div>
-              {table.rows.map((row, i) => (
-                <div key={i} className="grid grid-cols-3" style={{ backgroundColor: i % 2 === 0 ? '#000000' : '#050505', padding: '22px 24px', alignItems: 'center' }}>
-                  <span className={cormorant.className} style={{ fontSize: '20px', fontWeight: '300', color: '#ffffff' }}>{row[0]}</span>
-                  <span className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: '#cbb26a' }}>{row[1]}</span>
-                  <span className={montserrat.className} style={{ fontSize: '11px', fontWeight: '300', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.05em' }}>{row[2]}</span>
-                </div>
+        {/* INVESTMENT TABLE */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>2026 Pricing</p>
+          <div style={{ border: '1px solid #1a1a1a' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', background: '#0a0a0a', padding: '0.75rem 1.25rem', gap: '1rem' }}>
+              {['Home Size', 'Investment Range', 'Timeline'].map((h) => (
+                <span key={h} style={{ fontFamily: MS, fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)' }}>{h}</span>
               ))}
             </div>
-            <p className={montserrat.className} style={{ fontSize: '11px', fontWeight: '300', color: 'rgba(255,255,255,0.35)', marginTop: '20px', lineHeight: 1.7, letterSpacing: '0.04em' }}>
-              All ranges include permits, materials, labor, and 10-year structural warranty. Marin County projects carry a 20–35% premium over national averages due to hillside engineering and permit complexity.
-            </p>
-          </section>
-
-          {/* What&apos;s Included */}
-          <section style={{ padding: '72px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: '300', color: '#ffffff', marginBottom: '48px' }}>
-              What Is Included in Every Quote
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '0' }}>
-              {included.map(([left, right], i) => (
-                <div key={i} style={{ display: 'contents' }}>
-                  {[left, right].map((item, j) => (
-                    <div key={j} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start', padding: '14px 0', borderBottom: '1px solid rgba(203,178,106,0.08)' }}>
-                      <span style={{ color: '#cbb26a', flexShrink: 0, fontSize: '14px', lineHeight: 1.5 }}>✓</span>
-                      <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, letterSpacing: '0.04em' }}>{item}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Process */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '16px' }}>
-              How It Works
-            </p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: '300', color: '#ffffff', marginBottom: '48px' }}>
-              The ConstruBay Process
-            </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', backgroundColor: 'rgba(203,178,106,0.12)' }}>
-              {steps.map((step) => (
-                <div key={step.num} style={{ backgroundColor: '#000000', padding: '32px 36px', display: 'grid', gridTemplateColumns: '56px 1fr', gap: '28px', alignItems: 'start' }}>
-                  <p className={cormorant.className} style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(203,178,106,0.5)', paddingTop: '2px' }}>{step.num}</p>
-                  <div>
-                    <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#ffffff', marginBottom: '8px' }}>{step.title}</h3>
-                    <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, letterSpacing: '0.04em' }}>{step.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* FAQ */}
-          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: '300', color: '#ffffff', marginBottom: '48px' }}>
-              Frequently Asked Questions
-            </h2>
-            {faqs.map((faq, i) => (
-              <div key={i} style={{ borderBottom: '1px solid rgba(203,178,106,0.15)', padding: '32px 0' }}>
-                <h3 className={montserrat.className} style={{ fontSize: '13px', fontWeight: '400', color: '#ffffff', letterSpacing: '0.05em', marginBottom: '12px' }}>{faq.q}</h3>
-                <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.55)', lineHeight: 1.9 }}>{faq.a}</p>
+            {table.map((row, i) => (
+              <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '1.1rem 1.25rem', gap: '1rem', background: i % 2 === 0 ? '#000' : '#040404', borderTop: '1px solid #111' }}>
+                <span style={{ fontFamily: CG, fontSize: '1.1rem', fontWeight: 300 }}>{row[0]}</span>
+                <span style={{ fontFamily: MS, fontSize: '0.8rem', color: '#cbb26a' }}>{row[1]}</span>
+                <span style={{ fontFamily: MS, fontSize: '0.7rem', color: '#555' }}>{row[2]}</span>
               </div>
             ))}
-          </section>
+          </div>
+        </section>
 
-          {/* CTA */}
-          <section style={{ padding: '80px 0', textAlign: 'center' }}>
-            <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '20px' }}>Ready to Begin</p>
-            <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: '300', color: '#ffffff', marginBottom: '20px' }}>
-              Schedule a Free Site Visit
-            </h2>
-            <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 40px' }}>
-              Schedule a free site visit with Paulo. We review your space, understand your goals and provide a fixed-price proposal within 5 business days.
-            </p>
-            <a href="/request-a-bid" className={montserrat.className} style={{ display: 'inline-block', backgroundColor: '#cbb26a', color: '#000000', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 56px', textDecoration: 'none', fontWeight: '400' }}>
-              Schedule a Site Visit
-            </a>
-          </section>
+        {/* WHAT IS INCLUDED */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <h2 style={{ fontFamily: CG, fontWeight: 300, fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', marginBottom: '2rem' }}>What Is Included in Every Quote</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '0' }}>
+            {included.map((item, i) => (
+              <div key={i} style={{ display: 'flex', gap: '0.75rem', padding: '0.85rem 0', borderBottom: '1px solid #111' }}>
+                <span style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.85rem', flexShrink: 0 }}>✓</span>
+                <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', lineHeight: 1.6 }}>{item}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        </div>
+        {/* PROCESS */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>How It Works</p>
+          <h2 style={{ fontFamily: CG, fontWeight: 300, fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', marginBottom: '2rem' }}>The ConstruBay Process</h2>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {steps.map((step, i) => (
+              <div key={step.n} style={{ display: 'grid', gridTemplateColumns: '3rem 1fr', gap: '1.5rem', padding: '2rem 0', borderTop: i === 0 ? '1px solid #222' : '1px solid #111' }}>
+                <p style={{ color: 'rgba(203,178,106,0.4)', fontFamily: CG, fontStyle: 'italic', fontSize: '0.85rem', paddingTop: '0.2rem' }}>{step.n}</p>
+                <div>
+                  <p style={{ fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#fff', marginBottom: '0.5rem' }}>{step.t}</p>
+                  <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', lineHeight: 1.7 }}>{step.b}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '2rem' }}>FAQ</p>
+          {faqs.map((faq, i) => (
+            <div key={i} style={{ marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '1px solid #1a1a1a' }}>
+              <p style={{ fontFamily: CG, fontSize: '1.2rem', marginBottom: '0.75rem' }}>{faq.q}</p>
+              <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', lineHeight: 1.8 }}>{faq.a}</p>
+            </div>
+          ))}
+        </section>
+
+        {/* CTA */}
+        <section style={{ padding: '4rem 2rem', textAlign: 'center', borderTop: '1px solid #1a1a1a' }}>
+          <h2 style={{ fontFamily: CG, fontWeight: 300, fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', marginBottom: '1rem' }}>
+            Schedule a Free Site Visit
+          </h2>
+          <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', marginBottom: '2rem', maxWidth: '500px', margin: '0 auto 2rem' }}>
+            We review your space, understand your goals, and provide a fixed-price proposal within 5 business days.
+          </p>
+          <Link href="/request-a-bid" style={{ display: 'inline-block', background: '#cbb26a', color: '#000', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '1rem 2rem', textDecoration: 'none' }}>
+            Start Your Remodel
+          </Link>
+        </section>
+
       </main>
     </>
-  );
+  )
 }
