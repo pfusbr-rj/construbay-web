@@ -168,13 +168,13 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section style={{ padding: '120px 0', backgroundColor: '#f8f7f4' }}>
+      <section style={{ padding: '120px 0', backgroundColor: '#000000' }}>
         <div className="max-w-5xl mx-auto px-6">
           <h2 className={`${cormorant.className}`} style={{
             fontSize: 'clamp(32px, 4vw, 48px)',
             fontWeight: '300',
             textAlign: 'center',
-            color: '#0a1628',
+            color: '#ffffff',
             marginBottom: '80px',
             letterSpacing: '0.02em',
           }}>
@@ -192,8 +192,8 @@ export default function HomePage() {
               href={service.href}
               className="group block"
               style={{
-                borderTop: '1px solid rgba(10,22,40,0.12)',
-                borderBottom: index === 3 ? '1px solid rgba(10,22,40,0.12)' : 'none',
+                borderTop: '1px solid rgba(203,178,106,0.2)',
+                borderBottom: index === 3 ? '1px solid rgba(203,178,106,0.2)' : 'none',
                 padding: '40px 0',
                 display: 'grid',
                 gridTemplateColumns: '80px 1fr 40px',
@@ -207,14 +207,14 @@ export default function HomePage() {
                 fontSize: '14px',
                 fontStyle: 'italic',
                 color: '#cbb26a',
-                opacity: 0.6,
+                opacity: 0.8,
               }}>{service.num}</span>
 
               <div>
                 <h3 className={`${cormorant.className} group-hover:text-[#cbb26a]`} style={{
                   fontSize: '32px',
                   fontWeight: '300',
-                  color: '#0a1628',
+                  color: '#ffffff',
                   marginBottom: '8px',
                   transition: 'color 0.3s ease',
                 }}>{service.title}</h3>
@@ -222,7 +222,7 @@ export default function HomePage() {
                   fontSize: '12px',
                   fontWeight: '300',
                   letterSpacing: '0.08em',
-                  color: 'rgba(10,22,40,0.55)',
+                  color: 'rgba(255,255,255,0.55)',
                   lineHeight: 1.7,
                 }}>{service.description}</p>
               </div>
@@ -230,7 +230,7 @@ export default function HomePage() {
               <svg
                 className="group-hover:translate-x-2 group-hover:text-[#cbb26a]"
                 width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="#0a1628" strokeWidth="1"
+                stroke="#cbb26a" strokeWidth="1"
                 style={{ transition: 'all 0.4s ease' }}
               >
                 <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
