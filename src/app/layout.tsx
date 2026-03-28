@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SocialSidebar from "@/components/SocialSidebar";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -189,6 +190,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-CONSTRUBAY');`,
         }}
       />
+      <Script id="ms-clarity" strategy="afterInteractive">
+        {`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+        `}
+      </Script>
       <body
         className={`${inter.variable} ${caveat.variable} font-sans antialiased bg-brand-dark text-white pb-16 md:pb-0`}
       >
@@ -204,6 +214,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <Header />
         <main>{children}</main>
+        <ExitIntentPopup />
         <Footer />
         <div className="mobile-cta-bar fixed bottom-0 left-0 right-0 z-50 flex" style={{
           display: 'flex',

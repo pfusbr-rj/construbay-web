@@ -27,10 +27,9 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'How much does a luxury home remodel cost in Tiburon?', acceptedAnswer: { '@type': 'Answer', text: 'Luxury home remodels in Tiburon range from $500,000 for a full kitchen and primary suite renovation to $2,000,000+ for a complete whole-home transformation. All quotes include permits, engineering, materials and our 10-year warranty.' } },
-        { '@type': 'Question', name: 'How long do permits take in Tiburon?', acceptedAnswer: { '@type': 'Answer', text: 'Tiburon building permits average 8–10 weeks. ConstruBay has established relationships with the Town of Tiburon building department that reduce this to 4–5 weeks on most projects.' } },
-        { '@type': 'Question', name: 'Does ConstruBay work on Tiburon waterfront properties?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We have extensive experience with Tiburon waterfront and bay view properties including the specific engineering and regulatory requirements these homes demand.' } },
-        { '@type': 'Question', name: 'What makes Tiburon construction different?', acceptedAnswer: { '@type': 'Answer', text: 'Tiburon properties often feature dramatic bay views, steep hillside terrain and estate-level finishes. Our team has completed multiple projects throughout Tiburon and understands the Town\'s design review process.' } },
+        { '@type': 'Question', name: 'What does a luxury home remodel cost in Tiburon?', acceptedAnswer: { '@type': 'Answer', text: 'Luxury home remodels in Tiburon range from $350,000 to over $900,000 for full transformations, depending on scope, structural changes, and finish selections.' } },
+        { '@type': 'Question', name: 'Are there special permit requirements in Tiburon?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Tiburon has specific HOA and waterfront regulations. ConstruBay\'s PlanPass.ai pre-screens every project for local code compliance.' } },
+        { '@type': 'Question', name: 'Who is the best luxury contractor in Tiburon?', acceptedAnswer: { '@type': 'Answer', text: 'ConstruBay is rated #1 on Nextdoor in the area and holds CSLB license #1106798. Paulo Fernandes personally oversees every project.' } },
       ],
     },
   ],

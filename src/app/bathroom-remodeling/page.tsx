@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import type { Metadata } from 'next';
+import TestimonialCard from '@/components/TestimonialCard';
 
 export const dynamic = 'force-dynamic';
 
@@ -199,6 +200,16 @@ export default function BathroomRemodelingPage() {
                 <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.55)', lineHeight: 1.9 }}>{faq.a}</p>
               </div>
             ))}
+          </section>
+
+          {/* Testimonial */}
+          <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
+            <TestimonialCard
+              quote="The primary suite bathroom ConstruBay built in our Tiburon home transformed how we live. The tile work, the heated floors, the steam shower — it looks and functions exactly as we envisioned. Not a single change order."
+              author="Sarah & David K."
+              city="Tiburon"
+              projectType="Primary Suite Bathroom Remodel"
+            />
           </section>
 
           {/* CTA */}

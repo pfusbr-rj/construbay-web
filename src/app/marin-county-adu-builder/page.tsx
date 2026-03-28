@@ -21,11 +21,9 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'How much does an ADU cost in Marin County?', acceptedAnswer: { '@type': 'Answer', text: 'ADUs in Marin County range from $80,000 for a Junior ADU to $600,000+ for a large detached unit. All ConstruBay ADU quotes include design, permits, construction and our 10-year warranty.' } },
-        { '@type': 'Question', name: 'How long does ADU permitting take in Marin County?', acceptedAnswer: { '@type': 'Answer', text: 'ADU permits in Marin County average 4–6 months. ConstruBay has established relationships with all Marin County building departments that help keep applications moving.' } },
-        { '@type': 'Question', name: 'What cities in Marin County does ConstruBay build ADUs?', acceptedAnswer: { '@type': 'Answer', text: 'We build ADUs throughout Marin County including Mill Valley, Tiburon, San Rafael, Sausalito, Ross, Belvedere, Kentfield, Larkspur, Corte Madera and Novato.' } },
-        { '@type': 'Question', name: 'Can I rent out my Marin County ADU?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most Marin County jurisdictions allow ADU rentals. Average rental rates range from $3,000–$5,000 per month. An ADU typically increases property value by 15–20%.' } },
-        { '@type': 'Question', name: 'What size ADU can I build in Marin County?', acceptedAnswer: { '@type': 'Answer', text: 'California law allows detached ADUs up to 1,200 sqft in most Marin County neighborhoods. Junior ADUs up to 500 sqft can be created within existing home footprints.' } },
+        { '@type': 'Question', name: 'How much does an ADU cost in Marin County?', acceptedAnswer: { '@type': 'Answer', text: 'ADUs in Marin County typically cost between $175,000 and $450,000 depending on size, site conditions, and finish level.' } },
+        { '@type': 'Question', name: 'How long does ADU permitting take in Marin County?', acceptedAnswer: { '@type': 'Answer', text: 'Marin County ADU permits average 3 to 5 months. ConstruBay\'s PlanPass.ai tool pre-identifies permit risks to minimize delays.' } },
+        { '@type': 'Question', name: 'What ADU sizes are allowed in Marin County?', acceptedAnswer: { '@type': 'Answer', text: 'Marin County allows ADUs up to 1,200 square feet depending on lot size and zoning. ConstruBay handles all eligibility analysis and permit filings.' } },
       ],
     },
   ],

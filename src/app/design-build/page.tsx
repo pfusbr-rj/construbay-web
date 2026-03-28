@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import TestimonialCard from '@/components/TestimonialCard'
 
 export const metadata: Metadata = {
   title: 'Design-Build Contractor Marin County | ConstruBay CSLB #1106798',
@@ -82,6 +83,16 @@ export default function DesignBuildPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Testimonial */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <TestimonialCard
+            quote="The design-build process with ConstruBay removed every friction point we had experienced with our architect-contractor combination. One team, one contract, one person who was accountable for all of it. The result speaks for itself."
+            author="Thomas & Claire M."
+            city="San Rafael"
+            projectType="Design-Build Full Renovation"
+          />
         </section>
 
         {/* CTA */}

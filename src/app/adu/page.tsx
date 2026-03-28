@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import TestimonialCard from '@/components/TestimonialCard'
 
 declare global {
   interface Window {
@@ -187,6 +188,16 @@ export default function ADULandingPage() {
           </div>
         </div>
       )}
+
+      {/* ── TESTIMONIAL ── */}
+      <div style={{ padding: isMobile ? '16px' : '32px 24px', maxWidth: 960, margin: '0 auto' }}>
+        <TestimonialCard
+          quote="ConstruBay handled our entire ADU from permit submission to move-in day. They identified a setback issue on our lot before we ever signed — and redesigned around it without drama. The unit rented for $3,800 the first week it was listed."
+          author="Greg & Susan A."
+          city="Mill Valley"
+          projectType="Detached ADU"
+        />
+      </div>
 
       {/* ── MOBILE STICKY BAR ── */}
       {isMobile && (

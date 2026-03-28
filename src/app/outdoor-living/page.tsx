@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import TestimonialCard from '@/components/TestimonialCard'
 
 export const metadata: Metadata = {
   title: 'Outdoor Living Construction Marin County | Decks Pools Pergolas | ConstruBay',
@@ -82,6 +83,16 @@ export default function OutdoorLivingPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Testimonial */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <TestimonialCard
+            quote="Our new deck and outdoor kitchen have completely transformed how we use our home. ConstruBay engineered it perfectly for our hillside lot and the bay views are framed exactly as Paulo promised they would be."
+            author="Andrew & Patricia L."
+            city="Sausalito"
+            projectType="Deck & Outdoor Kitchen"
+          />
         </section>
 
         {/* CTA */}

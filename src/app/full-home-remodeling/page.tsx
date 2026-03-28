@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import TestimonialCard from '@/components/TestimonialCard'
 
 export const metadata: Metadata = {
   title: 'Full Home Remodeling Marin County 2026 | Whole House Renovation | ConstruBay',
@@ -157,6 +158,16 @@ export default function FullHomeRemodelingPage() {
               <p style={{ color: '#aaa', fontFamily: MS, fontSize: '0.8rem', lineHeight: 1.8 }}>{faq.a}</p>
             </div>
           ))}
+        </section>
+
+        {/* Testimonial */}
+        <section style={{ padding: '4rem 2rem', maxWidth: '900px', margin: '0 auto', borderTop: '1px solid #1a1a1a' }}>
+          <TestimonialCard
+            quote="We had lived through a disastrous whole-home renovation with a previous contractor — missed deadlines, endless change orders, zero communication. ConstruBay was the opposite experience in every possible way. Fixed price, weekly updates, and a final result that exceeded what we hoped for."
+            author="Jennifer & Robert P."
+            city="Mill Valley"
+            projectType="Full Home Remodel"
+          />
         </section>
 
         {/* CTA */}

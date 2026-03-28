@@ -83,6 +83,7 @@ export default function Footer() {
             <nav className="mt-10 flex flex-wrap gap-6">
               <Link href="/" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Home</Link>
               <Link href="/services" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Services</Link>
+              <Link href="/pricing" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Pricing</Link>
               <Link href="/projects" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Projects</Link>
               <Link href="/about" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">About</Link>
               <Link href="/investments" className="text-white/60 hover:text-brand-tan text-sm uppercase tracking-wider transition-colors">Investments</Link>
