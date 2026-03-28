@@ -41,6 +41,7 @@ const staticPages: SitemapEntry[] = [
   { path: '/novato-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
 
   // Service pages
+  { path: '/kitchen-remodel-mill-valley', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/kitchen-remodeling', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/bathroom-remodeling', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/full-home-remodeling', priority: 0.8, changeFrequency: 'monthly' },
