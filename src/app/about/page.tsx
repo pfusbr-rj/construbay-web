@@ -67,20 +67,35 @@ export default function AboutPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/paulo/paulo-fernandes-01.png"
-              alt="Paulo Fernandes — Founder of ConstruBay and PlanPass.ai"
+              alt="Paulo Fernandes — Founder of ConstruBay and PlanPass.ai, Luxury General Contractor Marin County"
               style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
                 objectPosition: 'center top',
-                filter: 'grayscale(20%) contrast(1.05)',
+                filter: 'grayscale(15%) contrast(1.05)',
               }}
             />
             <div style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(to bottom, transparent 60%, rgba(10,22,40,0.6) 100%)',
+              background: 'linear-gradient(to bottom, transparent 60%, rgba(10,22,40,0.7) 100%)',
             }} />
+            <div style={{
+              position: 'absolute',
+              bottom: '24px',
+              left: '24px',
+            }}>
+              <p style={{
+                fontFamily: 'Montserrat, sans-serif',
+                fontSize: '10px',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: '#cbb26a',
+              }}>
+                CSLB #1106798
+              </p>
+            </div>
           </div>
         </div>
       </section>
