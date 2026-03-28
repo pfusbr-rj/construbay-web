@@ -20,33 +20,35 @@ export default function Header() {
                 style={{ height: '110px', width: 'auto' }}
               />
             </Link>
-            <a
-              href="tel:4159689494"
-              className="hidden md:block hover:opacity-70 transition-opacity"
-              style={{
-                background: 'linear-gradient(135deg, #bb8b4a, #f7eb9e)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                fontSize: '24px',
-                letterSpacing: '0.1em',
+            <div className="hidden md:flex items-center" style={{ gap: '1rem', whiteSpace: 'nowrap' }}>
+              <a
+                href="tel:4159689494"
+                className="hover:opacity-70 transition-opacity"
+                style={{
+                  background: 'linear-gradient(135deg, #bb8b4a, #f7eb9e)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  fontSize: '24px',
+                  letterSpacing: '0.1em',
+                  fontWeight: '300',
+                }}
+              >
+                (415) 968-9494
+              </a>
+              <span style={{
+                color: 'rgba(203,178,106,0.5)',
+                fontSize: '11px',
+                letterSpacing: '0.15em',
                 fontWeight: '300',
-              }}
-            >
-              (415) 968-9494
-            </a>
-            <span className="hidden md:block" style={{
-              color: 'rgba(203,178,106,0.5)',
-              fontSize: '11px',
-              letterSpacing: '0.15em',
-              fontWeight: '300',
-              textTransform: 'uppercase',
-              fontFamily: 'Montserrat, sans-serif',
-              paddingLeft: '8px',
-              borderLeft: '1px solid rgba(203,178,106,0.3)',
-            }}>
-              CSLB #1106798
-            </span>
+                textTransform: 'uppercase',
+                fontFamily: 'Montserrat, sans-serif',
+                paddingLeft: '1rem',
+                borderLeft: '1px solid rgba(203,178,106,0.3)',
+              }}>
+                CSLB #1106798
+              </span>
+            </div>
           </div>
 
           {/* Desktop Nav */}
