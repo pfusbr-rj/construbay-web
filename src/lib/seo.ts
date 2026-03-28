@@ -21,12 +21,12 @@ export function generateCityMetadata(city: City): Metadata {
       `CSLB 1106798`,
     ],
     alternates: {
-      canonical: `https://construbay.com/${city.slug}-general-contractor`,
+      canonical: `https://www.construbay.com/${city.slug}-general-contractor`,
     },
     openGraph: {
       title,
       description,
-      url: `https://construbay.com/${city.slug}-general-contractor`,
+      url: `https://www.construbay.com/${city.slug}-general-contractor`,
       siteName: 'ConstruBay',
       locale: 'en_US',
       type: 'website',
@@ -40,12 +40,12 @@ export function generateBlogMetadata(post: BlogPost): Metadata {
     description: post.excerpt,
     keywords: post.tags,
     alternates: {
-      canonical: `https://construbay.com/blog/${post.slug}`,
+      canonical: `https://www.construbay.com/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://construbay.com/blog/${post.slug}`,
+      url: `https://www.construbay.com/blog/${post.slug}`,
       siteName: 'ConstruBay',
       locale: 'en_US',
       type: 'article',
