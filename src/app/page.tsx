@@ -80,6 +80,13 @@ export default function HomePage() {
 
         <div className="relative z-10 px-4 max-w-4xl mx-auto text-center w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
 
+          <div style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0px' }}>
+            <img
+              src="/images/svg/logo vector-01.svg"
+              alt="ConstruBay logo"
+              style={{ height: '80px', width: 'auto', filter: 'brightness(0) invert(1)' }}
+            />
+          </div>
           <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-none text-center w-full mx-auto`}>
             Built Without Compromise
           </h1>
