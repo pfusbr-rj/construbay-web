@@ -1,39 +1,77 @@
-import { MetadataRoute } from 'next';
-import { cities } from '@/lib/cities';
-import { getAllPosts } from '@/lib/blog';
+import type { MetadataRoute } from 'next'
+import { getBlogPosts } from '@/lib/blog'
 
-const BASE_URL = 'https://construbay.com';
+const baseUrl = 'https://construbay.com'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE_URL, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/services`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/projects`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE_URL}/locations`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/services/whole-house-remodel-marin-county`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/services/kitchen-remodel-marin-county`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/services/adu-builder-marin-county`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/services/bathroom-remodel-marin-county`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/services/home-addition-contractor-marin-county`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/services/general-contractor-marin-county`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${BASE_URL}/request-a-bid`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-  ];
+type SitemapEntry = {
+  path: string
+  priority: number
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+}
 
-  const cityPages: MetadataRoute.Sitemap = cities.map(city => ({
-    url: `${BASE_URL}/${city.slug}-general-contractor`,
-    lastModified: new Date(),
+const staticPages: SitemapEntry[] = [
+  // Homepage
+  { path: '', priority: 1.0, changeFrequency: 'weekly' },
+
+  // Core pages
+  { path: '/about', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/projects', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/locations', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
+
+  // Existing money pages
+  { path: '/adu', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/mill-valley-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/tiburon-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/san-rafael-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/sausalito-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
+
+  // NEW high-priority pages (build these first)
+  { path: '/marin-county-general-contractor', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/luxury-home-remodel-marin-county', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/adu-builder-marin-county', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/kitchen-remodel-mill-valley', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/bathroom-remodel-marin-county', priority: 0.9, changeFrequency: 'monthly' },
+
+  // Core service pages
+  { path: '/kitchen-remodeling', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/bathroom-remodeling', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/full-home-remodeling', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/home-additions', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/outdoor-living', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/luxury-home-remodeling', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/design-build', priority: 0.8, changeFrequency: 'monthly' },
+
+  // New city pages (ultra luxury first)
+  { path: '/ross-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/belvedere-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/kentfield-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/larkspur-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/corte-madera-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/novato-general-contractor', priority: 0.8, changeFrequency: 'monthly' },
+]
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date()
+
+  const staticUrls: MetadataRoute.Sitemap = staticPages.map((page) => ({
+    url: `${baseUrl}${page.path}`,
+    lastModified: now,
+    changeFrequency: page.changeFrequency,
+    priority: page.priority,
+  }))
+
+  // Dynamic blog posts from existing blog data
+  const posts = getBlogPosts()
+  const blogUrls: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: now,
     changeFrequency: 'monthly' as const,
-    priority: city.tier === 'primary' ? 0.9 : 0.75,
-  }));
+    priority: 0.6,
+  }))
 
-  const blogPages: MetadataRoute.Sitemap = getAllPosts().map(post => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.publishedAt),
-    changeFrequency: 'yearly' as const,
-    priority: 0.7,
-  }));
-
-  return [...staticPages, ...cityPages, ...blogPages];
+  // Sort by priority descending for optimal crawl efficiency
+  return [...staticUrls, ...blogUrls].sort(
+    (a, b) => (b.priority || 0) - (a.priority || 0)
+  )
 }
