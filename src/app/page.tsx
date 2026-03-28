@@ -84,7 +84,7 @@ export default function HomePage() {
             <img
               src="/images/svg/logo%20vector-02.svg"
               alt="ConstruBay"
-              style={{ height: '140px', width: 'auto' }}
+              style={{ height: '200px', width: 'auto' }}
             />
           </div>
           <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-none text-center w-full mx-auto`}>
