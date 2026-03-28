@@ -130,22 +130,31 @@ export default function HomePage() {
       {/* Featured Projects Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <h2 className={`${cormorant.className} text-4xl md:text-5xl text-brand-tan font-light mb-16`}>
-          Featured Projects
+          Bagatello Residence — Mill Valley
         </h2>
+        <p className={`${montserrat.className}`} style={{
+          fontSize: '12px',
+          letterSpacing: '0.2em',
+          textTransform: 'uppercase',
+          color: 'rgba(203,178,106,0.7)',
+          marginTop: '-48px',
+          marginBottom: '48px',
+        }}>
+          Full Home Remodel &amp; 2,200 sq ft Addition
+        </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-12">
           {[
-            { src: "/images/gallery/kitchen06.jpg", alt: "Custom kitchen remodel in Mill Valley, Marin County by ConstruBay" },
-            { src: "/images/gallery/kitchen04.jpg", alt: "Custom kitchen remodel in Tiburon, Marin County by ConstruBay" },
-            { src: "/images/gallery/kitchen05.jpg", alt: "Custom kitchen remodel in Sausalito, Marin County by ConstruBay" },
-            { src: "/images/gallery/kitchen03.jpg", alt: "Custom kitchen remodel in San Rafael, Marin County by ConstruBay" },
-            { src: "/images/gallery/bathroom05.jpg", alt: "Luxury bathroom remodel in Mill Valley, Marin County by ConstruBay" },
-            { src: "/images/gallery/bathroom07.jpg", alt: "Luxury bathroom remodel in Tiburon, Marin County by ConstruBay" },
-            { src: "/images/gallery/bathroom02.jpg", alt: "Luxury bathroom remodel in Sausalito, Marin County by ConstruBay" },
-            { src: "/images/gallery/kitchen01.jpg", alt: "Custom kitchen remodel in Novato, Marin County by ConstruBay" },
-            { src: "/images/gallery/bathroom06.jpg", alt: "Luxury bathroom remodel in San Rafael, Marin County by ConstruBay" },
-            { src: "/images/gallery/kitchen02.jpg", alt: "Custom kitchen remodel in Petaluma, Sonoma County by ConstruBay" },
-            { src: "/images/gallery/bathroom04.jpg", alt: "Luxury bathroom remodel in Santa Rosa, Sonoma County by ConstruBay" },
-            { src: "/images/gallery/bathroom03.jpg", alt: "Luxury bathroom remodel in Sebastopol, Sonoma County by ConstruBay" },
+            { src: "/images/gallery/bagatellos/bagatellos-01.jpg", alt: "Bagatello Residence — Full Home Remodel & 2,200 sq ft Addition, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-02.jpg", alt: "Bagatello Residence — Custom Kitchen, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-03.jpg", alt: "Bagatello Residence — Luxury Interior, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-04.jpg", alt: "Bagatello Residence — Master Suite Addition, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-05.jpg", alt: "Bagatello Residence — Living Spaces, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-06.jpg", alt: "Bagatello Residence — Architectural Detail, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-07.jpg", alt: "Bagatello Residence — Premium Finishes, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-08.jpg", alt: "Bagatello Residence — Custom Millwork, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-09.jpg", alt: "Bagatello Residence — Bathroom Renovation, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-10.jpg", alt: "Bagatello Residence — Exterior Addition, Mill Valley" },
+            { src: "/images/gallery/bagatellos/bagatellos-11.jpg", alt: "Bagatello Residence — Open Floor Plan, Mill Valley" },
           ].map((img) => (
             <div key={img.src} className="relative aspect-square overflow-hidden">
               <Image
