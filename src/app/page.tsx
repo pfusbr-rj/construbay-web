@@ -79,18 +79,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 px-4 max-w-4xl mx-auto text-center w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
-          <div style={{ marginBottom: '16px' }}>
-            <p style={{
-              fontSize: '42px',
-              fontWeight: '300',
-              color: '#cbb26a',
-              letterSpacing: '0.3em',
-              textTransform: 'uppercase',
-              textAlign: 'center',
-              fontFamily: 'Georgia, serif',
-              lineHeight: 1
-            }}>ConstruBay</p>
-          </div>
+
           <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-none text-center w-full mx-auto`}>
             Built Without Compromise
           </h1>
