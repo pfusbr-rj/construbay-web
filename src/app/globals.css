@@ -1,21 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+:root {
+  --brand-gold: #cbb26a;
+  --brand-dark: #0a1628;
+  --brand-gradient-start: #bb8b4a;
+  --brand-gradient-end: #f7eb9e;
+  --brand-gradient: linear-gradient(135deg, #bb8b4a, #f7eb9e);
+}
+
+/* Repo font — loaded locally since it's not on Google Fonts */
+@font-face {
+  font-family: 'Repo';
+  src: local('Repo ExtraBold'), local('Repo-ExtraBold');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global brand defaults */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a1628;
+  color: #ffffff;
+}
+
+/* Brand gradient text utility */
+.brand-gradient-text {
+  background: linear-gradient(135deg, #bb8b4a, #f7eb9e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold accent elements */
+.brand-gold {
+  color: #cbb26a;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 768px) {
-  .social-sidebar {
-    display: none !important;
-  }
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbb26a;
+  border-radius: 2px;
 }
 
-:root {
-  --background: #2C2520;
-  --foreground: #FFFFFF;
+/* Selection color */
+::selection {
+  background: rgba(203, 178, 106, 0.3);
+  color: #ffffff;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -24,21 +73,10 @@ body {
   }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #2C2520;
-}
-::-webkit-scrollbar-thumb {
-  background: #B5A48B;
-  border-radius: 4px;
+@media (max-width: 768px) {
+  .social-sidebar {
+    display: none !important;
+  }
 }
 
 @media (min-width: 768px) {

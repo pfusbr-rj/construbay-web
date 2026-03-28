@@ -27,7 +27,16 @@ export default function AboutPage() {
             <p className={montserrat.className} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '24px' }}>
               Founder &amp; CEO
             </p>
-            <h1 className={cormorant.className} style={{ fontSize: 'clamp(48px, 6vw, 80px)', fontWeight: 300, color: '#ffffff', lineHeight: 1.0, marginBottom: '32px' }}>
+            <h1 className={cormorant.className} style={{
+              fontSize: 'clamp(48px, 6vw, 80px)',
+              fontWeight: 300,
+              lineHeight: 1.0,
+              marginBottom: '32px',
+              background: 'linear-gradient(135deg, #bb8b4a, #f7eb9e)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>
               Paulo<br />Fernandes
             </h1>
             <div style={{ width: '60px', height: '1px', backgroundColor: '#cbb26a', marginBottom: '32px' }} />
@@ -111,7 +120,7 @@ export default function AboutPage() {
               { number: '2026', label: 'PlanPass.ai Launched' },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className={cormorant.className} style={{ fontSize: '64px', fontWeight: 300, color: '#cbb26a', lineHeight: 1, marginBottom: '12px' }}>
+                <p className={cormorant.className} style={{ fontSize: '64px', fontWeight: 300, lineHeight: 1, marginBottom: '12px', background: 'linear-gradient(135deg, #bb8b4a, #f7eb9e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                   {stat.number}
                 </p>
                 <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>

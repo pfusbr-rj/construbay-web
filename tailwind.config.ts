@@ -1,27 +1,28 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        brand: {
-          dark: "#2C2520",
-          tan: "#B5A48B",
-          cream: "#F5F0E8",
-          button: "#8B7D6B",
-        },
+        'brand-gold': '#cbb26a',
+        'brand-dark': '#0a1628',
+        'brand-tan': '#cbb26a',
+        'brand-gradient-start': '#bb8b4a',
+        'brand-gradient-end': '#f7eb9e',
       },
       fontFamily: {
-        caveat: ["var(--font-caveat)", "cursive"],
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        'repo': ['Repo', 'Montserrat', 'sans-serif'],
+      },
+      backgroundImage: {
+        'brand-gradient': 'linear-gradient(135deg, #bb8b4a, #f7eb9e)',
       },
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config

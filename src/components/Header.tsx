@@ -23,7 +23,15 @@ export default function Header() {
             <a
               href="tel:4159689494"
               className="hidden md:block hover:opacity-70 transition-opacity"
-              style={{ color: '#cbb26a', fontSize: '24px', letterSpacing: '0.1em', fontWeight: '300' }}
+              style={{
+                background: 'linear-gradient(135deg, #bb8b4a, #f7eb9e)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontSize: '24px',
+                letterSpacing: '0.1em',
+                fontWeight: '300',
+              }}
             >
               (415) 968-9494
             </a>
@@ -45,31 +53,31 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <Link
               href="/"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-brand-tan transition-colors"
+              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
             >
               Home
             </Link>
             <Link
               href="/services"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-brand-tan transition-colors"
+              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
             >
               Services
             </Link>
             <Link
               href="/projects"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-brand-tan transition-colors"
+              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
             >
               Projects
             </Link>
             <Link
               href="/about"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-brand-tan transition-colors"
+              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
             >
               About
             </Link>
             <Link
               href="/request-a-bid"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-brand-tan transition-colors"
+              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
             >
               Contact
             </Link>

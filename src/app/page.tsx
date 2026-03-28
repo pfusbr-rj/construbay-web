@@ -62,7 +62,7 @@ export default function HomePage() {
           <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-none text-center w-full mx-auto`}>
             Built Without Compromise
           </h1>
-          <p className={`${montserrat.className} text-white/70 mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px', textAlign: 'center', width: '100%', display: 'block' }}>
+          <p className={`${montserrat.className} mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px', textAlign: 'center', width: '100%', display: 'block', color: '#cbb26a' }}>
             Marin, Sonoma &amp; Napa
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
