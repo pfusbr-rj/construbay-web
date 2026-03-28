@@ -40,3 +40,9 @@ html {
   background: #B5A48B;
   border-radius: 4px;
 }
+
+@media (min-width: 768px) {
+  .mobile-cta-bar {
+    display: none !important;
+  }
+}

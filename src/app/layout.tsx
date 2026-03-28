@@ -159,7 +159,7 @@ gtag('config', 'G-E5R2DP0WG0');`,
         <Header />
         <main>{children}</main>
         <Footer />
-        <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden" style={{
+        <div className="mobile-cta-bar fixed bottom-0 left-0 right-0 z-50 flex" style={{
           display: 'flex',
           borderTop: '1px solid rgba(203,178,106,0.3)',
           backgroundColor: '#000000',
