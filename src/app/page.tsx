@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Cormorant_Garamond, Montserrat } from 'next/font/google';
+import ProjectGrid from '@/components/projects/ProjectGrid';
+import { projects } from '@/data/projects';
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
@@ -128,53 +130,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <h2 className={`${cormorant.className} text-4xl md:text-5xl text-brand-tan font-light mb-16`}>
-          Bagatello Residence — Mill Valley
-        </h2>
-        <p className={`${montserrat.className}`} style={{
-          fontSize: '12px',
-          letterSpacing: '0.2em',
-          textTransform: 'uppercase',
-          color: 'rgba(203,178,106,0.7)',
-          marginTop: '-48px',
-          marginBottom: '48px',
-        }}>
-          Full Home Remodel &amp; 2,200 sq ft Addition
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-12">
-          {[
-            { src: "/images/gallery/bagatellos/bagatellos-01.jpg", alt: "Bagatello Residence — Full Home Remodel & 2,200 sq ft Addition, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-02.jpg", alt: "Bagatello Residence — Custom Kitchen, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-03.jpg", alt: "Bagatello Residence — Luxury Interior, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-04.jpg", alt: "Bagatello Residence — Master Suite Addition, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-05.jpg", alt: "Bagatello Residence — Living Spaces, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-06.jpg", alt: "Bagatello Residence — Architectural Detail, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-07.jpg", alt: "Bagatello Residence — Premium Finishes, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-08.jpg", alt: "Bagatello Residence — Custom Millwork, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-09.jpg", alt: "Bagatello Residence — Bathroom Renovation, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-10.jpg", alt: "Bagatello Residence — Exterior Addition, Mill Valley" },
-            { src: "/images/gallery/bagatellos/bagatellos-11.jpg", alt: "Bagatello Residence — Open Floor Plan, Mill Valley" },
-          ].map((img) => (
-            <div key={img.src} className="relative aspect-square overflow-hidden">
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              />
-            </div>
-          ))}
-        </div>
-        <Link
-          href="/projects"
-          className={`${montserrat.className} inline-block border border-white/60 text-white/80 px-10 py-3 hover:bg-white/10 transition-colors`}
-          style={{ letterSpacing: '0.15em', textTransform: 'uppercase', fontSize: '12px' }}
-        >
-          View All Projects
-        </Link>
-      </section>
+      <ProjectGrid projects={projects} mode="featured" />
 
       {/* Services Section */}
       <section style={{ padding: '120px 0', backgroundColor: '#000000' }}>
