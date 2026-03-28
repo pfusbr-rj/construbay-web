@@ -47,12 +47,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: '/favicon_symbol-02.jpg',
+    shortcut: '/favicon_symbol-02.jpg',
+    apple: '/favicon_symbol-02.jpg',
   },
   verification: {
     // Add your Google Search Console verification code here
@@ -162,6 +159,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon_symbol-02.jpg" />
+        <link rel="apple-touch-icon" href="/favicon_symbol-02.jpg" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5R2DP0WG0" />
         <script
           dangerouslySetInnerHTML={{
