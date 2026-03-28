@@ -201,7 +201,7 @@ export default function BlogPage() {
               Founder, ConstruBay · CSLB #1106798
             </p>
             <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 1.8, maxWidth: '480px' }}>
-              Builder, entrepreneur, and Bay Area native. Paulo writes about construction, permitting, and what it takes to build without compromise in one of the world's most demanding markets.
+              Builder, entrepreneur, and Bay Area native. Paulo writes about construction, permitting, and what it takes to build without compromise in one of the world&apos;s most demanding markets.
             </p>
           </div>
         </div>
