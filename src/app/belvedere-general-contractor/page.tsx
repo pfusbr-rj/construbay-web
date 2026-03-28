@@ -4,6 +4,8 @@ import { generateCityMetadata } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-dynamic';
+
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
 
