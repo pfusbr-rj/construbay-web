@@ -5,36 +5,6 @@ import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
 
-const serviceCards = [
-  {
-    title: "Full Home Remodels",
-    description: "Complete design-build from structural to luxury finishes",
-    href: "/services/whole-house-remodel-marin-county",
-    image: "/images/services/services-1.jpg",
-    gradient: null,
-  },
-  {
-    title: "ADUs & Home Additions",
-    description: "Fully permitted accessory dwelling units and additions",
-    href: "/services/adu-builder-marin-county",
-    image: null,
-    gradient: "from-amber-900/40 to-brand-dark",
-  },
-  {
-    title: "Kitchen & Bath",
-    description: "Custom cabinetry, premium tile, fully permitted",
-    href: "/services/kitchen-remodel-marin-county",
-    image: "/images/services/kitchen.jpg",
-    gradient: null,
-  },
-  {
-    title: "Outdoor Living",
-    description: "Pool houses, decks, outdoor kitchens — Sonoma focus",
-    href: "/services",
-    image: null,
-    gradient: "from-green-900/40 to-brand-dark",
-  },
-];
 
 const testimonials = [
   {
@@ -198,32 +168,74 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h2 className={`${cormorant.className} text-4xl md:text-5xl text-brand-tan font-light mb-16`}>
-          Our Services
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {serviceCards.map((card) => (
-            <Link key={card.title} href={card.href} className="group block">
-              <div className="relative aspect-[16/9] overflow-hidden">
-                {card.image ? (
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                ) : (
-                  <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} transition-transform duration-500 group-hover:scale-105`} />
-                )}
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute inset-0 flex flex-col justify-end p-8">
-                  <h3 className={`${cormorant.className} text-white font-light text-2xl mb-2`}>{card.title}</h3>
-                  <p className={`${montserrat.className} text-white/70 text-xs tracking-wider`}>{card.description}</p>
-                </div>
+      <section style={{ padding: '120px 0', backgroundColor: '#f8f7f4' }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className={`${cormorant.className}`} style={{
+            fontSize: 'clamp(32px, 4vw, 48px)',
+            fontWeight: '300',
+            textAlign: 'center',
+            color: '#0a1628',
+            marginBottom: '80px',
+            letterSpacing: '0.02em',
+          }}>
+            Our Services
+          </h2>
+
+          {[
+            { num: '01', title: 'Full Home Remodels', description: 'Complete design-build transformation from structural to luxury finishes.', href: '/services/whole-house-remodel-marin-county' },
+            { num: '02', title: 'ADUs & Home Additions', description: 'Fully permitted accessory dwelling units designed for modern living.', href: '/services/adu-builder-marin-county' },
+            { num: '03', title: 'Kitchen & Bath', description: 'Custom cabinetry, premium tile, and precision craftsmanship throughout.', href: '/services/kitchen-remodel-marin-county' },
+            { num: '04', title: 'Outdoor Living', description: 'Pool houses, decks, and outdoor kitchens seamlessly integrated.', href: '/services' },
+          ].map((service, index) => (
+            <a
+              key={service.num}
+              href={service.href}
+              className="group block"
+              style={{
+                borderTop: '1px solid rgba(10,22,40,0.12)',
+                borderBottom: index === 3 ? '1px solid rgba(10,22,40,0.12)' : 'none',
+                padding: '40px 0',
+                display: 'grid',
+                gridTemplateColumns: '80px 1fr 40px',
+                alignItems: 'center',
+                gap: '32px',
+                textDecoration: 'none',
+                transition: 'all 0.4s ease',
+              }}
+            >
+              <span className={cormorant.className} style={{
+                fontSize: '14px',
+                fontStyle: 'italic',
+                color: '#cbb26a',
+                opacity: 0.6,
+              }}>{service.num}</span>
+
+              <div>
+                <h3 className={`${cormorant.className} group-hover:text-[#cbb26a]`} style={{
+                  fontSize: '32px',
+                  fontWeight: '300',
+                  color: '#0a1628',
+                  marginBottom: '8px',
+                  transition: 'color 0.3s ease',
+                }}>{service.title}</h3>
+                <p className={montserrat.className} style={{
+                  fontSize: '12px',
+                  fontWeight: '300',
+                  letterSpacing: '0.08em',
+                  color: 'rgba(10,22,40,0.55)',
+                  lineHeight: 1.7,
+                }}>{service.description}</p>
               </div>
-            </Link>
+
+              <svg
+                className="group-hover:translate-x-2 group-hover:text-[#cbb26a]"
+                width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#0a1628" strokeWidth="1"
+                style={{ transition: 'all 0.4s ease' }}
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           ))}
         </div>
       </section>
