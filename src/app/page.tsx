@@ -137,12 +137,13 @@ export default function HomePage() {
       {/* EEAT Trust Bar */}
       <section style={{ backgroundColor: '#0a0a0a', borderBottom: '1px solid rgba(203,178,106,0.15)', padding: '0' }}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4" style={{ borderLeft: '1px solid rgba(203,178,106,0.12)' }}>
+          <div className="grid grid-cols-2 md:grid-cols-5" style={{ borderLeft: '1px solid rgba(203,178,106,0.12)' }}>
             {[
               { label: 'CSLB #1106798', value: 'Licensed Since 2009' },
               { label: '$2M Liability', value: 'General Liability Insurance' },
               { label: '10-Year Warranty', value: 'Craftsmanship Guarantee' },
               { label: '5.0 Stars', value: '47 Google Reviews' },
+              { label: 'Nextdoor', value: '#1 Contractor Marin County — 2 Consecutive Years' },
             ].map((item) => (
               <div
                 key={item.label}
