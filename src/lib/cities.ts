@@ -1,0 +1,139 @@
+export interface City {
+  slug: string;
+  name: string;
+  county: string;
+  zip: string;
+  lat: number;
+  lng: number;
+  tier: 'primary' | 'secondary';
+  description: string;
+  neighborhoods: string[];
+  heroImage: string;
+}
+
+export const cities: City[] = [
+  {
+    slug: 'mill-valley',
+    name: 'Mill Valley',
+    county: 'Marin',
+    zip: '94941',
+    lat: 37.9060,
+    lng: -122.5450,
+    tier: 'primary',
+    description: 'Nestled at the base of Mount Tamalpais, Mill Valley is one of Marin\'s most coveted communities — known for its redwood-shaded streets, walkable downtown, and architecturally significant homes.',
+    neighborhoods: ['Sycamore Park', 'Tam Valley', 'Homestead Valley', 'Alto', 'Strawberry'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'tiburon',
+    name: 'Tiburon',
+    county: 'Marin',
+    zip: '94920',
+    lat: 37.8910,
+    lng: -122.4557,
+    tier: 'primary',
+    description: 'Tiburon\'s waterfront peninsula offers sweeping San Francisco Bay views and a collection of luxury homes that demand the highest level of craft and discretion.',
+    neighborhoods: ['Belvedere', 'Old Town Tiburon', 'Paradise Cay', 'Reed Elementary'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'san-rafael',
+    name: 'San Rafael',
+    county: 'Marin',
+    zip: '94901',
+    lat: 37.9735,
+    lng: -122.5311,
+    tier: 'primary',
+    description: 'As Marin\'s county seat and largest city, San Rafael blends historic architecture with modern living — from the Mission corridor to the hillside estates of Dominican.',
+    neighborhoods: ['Dominican', 'Glenwood', 'Lucas Valley', 'Marinwood', 'Terra Linda'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'sausalito',
+    name: 'Sausalito',
+    county: 'Marin',
+    zip: '94965',
+    lat: 37.8590,
+    lng: -122.4852,
+    tier: 'primary',
+    description: 'Perched above the bay with views of the Golden Gate, Sausalito\'s hillside cottages and waterfront estates require contractors who understand complex terrain and historic character.',
+    neighborhoods: ['Banana Belt', 'Hurricane Gulch', 'Wolfback Ridge', 'Marinship'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'belvedere',
+    name: 'Belvedere',
+    county: 'Marin',
+    zip: '94920',
+    lat: 37.8724,
+    lng: -122.4657,
+    tier: 'secondary',
+    description: 'One of the most exclusive zip codes in the Bay Area, Belvedere Island is home to multi-million dollar waterfront estates requiring the utmost in craftsmanship and discretion.',
+    neighborhoods: ['Belvedere Island', 'Corinthian Island'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'ross',
+    name: 'Ross',
+    county: 'Marin',
+    zip: '94957',
+    lat: 37.9624,
+    lng: -122.5566,
+    tier: 'secondary',
+    description: 'Ross is one of the smallest and wealthiest municipalities in California — a quiet enclave of historic estates where every renovation requires exceptional attention to architectural detail.',
+    neighborhoods: ['Downtown Ross', 'Lagunitas Road', 'Shady Lane'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'kentfield',
+    name: 'Kentfield',
+    county: 'Marin',
+    zip: '94904',
+    lat: 37.9546,
+    lng: -122.5531,
+    tier: 'secondary',
+    description: 'Kentfield\'s wooded hillsides and proximity to College of Marin make it a sought-after address — with a mix of craftsman homes and modern remodels that reward careful design.',
+    neighborhoods: ['Greenbrae', 'College of Marin Area', 'Crown Road'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'corte-madera',
+    name: 'Corte Madera',
+    county: 'Marin',
+    zip: '94925',
+    lat: 37.9249,
+    lng: -122.5241,
+    tier: 'secondary',
+    description: 'With easy highway access and a family-friendly atmosphere, Corte Madera is a popular choice for full home remodels and ADU additions in southern Marin.',
+    neighborhoods: ['Corte Madera Hills', 'Murray Park', 'Old Town'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'napa',
+    name: 'Napa',
+    county: 'Napa',
+    zip: '94559',
+    lat: 38.2975,
+    lng: -122.2869,
+    tier: 'secondary',
+    description: 'Napa Valley\'s wine country estates and historic downtown neighborhoods create unique remodeling opportunities — from vineyard compounds to restored Victorian-era homes.',
+    neighborhoods: ['Downtown Napa', 'Browns Valley', 'Coombsville', 'Alta Heights'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+  {
+    slug: 'santa-rosa',
+    name: 'Santa Rosa',
+    county: 'Sonoma',
+    zip: '95401',
+    lat: 38.4404,
+    lng: -122.7141,
+    tier: 'secondary',
+    description: 'Sonoma County\'s largest city offers a wide range of remodeling projects — from post-fire rebuilds in the foothills to luxury kitchen and bath renovations in established neighborhoods.',
+    neighborhoods: ['Fountaingrove', 'McDonald Avenue', 'Bennett Valley', 'Rincon Valley'],
+    heroImage: '/images/hero/hero-bg-1.jpg',
+  },
+];
+
+export function getCityBySlug(slug: string): City | undefined {
+  return cities.find(c => c.slug === slug);
+}

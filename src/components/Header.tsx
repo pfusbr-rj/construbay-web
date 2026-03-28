@@ -76,6 +76,12 @@ export default function Header() {
               About
             </Link>
             <Link
+              href="/blog"
+              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
+            >
+              Blog
+            </Link>
+            <Link
               href="/request-a-bid"
               className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
             >
@@ -107,6 +113,7 @@ export default function Header() {
               <Link href="/services" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Services</Link>
               <Link href="/projects" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Projects</Link>
               <Link href="/about" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>About</Link>
+              <Link href="/blog" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Blog</Link>
               <Link href="/request-a-bid" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Contact</Link>
             </nav>
           </div>
