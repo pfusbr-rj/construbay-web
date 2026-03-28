@@ -8,10 +8,13 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-brand-tan/20" style={{ backgroundColor: '#000000' }}>
-      <div className="w-full pl-8 pr-6 lg:pl-12 lg:pr-8">
-        <div className="flex items-center justify-between h-24 sm:h-32">
-          {/* CSLB + Logo + Phone */}
-          <div className="flex items-center gap-8">
+      <div style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
+
+        {/* Main row */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '96px' }}>
+
+          {/* Left: CSLB + Logo */}
+          <div className="flex items-center" style={{ gap: '1.5rem' }}>
             <span className="hidden md:block" style={{
               color: 'rgba(203,178,106,0.5)',
               fontSize: '11px',
@@ -33,6 +36,21 @@ export default function Header() {
                 style={{ height: '110px', width: 'auto' }}
               />
             </Link>
+          </div>
+
+          {/* Center: Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Home</Link>
+            <Link href="/services" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Services</Link>
+            <Link href="/locations" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Locations</Link>
+            <Link href="/projects" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Projects</Link>
+            <Link href="/about" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">About</Link>
+            <Link href="/blog" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Blog</Link>
+            <Link href="/request-a-bid" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Contact</Link>
+          </nav>
+
+          {/* Right: Phone (desktop) + Hamburger (mobile) */}
+          <div className="flex items-center">
             <a
               href="tel:4159689494"
               className="hidden md:block hover:opacity-70 transition-opacity"
@@ -49,68 +67,21 @@ export default function Header() {
             >
               (415) 968-9494
             </a>
+            <button
+              className="md:hidden text-white p-2"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {menuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link
-              href="/"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
-            >
-              Home
-            </Link>
-            <Link
-              href="/services"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
-            >
-              Services
-            </Link>
-            <Link
-              href="/locations"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
-            >
-              Locations
-            </Link>
-            <Link
-              href="/projects"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
-            >
-              Projects
-            </Link>
-            <Link
-              href="/about"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
-            >
-              About
-            </Link>
-            <Link
-              href="/blog"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/request-a-bid"
-              className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300"
-            >
-              Contact
-            </Link>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
         </div>
 
         {/* Mobile Menu */}
@@ -127,6 +98,7 @@ export default function Header() {
             </nav>
           </div>
         )}
+
       </div>
     </header>
   );
