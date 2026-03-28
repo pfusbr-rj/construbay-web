@@ -27,6 +27,18 @@ export default function Header() {
             >
               (415) 968-9494
             </a>
+            <span style={{
+              color: 'rgba(203,178,106,0.5)',
+              fontSize: '11px',
+              letterSpacing: '0.15em',
+              fontWeight: '300',
+              textTransform: 'uppercase',
+              fontFamily: 'Montserrat, sans-serif',
+              paddingLeft: '8px',
+              borderLeft: '1px solid rgba(203,178,106,0.3)',
+            }}>
+              CSLB #1106798
+            </span>
           </div>
 
           {/* Desktop Nav */}
