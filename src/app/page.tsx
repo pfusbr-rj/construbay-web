@@ -64,13 +64,16 @@ export default function HomePage() {
               style={{ height: '220px', width: 'auto' }}
             />
           </div>
-          <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-6 leading-none text-center w-full mx-auto`}>
-            Built Without Compromise
+          <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-4 leading-none text-center w-full mx-auto`}>
+            Built With Intention
           </h1>
+          <p className={`${cormorant.className} mb-6`} style={{ fontStyle: 'italic', fontSize: 'clamp(20px, 2.5vw, 32px)', textAlign: 'center', width: '100%', display: 'block', color: '#cbb26a', fontWeight: '300' }}>
+            Artistry in Execution
+          </p>
           <p style={{ display: 'none' }} aria-hidden="false">
             Luxury General Contractor serving Marin County, Sonoma County and Napa County. CSLB #1106798. Mill Valley, Tiburon, San Rafael, Sausalito.
           </p>
-          <p className={`${montserrat.className} mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px', textAlign: 'center', width: '100%', display: 'block', color: '#cbb26a' }}>
+          <p className={`${montserrat.className} mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px', textAlign: 'center', width: '100%', display: 'block', color: 'rgba(203,178,106,0.55)' }}>
             Marin, Sonoma &amp; Napa
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>

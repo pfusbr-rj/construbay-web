@@ -19,7 +19,7 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.construbay.com"),
   title: {
-    default: "ConstruBay | Licensed General Contractor — Marin & Sonoma County | CSLB #1106798",
+    default: "ConstruBay | Built With Intention | Licensed General Contractor Marin County",
     template: "%s | ConstruBay",
   },
   description:
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.construbay.com",
     siteName: "ConstruBay",
-    title: "ConstruBay | Licensed General Contractor — Marin & Sonoma County | CSLB #1106798",
+    title: "ConstruBay | Built With Intention | Licensed General Contractor Marin County",
     description:
       "Licensed general contractor serving Marin and Sonoma County. Full remodels, ADUs, custom pools, kitchen and bath, permit expediting. CSLB #1106798. Free estimates — (415) 968-9494.",
   },
