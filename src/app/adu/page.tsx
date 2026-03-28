@@ -11,10 +11,10 @@ const LOGO = '/images/logo.png'
 const WA_LINK = 'https://wa.me/14159689494?text=Hi%2C%20I%27m%20interested%20in%20building%20an%20ADU%20on%20my%20property.%20Can%20we%20chat%3F'
 const CALENDLY_URL = 'https://calendly.com/construbay/adu-planning-session-design-permits-budget'
 const PHONE = 'tel:4159689494'
-const navy = '#0a1628'
+const navy = '#000000'
 const gold = '#cbb26a'
 const grad = 'linear-gradient(135deg,#bb8b4a 0%,#f7eb9e 100%)'
-const panel = '#0d1a30'
+const panel = '#000000'
 const border = '1px solid rgba(203,178,106,0.22)'
 const inputBase = {
   width: '100%', background: 'rgba(255,255,255,0.05)', border, borderRadius: 6,

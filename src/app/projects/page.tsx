@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main style={{ backgroundColor: '#0a1628', minHeight: '100vh', paddingTop: '120px' }}>
+    <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '120px' }}>
       <ProjectGrid projects={projects} mode="archive" />
     </main>
   );

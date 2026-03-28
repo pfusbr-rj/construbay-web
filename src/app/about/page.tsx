@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main style={{ backgroundColor: '#0a1628', minHeight: '100vh', paddingTop: '120px' }}>
+    <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '120px' }}>
 
       {/* HERO */}
       <section style={{ padding: '80px 0 120px', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* PLANPASS.AI */}
-      <section style={{ padding: '120px 0', backgroundColor: 'rgba(203,178,106,0.04)', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
+      <section style={{ padding: '120px 0', backgroundColor: 'rgba(203,178,106,0.06)', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
         <div className="max-w-6xl mx-auto px-6" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '80px', alignItems: 'center' }}>
           <div>
             <p className={montserrat.className} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '24px' }}>
@@ -229,7 +229,7 @@ export default function AboutPage() {
               { bot: 'Marketing Bot', desc: 'Creates content, manages social media, and runs ad campaigns across all platforms automatically.' },
               { bot: 'Permit Bot', desc: 'Powered by PlanPass.ai — reviews permit applications and flags issues before submission.' },
             ].map((item) => (
-              <div key={item.bot} style={{ backgroundColor: '#0a1628', padding: '48px 40px' }}>
+              <div key={item.bot} style={{ backgroundColor: '#000000', padding: '48px 40px' }}>
                 <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px' }}>
                   {item.bot}
                 </p>

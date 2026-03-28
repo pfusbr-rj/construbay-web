@@ -27,7 +27,7 @@ export default function ProjectGrid({ projects, mode }: ProjectGridProps) {
   }, [projects, mode, activeFilter]);
 
   return (
-    <section style={{ padding: '120px 0', backgroundColor: '#0a1628' }}>
+    <section style={{ padding: '120px 0', backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '64px' }}>

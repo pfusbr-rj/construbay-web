@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'brand-gold': '#cbb26a',
-        'brand-dark': '#0a1628',
+        'brand-dark': '#000000',
         'brand-tan': '#cbb26a',
         'brand-gradient-start': '#bb8b4a',
         'brand-gradient-end': '#f7eb9e',
