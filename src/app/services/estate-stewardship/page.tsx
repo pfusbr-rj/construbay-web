@@ -7,40 +7,40 @@ const MS = "'Montserrat', Arial, sans-serif";
 const GOLD = "#cbb26a";
 const GRAD = "linear-gradient(135deg, #bb8b4a, #f7eb9e)";
 
-export default function AduBuilderPage() {
+export default function EstateStewardshipPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const included: string[] = [
-    "Detached ADU design & construction",
-    "Attached ADU & garage conversion",
-    "Junior ADU (JADU) interior conversions",
-    "SB 9 lot split & second unit compliance",
-    "Architectural language matching — siding, roofline & windows",
-    "Full permit navigation via PlanPass.ai",
-    "Utility connection engineering (water, sewer, electrical)",
-    "Landscaping & access pathway integration",
+    "Annual envelope & drainage inspection",
+    "Priority emergency response (24-48 hour response time)",
+    "Seasonal exterior maintenance planning",
+    "Pre-storm preparation & post-storm assessment",
+    "Mechanical system coordination & vendor management",
+    "Pre-planned improvement project scheduling",
+    "Property history & specification documentation",
+    "Preferred client pricing on all improvement work",
   ];
   const faqs: { q: string; a: string }[] = [
     {
-      q: "How much does an ADU cost in Marin County?",
-      a: "An ADU in Marin County typically ranges from $175,000 to $450,000+ depending on size, type (detached vs. garage conversion), site complexity, and finish level. Garage conversions are typically the most cost-effective option at $175,000–$275,000. Detached ADUs typically range from $250,000 to $450,000+. All ConstruBay ADU projects are delivered under a fixed-scope contract — the number you approve before we break ground is the final number you pay.",
+      q: "What is included in ConstruBay&apos;s Estate Stewardship program?",
+      a: "The Estate Stewardship program includes annual full-property envelope and systems inspection, priority 24–48 hour emergency response, seasonal maintenance coordination, pre-storm preparation visits, and proactive identification of maintenance needs. Stewardship clients also receive preferred pricing on all improvement and repair work, a dedicated coordinator who maintains your property&apos;s specification and history documentation, and priority scheduling for new project work.",
     },
     {
-      q: "How long does it take to build an ADU in Marin County?",
-      a: "An ADU permit in Marin County typically takes 3–8 months to obtain depending on jurisdiction and whether Design Review Board approval is required. Construction of a detached ADU typically takes 6–9 months from permit approval. Garage conversions typically take 4–6 months. ConstruBay&apos;s PlanPass.ai platform routinely reduces permit timelines by 30–45% through pre-screening and direct communication with plan checkers in each jurisdiction.",
+      q: "Who is the Estate Stewardship program designed for?",
+      a: "The program is designed for owners of luxury Marin County, Sonoma County, and Napa County estates who want to protect their investment through proactive maintenance rather than reactive repairs. Many of our stewardship clients are primary homeowners who travel frequently, owners of second estates who want professional oversight during periods of absence, and estates managed by family offices or property management firms who need a trusted licensed contractor as a dedicated resource.",
     },
     {
-      q: "Can I rent out an ADU in Marin County?",
-      a: "Yes — ADUs in Marin County can be rented as long-term rentals (30+ days). Short-term rentals (less than 30 days) are subject to separate local regulations that vary by jurisdiction and may require a business license and transient occupancy tax registration. Consult your specific city&apos;s short-term rental ordinance before marketing your ADU as a vacation rental. ConstruBay can refer you to local property managers and rental market specialists as part of the project consultation.",
+      q: "How does priority emergency response work?",
+      a: "Stewardship clients receive a direct emergency line to their designated project coordinator. We guarantee a site assessment within 24–48 hours of an emergency call — and in most cases, same-day response for critical issues like active water intrusion, storm damage, or mechanical failure. Emergency repairs are invoiced at preferred stewardship rates, and we maintain material inventory for the most common emergency repair scenarios on Marin County estates.",
     },
     {
-      q: "What is the difference between a JADU and a standard ADU in Marin County?",
-      a: "A Junior ADU (JADU) is a unit created entirely within the existing footprint of the primary dwelling — typically a converted bedroom or garage space — and is limited to 500 square feet under California law. JADUs require the property owner to occupy either the primary unit or the JADU. A standard ADU can be a detached structure, an addition, or a conversion of a larger existing space, and can be up to 1,200 square feet in most California jurisdictions. ConstruBay designs and builds both JADUs and standard ADUs and can advise on the best configuration for your specific property and goals.",
+      q: "Can I join the Estate Stewardship program even if ConstruBay did not build my home?",
+      a: "Yes — we accept a limited number of select estates into the program each year regardless of prior contractor relationship. New estate onboarding includes a comprehensive inspection and documentation session, after which we establish your property&apos;s specification record and begin your stewardship program. Estates are accepted at the discretion of our stewardship team based on property type, location, and program capacity.",
     },
   ];
   const relatedServices: { name: string; href: string; desc: string }[] = [
-    { name: "Home Addition", href: "/services/home-addition-marin-county", desc: "Primary suite wings, second stories & structural expansions" },
-    { name: "New Construction", href: "/services/new-construction-marin-county", desc: "Ground-up architect-designed custom homes in Marin County" },
     { name: "Full Home Remodel", href: "/services/whole-house-remodel-marin-county", desc: "Complete whole-home renovation — structural to aesthetic" },
+    { name: "New Construction", href: "/services/new-construction-marin-county", desc: "Ground-up architect-designed custom homes in Marin County" },
+    { name: "Deck & Outdoor Living", href: "/services/deck-outdoor-living-marin-county", desc: "Year-round outdoor living spaces for Marin estates" },
   ];
 
   return (
@@ -49,21 +49,21 @@ export default function AduBuilderPage() {
       {/* HERO */}
       <section style={{ position: 'relative', minHeight: '72vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/services/adu-hero.jpg" alt="Luxury ADU Builder Marin County" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }} />
+        <img src="/images/services/estate-stewardship-hero.jpg" alt="Estate Stewardship Marin County" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }} />
         <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)' }} />
         <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '860px', padding: '0 24px' }}>
           <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: '20px' }}>ConstruBay · CSLB #1106798</p>
-          <h1 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 300, color: '#ffffff', lineHeight: 1.05, marginBottom: '24px' }}>ADU &amp; Garage Conversion in Marin County</h1>
-          <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: '40px' }}>Architectural Quality Accessory Dwellings — Indistinguishable From Your Main Home</p>
+          <h1 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 300, color: '#ffffff', lineHeight: 1.05, marginBottom: '24px' }}>Estate Stewardship</h1>
+          <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: '40px' }}>Ongoing Estate Care — Priority Access, Preventative Maintenance &amp; Annual Planning</p>
           <a href="/request-a-bid" style={{ display: 'inline-block', background: GRAD, color: '#000000', fontFamily: MS, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 52px', textDecoration: 'none' }}>Schedule a Private Consultation</a>
         </div>
       </section>
 
       {/* PHILOSOPHY */}
       <section style={{ maxWidth: '800px', margin: '0 auto', padding: '96px 24px' }}>
-        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>An Accessory Dwelling Unit should never look like an afterthought. We design and build detached luxury suites and garage conversions that mirror the architectural language of your main home — perfect for multi-generational living, guest quarters, or high-yield estate rentals. Every ADU we build is finished to the same material standard as the primary residence.</p>
-        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>California&apos;s ADU laws have created extraordinary investment opportunities for Marin County homeowners — but navigating the permit process, SB 9 compliance, utility connections, and design review requirements requires local expertise. Our PlanPass.ai permit intelligence platform has accelerated ADU permit approvals across all Marin County jurisdictions, and our team has completed ADU projects on lots ranging from standard urban parcels to complex hillside sites with septic system requirements.</p>
-        <p style={{ fontFamily: MS, fontSize: '12px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.45)', lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed ADU and garage conversion projects across Marin, Sonoma, and Napa Counties.</p>
+        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>A luxury estate requires the same level of ongoing stewardship as the original construction that created it. ConstruBay&apos;s Estate Stewardship program provides our past clients and select new estates with priority access to our team for ongoing maintenance, seasonal inspections, and pre-planned improvement projects — ensuring that your estate performs and presents at its highest level year-round.</p>
+        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>Estate Stewardship is not a service contract — it is a relationship. Your dedicated stewardship coordinator maintains a living record of your property&apos;s systems, finishes, and improvement history, and proactively identifies maintenance needs before they become emergency repairs. We schedule annual envelope inspections, mechanical system service, and exterior maintenance as a planned program rather than a reactive response.</p>
+        <p style={{ fontFamily: MS, fontSize: '12px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.45)', lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed estate stewardship projects across Marin, Sonoma, and Napa Counties.</p>
       </section>
 
       <div style={{ height: '1px', background: GRAD, margin: '0 48px', opacity: 0.35 }} />
@@ -88,7 +88,7 @@ export default function AduBuilderPage() {
       <section style={{ maxWidth: '800px', margin: '0 auto', padding: '96px 24px' }}>
         <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: GOLD, marginBottom: '16px' }}>The Marin Advantage</h2>
         <div style={{ width: '40px', height: '1px', background: GRAD, marginBottom: '40px', opacity: 0.6 }} />
-        <p style={{ fontFamily: MS, fontSize: '14px', lineHeight: 1.95, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.03em' }}>ADU permitting in Marin County is governed by state ADU law (AB 68, SB 9, AB 2221) as well as local ordinances from each of Marin&apos;s 11 cities and unincorporated county areas. Our PlanPass.ai platform maintains current ADU compliance matrices for every Marin County jurisdiction — including Tiburon, Mill Valley, Sausalito, San Rafael, Novato, Ross, Belvedere, San Anselmo, Fairfax, Corte Madera, and Larkspur. We pre-screen every ADU application for setback, height, coverage, and owner-occupancy requirements before investing in construction drawings, preventing the costly redesigns that occur when projects hit regulatory obstacles mid-design. Our team has also completed ADU projects in Sonoma County jurisdictions including the City of Sonoma, Petaluma, and unincorporated Sonoma County.</p>
+        <p style={{ fontFamily: MS, fontSize: '14px', lineHeight: 1.95, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.03em' }}>Estate stewardship in Marin County requires intimate knowledge of the local climate cycles — wet winters with potential for roof, drainage, and envelope failures; dry summers with fire risk preparation; and the year-round salt air exposure that affects metal fasteners, exterior finishes, and glazing systems. Our stewardship coordinators are based in Mill Valley and are familiar with the specific maintenance requirements of estates throughout Marin County, Sonoma County, and Napa County. We maintain a dedicated crew for stewardship client priority response, independent from our active construction workforce.</p>
       </section>
 
       {/* PROCESS */}
@@ -117,8 +117,8 @@ export default function AduBuilderPage() {
         <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: GOLD, marginBottom: '16px' }}>Investment Range</h2>
         <div style={{ width: '40px', height: '1px', background: GRAD, margin: '0 auto 40px', opacity: 0.6 }} />
         <div style={{ border: '1px solid rgba(203,178,106,0.25)', padding: '48px 32px', marginBottom: '28px' }}>
-          <p style={{ fontFamily: CG, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 300, color: '#ffffff', marginBottom: '8px' }}>$175,000 – $450,000+</p>
-          <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, opacity: 0.65 }}>Typical Project Range</p>
+          <p style={{ fontFamily: CG, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 300, color: '#ffffff', marginBottom: '8px' }}>Retainer-Based Program</p>
+          <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, opacity: 0.65 }}>Custom Annual Pricing — Contact for Details</p>
         </div>
         <p style={{ fontFamily: MS, fontSize: '12px', lineHeight: 1.85, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em' }}>All projects are delivered under a fixed-scope contract — the number you approve is the number you pay.</p>
       </section>
@@ -164,7 +164,7 @@ export default function AduBuilderPage() {
       {/* FINAL CTA */}
       <section style={{ padding: '120px 24px', textAlign: 'center', backgroundColor: '#000000' }}>
         <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: '24px', opacity: 0.7 }}>Begin Your Project</p>
-        <h2 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, background: GRAD, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '24px', lineHeight: 1.1 }}>Begin Your ADU Project</h2>
+        <h2 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, background: GRAD, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '24px', lineHeight: 1.1 }}>Begin Your Estate Stewardship Project</h2>
         <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.58)', maxWidth: '500px', margin: '0 auto 48px', lineHeight: 1.9 }}>Fixed-scope contract. No surprises. Schedule a private consultation with Paulo.</p>
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="https://calendly.com/construbay/initial-consultation-construbay" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: GRAD, color: '#000000', fontFamily: MS, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 52px', textDecoration: 'none' }}>Book a Private Consultation</a>

@@ -7,54 +7,54 @@ const MS = "'Montserrat', Arial, sans-serif";
 const GOLD = "#cbb26a";
 const GRAD = "linear-gradient(135deg, #bb8b4a, #f7eb9e)";
 
-export default function KitchenRemodelPage() {
+export default function DeckOutdoorLivingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const included = [
-    "Custom full-overlay cabinetry & integrated hardware",
-    "Natural stone countertops — quartzite, marble & granite fabrication",
-    "Professional-grade appliance integration (Sub-Zero, Wolf, Miele)",
-    "Custom range hood & exhaust engineering",
-    "Architectural island design & waterfall edge fabrication",
-    "Concealed lighting coves & under-cabinet LED systems",
-    "Structural wall removal & beam engineering",
-    "Custom tile backsplash & natural stone flooring",
+  const included: string[] = [
+    "Premium Ipe, Cumaru & hardwood deck construction",
+    "Structural glass railing systems",
+    "Integrated outdoor kitchen design & construction",
+    "Gas fire pit & outdoor fireplace systems",
+    "Automated louvered pergola & motorized shade systems",
+    "Structural deck engineering & ledger connections",
+    "Ambient & task lighting systems",
+    "Outdoor audio & weatherproof AV integration",
   ];
 
-  const faqs = [
+  const faqs: { q: string; a: string }[] = [
     {
-      q: "How much does a luxury kitchen remodel cost in Marin County?",
-      a: "A luxury kitchen remodel in Marin County typically ranges from $85,000 to $175,000+, depending on size, structural modifications required, appliance selections, and custom millwork scope. Imported stone countertops, professional-grade appliances, and full custom cabinetry are the largest cost drivers. ConstruBay delivers a detailed fixed-scope bid with line-item pricing before any work begins — there are no surprise invoices at the end of your project.",
+      q: "How much does a luxury deck cost in Marin County?",
+      a: "A premium Ipe hardwood deck with glass railings typically ranges from $75,000 to $130,000 in Marin County, depending on size and structural complexity. Full outdoor living spaces with integrated kitchens, pergolas, and fire features commonly range from $130,000 to $200,000+. All ConstruBay outdoor projects are delivered under a fixed-scope contract with full permit management included.",
     },
     {
-      q: "How long does a kitchen remodel take in Marin County?",
-      a: "A full luxury kitchen remodel typically takes 10–16 weeks from permit approval to completion in Marin County. Lead times for custom cabinetry (8–12 weeks) and imported stone (4–8 weeks) are the critical path. We coordinate all material lead times before permitting begins, so your kitchen is fully staged for installation the moment permits are approved. Most standard kitchen permits in Marin County are approved within 4–8 weeks.",
+      q: "What decking materials are best for Marin County&apos;s coastal climate?",
+      a: "We typically specify Ipe or Cumaru hardwood for primary deck surfaces on Marin County properties — both species are naturally resistant to moisture, UV, and salt air, with a natural lifespan of 25–40+ years with minimal maintenance. For fire-rated applications in WUI zones, we also work with Trex Transcend composite decking and thermally modified wood options that meet Marin County Fire requirements. We do not recommend pressure-treated pine for luxury applications — the dimensional instability and aesthetic degradation in coastal conditions are unacceptable.",
     },
     {
-      q: "Do I need a permit for a kitchen remodel in Marin County?",
-      a: "Yes — any kitchen remodel involving electrical, plumbing, gas, or structural modifications requires a permit from your local jurisdiction (Marin County, Mill Valley, Tiburon, etc.). ConstruBay handles the entire permit process using our PlanPass.ai platform, which pre-screens applications to minimize plan check cycles. Cabinet-only replacements without system modifications may not require a permit, but we always recommend confirming with your jurisdiction first.",
+      q: "Do I need a permit to build a deck in Marin County?",
+      a: "Yes — virtually all attached decks and most freestanding decks above 30 inches from grade require building permits in Marin County. Hillside properties with structural post systems require additional structural engineering review. ConstruBay handles the full permit process as part of every outdoor living project, including neighbor notification where required.",
     },
     {
-      q: "What kitchen appliance brands do you work with?",
-      a: "ConstruBay integrates all major luxury appliance brands including Sub-Zero, Wolf, Miele, Thermador, La Cornue, and Gaggenau. We coordinate directly with your appliance supplier for delivery sequencing, rough-in specifications, and final trim installations. Our team has completed professional-grade kitchen installations across Marin and Sonoma Counties and is familiar with the installation requirements of each major brand.",
+      q: "Can I build a deck on a hillside lot in Marin County?",
+      a: "Yes — hillside deck engineering is one of our specialties. We design post-and-beam foundation systems for sloped terrain, including concrete pier foundations, helical pile systems for unstable soils, and cantilevered deck systems that minimize site disturbance. We have completed hillside decks throughout Mill Valley, Tiburon, and Sausalito on lots with grades ranging from 15% to over 50%.",
     },
   ];
 
-  const relatedServices = [
+  const relatedServices: { name: string; href: string; desc: string }[] = [
     {
-      name: "Bathroom Remodel",
-      href: "/services/bathroom-remodel-marin-county",
-      desc: "Spa-grade private sanctuaries with heated stone floors & custom steam showers",
+      name: "Landscaping & Grading",
+      href: "/services/landscaping-grading-marin-county",
+      desc: "Hillside grading, drainage & estate landscape construction",
+    },
+    {
+      name: "Fencing & Gates",
+      href: "/services/fencing-gates-marin-county",
+      desc: "Custom estate perimeters & automated gate systems",
     },
     {
       name: "Full Home Remodel",
       href: "/services/whole-house-remodel-marin-county",
-      desc: "Complete whole-home renovation for Marin County estates",
-    },
-    {
-      name: "Flooring",
-      href: "/services/flooring-marin-county",
-      desc: "Wide-plank hardwood, natural stone & custom inlay throughout your estate",
+      desc: "Complete whole-home renovation — structural to aesthetic",
     },
   ];
 
@@ -64,21 +64,21 @@ export default function KitchenRemodelPage() {
       {/* SECTION 1 — HERO */}
       <section style={{ position: "relative", minHeight: "72vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/services/kitchen-hero.jpg" alt="Luxury kitchen remodel in Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
+        <img src="/images/services/deck-hero.jpg" alt="Deck & Outdoor Living Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.6)" }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: "860px", padding: "0 24px" }}>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "20px" }}>ConstruBay · CSLB #1106798</p>
-          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Luxury Kitchen Remodels in Marin County</h1>
-          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Bespoke Culinary Spaces — Where Precision Meets Architecture</p>
+          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Deck &amp; Outdoor Living in Marin County</h1>
+          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Year-Round California Living — Engineered for Marin&apos;s Microclimate</p>
           <a href="/request-a-bid" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Schedule a Private Consultation</a>
         </div>
       </section>
 
       {/* SECTION 2 — PHILOSOPHY */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>The kitchen is the operational heart of your estate and the centerpiece of your property&apos;s value. We engineer bespoke culinary spaces using imported stone, precision cabinetry, and seamless appliance integration that disappears into the architecture — creating kitchens that are as beautiful at 6am as they are during a dinner party for twenty.</p>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Our kitchen remodeling process begins with a detailed structural review of your existing space. We identify load-bearing walls, reroute mechanical systems where necessary, and engineer an entirely new spatial flow before a single cabinet is ordered. The result is a kitchen that feels like it was always meant to be exactly this way.</p>
-        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury kitchen remodeling projects across Marin, Sonoma, and Napa Counties.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Marin&apos;s microclimate demands outdoor spaces as meticulously engineered as they are beautiful. We build premium Ipe and hardwood decks with integrated outdoor kitchens, fire features, and automated louvered pergolas designed for year-round California living — creating seamless transitions between interior luxury and the remarkable natural setting of every Marin property.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>An outdoor living space is the single highest-return improvement most Marin homeowners can make — adding functional square footage and transforming how the estate is experienced daily. We approach outdoor construction with the same structural rigor and material specification we apply to interior projects, because in Marin&apos;s salt air and coastal conditions, durability is as essential as beauty.</p>
+        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed deck and outdoor living projects across Marin, Sonoma, and Napa Counties.</p>
       </section>
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
@@ -103,7 +103,7 @@ export default function KitchenRemodelPage() {
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>The Marin Advantage</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, marginBottom: "40px", opacity: 0.6 }} />
-        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Kitchen remodels in Marin County often require structural modifications, electrical panel upgrades, and gas line rerouting — all of which require coordinated permit applications with Marin County Building Services or the relevant city jurisdiction. Our PlanPass.ai platform pre-screens permit applications for common kitchen remodel deficiencies before submission, dramatically reducing plan check cycle times. We have completed luxury kitchen remodels throughout Mill Valley, Tiburon, Sausalito, Ross, and Kentfield, and we are intimately familiar with the inspection protocols and material requirements of each jurisdiction.</p>
+        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Deck construction in Marin County is subject to strict setback requirements, height limitations, and in many hillside areas, additional structural engineering for posts on sloped terrain. Our PlanPass.ai platform pre-screens deck permit applications for the specific requirements of Mill Valley, Tiburon, Sausalito, and unincorporated Marin County, where conditions vary significantly. We are deeply experienced with hillside deck structural engineering — cantilevered decks, post-and-beam foundations on slopes, and seismic tie-down requirements are all standard considerations in our project planning. For properties in WUI fire zones, we specify fire-resistant decking materials and maintain current documentation on Marin County Fire&apos;s outdoor construction requirements.</p>
       </section>
 
       {/* SECTION 5 — PROCESS */}
@@ -132,7 +132,7 @@ export default function KitchenRemodelPage() {
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>Investment Range</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, margin: "0 auto 40px", opacity: 0.6 }} />
         <div style={{ border: "1px solid rgba(203,178,106,0.25)", padding: "48px 32px", marginBottom: "28px" }}>
-          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$85,000 – $175,000+</p>
+          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$75,000 – $200,000+</p>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, opacity: 0.65 }}>Typical Project Range</p>
         </div>
         <p style={{ fontFamily: MS, fontSize: "12px", lineHeight: 1.85, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em" }}>All projects are delivered under a fixed-scope contract — the number you approve is the number you pay.</p>
@@ -164,7 +164,7 @@ export default function KitchenRemodelPage() {
           <h2 style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 300, color: GOLD, textAlign: "center", marginBottom: "48px" }}>Related Services</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2px" }}>
             {relatedServices.map((s) => (
-              <a key={s.href} href={s.href} style={{ display: "block", padding: "40px 32px", backgroundColor: "#0a0a0a", border: "1px solid rgba(203,178,106,0.1)", textDecoration: "none", transition: "border-color 0.3s" }}
+              <a key={s.href} href={s.href} style={{ display: "block", padding: "40px 32px", backgroundColor: "#0a0a0a", border: "1px solid rgba(203,178,106,0.1)", textDecoration: "none" }}
                 onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(203,178,106,0.4)")}
                 onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(203,178,106,0.1)")}>
                 <h3 style={{ fontFamily: CG, fontSize: "1.4rem", fontWeight: 300, color: "#ffffff", marginBottom: "10px" }}>{s.name}</h3>
@@ -179,7 +179,7 @@ export default function KitchenRemodelPage() {
       {/* SECTION 9 — FINAL CTA */}
       <section style={{ padding: "120px 24px", textAlign: "center", backgroundColor: "#000000" }}>
         <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "24px", opacity: 0.7 }}>Begin Your Project</p>
-        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Kitchen Remodel Project</h2>
+        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Deck &amp; Outdoor Living Project</h2>
         <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.58)", maxWidth: "500px", margin: "0 auto 48px", lineHeight: 1.9 }}>Fixed-scope contract. No surprises. Schedule a private consultation with Paulo.</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <a href="https://calendly.com/construbay/initial-consultation-construbay" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Book a Private Consultation</a>

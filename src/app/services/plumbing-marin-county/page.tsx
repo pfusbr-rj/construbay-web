@@ -7,40 +7,40 @@ const MS = "'Montserrat', Arial, sans-serif";
 const GOLD = "#cbb26a";
 const GRAD = "linear-gradient(135deg, #bb8b4a, #f7eb9e)";
 
-export default function AduBuilderPage() {
+export default function PlumbingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const included: string[] = [
-    "Detached ADU design & construction",
-    "Attached ADU & garage conversion",
-    "Junior ADU (JADU) interior conversions",
-    "SB 9 lot split & second unit compliance",
-    "Architectural language matching — siding, roofline & windows",
-    "Full permit navigation via PlanPass.ai",
-    "Utility connection engineering (water, sewer, electrical)",
-    "Landscaping & access pathway integration",
+    "Luxury fixture installation (Waterworks, Dornbracht, Rohl)",
+    "Whole-home copper & PEX-A replumbing",
+    "Steam generator installation & steam shower rough-in",
+    "Tankless water heater systems",
+    "Recirculating hot water systems for instant hot delivery",
+    "Outdoor kitchen & bar plumbing",
+    "Gas line design & installation",
+    "Water filtration & softening system installation",
   ];
   const faqs: { q: string; a: string }[] = [
     {
-      q: "How much does an ADU cost in Marin County?",
-      a: "An ADU in Marin County typically ranges from $175,000 to $450,000+ depending on size, type (detached vs. garage conversion), site complexity, and finish level. Garage conversions are typically the most cost-effective option at $175,000–$275,000. Detached ADUs typically range from $250,000 to $450,000+. All ConstruBay ADU projects are delivered under a fixed-scope contract — the number you approve before we break ground is the final number you pay.",
+      q: "How much does whole-home replumbing cost in Marin County?",
+      a: "Whole-home replumbing in Marin County typically ranges from $25,000 to $75,000+ depending on home size, accessibility, and the extent of drain line replacement required. Supply line replacement alone typically runs $15,000–$40,000. Adding drain, waste, and vent system replacement adds $15,000–$35,000 depending on the condition of existing drain lines. ConstruBay provides fixed-scope pricing for all replumbing work with no open-ended billing.",
     },
     {
-      q: "How long does it take to build an ADU in Marin County?",
-      a: "An ADU permit in Marin County typically takes 3–8 months to obtain depending on jurisdiction and whether Design Review Board approval is required. Construction of a detached ADU typically takes 6–9 months from permit approval. Garage conversions typically take 4–6 months. ConstruBay&apos;s PlanPass.ai platform routinely reduces permit timelines by 30–45% through pre-screening and direct communication with plan checkers in each jurisdiction.",
+      q: "What luxury plumbing fixture brands do you install?",
+      a: "ConstruBay installs the full range of luxury fixture brands including Waterworks, Dornbracht, Rohl, Grohe, Hansgrohe, Kohler Artifacts, and Brizo. We coordinate directly with your interior designer or fixture supplier for pre-order rough-in specifications, ensuring that supply stub-out locations, drain placements, and wall blocking are precisely positioned before finishes are applied — eliminating the need for costly corrections after tile installation.",
     },
     {
-      q: "Can I rent out an ADU in Marin County?",
-      a: "Yes — ADUs in Marin County can be rented as long-term rentals (30+ days). Short-term rentals (less than 30 days) are subject to separate local regulations that vary by jurisdiction and may require a business license and transient occupancy tax registration. Consult your specific city&apos;s short-term rental ordinance before marketing your ADU as a vacation rental. ConstruBay can refer you to local property managers and rental market specialists as part of the project consultation.",
+      q: "Do I need a permit for plumbing work in Marin County?",
+      a: "Yes — all plumbing work beyond basic fixture replacement requires permits in Marin County. This includes any supply or drain line work, water heater replacement, steam generator installation, and gas line modification. ConstruBay manages all plumbing permit applications and coordinates inspections at required stages as part of every plumbing project scope.",
     },
     {
-      q: "What is the difference between a JADU and a standard ADU in Marin County?",
-      a: "A Junior ADU (JADU) is a unit created entirely within the existing footprint of the primary dwelling — typically a converted bedroom or garage space — and is limited to 500 square feet under California law. JADUs require the property owner to occupy either the primary unit or the JADU. A standard ADU can be a detached structure, an addition, or a conversion of a larger existing space, and can be up to 1,200 square feet in most California jurisdictions. ConstruBay designs and builds both JADUs and standard ADUs and can advise on the best configuration for your specific property and goals.",
+      q: "What is a recirculating hot water system and should I install one?",
+      a: "A recirculating hot water system maintains constant hot water circulation through your supply lines, delivering instant hot water at every fixture without running cold water down the drain. For large Marin County estates where the master bath may be 100+ feet from the water heater, recirculating systems eliminate the daily frustration of waiting 30–60 seconds for hot water — and dramatically reduce water waste. We install demand-control recirculating systems that only circulate when triggered by a motion sensor or button, minimizing energy consumption.",
     },
   ];
   const relatedServices: { name: string; href: string; desc: string }[] = [
-    { name: "Home Addition", href: "/services/home-addition-marin-county", desc: "Primary suite wings, second stories & structural expansions" },
-    { name: "New Construction", href: "/services/new-construction-marin-county", desc: "Ground-up architect-designed custom homes in Marin County" },
-    { name: "Full Home Remodel", href: "/services/whole-house-remodel-marin-county", desc: "Complete whole-home renovation — structural to aesthetic" },
+    { name: "Electrical", href: "/services/electrical-marin-county", desc: "Smart home wiring, architectural lighting & panel upgrades" },
+    { name: "HVAC", href: "/services/hvac-marin-county", desc: "Whisper-quiet climate systems & radiant floor heating" },
+    { name: "Bathroom Remodel", href: "/services/bathroom-remodel-marin-county", desc: "Spa-grade sanctuaries with heated stone floors & custom steam showers" },
   ];
 
   return (
@@ -49,21 +49,21 @@ export default function AduBuilderPage() {
       {/* HERO */}
       <section style={{ position: 'relative', minHeight: '72vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/services/adu-hero.jpg" alt="Luxury ADU Builder Marin County" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }} />
+        <img src="/images/services/plumbing-hero.jpg" alt="Luxury Plumbing Contractor Marin County" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }} />
         <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)' }} />
         <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '860px', padding: '0 24px' }}>
           <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: '20px' }}>ConstruBay · CSLB #1106798</p>
-          <h1 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 300, color: '#ffffff', lineHeight: 1.05, marginBottom: '24px' }}>ADU &amp; Garage Conversion in Marin County</h1>
-          <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: '40px' }}>Architectural Quality Accessory Dwellings — Indistinguishable From Your Main Home</p>
+          <h1 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 300, color: '#ffffff', lineHeight: 1.05, marginBottom: '24px' }}>Plumbing in Marin County</h1>
+          <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: '40px' }}>Luxury Fixture Installation &amp; Whole-Home Plumbing Systems</p>
           <a href="/request-a-bid" style={{ display: 'inline-block', background: GRAD, color: '#000000', fontFamily: MS, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 52px', textDecoration: 'none' }}>Schedule a Private Consultation</a>
         </div>
       </section>
 
       {/* PHILOSOPHY */}
       <section style={{ maxWidth: '800px', margin: '0 auto', padding: '96px 24px' }}>
-        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>An Accessory Dwelling Unit should never look like an afterthought. We design and build detached luxury suites and garage conversions that mirror the architectural language of your main home — perfect for multi-generational living, guest quarters, or high-yield estate rentals. Every ADU we build is finished to the same material standard as the primary residence.</p>
-        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>California&apos;s ADU laws have created extraordinary investment opportunities for Marin County homeowners — but navigating the permit process, SB 9 compliance, utility connections, and design review requirements requires local expertise. Our PlanPass.ai permit intelligence platform has accelerated ADU permit approvals across all Marin County jurisdictions, and our team has completed ADU projects on lots ranging from standard urban parcels to complex hillside sites with septic system requirements.</p>
-        <p style={{ fontFamily: MS, fontSize: '12px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.45)', lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed ADU and garage conversion projects across Marin, Sonoma, and Napa Counties.</p>
+        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>Plumbing in a luxury estate is not background infrastructure — it is the tactile experience of a $10,000 shower system functioning exactly as designed every single morning. We install high-end fixture packages from Waterworks, Dornbracht, Rohl, and Grohe, and we engineer the supply and drainage systems that allow those fixtures to perform at their specified pressure, temperature, and flow rate for decades.</p>
+        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>Whole-home replumbing removes the single largest long-term maintenance risk from any estate — aging galvanized or copper supply lines. We use PEX-A (Uponor) or copper supply systems depending on application, and we re-engineer drain, waste, and vent systems to eliminate the recurring blockage and drain performance issues common in homes with original cast iron or ABS drain lines.</p>
+        <p style={{ fontFamily: MS, fontSize: '12px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.45)', lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury plumbing projects across Marin, Sonoma, and Napa Counties.</p>
       </section>
 
       <div style={{ height: '1px', background: GRAD, margin: '0 48px', opacity: 0.35 }} />
@@ -88,7 +88,7 @@ export default function AduBuilderPage() {
       <section style={{ maxWidth: '800px', margin: '0 auto', padding: '96px 24px' }}>
         <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: GOLD, marginBottom: '16px' }}>The Marin Advantage</h2>
         <div style={{ width: '40px', height: '1px', background: GRAD, marginBottom: '40px', opacity: 0.6 }} />
-        <p style={{ fontFamily: MS, fontSize: '14px', lineHeight: 1.95, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.03em' }}>ADU permitting in Marin County is governed by state ADU law (AB 68, SB 9, AB 2221) as well as local ordinances from each of Marin&apos;s 11 cities and unincorporated county areas. Our PlanPass.ai platform maintains current ADU compliance matrices for every Marin County jurisdiction — including Tiburon, Mill Valley, Sausalito, San Rafael, Novato, Ross, Belvedere, San Anselmo, Fairfax, Corte Madera, and Larkspur. We pre-screen every ADU application for setback, height, coverage, and owner-occupancy requirements before investing in construction drawings, preventing the costly redesigns that occur when projects hit regulatory obstacles mid-design. Our team has also completed ADU projects in Sonoma County jurisdictions including the City of Sonoma, Petaluma, and unincorporated Sonoma County.</p>
+        <p style={{ fontFamily: MS, fontSize: '14px', lineHeight: 1.95, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.03em' }}>Plumbing permits in Marin County and incorporated cities within the county require licensed plumber certification and inspection at rough-in, pressure test, and final stages. Our in-house plumbers are C-36 licensed in California and current on the California Plumbing Code, including the specific fixture unit and supply sizing requirements for large luxury homes with multiple master bathrooms and outdoor kitchen applications. For steam shower systems — which require coordinated plumbing, electrical, and mechanical permits — our PlanPass.ai platform manages the multi-agency submission process. We have completed full replumbing projects on historic estates in Mill Valley and Tiburon where original cast iron and galvanized supply lines required careful demolition management.</p>
       </section>
 
       {/* PROCESS */}
@@ -117,7 +117,7 @@ export default function AduBuilderPage() {
         <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: GOLD, marginBottom: '16px' }}>Investment Range</h2>
         <div style={{ width: '40px', height: '1px', background: GRAD, margin: '0 auto 40px', opacity: 0.6 }} />
         <div style={{ border: '1px solid rgba(203,178,106,0.25)', padding: '48px 32px', marginBottom: '28px' }}>
-          <p style={{ fontFamily: CG, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 300, color: '#ffffff', marginBottom: '8px' }}>$175,000 – $450,000+</p>
+          <p style={{ fontFamily: CG, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 300, color: '#ffffff', marginBottom: '8px' }}>$10,000 – $75,000+</p>
           <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, opacity: 0.65 }}>Typical Project Range</p>
         </div>
         <p style={{ fontFamily: MS, fontSize: '12px', lineHeight: 1.85, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em' }}>All projects are delivered under a fixed-scope contract — the number you approve is the number you pay.</p>
@@ -164,7 +164,7 @@ export default function AduBuilderPage() {
       {/* FINAL CTA */}
       <section style={{ padding: '120px 24px', textAlign: 'center', backgroundColor: '#000000' }}>
         <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: '24px', opacity: 0.7 }}>Begin Your Project</p>
-        <h2 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, background: GRAD, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '24px', lineHeight: 1.1 }}>Begin Your ADU Project</h2>
+        <h2 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, background: GRAD, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '24px', lineHeight: 1.1 }}>Begin Your Plumbing Project</h2>
         <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.58)', maxWidth: '500px', margin: '0 auto 48px', lineHeight: 1.9 }}>Fixed-scope contract. No surprises. Schedule a private consultation with Paulo.</p>
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="https://calendly.com/construbay/initial-consultation-construbay" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: GRAD, color: '#000000', fontFamily: MS, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 52px', textDecoration: 'none' }}>Book a Private Consultation</a>

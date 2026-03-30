@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Whole House Remodel Marin County | ConstruBay | CSLB #1106798",
+  title: "Whole Home Remodel Marin County | ConstruBay | CSLB #1106798",
   description:
-    "Full home remodels in Marin County. Structural, design-build, permits, luxury finishes. CSLB #1106798. Free consultation.",
+    "Complete whole-home remodeling in Marin County. Structural, mechanical & aesthetic systems rebuilt to modern luxury standards. CSLB #1106798, based in Mill Valley.",
   alternates: {
     canonical: "https://www.construbay.com/services/whole-house-remodel-marin-county",
   },
   openGraph: {
-    title: "Whole House Remodel Marin County | ConstruBay | CSLB #1106798",
+    title: "Whole Home Remodel Marin County | ConstruBay | CSLB #1106798",
     description:
-      "Full home remodels in Marin County. Structural, design-build, permits, luxury finishes. CSLB #1106798. Free consultation.",
+      "Complete whole-home remodeling in Marin County. Structural, mechanical & aesthetic systems rebuilt to modern luxury standards. CSLB #1106798, based in Mill Valley.",
     url: "https://www.construbay.com/services/whole-house-remodel-marin-county",
     type: "website",
   },

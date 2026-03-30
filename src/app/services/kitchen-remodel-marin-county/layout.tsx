@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kitchen Remodel Marin County | ConstruBay | CSLB #1106798",
+  title: "Luxury Kitchen Remodel Marin County | ConstruBay | CSLB #1106798",
   description:
-    "Custom kitchen remodeling in Marin County. Full design-build, custom cabinets, permits handled. CSLB #1106798. Free estimate — (415) 968-9494.",
+    "Bespoke luxury kitchen remodeling in Marin County. Custom millwork, imported stone, professional appliances. ConstruBay — CSLB #1106798, based in Mill Valley.",
   alternates: {
     canonical: "https://www.construbay.com/services/kitchen-remodel-marin-county",
   },
   openGraph: {
-    title: "Kitchen Remodel Marin County | ConstruBay | CSLB #1106798",
+    title: "Luxury Kitchen Remodel Marin County | ConstruBay | CSLB #1106798",
     description:
-      "Custom kitchen remodeling in Marin County. Full design-build, custom cabinets, permits handled. CSLB #1106798. Free estimate — (415) 968-9494.",
+      "Bespoke luxury kitchen remodeling in Marin County. Custom millwork, imported stone, professional appliances. ConstruBay — CSLB #1106798, based in Mill Valley.",
     url: "https://www.construbay.com/services/kitchen-remodel-marin-county",
     type: "website",
   },

@@ -5,6 +5,18 @@ import { useState } from "react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  const tier1Services = [
+    { label: "New Construction",       href: "/services/new-construction-marin-county" },
+    { label: "Full Home Remodel",      href: "/services/whole-house-remodel-marin-county" },
+    { label: "Kitchen Remodel",        href: "/services/kitchen-remodel-marin-county" },
+    { label: "Bathroom Remodel",       href: "/services/bathroom-remodel-marin-county" },
+    { label: "ADU &amp; Garage Conversion", href: "/services/adu-builder-marin-county" },
+    { label: "Home Addition",          href: "/services/home-addition-marin-county" },
+    { label: "Basement Finishing",     href: "/services/basement-finishing-marin-county" },
+    { label: "Deck &amp; Outdoor Living",   href: "/services/deck-outdoor-living-marin-county" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-brand-tan/20" style={{ backgroundColor: '#000000' }}>
@@ -41,7 +53,83 @@ export default function Header() {
           {/* Center: Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Home</Link>
-            <Link href="/services" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Services</Link>
+
+            {/* Services dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <button
+                className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300 flex items-center gap-1 bg-transparent border-0 cursor-pointer p-0"
+                onClick={() => setServicesOpen(!servicesOpen)}
+                aria-haspopup="true"
+                aria-expanded={servicesOpen}
+              >
+                Services
+                <svg
+                  className="w-3 h-3 mt-px"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {servicesOpen && (
+                <div
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50"
+                  style={{
+                    backgroundColor: '#0a0a0a',
+                    border: '1px solid rgba(203,178,106,0.25)',
+                    minWidth: '230px',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
+                  }}
+                >
+                  {tier1Services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block hover:text-[#cbb26a] hover:bg-white/5 transition-colors duration-200"
+                      style={{
+                        color: 'rgba(255,255,255,0.85)',
+                        fontSize: '11px',
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontWeight: '300',
+                        padding: '10px 20px',
+                        display: 'block',
+                        borderBottom: '1px solid rgba(203,178,106,0.1)',
+                        whiteSpace: 'nowrap',
+                      }}
+                      dangerouslySetInnerHTML={{ __html: service.label }}
+                    />
+                  ))}
+                  {/* Tier 2: View All Services */}
+                  <Link
+                    href="/services"
+                    className="block hover:text-[#cbb26a] hover:bg-white/5 transition-colors duration-200"
+                    style={{
+                      color: '#cbb26a',
+                      fontSize: '11px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      fontFamily: 'Montserrat, sans-serif',
+                      fontWeight: '400',
+                      padding: '12px 20px',
+                      display: 'block',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    View All Services &rarr;
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link href="/pricing" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Pricing</Link>
             <Link href="/locations" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Locations</Link>
             <Link href="/projects" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Projects</Link>
@@ -111,6 +199,15 @@ export default function Header() {
             <nav className="flex flex-col gap-4">
               <Link href="/" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Home</Link>
               <Link href="/services" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Services</Link>
+              {tier1Services.map((service) => (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  className="text-white/60 text-xs tracking-[0.15em] uppercase pl-4"
+                  onClick={() => setMenuOpen(false)}
+                  dangerouslySetInnerHTML={{ __html: service.label }}
+                />
+              ))}
               <Link href="/locations" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Locations</Link>
               <Link href="/projects" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Projects</Link>
               <Link href="/about" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>About</Link>

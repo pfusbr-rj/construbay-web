@@ -7,83 +7,68 @@ const MS = "'Montserrat', Arial, sans-serif";
 const GOLD = "#cbb26a";
 const GRAD = "linear-gradient(135deg, #bb8b4a, #f7eb9e)";
 
-export default function KitchenRemodelPage() {
+export default function WindowsDoorsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const included = [
-    "Custom full-overlay cabinetry & integrated hardware",
-    "Natural stone countertops — quartzite, marble & granite fabrication",
-    "Professional-grade appliance integration (Sub-Zero, Wolf, Miele)",
-    "Custom range hood & exhaust engineering",
-    "Architectural island design & waterfall edge fabrication",
-    "Concealed lighting coves & under-cabinet LED systems",
-    "Structural wall removal & beam engineering",
-    "Custom tile backsplash & natural stone flooring",
+  const included: string[] = [
+    "Marvin, Andersen & custom aluminum window systems",
+    "Pivot, Dutch & grand entry door installations",
+    "Pocket and sliding glass door systems",
+    "Steel-framed window and door installations",
+    "Structural header engineering & rough opening modification",
+    "High-performance weatherstripping & thermal break systems",
+    "Custom window trim & interior casing millwork",
+    "Historic & Design Review Board-compliant window replacements",
   ];
-
-  const faqs = [
+  const faqs: { q: string; a: string }[] = [
     {
-      q: "How much does a luxury kitchen remodel cost in Marin County?",
-      a: "A luxury kitchen remodel in Marin County typically ranges from $85,000 to $175,000+, depending on size, structural modifications required, appliance selections, and custom millwork scope. Imported stone countertops, professional-grade appliances, and full custom cabinetry are the largest cost drivers. ConstruBay delivers a detailed fixed-scope bid with line-item pricing before any work begins — there are no surprise invoices at the end of your project.",
+      q: "How much do replacement windows cost in Marin County?",
+      a: "Window replacement in Marin County typically ranges from $800 to $2,500 per window installed, depending on size, material, and operability type. A whole-home window replacement project typically ranges from $25,000 to $95,000+. Custom steel-framed or large-format pivot windows can run $3,000–$8,000+ per unit installed. ConstruBay provides fixed-scope pricing that includes structural rough opening work, flashing, trim, and final inspection.",
     },
     {
-      q: "How long does a kitchen remodel take in Marin County?",
-      a: "A full luxury kitchen remodel typically takes 10–16 weeks from permit approval to completion in Marin County. Lead times for custom cabinetry (8–12 weeks) and imported stone (4–8 weeks) are the critical path. We coordinate all material lead times before permitting begins, so your kitchen is fully staged for installation the moment permits are approved. Most standard kitchen permits in Marin County are approved within 4–8 weeks.",
+      q: "Do I need approval to replace windows in Marin County?",
+      a: "In many Marin County jurisdictions, window replacements that match the existing size and configuration require only a building permit. However, any changes to window size, configuration, or material type in Design Review Board jurisdictions — including Mill Valley, Ross, Belvedere, and Tiburon — require DRB approval before permits can be pulled. ConstruBay manages the entire approval process as part of your project scope.",
     },
     {
-      q: "Do I need a permit for a kitchen remodel in Marin County?",
-      a: "Yes — any kitchen remodel involving electrical, plumbing, gas, or structural modifications requires a permit from your local jurisdiction (Marin County, Mill Valley, Tiburon, etc.). ConstruBay handles the entire permit process using our PlanPass.ai platform, which pre-screens applications to minimize plan check cycles. Cabinet-only replacements without system modifications may not require a permit, but we always recommend confirming with your jurisdiction first.",
+      q: "What window brands do you recommend for Marin County homes?",
+      a: "For most Marin County luxury applications, we specify Marvin Signature or Integrity window systems for wood and fiberglass options, and NanaWall or Fleetwood for large-format sliding and folding glazing systems. For contemporary steel-look aesthetics, we work with Optimum Window and Mondrian steel window systems. All specifications are tailored to your architectural style and thermal performance requirements.",
     },
     {
-      q: "What kitchen appliance brands do you work with?",
-      a: "ConstruBay integrates all major luxury appliance brands including Sub-Zero, Wolf, Miele, Thermador, La Cornue, and Gaggenau. We coordinate directly with your appliance supplier for delivery sequencing, rough-in specifications, and final trim installations. Our team has completed professional-grade kitchen installations across Marin and Sonoma Counties and is familiar with the installation requirements of each major brand.",
+      q: "What is the best entry door material for a Marin County home?",
+      a: "For Marin County&apos;s coastal climate, we recommend fiberglass or steel entry door systems over wood for exterior applications. Fiberglass doors from Therma-Tru or Simpson provide the wood aesthetic with significantly better dimensional stability in Marin&apos;s moisture cycling. For architecturally significant estates where wood appearance is required, we specify mahogany or teak with marine-grade finish systems that maintain appearance and performance in coastal conditions.",
     },
   ];
-
-  const relatedServices = [
-    {
-      name: "Bathroom Remodel",
-      href: "/services/bathroom-remodel-marin-county",
-      desc: "Spa-grade private sanctuaries with heated stone floors & custom steam showers",
-    },
-    {
-      name: "Full Home Remodel",
-      href: "/services/whole-house-remodel-marin-county",
-      desc: "Complete whole-home renovation for Marin County estates",
-    },
-    {
-      name: "Flooring",
-      href: "/services/flooring-marin-county",
-      desc: "Wide-plank hardwood, natural stone & custom inlay throughout your estate",
-    },
+  const relatedServices: { name: string; href: string; desc: string }[] = [
+    { name: "Roofing", href: "/services/roofing-marin-county", desc: "Premium slate, metal & clay tile systems for Marin estates" },
+    { name: "Interior & Exterior Paint", href: "/services/painting-marin-county", desc: "Museum-grade finishes & master painter execution" },
+    { name: "Full Home Remodel", href: "/services/whole-house-remodel-marin-county", desc: "Complete whole-home renovation — structural to aesthetic" },
   ];
 
   return (
     <div style={{ backgroundColor: "#000000", color: "#ffffff", fontFamily: MS }}>
 
-      {/* SECTION 1 — HERO */}
+      {/* HERO */}
       <section style={{ position: "relative", minHeight: "72vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/services/kitchen-hero.jpg" alt="Luxury kitchen remodel in Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
+        <img src="/images/services/windows-doors-hero.jpg" alt="Luxury Windows Doors Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.6)" }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: "860px", padding: "0 24px" }}>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "20px" }}>ConstruBay · CSLB #1106798</p>
-          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Luxury Kitchen Remodels in Marin County</h1>
-          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Bespoke Culinary Spaces — Where Precision Meets Architecture</p>
+          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Windows &amp; Doors in Marin County</h1>
+          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Architectural Glazing &amp; Custom Entry Systems — Precision-Installed</p>
           <a href="/request-a-bid" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Schedule a Private Consultation</a>
         </div>
       </section>
 
-      {/* SECTION 2 — PHILOSOPHY */}
+      {/* PHILOSOPHY */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>The kitchen is the operational heart of your estate and the centerpiece of your property&apos;s value. We engineer bespoke culinary spaces using imported stone, precision cabinetry, and seamless appliance integration that disappears into the architecture — creating kitchens that are as beautiful at 6am as they are during a dinner party for twenty.</p>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Our kitchen remodeling process begins with a detailed structural review of your existing space. We identify load-bearing walls, reroute mechanical systems where necessary, and engineer an entirely new spatial flow before a single cabinet is ordered. The result is a kitchen that feels like it was always meant to be exactly this way.</p>
-        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury kitchen remodeling projects across Marin, Sonoma, and Napa Counties.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Windows and doors are the architectural punctuation of your estate — defining how light enters, how views are framed, and how the exterior aesthetic reads at every approach. We install custom aluminum-clad, fiberglass, and wood window systems and bespoke entry door packages that are engineered for Marin County&apos;s seismic and coastal conditions while elevating every elevation of your home.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Every window and door installation begins with a thorough structural assessment of the rough opening, header, and flashing conditions. We engineer correct water management, thermal breaks, and seismic anchorage for every opening before specifying the unit — because the most beautiful window system will fail within years if the underlying installation is not executed with precision.</p>
+        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury window and door installation projects across Marin, Sonoma, and Napa Counties.</p>
       </section>
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
 
-      {/* SECTION 3 — WHAT IS INCLUDED */}
+      {/* INCLUDED */}
       <section style={{ maxWidth: "1000px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, textAlign: "center", marginBottom: "16px" }}>What Is Included</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, margin: "0 auto 56px", opacity: 0.6 }} />
@@ -99,14 +84,14 @@ export default function KitchenRemodelPage() {
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
 
-      {/* SECTION 4 — MARIN ADVANTAGE */}
+      {/* MARIN ADVANTAGE */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>The Marin Advantage</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, marginBottom: "40px", opacity: 0.6 }} />
-        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Kitchen remodels in Marin County often require structural modifications, electrical panel upgrades, and gas line rerouting — all of which require coordinated permit applications with Marin County Building Services or the relevant city jurisdiction. Our PlanPass.ai platform pre-screens permit applications for common kitchen remodel deficiencies before submission, dramatically reducing plan check cycle times. We have completed luxury kitchen remodels throughout Mill Valley, Tiburon, Sausalito, Ross, and Kentfield, and we are intimately familiar with the inspection protocols and material requirements of each jurisdiction.</p>
+        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Window and door replacement in many Marin County neighborhoods — particularly in Mill Valley, Ross, and Belvedere — requires Design Review Board approval for changes to window size, configuration, or material. Our PlanPass.ai platform pre-screens window permit applications for DRB compliance requirements before we commission custom units, preventing costly redesigns after fabrication. We are also deeply familiar with the seismic bracing requirements for large-format glazing on Marin&apos;s hillside properties, and we specify laminated safety glass as a standard practice for any opening in a seismically sensitive location.</p>
       </section>
 
-      {/* SECTION 5 — PROCESS */}
+      {/* PROCESS */}
       <section style={{ backgroundColor: "rgba(203,178,106,0.04)", padding: "96px 24px" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, textAlign: "center", marginBottom: "16px" }}>Our Process</h2>
@@ -127,12 +112,12 @@ export default function KitchenRemodelPage() {
         </div>
       </section>
 
-      {/* SECTION 6 — INVESTMENT */}
+      {/* INVESTMENT */}
       <section style={{ maxWidth: "680px", margin: "0 auto", padding: "96px 24px", textAlign: "center" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>Investment Range</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, margin: "0 auto 40px", opacity: 0.6 }} />
         <div style={{ border: "1px solid rgba(203,178,106,0.25)", padding: "48px 32px", marginBottom: "28px" }}>
-          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$85,000 – $175,000+</p>
+          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$25,000 – $95,000+</p>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, opacity: 0.65 }}>Typical Project Range</p>
         </div>
         <p style={{ fontFamily: MS, fontSize: "12px", lineHeight: 1.85, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em" }}>All projects are delivered under a fixed-scope contract — the number you approve is the number you pay.</p>
@@ -140,7 +125,7 @@ export default function KitchenRemodelPage() {
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
 
-      {/* SECTION 7 — FAQ */}
+      {/* FAQ */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>Frequently Asked Questions</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, marginBottom: "48px", opacity: 0.6 }} />
@@ -158,13 +143,13 @@ export default function KitchenRemodelPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
       </section>
 
-      {/* SECTION 8 — RELATED SERVICES */}
+      {/* RELATED */}
       <section style={{ backgroundColor: "rgba(203,178,106,0.04)", padding: "96px 24px" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 300, color: GOLD, textAlign: "center", marginBottom: "48px" }}>Related Services</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2px" }}>
             {relatedServices.map((s) => (
-              <a key={s.href} href={s.href} style={{ display: "block", padding: "40px 32px", backgroundColor: "#0a0a0a", border: "1px solid rgba(203,178,106,0.1)", textDecoration: "none", transition: "border-color 0.3s" }}
+              <a key={s.href} href={s.href} style={{ display: "block", padding: "40px 32px", backgroundColor: "#0a0a0a", border: "1px solid rgba(203,178,106,0.1)", textDecoration: "none" }}
                 onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(203,178,106,0.4)")}
                 onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(203,178,106,0.1)")}>
                 <h3 style={{ fontFamily: CG, fontSize: "1.4rem", fontWeight: 300, color: "#ffffff", marginBottom: "10px" }}>{s.name}</h3>
@@ -176,17 +161,16 @@ export default function KitchenRemodelPage() {
         </div>
       </section>
 
-      {/* SECTION 9 — FINAL CTA */}
+      {/* FINAL CTA */}
       <section style={{ padding: "120px 24px", textAlign: "center", backgroundColor: "#000000" }}>
         <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "24px", opacity: 0.7 }}>Begin Your Project</p>
-        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Kitchen Remodel Project</h2>
+        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Window &amp; Door Project</h2>
         <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.58)", maxWidth: "500px", margin: "0 auto 48px", lineHeight: 1.9 }}>Fixed-scope contract. No surprises. Schedule a private consultation with Paulo.</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <a href="https://calendly.com/construbay/initial-consultation-construbay" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Book a Private Consultation</a>
           <a href="tel:4159689494" style={{ display: "inline-block", border: "1px solid rgba(203,178,106,0.4)", color: GOLD, fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Or Call (415) 968-9494</a>
         </div>
       </section>
-
     </div>
   );
 }

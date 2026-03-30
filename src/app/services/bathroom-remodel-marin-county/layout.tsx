@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodel Marin County | ConstruBay | CSLB #1106798",
+  title: "Luxury Bathroom Remodel Marin County | ConstruBay | CSLB #1106798",
   description:
-    "Custom bathroom remodeling in Marin County. Luxury finishes, walk-in showers, freestanding tubs, fully permitted. CSLB #1106798. Free estimate.",
+    "Spa-grade luxury bathroom remodeling in Marin County. Heated stone floors, custom steam showers, architectural lighting. ConstruBay — CSLB #1106798, Mill Valley.",
   alternates: {
     canonical: "https://www.construbay.com/services/bathroom-remodel-marin-county",
   },
   openGraph: {
-    title: "Bathroom Remodel Marin County | ConstruBay | CSLB #1106798",
+    title: "Luxury Bathroom Remodel Marin County | ConstruBay | CSLB #1106798",
     description:
-      "Custom bathroom remodeling in Marin County. Luxury finishes, walk-in showers, freestanding tubs, fully permitted. CSLB #1106798. Free estimate.",
+      "Spa-grade luxury bathroom remodeling in Marin County. Heated stone floors, custom steam showers, architectural lighting. ConstruBay — CSLB #1106798, Mill Valley.",
     url: "https://www.construbay.com/services/bathroom-remodel-marin-county",
     type: "website",
   },

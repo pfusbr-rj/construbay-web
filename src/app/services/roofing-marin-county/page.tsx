@@ -7,54 +7,54 @@ const MS = "'Montserrat', Arial, sans-serif";
 const GOLD = "#cbb26a";
 const GRAD = "linear-gradient(135deg, #bb8b4a, #f7eb9e)";
 
-export default function KitchenRemodelPage() {
+export default function RoofingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const included = [
-    "Custom full-overlay cabinetry & integrated hardware",
-    "Natural stone countertops — quartzite, marble & granite fabrication",
-    "Professional-grade appliance integration (Sub-Zero, Wolf, Miele)",
-    "Custom range hood & exhaust engineering",
-    "Architectural island design & waterfall edge fabrication",
-    "Concealed lighting coves & under-cabinet LED systems",
-    "Structural wall removal & beam engineering",
-    "Custom tile backsplash & natural stone flooring",
+  const included: string[] = [
+    "Natural slate roofing installation & repair",
+    "Standing seam metal roof systems",
+    "Clay & concrete tile installation",
+    "Copper flashing & custom metal work",
+    "Structural roof framing assessment & repair",
+    "Ice & water shield & moisture management",
+    "Ridge vent & attic ventilation engineering",
+    "WUI Class A fire-rated roofing systems",
   ];
 
-  const faqs = [
+  const faqs: { q: string; a: string }[] = [
     {
-      q: "How much does a luxury kitchen remodel cost in Marin County?",
-      a: "A luxury kitchen remodel in Marin County typically ranges from $85,000 to $175,000+, depending on size, structural modifications required, appliance selections, and custom millwork scope. Imported stone countertops, professional-grade appliances, and full custom cabinetry are the largest cost drivers. ConstruBay delivers a detailed fixed-scope bid with line-item pricing before any work begins — there are no surprise invoices at the end of your project.",
+      q: "How much does a new roof cost in Marin County?",
+      a: "A full roof replacement in Marin County typically ranges from $35,000 to $120,000+ depending on square footage, material selection, structural repairs needed, and WUI compliance requirements. Natural slate roofing is the most expensive option at $80–$120+ per square foot installed; standing seam metal runs $45–$75 per square foot; clay tile typically ranges $35–$65 per square foot. ConstruBay provides fixed-scope pricing that includes all permits, underlayment, flashing, and final inspection.",
     },
     {
-      q: "How long does a kitchen remodel take in Marin County?",
-      a: "A full luxury kitchen remodel typically takes 10–16 weeks from permit approval to completion in Marin County. Lead times for custom cabinetry (8–12 weeks) and imported stone (4–8 weeks) are the critical path. We coordinate all material lead times before permitting begins, so your kitchen is fully staged for installation the moment permits are approved. Most standard kitchen permits in Marin County are approved within 4–8 weeks.",
+      q: "What roofing materials are approved for Marin County fire zones?",
+      a: "Marin County&apos;s fire hazard severity zones (FHSZ) require Class A fire-rated roofing assemblies. Approved materials include natural slate, clay and concrete tile, steel and aluminum standing seam metal, and Class A rated composition shingles. Wood shingles and shakes are not permitted in most Marin WUI areas. We maintain current knowledge of Marin County Fire&apos;s roofing material approval list and can advise on the best Class A option for your architectural style.",
     },
     {
-      q: "Do I need a permit for a kitchen remodel in Marin County?",
-      a: "Yes — any kitchen remodel involving electrical, plumbing, gas, or structural modifications requires a permit from your local jurisdiction (Marin County, Mill Valley, Tiburon, etc.). ConstruBay handles the entire permit process using our PlanPass.ai platform, which pre-screens applications to minimize plan check cycles. Cabinet-only replacements without system modifications may not require a permit, but we always recommend confirming with your jurisdiction first.",
+      q: "How long does a luxury roof last in Marin County?",
+      a: "Natural slate roofs installed correctly typically last 75–150+ years. Clay and concrete tile roofs last 50–100 years. Standing seam metal roofs have a 40–70 year lifespan. In Marin&apos;s coastal climate, proper flashing, ventilation, and underlayment specification are the most important longevity factors — not the primary roofing material. ConstruBay specifies high-performance underlayments and copper or stainless steel flashings on all luxury roofing projects.",
     },
     {
-      q: "What kitchen appliance brands do you work with?",
-      a: "ConstruBay integrates all major luxury appliance brands including Sub-Zero, Wolf, Miele, Thermador, La Cornue, and Gaggenau. We coordinate directly with your appliance supplier for delivery sequencing, rough-in specifications, and final trim installations. Our team has completed professional-grade kitchen installations across Marin and Sonoma Counties and is familiar with the installation requirements of each major brand.",
+      q: "Do I need a permit for a roof replacement in Marin County?",
+      a: "Yes — roof replacements require building permits in Marin County and most incorporated cities within the county. In fire hazard severity zones, Marin County Fire may also require review and approval of the roofing material specification. ConstruBay manages all permit applications as part of every roofing project using our PlanPass.ai platform.",
     },
   ];
 
-  const relatedServices = [
+  const relatedServices: { name: string; href: string; desc: string }[] = [
     {
-      name: "Bathroom Remodel",
-      href: "/services/bathroom-remodel-marin-county",
-      desc: "Spa-grade private sanctuaries with heated stone floors & custom steam showers",
+      name: "Windows & Doors",
+      href: "/services/windows-doors-marin-county",
+      desc: "Architectural glazing & custom entry systems",
+    },
+    {
+      name: "Interior & Exterior Paint",
+      href: "/services/painting-marin-county",
+      desc: "Museum-grade exterior finishes & master painter execution",
     },
     {
       name: "Full Home Remodel",
       href: "/services/whole-house-remodel-marin-county",
-      desc: "Complete whole-home renovation for Marin County estates",
-    },
-    {
-      name: "Flooring",
-      href: "/services/flooring-marin-county",
-      desc: "Wide-plank hardwood, natural stone & custom inlay throughout your estate",
+      desc: "Complete whole-home renovation — structural to aesthetic",
     },
   ];
 
@@ -64,21 +64,21 @@ export default function KitchenRemodelPage() {
       {/* SECTION 1 — HERO */}
       <section style={{ position: "relative", minHeight: "72vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/services/kitchen-hero.jpg" alt="Luxury kitchen remodel in Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
+        <img src="/images/services/roofing-hero.jpg" alt="Luxury Roofing Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.6)" }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: "860px", padding: "0 24px" }}>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "20px" }}>ConstruBay · CSLB #1106798</p>
-          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Luxury Kitchen Remodels in Marin County</h1>
-          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Bespoke Culinary Spaces — Where Precision Meets Architecture</p>
+          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Luxury Roofing in Marin County</h1>
+          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Premium Slate, Metal &amp; Clay Tile Systems — The Crown of Your Estate</p>
           <a href="/request-a-bid" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Schedule a Private Consultation</a>
         </div>
       </section>
 
       {/* SECTION 2 — PHILOSOPHY */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>The kitchen is the operational heart of your estate and the centerpiece of your property&apos;s value. We engineer bespoke culinary spaces using imported stone, precision cabinetry, and seamless appliance integration that disappears into the architecture — creating kitchens that are as beautiful at 6am as they are during a dinner party for twenty.</p>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Our kitchen remodeling process begins with a detailed structural review of your existing space. We identify load-bearing walls, reroute mechanical systems where necessary, and engineer an entirely new spatial flow before a single cabinet is ordered. The result is a kitchen that feels like it was always meant to be exactly this way.</p>
-        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury kitchen remodeling projects across Marin, Sonoma, and Napa Counties.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>The roof is the most consequential envelope system on any estate — it defines architectural character, protects everything beneath it, and determines long-term maintenance costs. We install premium natural slate, standing seam metal, and clay and concrete tile roofing systems with the precision and detailing that luxury Marin County properties demand.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Every roofing project begins with a comprehensive structural assessment of the existing framing, sheathing, and drainage systems. We engineer correct ventilation, ice and water shield placement, and drainage solutions before specifying materials — because the most beautiful roofing material fails prematurely when the underlying system is not engineered correctly.</p>
+        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury roofing projects across Marin, Sonoma, and Napa Counties.</p>
       </section>
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
@@ -103,7 +103,7 @@ export default function KitchenRemodelPage() {
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>The Marin Advantage</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, marginBottom: "40px", opacity: 0.6 }} />
-        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Kitchen remodels in Marin County often require structural modifications, electrical panel upgrades, and gas line rerouting — all of which require coordinated permit applications with Marin County Building Services or the relevant city jurisdiction. Our PlanPass.ai platform pre-screens permit applications for common kitchen remodel deficiencies before submission, dramatically reducing plan check cycle times. We have completed luxury kitchen remodels throughout Mill Valley, Tiburon, Sausalito, Ross, and Kentfield, and we are intimately familiar with the inspection protocols and material requirements of each jurisdiction.</p>
+        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Roofing in Marin County&apos;s Wildland-Urban Interface zones requires Class A fire-rated materials that also meet the architectural standards of Marin&apos;s historic and design-review-sensitive neighborhoods. Our PlanPass.ai platform manages roofing permit applications that frequently involve simultaneous review by building and fire departments. We are current on Marin County Fire&apos;s ember-resistant vent requirements, Class A assembly specifications, and the specific roofing material approvals required in designated fire hazard severity zones — including communities in Mill Valley, Kentfield, Ross, and unincorporated Marin hills.</p>
       </section>
 
       {/* SECTION 5 — PROCESS */}
@@ -132,7 +132,7 @@ export default function KitchenRemodelPage() {
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>Investment Range</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, margin: "0 auto 40px", opacity: 0.6 }} />
         <div style={{ border: "1px solid rgba(203,178,106,0.25)", padding: "48px 32px", marginBottom: "28px" }}>
-          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$85,000 – $175,000+</p>
+          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$35,000 – $120,000+</p>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, opacity: 0.65 }}>Typical Project Range</p>
         </div>
         <p style={{ fontFamily: MS, fontSize: "12px", lineHeight: 1.85, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em" }}>All projects are delivered under a fixed-scope contract — the number you approve is the number you pay.</p>
@@ -164,7 +164,7 @@ export default function KitchenRemodelPage() {
           <h2 style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 300, color: GOLD, textAlign: "center", marginBottom: "48px" }}>Related Services</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2px" }}>
             {relatedServices.map((s) => (
-              <a key={s.href} href={s.href} style={{ display: "block", padding: "40px 32px", backgroundColor: "#0a0a0a", border: "1px solid rgba(203,178,106,0.1)", textDecoration: "none", transition: "border-color 0.3s" }}
+              <a key={s.href} href={s.href} style={{ display: "block", padding: "40px 32px", backgroundColor: "#0a0a0a", border: "1px solid rgba(203,178,106,0.1)", textDecoration: "none" }}
                 onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(203,178,106,0.4)")}
                 onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(203,178,106,0.1)")}>
                 <h3 style={{ fontFamily: CG, fontSize: "1.4rem", fontWeight: 300, color: "#ffffff", marginBottom: "10px" }}>{s.name}</h3>
@@ -179,7 +179,7 @@ export default function KitchenRemodelPage() {
       {/* SECTION 9 — FINAL CTA */}
       <section style={{ padding: "120px 24px", textAlign: "center", backgroundColor: "#000000" }}>
         <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "24px", opacity: 0.7 }}>Begin Your Project</p>
-        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Kitchen Remodel Project</h2>
+        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Roofing Project</h2>
         <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.58)", maxWidth: "500px", margin: "0 auto 48px", lineHeight: 1.9 }}>Fixed-scope contract. No surprises. Schedule a private consultation with Paulo.</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <a href="https://calendly.com/construbay/initial-consultation-construbay" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Book a Private Consultation</a>

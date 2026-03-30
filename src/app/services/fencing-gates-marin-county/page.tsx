@@ -7,83 +7,68 @@ const MS = "'Montserrat', Arial, sans-serif";
 const GOLD = "#cbb26a";
 const GRAD = "linear-gradient(135deg, #bb8b4a, #f7eb9e)";
 
-export default function KitchenRemodelPage() {
+export default function FencingGatesPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const included = [
-    "Custom full-overlay cabinetry & integrated hardware",
-    "Natural stone countertops — quartzite, marble & granite fabrication",
-    "Professional-grade appliance integration (Sub-Zero, Wolf, Miele)",
-    "Custom range hood & exhaust engineering",
-    "Architectural island design & waterfall edge fabrication",
-    "Concealed lighting coves & under-cabinet LED systems",
-    "Structural wall removal & beam engineering",
-    "Custom tile backsplash & natural stone flooring",
+  const included: string[] = [
+    "Custom steel & iron estate fencing design & installation",
+    "Automated swing & slide gate systems",
+    "Cedar, redwood & hardwood privacy fencing",
+    "Masonry & stucco perimeter wall construction",
+    "Video intercom & smart access integration",
+    "Driveway gate motor & control systems",
+    "Post & rail fencing with custom infill",
+    "Pool code-compliant safety fencing",
   ];
-
-  const faqs = [
+  const faqs: { q: string; a: string }[] = [
     {
-      q: "How much does a luxury kitchen remodel cost in Marin County?",
-      a: "A luxury kitchen remodel in Marin County typically ranges from $85,000 to $175,000+, depending on size, structural modifications required, appliance selections, and custom millwork scope. Imported stone countertops, professional-grade appliances, and full custom cabinetry are the largest cost drivers. ConstruBay delivers a detailed fixed-scope bid with line-item pricing before any work begins — there are no surprise invoices at the end of your project.",
+      q: "How much does custom estate fencing cost in Marin County?",
+      a: "Custom estate fencing in Marin County typically ranges from $150 to $500+ per linear foot installed, depending on material and design. A custom steel panel fence with automated swing gate typically runs $25,000–$75,000 for a standard estate entry. Cedar privacy fencing runs $80–$180 per linear foot. Masonry perimeter walls run $200–$400+ per linear foot. ConstruBay provides fixed-scope pricing for all fencing and gate projects.",
     },
     {
-      q: "How long does a kitchen remodel take in Marin County?",
-      a: "A full luxury kitchen remodel typically takes 10–16 weeks from permit approval to completion in Marin County. Lead times for custom cabinetry (8–12 weeks) and imported stone (4–8 weeks) are the critical path. We coordinate all material lead times before permitting begins, so your kitchen is fully staged for installation the moment permits are approved. Most standard kitchen permits in Marin County are approved within 4–8 weeks.",
+      q: "Do I need a permit for a fence or gate in Marin County?",
+      a: "Fences and walls above a certain height (typically 3.5–6 feet depending on location and jurisdiction) require building permits in Marin County and most incorporated cities. Automated gate systems require electrical permits. In Design Review Board jurisdictions, materials and finishes for street-visible fences may require approval. ConstruBay handles all permit applications as part of your project scope.",
     },
     {
-      q: "Do I need a permit for a kitchen remodel in Marin County?",
-      a: "Yes — any kitchen remodel involving electrical, plumbing, gas, or structural modifications requires a permit from your local jurisdiction (Marin County, Mill Valley, Tiburon, etc.). ConstruBay handles the entire permit process using our PlanPass.ai platform, which pre-screens applications to minimize plan check cycles. Cabinet-only replacements without system modifications may not require a permit, but we always recommend confirming with your jurisdiction first.",
+      q: "What type of automated gate is best for a Marin County property?",
+      a: "For most Marin County estate applications, we recommend swing gates for properties with adequate gate swing clearance, and sliding cantilever gates for driveways with limited approach depth or cross-slope conditions. We specify LiftMaster and FAAC gate operators for residential applications, both of which integrate with most smart home platforms and provide reliable performance in Marin&apos;s varied climate conditions. All gate installations include safety edge sensors and manual release systems.",
     },
     {
-      q: "What kitchen appliance brands do you work with?",
-      a: "ConstruBay integrates all major luxury appliance brands including Sub-Zero, Wolf, Miele, Thermador, La Cornue, and Gaggenau. We coordinate directly with your appliance supplier for delivery sequencing, rough-in specifications, and final trim installations. Our team has completed professional-grade kitchen installations across Marin and Sonoma Counties and is familiar with the installation requirements of each major brand.",
+      q: "Can you build a fence in a fire hazard zone in Marin County?",
+      a: "Yes — with material specifications that meet Marin County Fire&apos;s requirements. Wood fencing is generally permitted in WUI zones with proper setbacks from structures. Non-combustible materials like steel, masonry, and composite are preferred for properties in high or very high fire hazard severity zones. Our team is current on Marin County Fire&apos;s vegetation management and non-combustible zone requirements and designs fencing systems accordingly.",
     },
   ];
-
-  const relatedServices = [
-    {
-      name: "Bathroom Remodel",
-      href: "/services/bathroom-remodel-marin-county",
-      desc: "Spa-grade private sanctuaries with heated stone floors & custom steam showers",
-    },
-    {
-      name: "Full Home Remodel",
-      href: "/services/whole-house-remodel-marin-county",
-      desc: "Complete whole-home renovation for Marin County estates",
-    },
-    {
-      name: "Flooring",
-      href: "/services/flooring-marin-county",
-      desc: "Wide-plank hardwood, natural stone & custom inlay throughout your estate",
-    },
+  const relatedServices: { name: string; href: string; desc: string }[] = [
+    { name: "Driveways & Hardscape", href: "/services/driveways-hardscape-marin-county", desc: "Grand entrances & permeable stone hardscaping" },
+    { name: "Landscaping & Grading", href: "/services/landscaping-grading-marin-county", desc: "Hillside grading, drainage & estate landscape construction" },
+    { name: "Deck & Outdoor Living", href: "/services/deck-outdoor-living-marin-county", desc: "Year-round outdoor living spaces for Marin estates" },
   ];
 
   return (
     <div style={{ backgroundColor: "#000000", color: "#ffffff", fontFamily: MS }}>
 
-      {/* SECTION 1 — HERO */}
+      {/* HERO */}
       <section style={{ position: "relative", minHeight: "72vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/services/kitchen-hero.jpg" alt="Luxury kitchen remodel in Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
+        <img src="/images/services/fencing-hero.jpg" alt="Custom Fencing Gates Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.6)" }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: "860px", padding: "0 24px" }}>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "20px" }}>ConstruBay · CSLB #1106798</p>
-          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Luxury Kitchen Remodels in Marin County</h1>
-          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Bespoke Culinary Spaces — Where Precision Meets Architecture</p>
+          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Fencing &amp; Gates in Marin County</h1>
+          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Custom Estate Perimeters &amp; Automated Entry Systems — Security Without Compromise</p>
           <a href="/request-a-bid" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Schedule a Private Consultation</a>
         </div>
       </section>
 
-      {/* SECTION 2 — PHILOSOPHY */}
+      {/* PHILOSOPHY */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>The kitchen is the operational heart of your estate and the centerpiece of your property&apos;s value. We engineer bespoke culinary spaces using imported stone, precision cabinetry, and seamless appliance integration that disappears into the architecture — creating kitchens that are as beautiful at 6am as they are during a dinner party for twenty.</p>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Our kitchen remodeling process begins with a detailed structural review of your existing space. We identify load-bearing walls, reroute mechanical systems where necessary, and engineer an entirely new spatial flow before a single cabinet is ordered. The result is a kitchen that feels like it was always meant to be exactly this way.</p>
-        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury kitchen remodeling projects across Marin, Sonoma, and Napa Counties.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>The boundary of your estate should be as considered as its interior. We design and build custom steel, wood, and masonry fencing systems with automated entry gates that provide security, privacy, and architectural coherence — framing your property as the private estate it is, without the institutional aesthetic of commodity fencing products.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Automated gate systems are complex electromechanical installations that require careful engineering of structural posts, gate weight distribution, motor sizing, safety sensor placement, and electrical supply. We integrate gate automation with home automation systems, video intercoms, and keypad or remote access systems as part of a fully coordinated entry design.</p>
+        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed custom fencing and gate projects across Marin, Sonoma, and Napa Counties.</p>
       </section>
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
 
-      {/* SECTION 3 — WHAT IS INCLUDED */}
+      {/* INCLUDED */}
       <section style={{ maxWidth: "1000px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, textAlign: "center", marginBottom: "16px" }}>What Is Included</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, margin: "0 auto 56px", opacity: 0.6 }} />
@@ -99,14 +84,14 @@ export default function KitchenRemodelPage() {
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
 
-      {/* SECTION 4 — MARIN ADVANTAGE */}
+      {/* MARIN ADVANTAGE */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>The Marin Advantage</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, marginBottom: "40px", opacity: 0.6 }} />
-        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Kitchen remodels in Marin County often require structural modifications, electrical panel upgrades, and gas line rerouting — all of which require coordinated permit applications with Marin County Building Services or the relevant city jurisdiction. Our PlanPass.ai platform pre-screens permit applications for common kitchen remodel deficiencies before submission, dramatically reducing plan check cycle times. We have completed luxury kitchen remodels throughout Mill Valley, Tiburon, Sausalito, Ross, and Kentfield, and we are intimately familiar with the inspection protocols and material requirements of each jurisdiction.</p>
+        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Fencing and gate installations in Marin County are governed by setback requirements, height limits, and in many cases, Design Review Board guidelines that restrict fence height, material, and color in visible street-facing locations. Our PlanPass.ai platform pre-screens fence permit applications for compliance with the specific requirements of Mill Valley, Tiburon, Belvedere, and unincorporated Marin County before we begin construction. For automated gate systems, we coordinate electrical permits and fire department access requirements — in fire hazard severity zones, gates must meet Marin County Fire&apos;s emergency access specifications.</p>
       </section>
 
-      {/* SECTION 5 — PROCESS */}
+      {/* PROCESS */}
       <section style={{ backgroundColor: "rgba(203,178,106,0.04)", padding: "96px 24px" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, textAlign: "center", marginBottom: "16px" }}>Our Process</h2>
@@ -127,12 +112,12 @@ export default function KitchenRemodelPage() {
         </div>
       </section>
 
-      {/* SECTION 6 — INVESTMENT */}
+      {/* INVESTMENT */}
       <section style={{ maxWidth: "680px", margin: "0 auto", padding: "96px 24px", textAlign: "center" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>Investment Range</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, margin: "0 auto 40px", opacity: 0.6 }} />
         <div style={{ border: "1px solid rgba(203,178,106,0.25)", padding: "48px 32px", marginBottom: "28px" }}>
-          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$85,000 – $175,000+</p>
+          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$15,000 – $75,000+</p>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, opacity: 0.65 }}>Typical Project Range</p>
         </div>
         <p style={{ fontFamily: MS, fontSize: "12px", lineHeight: 1.85, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em" }}>All projects are delivered under a fixed-scope contract — the number you approve is the number you pay.</p>
@@ -140,7 +125,7 @@ export default function KitchenRemodelPage() {
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
 
-      {/* SECTION 7 — FAQ */}
+      {/* FAQ */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>Frequently Asked Questions</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, marginBottom: "48px", opacity: 0.6 }} />
@@ -158,13 +143,13 @@ export default function KitchenRemodelPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) }) }} />
       </section>
 
-      {/* SECTION 8 — RELATED SERVICES */}
+      {/* RELATED */}
       <section style={{ backgroundColor: "rgba(203,178,106,0.04)", padding: "96px 24px" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 300, color: GOLD, textAlign: "center", marginBottom: "48px" }}>Related Services</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2px" }}>
             {relatedServices.map((s) => (
-              <a key={s.href} href={s.href} style={{ display: "block", padding: "40px 32px", backgroundColor: "#0a0a0a", border: "1px solid rgba(203,178,106,0.1)", textDecoration: "none", transition: "border-color 0.3s" }}
+              <a key={s.href} href={s.href} style={{ display: "block", padding: "40px 32px", backgroundColor: "#0a0a0a", border: "1px solid rgba(203,178,106,0.1)", textDecoration: "none" }}
                 onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(203,178,106,0.4)")}
                 onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(203,178,106,0.1)")}>
                 <h3 style={{ fontFamily: CG, fontSize: "1.4rem", fontWeight: 300, color: "#ffffff", marginBottom: "10px" }}>{s.name}</h3>
@@ -176,17 +161,16 @@ export default function KitchenRemodelPage() {
         </div>
       </section>
 
-      {/* SECTION 9 — FINAL CTA */}
+      {/* FINAL CTA */}
       <section style={{ padding: "120px 24px", textAlign: "center", backgroundColor: "#000000" }}>
         <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "24px", opacity: 0.7 }}>Begin Your Project</p>
-        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Kitchen Remodel Project</h2>
+        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Fencing &amp; Gates Project</h2>
         <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.58)", maxWidth: "500px", margin: "0 auto 48px", lineHeight: 1.9 }}>Fixed-scope contract. No surprises. Schedule a private consultation with Paulo.</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <a href="https://calendly.com/construbay/initial-consultation-construbay" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Book a Private Consultation</a>
           <a href="tel:4159689494" style={{ display: "inline-block", border: "1px solid rgba(203,178,106,0.4)", color: GOLD, fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Or Call (415) 968-9494</a>
         </div>
       </section>
-
     </div>
   );
 }

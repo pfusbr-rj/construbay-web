@@ -7,39 +7,39 @@ const MS = "'Montserrat', Arial, sans-serif";
 const GOLD = "#cbb26a";
 const GRAD = "linear-gradient(135deg, #bb8b4a, #f7eb9e)";
 
-export default function AduBuilderPage() {
+export default function HvacPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const included: string[] = [
-    "Detached ADU design & construction",
-    "Attached ADU & garage conversion",
-    "Junior ADU (JADU) interior conversions",
-    "SB 9 lot split & second unit compliance",
-    "Architectural language matching — siding, roofline & windows",
-    "Full permit navigation via PlanPass.ai",
-    "Utility connection engineering (water, sewer, electrical)",
-    "Landscaping & access pathway integration",
+    "Whole-home ducted heat pump system design & installation",
+    "Ductless multi-zone mini-split systems (Mitsubishi, Daikin)",
+    "Hydronic radiant floor heating design & installation",
+    "Zoned temperature control systems",
+    "ERV & HRV fresh air ventilation systems",
+    "Duct sealing & insulation upgrades",
+    "Whole-home air filtration & dehumidification",
+    "Smart thermostat & home automation integration",
   ];
   const faqs: { q: string; a: string }[] = [
     {
-      q: "How much does an ADU cost in Marin County?",
-      a: "An ADU in Marin County typically ranges from $175,000 to $450,000+ depending on size, type (detached vs. garage conversion), site complexity, and finish level. Garage conversions are typically the most cost-effective option at $175,000–$275,000. Detached ADUs typically range from $250,000 to $450,000+. All ConstruBay ADU projects are delivered under a fixed-scope contract — the number you approve before we break ground is the final number you pay.",
+      q: "How much does a new HVAC system cost in Marin County?",
+      a: "A complete HVAC system replacement in Marin County typically ranges from $15,000 to $95,000+ depending on home size, system type, and zoning complexity. A single-zone heat pump replacement typically runs $15,000–$30,000. Multi-zone ducted systems for 3,000–5,000 square foot homes typically range from $35,000 to $65,000. Hydronic radiant heating systems with heat pump water heaters run $45,000–$95,000+ depending on the extent of floor system required. All projects are fixed-scope priced.",
     },
     {
-      q: "How long does it take to build an ADU in Marin County?",
-      a: "An ADU permit in Marin County typically takes 3–8 months to obtain depending on jurisdiction and whether Design Review Board approval is required. Construction of a detached ADU typically takes 6–9 months from permit approval. Garage conversions typically take 4–6 months. ConstruBay&apos;s PlanPass.ai platform routinely reduces permit timelines by 30–45% through pre-screening and direct communication with plan checkers in each jurisdiction.",
+      q: "What HVAC system is best for a Marin County home?",
+      a: "For most Marin County applications, we recommend variable-speed heat pump systems — either ducted or ductless — over gas furnace systems. Heat pumps provide both heating and cooling from a single system, qualify for Marin Clean Energy incentives, and perform excellently in Marin&apos;s mild climate where extreme cold is rare. Mitsubishi and Daikin mini-split systems are our preferred specifications for zoned applications; Carrier and Trane ducted heat pump systems are our preference for whole-home ducted applications.",
     },
     {
-      q: "Can I rent out an ADU in Marin County?",
-      a: "Yes — ADUs in Marin County can be rented as long-term rentals (30+ days). Short-term rentals (less than 30 days) are subject to separate local regulations that vary by jurisdiction and may require a business license and transient occupancy tax registration. Consult your specific city&apos;s short-term rental ordinance before marketing your ADU as a vacation rental. ConstruBay can refer you to local property managers and rental market specialists as part of the project consultation.",
+      q: "Do I need a permit for HVAC installation in Marin County?",
+      a: "Yes — all HVAC installations, replacements, and significant modifications require mechanical permits in Marin County. New equipment installations also require Title 24 energy compliance documentation. ConstruBay prepares all Title 24 documentation and manages mechanical permit applications as part of every HVAC project scope. For projects that also require electrical work (panel upgrades, new circuits), we coordinate electrical and mechanical permit submissions simultaneously through our PlanPass.ai platform.",
     },
     {
-      q: "What is the difference between a JADU and a standard ADU in Marin County?",
-      a: "A Junior ADU (JADU) is a unit created entirely within the existing footprint of the primary dwelling — typically a converted bedroom or garage space — and is limited to 500 square feet under California law. JADUs require the property owner to occupy either the primary unit or the JADU. A standard ADU can be a detached structure, an addition, or a conversion of a larger existing space, and can be up to 1,200 square feet in most California jurisdictions. ConstruBay designs and builds both JADUs and standard ADUs and can advise on the best configuration for your specific property and goals.",
+      q: "What is the best heating system for a hillside Marin County home?",
+      a: "For hillside homes in Mill Valley, Tiburon, and Ross — where ductwork installation is difficult due to complex framing and limited attic access — ductless multi-zone mini-split systems are typically the most practical and cost-effective solution. Modern Mitsubishi Hyper Heat systems maintain full heating capacity down to -13°F, making them effective even during Marin&apos;s occasional cold spells. For new construction or major remodels where duct installation can be integrated into the framing design, ducted heat pump systems with zoned control provide more uniform distribution and better resale appeal.",
     },
   ];
   const relatedServices: { name: string; href: string; desc: string }[] = [
-    { name: "Home Addition", href: "/services/home-addition-marin-county", desc: "Primary suite wings, second stories & structural expansions" },
-    { name: "New Construction", href: "/services/new-construction-marin-county", desc: "Ground-up architect-designed custom homes in Marin County" },
+    { name: "Electrical", href: "/services/electrical-marin-county", desc: "Smart home wiring, architectural lighting & panel upgrades" },
+    { name: "Plumbing", href: "/services/plumbing-marin-county", desc: "Luxury fixture installation & whole-home plumbing systems" },
     { name: "Full Home Remodel", href: "/services/whole-house-remodel-marin-county", desc: "Complete whole-home renovation — structural to aesthetic" },
   ];
 
@@ -49,21 +49,21 @@ export default function AduBuilderPage() {
       {/* HERO */}
       <section style={{ position: 'relative', minHeight: '72vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/services/adu-hero.jpg" alt="Luxury ADU Builder Marin County" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }} />
+        <img src="/images/services/hvac-hero.jpg" alt="Luxury HVAC Marin County" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3 }} />
         <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)' }} />
         <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '860px', padding: '0 24px' }}>
           <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: '20px' }}>ConstruBay · CSLB #1106798</p>
-          <h1 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 300, color: '#ffffff', lineHeight: 1.05, marginBottom: '24px' }}>ADU &amp; Garage Conversion in Marin County</h1>
-          <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: '40px' }}>Architectural Quality Accessory Dwellings — Indistinguishable From Your Main Home</p>
+          <h1 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 300, color: '#ffffff', lineHeight: 1.05, marginBottom: '24px' }}>HVAC in Marin County</h1>
+          <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: '40px' }}>Whisper-Quiet Climate Systems &amp; Radiant Heating — Invisible Comfort</p>
           <a href="/request-a-bid" style={{ display: 'inline-block', background: GRAD, color: '#000000', fontFamily: MS, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 52px', textDecoration: 'none' }}>Schedule a Private Consultation</a>
         </div>
       </section>
 
       {/* PHILOSOPHY */}
       <section style={{ maxWidth: '800px', margin: '0 auto', padding: '96px 24px' }}>
-        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>An Accessory Dwelling Unit should never look like an afterthought. We design and build detached luxury suites and garage conversions that mirror the architectural language of your main home — perfect for multi-generational living, guest quarters, or high-yield estate rentals. Every ADU we build is finished to the same material standard as the primary residence.</p>
-        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>California&apos;s ADU laws have created extraordinary investment opportunities for Marin County homeowners — but navigating the permit process, SB 9 compliance, utility connections, and design review requirements requires local expertise. Our PlanPass.ai permit intelligence platform has accelerated ADU permit approvals across all Marin County jurisdictions, and our team has completed ADU projects on lots ranging from standard urban parcels to complex hillside sites with septic system requirements.</p>
-        <p style={{ fontFamily: MS, fontSize: '12px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.45)', lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed ADU and garage conversion projects across Marin, Sonoma, and Napa Counties.</p>
+        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>The best HVAC system in a luxury home is the one you never notice — whisper-quiet, perfectly distributed, and invisible within the architecture. We design and install ducted and ductless mini-split systems, radiant hydronic heating, and heat pump systems that deliver precise temperature control in every zone of your estate without the architectural compromise of exposed equipment or intrusive mechanical noise.</p>
+        <p style={{ fontFamily: CG, fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', fontWeight: 300, color: 'rgba(255,255,255,0.9)', lineHeight: 1.85, marginBottom: '32px' }}>Climate system design on a luxury estate begins with a Manual J load calculation — the engineering foundation that determines the correct equipment capacity for each zone. Oversized equipment short-cycles, creating humidity problems and premature equipment failure. Undersized equipment runs continuously and never achieves setpoints. We engineer systems to exact load requirements and coordinate mechanical, electrical, and structural permits as a single coordinated scope.</p>
+        <p style={{ fontFamily: MS, fontSize: '12px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.45)', lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury HVAC projects across Marin, Sonoma, and Napa Counties.</p>
       </section>
 
       <div style={{ height: '1px', background: GRAD, margin: '0 48px', opacity: 0.35 }} />
@@ -88,7 +88,7 @@ export default function AduBuilderPage() {
       <section style={{ maxWidth: '800px', margin: '0 auto', padding: '96px 24px' }}>
         <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: GOLD, marginBottom: '16px' }}>The Marin Advantage</h2>
         <div style={{ width: '40px', height: '1px', background: GRAD, marginBottom: '40px', opacity: 0.6 }} />
-        <p style={{ fontFamily: MS, fontSize: '14px', lineHeight: 1.95, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.03em' }}>ADU permitting in Marin County is governed by state ADU law (AB 68, SB 9, AB 2221) as well as local ordinances from each of Marin&apos;s 11 cities and unincorporated county areas. Our PlanPass.ai platform maintains current ADU compliance matrices for every Marin County jurisdiction — including Tiburon, Mill Valley, Sausalito, San Rafael, Novato, Ross, Belvedere, San Anselmo, Fairfax, Corte Madera, and Larkspur. We pre-screen every ADU application for setback, height, coverage, and owner-occupancy requirements before investing in construction drawings, preventing the costly redesigns that occur when projects hit regulatory obstacles mid-design. Our team has also completed ADU projects in Sonoma County jurisdictions including the City of Sonoma, Petaluma, and unincorporated Sonoma County.</p>
+        <p style={{ fontFamily: MS, fontSize: '14px', lineHeight: 1.95, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.03em' }}>HVAC installations in Marin County require mechanical permits with Title 24 energy compliance documentation — one of the most stringent building energy code frameworks in the United States. Our team prepares Title 24 compliance documentation for every HVAC project using current CalCERTS-approved calculation tools, and our PlanPass.ai platform manages mechanical permit submissions across Marin County jurisdictions. For homes transitioning from gas heating to electric heat pump systems — an increasingly common project in Marin County as part of all-electric utility programs — we coordinate the panel upgrade, service entrance work, and utility interconnection as part of a unified project scope, eliminating the coordination friction that delays these projects when managed by separate contractors.</p>
       </section>
 
       {/* PROCESS */}
@@ -117,7 +117,7 @@ export default function AduBuilderPage() {
         <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: GOLD, marginBottom: '16px' }}>Investment Range</h2>
         <div style={{ width: '40px', height: '1px', background: GRAD, margin: '0 auto 40px', opacity: 0.6 }} />
         <div style={{ border: '1px solid rgba(203,178,106,0.25)', padding: '48px 32px', marginBottom: '28px' }}>
-          <p style={{ fontFamily: CG, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 300, color: '#ffffff', marginBottom: '8px' }}>$175,000 – $450,000+</p>
+          <p style={{ fontFamily: CG, fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', fontWeight: 300, color: '#ffffff', marginBottom: '8px' }}>$15,000 – $95,000+</p>
           <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, opacity: 0.65 }}>Typical Project Range</p>
         </div>
         <p style={{ fontFamily: MS, fontSize: '12px', lineHeight: 1.85, color: 'rgba(255,255,255,0.5)', letterSpacing: '0.04em' }}>All projects are delivered under a fixed-scope contract — the number you approve is the number you pay.</p>
@@ -164,7 +164,7 @@ export default function AduBuilderPage() {
       {/* FINAL CTA */}
       <section style={{ padding: '120px 24px', textAlign: 'center', backgroundColor: '#000000' }}>
         <p style={{ fontFamily: MS, fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: '24px', opacity: 0.7 }}>Begin Your Project</p>
-        <h2 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, background: GRAD, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '24px', lineHeight: 1.1 }}>Begin Your ADU Project</h2>
+        <h2 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, background: GRAD, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: '24px', lineHeight: 1.1 }}>Begin Your HVAC Project</h2>
         <p style={{ fontFamily: MS, fontSize: '13px', letterSpacing: '0.07em', color: 'rgba(255,255,255,0.58)', maxWidth: '500px', margin: '0 auto 48px', lineHeight: 1.9 }}>Fixed-scope contract. No surprises. Schedule a private consultation with Paulo.</p>
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="https://calendly.com/construbay/initial-consultation-construbay" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: GRAD, color: '#000000', fontFamily: MS, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 52px', textDecoration: 'none' }}>Book a Private Consultation</a>

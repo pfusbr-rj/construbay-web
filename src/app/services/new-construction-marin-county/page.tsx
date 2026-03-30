@@ -7,54 +7,54 @@ const MS = "'Montserrat', Arial, sans-serif";
 const GOLD = "#cbb26a";
 const GRAD = "linear-gradient(135deg, #bb8b4a, #f7eb9e)";
 
-export default function KitchenRemodelPage() {
+export default function NewConstructionPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const included = [
-    "Custom full-overlay cabinetry & integrated hardware",
-    "Natural stone countertops — quartzite, marble & granite fabrication",
-    "Professional-grade appliance integration (Sub-Zero, Wolf, Miele)",
-    "Custom range hood & exhaust engineering",
-    "Architectural island design & waterfall edge fabrication",
-    "Concealed lighting coves & under-cabinet LED systems",
-    "Structural wall removal & beam engineering",
-    "Custom tile backsplash & natural stone flooring",
+    "Complete structural engineering & foundation systems",
+    "MEP (mechanical, electrical & plumbing) full coordination",
+    "Custom interior millwork & built-in cabinetry",
+    "Above-code energy systems & insulation packages",
+    "Architectural window & door systems",
+    "Roofing, siding & exterior envelope",
+    "Landscaping & hardscape integration",
+    "Full CSLB-licensed permit management",
   ];
 
   const faqs = [
     {
-      q: "How much does a luxury kitchen remodel cost in Marin County?",
-      a: "A luxury kitchen remodel in Marin County typically ranges from $85,000 to $175,000+, depending on size, structural modifications required, appliance selections, and custom millwork scope. Imported stone countertops, professional-grade appliances, and full custom cabinetry are the largest cost drivers. ConstruBay delivers a detailed fixed-scope bid with line-item pricing before any work begins — there are no surprise invoices at the end of your project.",
+      q: "How much does it cost to build a custom home in Marin County?",
+      a: "Custom home construction in Marin County typically ranges from $800,000 to $3,000,000+ depending on square footage, site conditions, finish level, and structural complexity. Hillside lots, WUI fire zones, and Design Review Board requirements in cities like Mill Valley, Tiburon, and Sausalito can add 15–25% to baseline construction costs. ConstruBay delivers all projects under a fixed-scope contract — you approve the number before we break ground, and that is the number you pay.",
     },
     {
-      q: "How long does a kitchen remodel take in Marin County?",
-      a: "A full luxury kitchen remodel typically takes 10–16 weeks from permit approval to completion in Marin County. Lead times for custom cabinetry (8–12 weeks) and imported stone (4–8 weeks) are the critical path. We coordinate all material lead times before permitting begins, so your kitchen is fully staged for installation the moment permits are approved. Most standard kitchen permits in Marin County are approved within 4–8 weeks.",
+      q: "How long does it take to build a custom home in Marin County?",
+      a: "The average custom home in Marin takes 18–30 months from first consultation to certificate of occupancy. Permit approvals in Marin County and surrounding jurisdictions like Sonoma County typically take 6–14 months depending on scope and jurisdiction. Our PlanPass.ai integration routinely reduces permit timelines by 30–45%, and our pre-application consultation process identifies potential Design Review Board concerns before the first submission.",
     },
     {
-      q: "Do I need a permit for a kitchen remodel in Marin County?",
-      a: "Yes — any kitchen remodel involving electrical, plumbing, gas, or structural modifications requires a permit from your local jurisdiction (Marin County, Mill Valley, Tiburon, etc.). ConstruBay handles the entire permit process using our PlanPass.ai platform, which pre-screens applications to minimize plan check cycles. Cabinet-only replacements without system modifications may not require a permit, but we always recommend confirming with your jurisdiction first.",
+      q: "Do I need an architect before contacting a general contractor in Marin?",
+      a: "Not necessarily. Many of our clients begin with a design-build consultation where we introduce them to our trusted architectural partners and develop a preliminary scope together. If you already have an architect or are mid-design, we can join the process at any stage. We collaborate seamlessly with all major Marin and Sonoma County architecture firms.",
     },
     {
-      q: "What kitchen appliance brands do you work with?",
-      a: "ConstruBay integrates all major luxury appliance brands including Sub-Zero, Wolf, Miele, Thermador, La Cornue, and Gaggenau. We coordinate directly with your appliance supplier for delivery sequencing, rough-in specifications, and final trim installations. Our team has completed professional-grade kitchen installations across Marin and Sonoma Counties and is familiar with the installation requirements of each major brand.",
+      q: "What is a fixed-scope construction contract and why does it matter?",
+      a: "A fixed-scope contract means we agree on a precise scope of work and a final price before construction begins — and that price does not change unless you authorize a change order. This eliminates the open-ended cost creep that occurs on cost-plus contracts, where the final invoice can be 20–40% higher than the initial estimate. At ConstruBay, every project — from ground-up homes in Mill Valley to remodels in Sausalito — is delivered under a fixed-scope agreement.",
     },
   ];
 
   const relatedServices = [
     {
-      name: "Bathroom Remodel",
-      href: "/services/bathroom-remodel-marin-county",
-      desc: "Spa-grade private sanctuaries with heated stone floors & custom steam showers",
-    },
-    {
       name: "Full Home Remodel",
       href: "/services/whole-house-remodel-marin-county",
-      desc: "Complete whole-home renovation for Marin County estates",
+      desc: "Complete structural & aesthetic renovation for Marin County estates",
     },
     {
-      name: "Flooring",
-      href: "/services/flooring-marin-county",
-      desc: "Wide-plank hardwood, natural stone & custom inlay throughout your estate",
+      name: "ADU & Garage Conversion",
+      href: "/services/adu-builder-marin-county",
+      desc: "Luxury accessory dwelling units that match your main home&apos;s architecture",
+    },
+    {
+      name: "Home Addition",
+      href: "/services/home-addition-marin-county",
+      desc: "Primary suite wings, second stories & structural expansions in Marin",
     },
   ];
 
@@ -64,21 +64,21 @@ export default function KitchenRemodelPage() {
       {/* SECTION 1 — HERO */}
       <section style={{ position: "relative", minHeight: "72vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/services/kitchen-hero.jpg" alt="Luxury kitchen remodel in Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
+        <img src="/images/services/new-construction-hero.jpg" alt="Custom home construction in Marin County" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.3 }} />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.6)" }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: "860px", padding: "0 24px" }}>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "20px" }}>ConstruBay · CSLB #1106798</p>
-          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Luxury Kitchen Remodels in Marin County</h1>
-          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Bespoke Culinary Spaces — Where Precision Meets Architecture</p>
+          <h1 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 300, color: "#ffffff", lineHeight: 1.05, marginBottom: "24px" }}>Custom Home Construction in Marin County</h1>
+          <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: "40px" }}>Ground-Up Estate Construction — Built to Define Your Property for Generations</p>
           <a href="/request-a-bid" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Schedule a Private Consultation</a>
         </div>
       </section>
 
       {/* SECTION 2 — PHILOSOPHY */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>The kitchen is the operational heart of your estate and the centerpiece of your property&apos;s value. We engineer bespoke culinary spaces using imported stone, precision cabinetry, and seamless appliance integration that disappears into the architecture — creating kitchens that are as beautiful at 6am as they are during a dinner party for twenty.</p>
-        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Our kitchen remodeling process begins with a detailed structural review of your existing space. We identify load-bearing walls, reroute mechanical systems where necessary, and engineer an entirely new spatial flow before a single cabinet is ordered. The result is a kitchen that feels like it was always meant to be exactly this way.</p>
-        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed luxury kitchen remodeling projects across Marin, Sonoma, and Napa Counties.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>We build architect-designed residences from foundation to finish, managing structural engineering, MEP systems, and interior millwork as a single point of accountability. Every decision — from the foundation type to the hardware finish — is coordinated under one roof, eliminating the costly friction between trades that plagues most luxury builds.</p>
+        <p style={{ fontFamily: CG, fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 300, color: "rgba(255,255,255,0.9)", lineHeight: 1.85, marginBottom: "32px" }}>Each Marin estate we construct is a permanent expression of your vision. We work closely with your architect and interior designer, or we can refer you to our trusted design partners, to deliver a finished home that exceeds architectural drawings in craftsmanship and detail.</p>
+        <p style={{ fontFamily: MS, fontSize: "12px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.45)", lineHeight: 1.9 }}>ConstruBay (CSLB #1106798) is based in Mill Valley and has executed custom home construction projects across Marin, Sonoma, and Napa Counties.</p>
       </section>
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
@@ -103,7 +103,7 @@ export default function KitchenRemodelPage() {
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>The Marin Advantage</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, marginBottom: "40px", opacity: 0.6 }} />
-        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Kitchen remodels in Marin County often require structural modifications, electrical panel upgrades, and gas line rerouting — all of which require coordinated permit applications with Marin County Building Services or the relevant city jurisdiction. Our PlanPass.ai platform pre-screens permit applications for common kitchen remodel deficiencies before submission, dramatically reducing plan check cycle times. We have completed luxury kitchen remodels throughout Mill Valley, Tiburon, Sausalito, Ross, and Kentfield, and we are intimately familiar with the inspection protocols and material requirements of each jurisdiction.</p>
+        <p style={{ fontFamily: MS, fontSize: "14px", lineHeight: 1.95, color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em" }}>Building in Marin County requires navigating among the most complex permitting environments in California. Our proprietary PlanPass.ai permit intelligence platform accelerates approvals across Marin County, the Town of Tiburon, City of Sausalito, and Marin County Fire — typically reducing permit timelines by 30–45%. Our team has extensive Wildland-Urban Interface (WUI) construction experience, meeting Marin County&apos;s strict fire-hardening requirements without sacrificing the architectural vision. We have completed projects subject to Design Review Board approval in Mill Valley, Tiburon, and Belvedere, and we know exactly how to present materials, massing, and landscape plans for approval on the first submission.</p>
       </section>
 
       {/* SECTION 5 — PROCESS */}
@@ -132,7 +132,7 @@ export default function KitchenRemodelPage() {
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>Investment Range</h2>
         <div style={{ width: "40px", height: "1px", background: GRAD, margin: "0 auto 40px", opacity: 0.6 }} />
         <div style={{ border: "1px solid rgba(203,178,106,0.25)", padding: "48px 32px", marginBottom: "28px" }}>
-          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$85,000 – $175,000+</p>
+          <p style={{ fontFamily: CG, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 300, color: "#ffffff", marginBottom: "8px" }}>$800,000 – $3,000,000+</p>
           <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, opacity: 0.65 }}>Typical Project Range</p>
         </div>
         <p style={{ fontFamily: MS, fontSize: "12px", lineHeight: 1.85, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em" }}>All projects are delivered under a fixed-scope contract — the number you approve is the number you pay.</p>
@@ -179,7 +179,7 @@ export default function KitchenRemodelPage() {
       {/* SECTION 9 — FINAL CTA */}
       <section style={{ padding: "120px 24px", textAlign: "center", backgroundColor: "#000000" }}>
         <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "24px", opacity: 0.7 }}>Begin Your Project</p>
-        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Kitchen Remodel Project</h2>
+        <h2 style={{ fontFamily: CG, fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, background: GRAD, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", marginBottom: "24px", lineHeight: 1.1 }}>Begin Your Custom Home Construction Project</h2>
         <p style={{ fontFamily: MS, fontSize: "13px", letterSpacing: "0.07em", color: "rgba(255,255,255,0.58)", maxWidth: "500px", margin: "0 auto 48px", lineHeight: 1.9 }}>Fixed-scope contract. No surprises. Schedule a private consultation with Paulo.</p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <a href="https://calendly.com/construbay/initial-consultation-construbay" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: GRAD, color: "#000000", fontFamily: MS, fontSize: "11px", letterSpacing: "0.25em", textTransform: "uppercase", padding: "18px 52px", textDecoration: "none" }}>Book a Private Consultation</a>
