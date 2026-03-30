@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import TestimonialCard from '@/components/TestimonialCard'
+import AduSchema from '@/components/schema/AduSchema'
 
 declare global {
   interface Window {
@@ -113,6 +114,7 @@ export default function ADULandingPage() {
 
   return (
     <div style={{ fontFamily: "'DM Sans',sans-serif", background: navy, color: gold, minHeight: '100vh', paddingBottom: '90px', WebkitOverflowScrolling: 'touch' }}>
+      <AduSchema />
 
       {/* ── HEADER: logo left, phone right ── */}
       <header style={{ background: navy, padding: isMobile ? '12px 16px' : '14px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, zIndex: 100 }}>
@@ -197,6 +199,105 @@ export default function ADULandingPage() {
           city="Mill Valley"
           projectType="Detached ADU"
         />
+      </div>
+
+      {/* ── PLANPASS.AI SECTION ── */}
+      <div style={{ padding: isMobile ? '24px 16px' : '48px 24px', maxWidth: 960, margin: '0 auto' }}>
+        <div style={{ border: '1px solid rgba(203,178,106,0.2)', padding: isMobile ? '24px' : '40px', background: '#0a0a0a' }}>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase' as const, color: 'rgba(203,178,106,0.6)', marginBottom: 12 }}>Competitive Advantage</div>
+          <h2 style={{ fontSize: isMobile ? 22 : 28, fontWeight: 800, color: '#fff', margin: '0 0 16px', lineHeight: 1.2 }}>
+            AI-Powered Permit Planning
+          </h2>
+          <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: 20 }}>
+            ConstruBay uses <strong style={{ color: gold }}>PlanPass.ai</strong> — an AI-powered construction permit intelligence platform — to accelerate Marin County permit approvals, flag issues before submission, and give clients real-time visibility into their permit status. No other contractor in Marin County offers this.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 10, marginBottom: 20 }}>
+            {[
+              ['40% faster', 'permit approvals vs. Marin County average'],
+              ['Pre-submission', 'issue detection before rejection'],
+              ['Real-time', 'permit status visibility for clients'],
+              ['Marin-specific', 'code intelligence across all 11 jurisdictions'],
+            ].map(([stat, desc]) => (
+              <div key={stat} style={{ padding: '16px', border: '1px solid rgba(203,178,106,0.12)', background: '#000' }}>
+                <div style={{ fontSize: 13, fontWeight: 800, color: gold, marginBottom: 4 }}>{stat}</div>
+                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', lineHeight: 1.5 }}>{desc}</div>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', lineHeight: 1.6 }}>
+            PlanPass.ai is a ConstruBay exclusive. It&apos;s how we protect your timeline and your investment.
+          </p>
+        </div>
+      </div>
+
+      {/* ── FAQ SECTION ── */}
+      <div style={{ padding: isMobile ? '24px 16px 48px' : '48px 24px 80px', maxWidth: 960, margin: '0 auto' }}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'How much does an ADU cost in Marin County?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'ADU construction in Marin County ranges from $185,000 for a garage conversion to $650,000+ for a custom detached unit. Costs depend on size, finish level, hillside complexity, and permit requirements. ConstruBay provides fixed-scope contracts — what we quote is what you pay.' }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How long does ADU construction take in Marin County?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'A typical ADU project takes 10–16 months from design to final inspection. Permit approval alone can take 4–8 months in Marin County depending on the jurisdiction. We use PlanPass.ai to accelerate the permit process and flag issues before submission.' }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do I need a permit to build an ADU in Marin County?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Yes. All ADUs in Marin County require building permits. Some jurisdictions also require Design Review Board approval. ConstruBay handles the entire permit process — from application to final sign-off — using our AI-powered permit planning platform PlanPass.ai.' }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Can I build an ADU on a hillside lot in Marin County?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'Yes, but hillside ADUs require geotechnical investigation, engineered retaining walls, and often a soils report. ConstruBay specializes in hillside construction across Mill Valley, Tiburon, and unincorporated Marin.' }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What ADU types does ConstruBay build?',
+                  acceptedAnswer: { '@type': 'Answer', text: 'We build detached ADUs, attached ADUs, garage conversions, and Junior ADUs (JADUs). Each type has different cost, size, and permitting requirements — we help you choose the right option for your lot and goals.' }
+                },
+              ]
+            })
+          }}
+        />
+        <h2 style={{ fontSize: isMobile ? 24 : 32, fontWeight: 800, color: '#fff', marginBottom: 32, lineHeight: 1.2 }}>
+          Frequently Asked Questions — ADU Construction Marin County
+        </h2>
+        {[
+          {
+            q: 'How much does an ADU cost in Marin County?',
+            a: 'ADU construction in Marin County ranges from $185,000 for a garage conversion to $650,000+ for a custom detached unit. Costs depend on size, finish level, hillside complexity, and permit requirements. ConstruBay provides fixed-scope contracts — what we quote is what you pay.',
+          },
+          {
+            q: 'How long does ADU construction take in Marin County?',
+            a: 'A typical ADU project takes 10–16 months from design to final inspection. Permit approval alone can take 4–8 months in Marin County depending on the jurisdiction. We use PlanPass.ai to accelerate the permit process and flag issues before submission.',
+          },
+          {
+            q: 'Do I need a permit to build an ADU in Marin County?',
+            a: 'Yes. All ADUs in Marin County require building permits. Some jurisdictions also require Design Review Board approval. ConstruBay handles the entire permit process — from application to final sign-off — using our AI-powered permit planning platform PlanPass.ai.',
+          },
+          {
+            q: 'Can I build an ADU on a hillside lot in Marin County?',
+            a: 'Yes, but hillside ADUs require geotechnical investigation, engineered retaining walls, and often a soils report. ConstruBay specializes in hillside construction across Mill Valley, Tiburon, and unincorporated Marin.',
+          },
+          {
+            q: 'What ADU types does ConstruBay build?',
+            a: 'We build detached ADUs, attached ADUs, garage conversions, and Junior ADUs (JADUs). Each type has different cost, size, and permitting requirements — we help you choose the right option for your lot and goals.',
+          },
+        ].map((faq, i) => (
+          <div key={i} style={{ borderBottom: '1px solid rgba(203,178,106,0.12)', padding: '20px 0' }}>
+            <h3 style={{ fontSize: isMobile ? 15 : 17, fontWeight: 700, color: '#fff', marginBottom: 8, lineHeight: 1.4 }}>{faq.q}</h3>
+            <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', lineHeight: 1.8, margin: 0 }}>{faq.a}</p>
+          </div>
+        ))}
       </div>
 
       {/* ── MOBILE STICKY BAR ── */}

@@ -86,7 +86,7 @@ export default function ServicesPage() {
           <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[400px] overflow-hidden">
             <Image
               src="/images/services/office-kitchen.jpg"
-              alt="Kitchen remodeling"
+              alt="Kitchen remodeling by ConstruBay — luxury general contractor Marin County CA"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 33vw"
@@ -102,7 +102,7 @@ export default function ServicesPage() {
           <div className="relative aspect-[3/4] overflow-hidden">
             <Image
               src="/images/services/bathroom-service.jpg"
-              alt="Bathroom remodeling service"
+              alt="Bathroom remodeling service by ConstruBay — Marin County CSLB #1106798"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"

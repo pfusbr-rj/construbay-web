@@ -5,6 +5,7 @@ import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import ProjectGrid from '@/components/projects/ProjectGrid';
 import { projects } from '@/data/projects';
 import InquiryModal from '@/components/InquiryModal';
+import SiteSchema from '@/components/schema/SiteSchema';
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
@@ -14,17 +15,17 @@ const testimonials = [
   {
     text: "Quick to respond! They gave us a free estimate in a timely manner. Hired them for several projects on our Home. They do 'Great' work, clean, friendly, fun to work with on a daily basis.",
     author: "The Mathews",
-    projectType: "Full home remodel — Mill Valley",
+    projectType: "Full Home Remodel · Mill Valley",
   },
   {
     text: "Great place to work at with great people. Energetic with a great foundation for growth. Organized and focused to perform at a high level of expectation for their customers.",
     author: "Lars & Mary Williams",
-    projectType: "Kitchen remodel — Tiburon",
+    projectType: "Kitchen Remodel · Tiburon",
   },
   {
     text: "I dealt with different aspects of their business from converting LLC to corps to working with out of state job projects and licensing. The job was very fast paced and fun.",
     author: "Chris Parks",
-    projectType: "Commercial project — San Rafael",
+    projectType: "Commercial Project · San Rafael",
   },
 ];
 
@@ -41,6 +42,7 @@ export default function HomePage() {
 
   return (
     <>
+      <SiteSchema />
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center">
         <div className="absolute inset-0">
@@ -374,6 +376,38 @@ export default function HomePage() {
               <p className={`${montserrat.className} text-xs text-white/40 mt-1 tracking-wider`}>{t.projectType}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Why Trust ConstruBay — EEAT Trust Section */}
+      <section style={{ padding: '100px 0', backgroundColor: '#050505', borderBottom: '1px solid rgba(203,178,106,0.08)' }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', textAlign: 'center', marginBottom: '24px' }}>
+            Credentials &amp; Trust
+          </p>
+          <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4.5vw, 52px)', fontWeight: '300', color: '#ffffff', textAlign: 'center', marginBottom: '72px', letterSpacing: '0.02em', lineHeight: 1.2 }}>
+            Why Trust ConstruBay
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1px', backgroundColor: 'rgba(203,178,106,0.08)' }}>
+            {[
+              { title: 'CSLB Licensed Since 2009', body: 'License #1106798 — active Class B General Contractor, verified on cslb.ca.gov.' },
+              { title: '$2M General Liability Insurance', body: 'Fully insured on every project. Certificate of insurance available upon request.' },
+              { title: '10-Year Craftsmanship Warranty', body: 'We back every build with a decade-long warranty on workmanship — no exceptions.' },
+              { title: '47 Five-Star Google Reviews', body: '5.0 average rating, every review earned on completed Marin County projects.' },
+              { title: '#1 Contractor on Nextdoor Marin', body: '2 consecutive years voted by the Marin homeowner community.' },
+              { title: 'AI-Powered Permit Planning', body: 'Exclusive use of PlanPass.ai — 40% faster permit approvals in Marin County.' },
+            ].map((item) => (
+              <div key={item.title} style={{ backgroundColor: '#050505', padding: '44px 36px' }}>
+                <div style={{ width: '28px', height: '1px', backgroundColor: '#cbb26a', marginBottom: '20px' }} />
+                <h3 className={montserrat.className} style={{ fontSize: '10px', fontWeight: '400', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '12px', lineHeight: 1.6 }}>
+                  {item.title}
+                </h3>
+                <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.45)', lineHeight: 1.9, letterSpacing: '0.03em' }}>
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

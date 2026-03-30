@@ -23,6 +23,24 @@ function renderContent(content: string) {
   const elements: React.ReactNode[] = [];
   let key = 0;
 
+  const parseInline = (text: string) => {
+    const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={i} style={{ color: '#ffffff', fontWeight: '400' }}>{part.slice(2, -2)}</strong>;
+      }
+      const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (linkMatch) {
+        return (
+          <a key={i} href={linkMatch[2]} style={{ color: '#cbb26a', textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+            {linkMatch[1]}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   for (const line of lines) {
     if (line.startsWith('## ')) {
       elements.push(
@@ -40,14 +58,6 @@ function renderContent(content: string) {
     } else if (line.trim() === '') {
       elements.push(<div key={key++} style={{ height: '16px' }} />);
     } else {
-      const parts = line.split(/(\*\*[^*]+\*\*)/g);
-      const rendered = parts.map((part, i) => {
-        if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={i} style={{ color: '#ffffff', fontWeight: '400' }}>{part.slice(2, -2)}</strong>;
-        }
-        return part;
-      });
-
       elements.push(
         <p key={key++} className={montserrat.className} style={{
           fontSize: '14px',
@@ -57,7 +67,7 @@ function renderContent(content: string) {
           letterSpacing: '0.03em',
           marginBottom: '0',
         }}>
-          {rendered}
+          {parseInline(line)}
         </p>
       );
     }
@@ -69,6 +79,31 @@ function renderContent(content: string) {
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.construbay.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://www.construbay.com/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://www.construbay.com/blog/${post.slug}`,
+      },
+    ],
+  };
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -102,6 +137,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '140px' }}>

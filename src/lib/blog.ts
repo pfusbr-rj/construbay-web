@@ -57,9 +57,9 @@ Plan for 4–12 weeks for most residential permits. Complex projects — ADUs, a
 
 ## How We Handle Permits for Our Clients
 
-At ConstruBay, permit management is part of every project we take on. We maintain relationships with each city's building department, know which plan checkers prefer what format, and pre-check every submittal before it goes in. For most of our projects, we're ahead of the average timeline.
+At ConstruBay, [permit management and expediting](/marin-county-permit-expediting) is part of every project we take on. We maintain relationships with each city's building department, know which plan checkers prefer what format, and pre-check every submittal before it goes in. For most of our projects, we're ahead of the average timeline.
 
-If you're planning a project and want a realistic permit forecast before you commit to a budget and timeline, call us. That conversation is always free.`,
+If you're planning an [ADU or addition in Marin County](/adu-builder-marin-county) and want a realistic permit forecast before you commit to a budget and timeline, call us. That conversation is always free.`,
   },
   {
     slug: 'adu-cost-marin-county-2024',
@@ -117,7 +117,7 @@ A well-built ADU in Mill Valley or Tiburon can command $3,500–$5,500/month. At
 
 ## Our Process
 
-We specialize in ADU projects throughout Marin. Every project starts with a free feasibility assessment — we'll look at your parcel, setbacks, lot coverage limits, and septic/sewer capacity before you spend a dollar on design. Call (415) 968-9494 to set that up.`,
+We specialize in [ADU construction throughout Marin County](/adu-builder-marin-county). Every project starts with a free feasibility assessment — we'll look at your parcel, setbacks, lot coverage limits, and septic/sewer capacity before you spend a dollar on design. As your [general contractor in Marin County](/marin-county-general-contractor), we handle everything from design through final inspection. Call (415) 968-9494 to set that up.`,
   },
   {
     slug: 'ai-permits-future-of-construction-marin',
@@ -159,7 +159,7 @@ What *will* change in the next few years is how quickly straightforward permits 
 
 Where AI tools fall short is in discretionary judgment — the hillside neighbor who objects to your second story, the design review board that wants different window proportions, the fire marshal who has site-specific concerns about your WUI lot. These conversations require a contractor who knows the people and the politics.
 
-That's been the ConstruBay approach from day one: combine the best available tools with deep local relationships. We'll adopt AI permit tools as they become available. But the phone call to the plan checker the day before submittal? That's still how projects move in Marin.`,
+That's been the ConstruBay approach from day one: combine the best available tools with deep local relationships. Our [permit expediting service in Marin County](/marin-county-permit-expediting) layers AI intelligence over local expertise — so your project moves faster without sacrificing accuracy. Whether you're building an [ADU in Marin County](/adu-builder-marin-county) or a full home addition, we handle the permit process end to end.`,
   },
   {
     slug: 'tiburon-kitchen-remodel-what-to-expect',
@@ -209,7 +209,7 @@ The variance is almost entirely driven by cabinetry and appliances. A Thermador/
 
 **The window seat that wasn't in the plan.** On almost every kitchen project, we find an opportunity — a bump-out, a built-in, a view window — that wasn't in the original scope but dramatically elevates the result. Great contractors see these.
 
-If you're planning a kitchen remodel in Tiburon or southern Marin, we'd love to walk through your space. Call us at (415) 968-9494 or use the inquiry form on our site.`,
+If you're planning a [kitchen remodel in Tiburon](/tiburon-kitchen-remodel) or anywhere in southern Marin, we'd love to walk through your space. Our [Marin County kitchen remodeling](/marin-county-kitchen-remodeling) process covers everything from design through final inspection. Call us at (415) 968-9494 or use the inquiry form on our site.`,
   },
   {
     slug: 'how-to-choose-a-contractor-marin-county',
@@ -288,7 +288,7 @@ Any reputable contractor will present a detailed contract. If they hand you a on
 
 **Vague answers about subcontractors.** Who is doing your electrical? Your tile? If the GC can't name them, they may be using whoever's available rather than a trusted team.
 
-We're happy to answer any of these questions about our own company. That's the standard every contractor should be held to.`,
+We're happy to answer any of these questions about our own company. That's the standard every [general contractor in Marin County](/marin-county-general-contractor) should be held to. When you're ready, [request a free estimate](/request-a-bid) — we'll walk through your project, your scope, and our process before you sign anything.`,
   },
   {
     slug: 'sonoma-county-remodel-trends-2024',
