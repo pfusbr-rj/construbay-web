@@ -25,7 +25,7 @@ export default function ExitIntentPopup() {
   useEffect(() => {
     if (blocked) return
     let ready = false
-    const timer = setTimeout(() => { ready = true }, 5000)
+    const timer = setTimeout(() => { ready = true }, 8000)
 
     const onMouseOut = (e: MouseEvent) => {
       if (!ready) return
