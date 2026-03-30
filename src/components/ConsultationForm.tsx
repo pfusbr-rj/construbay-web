@@ -95,14 +95,14 @@ export default function ConsultationForm() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-brand-dark mb-2">Thank you, {form.fullName}!</h3>
-          <p className="text-brand-dark/70 mb-6">
+          <h3 className="text-2xl font-bold text-white mb-2">Thank you, {form.fullName}!</h3>
+          <p className="text-white/70 mb-6">
             We received your request. Book a time below or we&apos;ll call you within 24 hours.
           </p>
         </div>
 
         {/* Calendly Embed */}
-        <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+        <div className="border border-white/20 rounded-lg overflow-hidden bg-white">
           <iframe
             src="https://calendly.com/construbay/initial-contractor-consultation-construbay?hide_gdpr_banner=1&primary_color=C9A84C"
             width="100%"
@@ -114,7 +114,7 @@ export default function ConsultationForm() {
 
         <button
           onClick={() => window.location.href = "/"}
-          className="w-full text-center text-brand-dark/60 text-sm underline hover:text-brand-dark transition-colors"
+          className="w-full text-center text-white/60 text-sm underline hover:text-white transition-colors"
         >
           Skip scheduling — we&apos;ll call you within 24 hours
         </button>
@@ -130,7 +130,7 @@ export default function ConsultationForm() {
           <div
             key={s}
             className={`h-1.5 flex-1 rounded-full transition-colors ${
-              s <= step ? "bg-[#C9A84C]" : "bg-gray-300"
+              s <= step ? "bg-[#cbb26a]" : "bg-white/20"
             }`}
           />
         ))}
@@ -139,7 +139,7 @@ export default function ConsultationForm() {
       {/* Step 1: Project Type */}
       {step === 1 && (
         <div className="space-y-4">
-          <h2 className="text-xl font-bold text-brand-dark">What type of project?</h2>
+          <h2 className="text-xl font-bold text-white">What type of project?</h2>
           <div className="grid grid-cols-1 gap-2">
             {projectTypes.map((type) => (
               <button
@@ -147,8 +147,8 @@ export default function ConsultationForm() {
                 onClick={() => update("projectType", type)}
                 className={`text-left px-4 py-3 border rounded-lg transition-colors ${
                   form.projectType === type
-                    ? "border-[#C9A84C] bg-[#C9A84C]/10 text-brand-dark font-medium"
-                    : "border-gray-300 text-brand-dark/80 hover:border-[#C9A84C]/50"
+                    ? "border-[#cbb26a] bg-[#cbb26a]/20 text-white font-medium"
+                    : "border-white/30 text-white/80 hover:border-[#cbb26a]/60"
                 }`}
               >
                 {type}
@@ -161,25 +161,25 @@ export default function ConsultationForm() {
       {/* Step 2: Project Details */}
       {step === 2 && (
         <div className="space-y-4">
-          <h2 className="text-xl font-bold text-brand-dark">Tell us more about your project</h2>
+          <h2 className="text-xl font-bold text-white">Tell us more about your project</h2>
           <div className="grid grid-cols-2 gap-3">
             <input
               type="text"
               placeholder="City"
               value={form.propertyCity}
               onChange={(e) => update("propertyCity", e.target.value)}
-              className="bg-white border border-gray-300 text-brand-dark px-4 py-3 rounded-lg focus:outline-none focus:border-[#C9A84C] transition-colors"
+              className="bg-white/10 border border-white/30 text-white placeholder:text-white/50 px-4 py-3 rounded-lg focus:outline-none focus:border-[#cbb26a] transition-colors"
             />
             <input
               type="text"
               placeholder="Zip Code"
               value={form.propertyZip}
               onChange={(e) => update("propertyZip", e.target.value)}
-              className="bg-white border border-gray-300 text-brand-dark px-4 py-3 rounded-lg focus:outline-none focus:border-[#C9A84C] transition-colors"
+              className="bg-white/10 border border-white/30 text-white placeholder:text-white/50 px-4 py-3 rounded-lg focus:outline-none focus:border-[#cbb26a] transition-colors"
             />
           </div>
           <div>
-            <label className="text-sm text-brand-dark/60 mb-1 block">Budget Range</label>
+            <label className="text-sm text-white/80 mb-1 block">Budget Range</label>
             <div className="grid grid-cols-1 gap-2">
               {budgetRanges.map((range) => (
                 <button
@@ -187,8 +187,8 @@ export default function ConsultationForm() {
                   onClick={() => update("budgetRange", range)}
                   className={`text-left px-4 py-3 border rounded-lg transition-colors ${
                     form.budgetRange === range
-                      ? "border-[#C9A84C] bg-[#C9A84C]/10 text-brand-dark font-medium"
-                      : "border-gray-300 text-brand-dark/80 hover:border-[#C9A84C]/50"
+                      ? "border-[#cbb26a] bg-[#cbb26a]/20 text-white font-medium"
+                      : "border-white/30 text-white/80 hover:border-[#cbb26a]/60"
                   }`}
                 >
                   {range}
@@ -197,7 +197,7 @@ export default function ConsultationForm() {
             </div>
           </div>
           <div>
-            <label className="text-sm text-brand-dark/60 mb-1 block">Timeline</label>
+            <label className="text-sm text-white/80 mb-1 block">Timeline</label>
             <div className="grid grid-cols-2 gap-2">
               {timelines.map((t) => (
                 <button
@@ -205,8 +205,8 @@ export default function ConsultationForm() {
                   onClick={() => update("timeline", t)}
                   className={`text-left px-4 py-3 border rounded-lg transition-colors ${
                     form.timeline === t
-                      ? "border-[#C9A84C] bg-[#C9A84C]/10 text-brand-dark font-medium"
-                      : "border-gray-300 text-brand-dark/80 hover:border-[#C9A84C]/50"
+                      ? "border-[#cbb26a] bg-[#cbb26a]/20 text-white font-medium"
+                      : "border-white/30 text-white/80 hover:border-[#cbb26a]/60"
                   }`}
                 >
                   {t}
@@ -220,14 +220,14 @@ export default function ConsultationForm() {
       {/* Step 3: Contact Info */}
       {step === 3 && (
         <div className="space-y-4">
-          <h2 className="text-xl font-bold text-brand-dark">How can we reach you?</h2>
+          <h2 className="text-xl font-bold text-white">How can we reach you?</h2>
           <input
             type="text"
             placeholder="Full Name *"
             required
             value={form.fullName}
             onChange={(e) => update("fullName", e.target.value)}
-            className="w-full bg-white border border-gray-300 text-brand-dark px-4 py-3 rounded-lg focus:outline-none focus:border-[#C9A84C] transition-colors"
+            className="w-full bg-white/10 border border-white/30 text-white placeholder:text-white/50 px-4 py-3 rounded-lg focus:outline-none focus:border-[#cbb26a] transition-colors"
           />
           <input
             type="tel"
@@ -235,7 +235,7 @@ export default function ConsultationForm() {
             required
             value={form.phone}
             onChange={(e) => update("phone", e.target.value)}
-            className="w-full bg-white border border-gray-300 text-brand-dark px-4 py-3 rounded-lg focus:outline-none focus:border-[#C9A84C] transition-colors"
+            className="w-full bg-white/10 border border-white/30 text-white placeholder:text-white/50 px-4 py-3 rounded-lg focus:outline-none focus:border-[#cbb26a] transition-colors"
           />
           <input
             type="email"
@@ -243,20 +243,20 @@ export default function ConsultationForm() {
             required
             value={form.email}
             onChange={(e) => update("email", e.target.value)}
-            className="w-full bg-white border border-gray-300 text-brand-dark px-4 py-3 rounded-lg focus:outline-none focus:border-[#C9A84C] transition-colors"
+            className="w-full bg-white/10 border border-white/30 text-white placeholder:text-white/50 px-4 py-3 rounded-lg focus:outline-none focus:border-[#cbb26a] transition-colors"
           />
           <textarea
             placeholder="Anything else we should know? (optional)"
             value={form.message}
             onChange={(e) => update("message", e.target.value)}
             rows={3}
-            className="w-full bg-white border border-gray-300 text-brand-dark px-4 py-3 rounded-lg focus:outline-none focus:border-[#C9A84C] transition-colors resize-none"
+            className="w-full bg-white/10 border border-white/30 text-white placeholder:text-white/50 px-4 py-3 rounded-lg focus:outline-none focus:border-[#cbb26a] transition-colors resize-none"
           />
         </div>
       )}
 
       {error && (
-        <p className="text-red-600 text-sm">{error}</p>
+        <p className="text-red-400 text-sm">{error}</p>
       )}
 
       {/* Navigation Buttons */}
@@ -264,7 +264,7 @@ export default function ConsultationForm() {
         {step > 1 && (
           <button
             onClick={() => setStep(step - 1)}
-            className="px-6 py-3 border border-gray-300 text-brand-dark/70 rounded-lg hover:bg-gray-100 transition-colors"
+            className="px-6 py-3 border border-white/30 text-white/70 rounded-lg hover:bg-white/10 transition-colors"
           >
             Back
           </button>
@@ -273,10 +273,10 @@ export default function ConsultationForm() {
           <button
             onClick={() => canNext() && setStep(step + 1)}
             disabled={!canNext()}
-            className={`flex-1 py-3 rounded-lg font-semibold text-white transition-colors ${
+            className={`flex-1 py-3 rounded-lg font-semibold transition-colors ${
               canNext()
-                ? "bg-[#C9A84C] hover:bg-[#b89638]"
-                : "bg-gray-300 cursor-not-allowed"
+                ? "bg-[#cbb26a] hover:bg-[#b89638] text-gray-900"
+                : "bg-white/20 text-white/40 cursor-not-allowed"
             }`}
           >
             Next
@@ -285,10 +285,10 @@ export default function ConsultationForm() {
           <button
             onClick={handleSubmit}
             disabled={!canNext() || submitting}
-            className={`flex-1 py-3 rounded-lg font-semibold text-white transition-colors ${
+            className={`flex-1 py-3 rounded-lg font-semibold transition-colors ${
               canNext() && !submitting
-                ? "bg-[#C9A84C] hover:bg-[#b89638]"
-                : "bg-gray-300 cursor-not-allowed"
+                ? "bg-[#cbb26a] hover:bg-[#b89638] text-gray-900"
+                : "bg-white/20 text-white/40 cursor-not-allowed"
             }`}
           >
             {submitting ? "Submitting..." : "Submit & Schedule Consultation"}
@@ -296,7 +296,7 @@ export default function ConsultationForm() {
         )}
       </div>
 
-      <p className="text-center text-brand-dark/40 text-xs">
+      <p className="text-center text-white/40 text-xs">
         CSLB #1106798 &middot; Licensed &amp; Insured &middot; (415) 968-9494
       </p>
     </div>
