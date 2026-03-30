@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.construbay.com",
     siteName: "ConstruBay",
-    title: "ConstruBay | Built With Intention | Licensed General Contractor Marin County",
+    title: "Luxury General Contractor Mill Valley CA | ConstruBay | CSLB #1106798",
     description:
       "ConstruBay — luxury general contractor serving Marin, Sonoma & Napa Counties. ADU construction, whole home remodels, kitchen & bath. Fixed-scope contracts. Free estimate. CSLB #1106798.",
   },
