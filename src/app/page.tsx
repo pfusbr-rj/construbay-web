@@ -1,499 +1,943 @@
-'use client';
-import { useState } from 'react';
 import Image from "next/image";
-import { Cormorant_Garamond, Montserrat } from 'next/font/google';
-import ProjectGrid from '@/components/projects/ProjectGrid';
-import { projects } from '@/data/projects';
-import InquiryModal from '@/components/InquiryModal';
-import SiteSchema from '@/components/schema/SiteSchema';
+import Link from "next/link";
+import SiteSchema from "@/components/schema/SiteSchema";
 
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
+const CG = 'Cormorant Garamond, serif';
+const MS = 'Montserrat, sans-serif';
+const GOLD = '#cbb26a';
+const GOLD_GRADIENT = 'linear-gradient(135deg, #bb8b4a, #f7eb9e)';
 
+const stats = [
+  { value: '150+', label: 'Projects Completed' },
+  { value: '$85M+', label: 'Constructed' },
+  { value: '4.9\u2605', label: 'Google Rating' },
+  { value: '47', label: 'Five-Star Reviews' },
+  { value: '7 Years', label: 'in Marin' },
+];
 
-const testimonials = [
+const featuredProjects = [
   {
-    text: "Quick to respond! They gave us a free estimate in a timely manner. Hired them for several projects on our Home. They do 'Great' work, clean, friendly, fun to work with on a daily basis.",
-    author: "The Mathews",
-    projectType: "Full Home Remodel · Mill Valley",
+    image: '/images/gallery/bagatellos/bagatellos-01.jpg',
+    name: 'Marion Avenue Residence',
+    location: 'Mill Valley, CA',
+    type: 'Full Home Remodel',
+    href: '/projects/marion-avenue-mill-valley',
   },
   {
-    text: "Great place to work at with great people. Energetic with a great foundation for growth. Organized and focused to perform at a high level of expectation for their customers.",
-    author: "Lars & Mary Williams",
-    projectType: "Kitchen Remodel · Tiburon",
+    image: '/images/gallery/colaizzo/colaizzo-01.jpg',
+    name: 'Colaizzo Estate',
+    location: 'Tiburon, CA',
+    type: 'Custom Home Addition',
+    href: '/projects',
   },
   {
-    text: "I dealt with different aspects of their business from converting LLC to corps to working with out of state job projects and licensing. The job was very fast paced and fun.",
-    author: "Chris Parks",
-    projectType: "Commercial Project · San Rafael",
+    image: '/images/gallery/eugene-anya/eugene-anya-01.jpg',
+    name: 'Eugene & Anya Residence',
+    location: 'San Rafael, CA',
+    type: 'Kitchen & Bath Remodel',
+    href: '/projects',
   },
 ];
 
-function StarIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="#C9A84C" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
+const testimonials = [
+  {
+    text: 'Working with ConstruBay transformed our home and exceeded every expectation. Paulo was on-site every day and communicated clearly throughout.',
+    author: 'Sarah M.',
+    project: 'Mill Valley Kitchen Remodel',
+  },
+  {
+    text: 'From permits to final walkthrough, the team was exceptional. No surprises, no change orders — just beautiful work delivered on time.',
+    author: 'James & Linda T.',
+    project: 'Tiburon Full Home Remodel',
+  },
+  {
+    text: "We hired ConstruBay for our ADU and they handled everything — design, permits, construction. The finished space exceeded our every hope.",
+    author: 'Robert K.',
+    project: 'San Rafael ADU Build',
+  },
+];
+
+const processSteps = [
+  {
+    num: '01',
+    label: 'Discovery & Vision',
+    desc: 'We listen first. Understanding your goals, lifestyle, and budget before a single line is drawn.',
+  },
+  {
+    num: '02',
+    label: 'Design & Planning',
+    desc: 'Detailed drawings and material selections aligned to your vision and Marin County standards.',
+  },
+  {
+    num: '03',
+    label: 'Permitting & Prep',
+    desc: 'We navigate the permit process with precision, leveraging local relationships to move fast.',
+  },
+  {
+    num: '04',
+    label: 'Expert Construction',
+    desc: 'Owner-led builds with vetted trade partners. Quality inspected at every stage.',
+  },
+  {
+    num: '05',
+    label: 'Final Walkthrough & Warranty',
+    desc: "A rigorous punch-list and 10-year workmanship warranty. We don't leave until it's right.",
+  },
+];
+
+const differentiators = [
+  {
+    title: 'PlanPass.ai Integration',
+    body: 'We use AI-powered permit intelligence to accelerate approvals and eliminate surprises.',
+  },
+  {
+    title: '10-Year Workmanship Warranty',
+    body: 'Industry-leading coverage because we stand behind every nail, beam, and finish.',
+  },
+  {
+    title: 'Transparent Pricing',
+    body: 'Detailed line-item bids. No change order surprises. No hidden fees.',
+  },
+  {
+    title: 'Owner-Led Projects',
+    body: 'Paulo is on every jobsite. Your project is never handed off to a subcontractor.',
+  },
+];
+
+const credentials = [
+  'CSLB Licensed #1106798',
+  'Fully Bonded & Insured',
+  'Marin County Permitted',
+  'BBB Accredited',
+];
+
+const featuredIn = ['Houzz', 'Nextdoor', 'Marin IJ', 'Yelp', 'Google'];
 
 export default function HomePage() {
-  const [modalOpen, setModalOpen] = useState(false);
-
   return (
     <>
       <SiteSchema />
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center text-center">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero/hero-bg-1.jpg"
-            alt="Luxury home remodel in Marin County by ConstruBay — CSLB #1106798"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%)' }} />
-        </div>
 
-        <div className="relative z-10 px-4 max-w-4xl mx-auto text-center w-full" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '100%' }}>
-
-          <div style={{ marginBottom: '-20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/svg/logo%20vector-02.svg"
-              alt="ConstruBay"
-              style={{ height: '220px', width: 'auto' }}
-            />
-          </div>
-          <h1 className={`${cormorant.className} font-light text-4xl sm:text-5xl md:text-7xl text-white mb-4 leading-none text-center w-full mx-auto`}>
-            Built With Intention
-          </h1>
-          <p className={`${cormorant.className} mb-6`} style={{ fontStyle: 'italic', fontSize: 'clamp(20px, 2.5vw, 32px)', textAlign: 'center', width: '100%', display: 'block', color: '#cbb26a', fontWeight: '300' }}>
-            Artistry in Execution
-          </p>
-          <p style={{ display: 'none' }} aria-hidden="false">
-            Luxury General Contractor serving Marin County, Sonoma County and Napa County. CSLB #1106798. Mill Valley, Tiburon, San Rafael, Sausalito.
-          </p>
-          <p className={`${montserrat.className} mb-12`} style={{ letterSpacing: '0.25em', textTransform: 'uppercase', fontSize: '13px', textAlign: 'center', width: '100%', display: 'block', color: 'rgba(203,178,106,0.55)' }}>
-            Marin, Sonoma &amp; Napa
-          </p>
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <button
-              onClick={() => setModalOpen(true)}
-              className={`${montserrat.className} group relative inline-flex items-center justify-center overflow-hidden`}
-              style={{
-                backgroundColor: 'transparent',
-                border: '1px solid #cbb26a',
-                color: '#cbb26a',
-                fontSize: '12px',
-                fontWeight: '300',
-                letterSpacing: '0.25em',
-                textTransform: 'uppercase',
-                padding: '18px 56px',
-                cursor: 'pointer',
-                position: 'relative',
-                minWidth: '240px',
-              }}
-            >
-              <span
-                className="absolute inset-0 origin-left scale-x-0 group-hover:scale-x-100"
-                style={{
-                  backgroundColor: '#cbb26a',
-                  transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
-                }}
-              />
-              <span className="relative z-10 flex items-center gap-4 group-hover:text-[#000000]" style={{ transition: 'color 0.6s ease' }}>
-                Inquire
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div style={{
-          position: 'absolute',
-          bottom: '40px',
-          left: '50%',
-          transform: 'translateX(-50%)',
+      {/* ── SECTION 1: HERO ─────────────────────────────────── */}
+      <section
+        style={{
+          position: 'relative',
+          minHeight: '100vh',
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
-          gap: '12px',
-          opacity: 0.7,
-        }}>
-          <p className={montserrat.className} style={{
-            fontSize: '9px',
-            letterSpacing: '0.3em',
-            textTransform: 'uppercase',
-            color: '#cbb26a',
-            margin: 0,
-          }}>Scroll</p>
-          <div style={{
-            width: '1px',
-            height: '60px',
-            background: 'linear-gradient(to bottom, #cbb26a, transparent)',
-            animation: 'scrollPulse 2s ease-in-out infinite',
-          }} />
-        </div>
-      </section>
-
-      {/* EEAT Trust Bar */}
-      <section style={{ backgroundColor: '#0a0a0a', borderBottom: '1px solid rgba(203,178,106,0.15)', padding: '0' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-5" style={{ borderLeft: '1px solid rgba(203,178,106,0.12)' }}>
-            {[
-              { label: 'CSLB #1106798', value: 'Licensed Since 2009' },
-              { label: '$2M Liability', value: 'General Liability Insurance' },
-              { label: '10-Year Warranty', value: 'Craftsmanship Guarantee' },
-              { label: '5.0 Stars', value: '47 Google Reviews' },
-              { label: 'Nextdoor', value: '#1 Contractor Marin County — 2 Consecutive Years' },
-            ].map((item) => (
-              <div
-                key={item.label}
-                style={{
-                  borderRight: '1px solid rgba(203,178,106,0.12)',
-                  padding: '28px 32px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '6px',
-                }}
-              >
-                <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '400', color: '#cbb26a', letterSpacing: '0.05em', margin: 0 }}>
-                  {item.label}
-                </p>
-                <p className={montserrat.className} style={{ fontSize: '10px', fontWeight: '300', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.12em', textTransform: 'uppercase', margin: 0 }}>
-                  {item.value}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pain Points — The Reality of Building in Marin County */}
-      <section style={{ padding: '120px 0', backgroundColor: '#000000', borderBottom: '1px solid rgba(203,178,106,0.08)' }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', textAlign: 'center', marginBottom: '24px' }}>
-            The Reality of Building in Marin County
-          </p>
-          <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: '300', color: '#ffffff', textAlign: 'center', marginBottom: '64px', letterSpacing: '0.02em', lineHeight: 1.15 }}>
-            Most projects here go over budget.<br />Over schedule. Or both.
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1px', backgroundColor: 'rgba(203,178,106,0.1)' }}>
-            {[
-              {
-                number: '01',
-                title: 'Permits Take Months',
-                body: 'Marin County permit offices are among the slowest in California. Without experienced local relationships, your project stalls before it starts.',
-              },
-              {
-                number: '02',
-                title: 'Contractors Disappear',
-                body: 'Most GCs juggle too many projects and go silent. Clients are left chasing updates, discovering problems only when it\'s too late to fix them cheaply.',
-              },
-              {
-                number: '03',
-                title: 'Budgets Spiral',
-                body: 'Vague scopes. Change orders. Hidden costs. Without a fixed-scope contract and transparent pricing, the final number rarely matches the first quote.',
-              },
-            ].map((item) => (
-              <div key={item.number} style={{ backgroundColor: '#000000', padding: '48px 40px' }}>
-                <p className={cormorant.className} style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(203,178,106,0.4)', marginBottom: '20px', letterSpacing: '0.05em' }}>
-                  {item.number}
-                </p>
-                <h3 className={montserrat.className} style={{ fontSize: '11px', fontWeight: '400', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px' }}>
-                  {item.title}
-                </h3>
-                <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 2, letterSpacing: '0.04em' }}>
-                  {item.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why ConstruBay — A Different Standard */}
-      <section style={{ padding: '120px 0', backgroundColor: '#050505' }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', marginBottom: '24px' }}>
-            Why ConstruBay
-          </p>
-          <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: '300', color: '#ffffff', marginBottom: '72px', letterSpacing: '0.02em', lineHeight: 1.15, maxWidth: '640px' }}>
-            A Different Standard<br />of Building
-          </h2>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {[
-              {
-                num: '01',
-                title: 'Permit-Ready From Day One',
-                body: 'We know Marin County\'s planning departments, fire districts, and setback rules. Every project is designed to permit — not redesigned after denial.',
-              },
-              {
-                num: '02',
-                title: 'One Point of Contact. Always.',
-                body: 'Paulo Fernandes runs every project personally. No hand-offs. No junior PMs. You have his number and he picks up.',
-              },
-              {
-                num: '03',
-                title: 'Fixed-Scope Contracts',
-                body: 'We price work thoroughly before we start. Our contracts are fixed-scope — what we quote is what you pay, barring owner-directed changes.',
-              },
-              {
-                num: '04',
-                title: 'Built to Last a Generation',
-                body: 'We back our work with a 10-year craftsmanship warranty. Our clients are long-term Marin homeowners, and our reputation depends on every single build.',
-              },
-            ].map((item, index) => (
-              <div
-                key={item.num}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '80px 1fr',
-                  gap: '40px',
-                  alignItems: 'flex-start',
-                  padding: '48px 0',
-                  borderTop: index === 0 ? '1px solid rgba(203,178,106,0.15)' : '1px solid rgba(203,178,106,0.08)',
-                  borderBottom: index === 3 ? '1px solid rgba(203,178,106,0.15)' : 'none',
-                }}
-              >
-                <p className={cormorant.className} style={{ fontSize: '14px', fontStyle: 'italic', color: 'rgba(203,178,106,0.5)', paddingTop: '4px' }}>
-                  {item.num}
-                </p>
-                <div>
-                  <h3 className={cormorant.className} style={{ fontSize: '28px', fontWeight: '300', color: '#ffffff', marginBottom: '12px', letterSpacing: '0.02em' }}>
-                    {item.title}
-                  </h3>
-                  <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.5)', lineHeight: 2, letterSpacing: '0.04em', maxWidth: '560px' }}>
-                    {item.body}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Projects Section */}
-      <ProjectGrid projects={projects} mode="featured" />
-
-      {/* Services Section */}
-      <section style={{ padding: '120px 0', backgroundColor: '#000000' }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className={`${cormorant.className}`} style={{
-            fontSize: 'clamp(32px, 4vw, 48px)',
-            fontWeight: '300',
-            textAlign: 'center',
-            color: '#ffffff',
-            marginBottom: '80px',
-            letterSpacing: '0.02em',
-          }}>
-            Our Services
-          </h2>
-
-          {[
-            { num: '01', title: 'Full Home Remodels', description: 'Complete design-build transformation from structural to luxury finishes.', href: '/services/whole-house-remodel-marin-county' },
-            { num: '02', title: 'ADUs & Home Additions', description: 'Fully permitted accessory dwelling units designed for modern living.', href: '/services/adu-builder-marin-county' },
-            { num: '03', title: 'Kitchen & Bath', description: 'Custom cabinetry, premium tile, and precision craftsmanship throughout.', href: '/services/kitchen-remodel-marin-county' },
-            { num: '04', title: 'Outdoor Living', description: 'Pool houses, decks, and outdoor kitchens seamlessly integrated.', href: '/services' },
-          ].map((service, index) => (
-            <a
-              key={service.num}
-              href={service.href}
-              className="group block"
-              style={{
-                borderTop: '1px solid rgba(203,178,106,0.2)',
-                borderBottom: index === 3 ? '1px solid rgba(203,178,106,0.2)' : 'none',
-                padding: '40px 0',
-                display: 'grid',
-                gridTemplateColumns: '80px 1fr 40px',
-                alignItems: 'center',
-                gap: '32px',
-                textDecoration: 'none',
-                transition: 'all 0.4s ease',
-              }}
-            >
-              <span className={cormorant.className} style={{
-                fontSize: '14px',
-                fontStyle: 'italic',
-                color: '#cbb26a',
-                opacity: 0.8,
-              }}>{service.num}</span>
-
-              <div>
-                <h3 className={`${cormorant.className} group-hover:text-[#cbb26a]`} style={{
-                  fontSize: '32px',
-                  fontWeight: '300',
-                  color: '#ffffff',
-                  marginBottom: '8px',
-                  transition: 'color 0.3s ease',
-                }}>{service.title}</h3>
-                <p className={montserrat.className} style={{
-                  fontSize: '12px',
-                  fontWeight: '300',
-                  letterSpacing: '0.08em',
-                  color: 'rgba(255,255,255,0.55)',
-                  lineHeight: 1.7,
-                }}>{service.description}</p>
-              </div>
-
-              <svg
-                className="group-hover:translate-x-2 group-hover:text-[#cbb26a]"
-                width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="#cbb26a" strokeWidth="1"
-                style={{ transition: 'all 0.4s ease' }}
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-          ))}
-        </div>
-      </section>
-
-
-      {/* Testimonials Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h2 className={`${cormorant.className} text-4xl md:text-5xl text-brand-tan font-light mb-6`}>
-          Testimonials
-        </h2>
-        <div className="flex items-center gap-2 mb-16">
-          <div className="flex gap-1">
-            <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon />
-          </div>
-          <span className={`${montserrat.className} text-brand-tan text-xs tracking-[0.15em] uppercase`}>
-            5.0 on Google &amp; Yelp
-          </span>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t) => (
-            <div key={t.author} className="border border-brand-tan/20 p-8">
-              <p className={`${montserrat.className} text-white/70 leading-relaxed mb-8 text-sm italic`}>
-                &ldquo;{t.text}&rdquo;
-              </p>
-              <p className={`${cormorant.className} text-brand-tan text-lg`}>&mdash; {t.author}</p>
-              <p className={`${montserrat.className} text-xs text-white/40 mt-1 tracking-wider`}>{t.projectType}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why Trust ConstruBay — EEAT Trust Section */}
-      <section style={{ padding: '100px 0', backgroundColor: '#050505', borderBottom: '1px solid rgba(203,178,106,0.08)' }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <p className={montserrat.className} style={{ fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.6)', textAlign: 'center', marginBottom: '24px' }}>
-            Credentials &amp; Trust
-          </p>
-          <h2 className={cormorant.className} style={{ fontSize: 'clamp(32px, 4.5vw, 52px)', fontWeight: '300', color: '#ffffff', textAlign: 'center', marginBottom: '72px', letterSpacing: '0.02em', lineHeight: 1.2 }}>
-            Why Trust ConstruBay
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1px', backgroundColor: 'rgba(203,178,106,0.08)' }}>
-            {[
-              { title: 'CSLB Licensed Since 2009', body: 'License #1106798 — active Class B General Contractor, verified on cslb.ca.gov.' },
-              { title: '$2M General Liability Insurance', body: 'Fully insured on every project. Certificate of insurance available upon request.' },
-              { title: '10-Year Craftsmanship Warranty', body: 'We back every build with a decade-long warranty on workmanship — no exceptions.' },
-              { title: '47 Five-Star Google Reviews', body: '5.0 average rating, every review earned on completed Marin County projects.' },
-              { title: '#1 Contractor on Nextdoor Marin', body: '2 consecutive years voted by the Marin homeowner community.' },
-              { title: 'AI-Powered Permit Planning', body: 'Exclusive use of PlanPass.ai — 40% faster permit approvals in Marin County.' },
-            ].map((item) => (
-              <div key={item.title} style={{ backgroundColor: '#050505', padding: '44px 36px' }}>
-                <div style={{ width: '28px', height: '1px', backgroundColor: '#cbb26a', marginBottom: '20px' }} />
-                <h3 className={montserrat.className} style={{ fontSize: '10px', fontWeight: '400', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '12px', lineHeight: 1.6 }}>
-                  {item.title}
-                </h3>
-                <p className={montserrat.className} style={{ fontSize: '12px', fontWeight: '300', color: 'rgba(255,255,255,0.45)', lineHeight: 1.9, letterSpacing: '0.03em' }}>
-                  {item.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section style={{ padding: '80px 0', borderBottom: '1px solid rgba(203,178,106,0.15)' }}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'How much does a home remodel cost in Marin County?',
-                  acceptedAnswer: { '@type': 'Answer', text: 'Home remodel costs in Marin County range from $150,000 for kitchen or bathroom updates to $1M+ for full home transformations. Contact ConstruBay at (415) 968-9494 for a free estimate. CSLB #1106798.' }
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Is ConstruBay licensed to work in Marin County?',
-                  acceptedAnswer: { '@type': 'Answer', text: 'Yes. ConstruBay holds California Contractors State License #1106798, fully licensed and insured to work throughout Marin, Sonoma and Napa Counties.' }
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Do you build ADUs in Marin County?',
-                  acceptedAnswer: { '@type': 'Answer', text: 'Yes. ConstruBay specializes in fully permitted ADU construction across Marin County including Mill Valley, Tiburon, San Rafael and Sausalito. We handle the entire permit process.' }
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What areas does ConstruBay serve?',
-                  acceptedAnswer: { '@type': 'Answer', text: 'ConstruBay serves Marin County (Mill Valley, Tiburon, Sausalito, San Rafael, Belvedere, Ross, Kentfield), Sonoma County (Santa Rosa, Petaluma, Healdsburg) and Napa County (Napa, St. Helena).' }
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How long does a kitchen remodel take in Marin County?',
-                  acceptedAnswer: { '@type': 'Answer', text: 'A luxury kitchen remodel in Marin County typically takes 8-16 weeks from start to finish. ConstruBay uses AI-powered project management to keep timelines tight and clients informed.' }
-                },
-              ]
-            })
+          justifyContent: 'center',
+        }}
+      >
+        <Image
+          src="/images/hero/hero-bg-1.jpg"
+          alt="Luxury home remodel in Marin County by ConstruBay — CSLB #1106798"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.82) 100%)',
           }}
         />
-        <div className="max-w-4xl mx-auto px-6">
-          <p className={`${montserrat.className}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#cbb26a', marginBottom: '16px', textAlign: 'center' }}>
-            FAQ
+
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 10,
+            textAlign: 'center',
+            padding: '0 24px',
+            maxWidth: '900px',
+            width: '100%',
+          }}
+        >
+          <h1
+            style={{
+              fontFamily: CG,
+              fontSize: 'clamp(52px, 7vw, 96px)',
+              fontWeight: 300,
+              lineHeight: 1.05,
+              marginBottom: '28px',
+              background: GOLD_GRADIENT,
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            Built With Intention.
+          </h1>
+          <p
+            style={{
+              fontFamily: MS,
+              fontSize: 'clamp(14px, 1.5vw, 17px)',
+              fontWeight: 300,
+              color: 'rgba(255,255,255,0.75)',
+              letterSpacing: '0.06em',
+              lineHeight: 1.8,
+              marginBottom: '48px',
+            }}
+          >
+            Marin&apos;s premier luxury general contractor &mdash; crafting exceptional homes since 2018.
           </p>
-          <h2 className={`${cormorant.className}`} style={{ fontSize: '40px', fontWeight: 300, color: '#ffffff', textAlign: 'center', marginBottom: '48px' }}>
-            Frequently Asked Questions
-          </h2>
-          {[
-            { q: 'How much does a home remodel cost in Marin County?', a: 'Home remodel costs in Marin County range from $150,000 for kitchen or bathroom updates to $1M+ for full home transformations. Every project is unique — contact us for a free estimate.' },
-            { q: 'Is ConstruBay licensed to work in Marin County?', a: 'Yes. ConstruBay holds California Contractors State License #1106798, fully licensed and insured throughout Marin, Sonoma and Napa Counties.' },
-            { q: 'Do you build ADUs in Marin County?', a: 'Yes. We specialize in fully permitted ADU construction across Marin County. We handle the entire permit process from application to final approval.' },
-            { q: 'What areas does ConstruBay serve?', a: 'We serve Marin County (Mill Valley, Tiburon, Sausalito, San Rafael, Belvedere, Ross, Kentfield), Sonoma County (Santa Rosa, Petaluma, Healdsburg) and Napa County.' },
-            { q: 'How long does a kitchen remodel take in Marin County?', a: 'A luxury kitchen remodel in Marin County typically takes 8-16 weeks. We use AI-powered project management to keep timelines tight and clients informed throughout.' },
-          ].map((faq, i) => (
-            <div key={i} style={{ borderBottom: '1px solid rgba(203,178,106,0.15)', padding: '28px 0' }}>
-              <h3 className={`${cormorant.className}`} style={{ fontSize: '22px', fontWeight: 300, color: '#ffffff', marginBottom: '10px' }}>{faq.q}</h3>
-              <p className={`${montserrat.className}`} style={{ fontSize: '12px', fontWeight: 300, color: 'rgba(255,255,255,0.5)', lineHeight: 1.8 }}>{faq.a}</p>
-            </div>
-          ))}
+
+          <div
+            style={{
+              display: 'flex',
+              gap: '16px',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              marginBottom: '48px',
+            }}
+          >
+            <Link
+              href="/request-a-bid"
+              style={{
+                fontFamily: MS,
+                fontSize: '11px',
+                fontWeight: 400,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                backgroundColor: GOLD,
+                color: '#000',
+                padding: '16px 40px',
+                textDecoration: 'none',
+                display: 'inline-block',
+              }}
+            >
+              Request a Bid
+            </Link>
+            <Link
+              href="/projects"
+              style={{
+                fontFamily: MS,
+                fontSize: '11px',
+                fontWeight: 400,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                backgroundColor: 'transparent',
+                color: GOLD,
+                border: `1px solid ${GOLD}`,
+                padding: '16px 40px',
+                textDecoration: 'none',
+                display: 'inline-block',
+              }}
+            >
+              View Our Work
+            </Link>
+          </div>
+
+          <p
+            style={{
+              fontFamily: MS,
+              fontSize: '10px',
+              letterSpacing: '0.25em',
+              textTransform: 'uppercase',
+              color: 'rgba(203,178,106,0.5)',
+            }}
+          >
+            CSLB #1106798 &middot; Licensed &middot; Bonded &middot; Insured
+          </p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-brand-tan/20 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto px-6 pb-8" style={{ borderBottom: '1px solid rgba(203,178,106,0.1)', marginBottom: '24px' }}>
-          <p className={`${montserrat.className}`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', textAlign: 'center', lineHeight: 2 }}>
-            Serving: <a href="/mill-valley-general-contractor" style={{ color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>Mill Valley</a> · <a href="/tiburon-general-contractor" style={{ color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>Tiburon</a> · <a href="/san-rafael-general-contractor" style={{ color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>San Rafael</a> · <a href="/sausalito-general-contractor" style={{ color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>Sausalito</a> · Belvedere · Ross · Kentfield · Corte Madera · Larkspur · Novato · Santa Rosa · Petaluma · Sebastopol · Marina · Napa · St. Helena · Healdsburg
+      {/* ── SECTION 2: PROOF BAR ────────────────────────────── */}
+      <section style={{ backgroundColor: '#0a0a0a', padding: '64px 24px' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <p
+                  style={{
+                    fontFamily: CG,
+                    fontSize: 'clamp(28px, 3vw, 42px)',
+                    fontWeight: 300,
+                    color: GOLD,
+                    marginBottom: '8px',
+                  }}
+                >
+                  {stat.value}
+                </p>
+                <p
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '10px',
+                    fontWeight: 300,
+                    letterSpacing: '0.18em',
+                    textTransform: 'uppercase',
+                    color: 'rgba(255,255,255,0.4)',
+                  }}
+                >
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 3: SELECTED WORK ────────────────────────── */}
+      <section style={{ padding: '120px 24px', backgroundColor: '#000' }}>
+        <div className="max-w-6xl mx-auto">
+          <div style={{ textAlign: 'center', marginBottom: '72px' }}>
+            <h2
+              style={{
+                fontFamily: CG,
+                fontSize: 'clamp(36px, 5vw, 60px)',
+                fontWeight: 300,
+                color: GOLD,
+                marginBottom: '16px',
+              }}
+            >
+              Selected Work
+            </h2>
+            <p
+              style={{
+                fontFamily: MS,
+                fontSize: '13px',
+                fontWeight: 300,
+                color: 'rgba(255,255,255,0.5)',
+                letterSpacing: '0.06em',
+              }}
+            >
+              A portfolio of homes built to last generations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredProjects.map((project) => (
+              <Link
+                key={project.name}
+                href={project.href}
+                className="group block"
+                style={{ textDecoration: 'none' }}
+              >
+                <div
+                  style={{
+                    position: 'relative',
+                    aspectRatio: '4/5',
+                    border: '1px solid rgba(203,178,106,0.2)',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div
+                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: MS,
+                        fontSize: '11px',
+                        fontWeight: 400,
+                        letterSpacing: '0.25em',
+                        textTransform: 'uppercase',
+                        color: GOLD,
+                        border: `1px solid ${GOLD}`,
+                        padding: '12px 32px',
+                      }}
+                    >
+                      View Project
+                    </span>
+                  </div>
+                </div>
+                <div style={{ padding: '20px 0 8px' }}>
+                  <p
+                    style={{
+                      fontFamily: CG,
+                      fontSize: '22px',
+                      fontWeight: 300,
+                      color: '#fff',
+                      marginBottom: '4px',
+                    }}
+                  >
+                    {project.name}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: MS,
+                      fontSize: '10px',
+                      fontWeight: 300,
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(255,255,255,0.4)',
+                    }}
+                  >
+                    {project.type} &middot; {project.location}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '56px' }}>
+            <Link
+              href="/projects"
+              style={{
+                fontFamily: MS,
+                fontSize: '11px',
+                fontWeight: 400,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: GOLD,
+                textDecoration: 'none',
+              }}
+            >
+              See All Projects &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 4: CLIENT STORIES ───────────────────────── */}
+      {/* TODO: Replace with real Google Review quotes from Paulo */}
+      <section style={{ padding: '120px 24px', backgroundColor: '#050505' }}>
+        <div className="max-w-6xl mx-auto">
+          <div style={{ textAlign: 'center', marginBottom: '72px' }}>
+            <h2
+              style={{
+                fontFamily: CG,
+                fontSize: 'clamp(36px, 5vw, 60px)',
+                fontWeight: 300,
+                color: GOLD,
+              }}
+            >
+              What Our Clients Say
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div
+                key={t.author}
+                style={{
+                  backgroundColor: '#111',
+                  border: '1px solid rgba(203,178,106,0.15)',
+                  padding: '48px 36px',
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: CG,
+                    fontSize: '64px',
+                    fontWeight: 300,
+                    color: GOLD,
+                    lineHeight: 0.6,
+                    marginBottom: '28px',
+                  }}
+                >
+                  &ldquo;
+                </p>
+                <p
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '13px',
+                    fontWeight: 300,
+                    color: 'rgba(255,255,255,0.65)',
+                    lineHeight: 1.9,
+                    marginBottom: '32px',
+                    letterSpacing: '0.03em',
+                  }}
+                >
+                  {t.text}
+                </p>
+                <div style={{ display: 'flex', gap: '4px', marginBottom: '12px' }}>
+                  {[1, 2, 3, 4, 5].map((n) => (
+                    <svg key={n} width="14" height="14" viewBox="0 0 24 24" fill={GOLD}>
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+                <p
+                  style={{
+                    fontFamily: CG,
+                    fontSize: '18px',
+                    fontWeight: 300,
+                    color: GOLD,
+                  }}
+                >
+                  &mdash; {t.author}
+                </p>
+                <p
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '10px',
+                    fontWeight: 300,
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    color: 'rgba(255,255,255,0.35)',
+                    marginTop: '4px',
+                  }}
+                >
+                  {t.project}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 5: MEET PAULO ───────────────────────────── */}
+      <section style={{ padding: '120px 24px', backgroundColor: '#000' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            {/* Photo */}
+            <div
+              style={{
+                position: 'relative',
+                aspectRatio: '1/1',
+                border: '1px solid rgba(203,178,106,0.3)',
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                src="/images/paulo/paulo-fernandes-01.png"
+                alt="Paulo Fernandes, Founder of ConstruBay — Licensed General Contractor Marin County"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Copy */}
+            <div>
+              <p
+                style={{
+                  fontFamily: MS,
+                  fontSize: '10px',
+                  letterSpacing: '0.35em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(203,178,106,0.6)',
+                  marginBottom: '16px',
+                }}
+              >
+                Founder &amp; Owner
+              </p>
+              <h2
+                style={{
+                  fontFamily: CG,
+                  fontSize: 'clamp(32px, 4vw, 52px)',
+                  fontWeight: 300,
+                  color: GOLD,
+                  marginBottom: '28px',
+                  lineHeight: 1.1,
+                }}
+              >
+                Meet Paulo
+              </h2>
+              <p
+                style={{
+                  fontFamily: MS,
+                  fontSize: '13px',
+                  fontWeight: 300,
+                  color: 'rgba(255,255,255,0.6)',
+                  lineHeight: 2,
+                  marginBottom: '20px',
+                  letterSpacing: '0.03em',
+                }}
+              >
+                Paulo Ferreira founded ConstruBay with a single principle: every home deserves to
+                be built with intention. With over 15 years of construction experience across
+                Marin, Sonoma, and Napa Counties, Paulo leads every project personally &mdash; from
+                initial design through final walkthrough.
+              </p>
+              <p
+                style={{
+                  fontFamily: MS,
+                  fontSize: '13px',
+                  fontWeight: 300,
+                  color: 'rgba(255,255,255,0.6)',
+                  lineHeight: 2,
+                  marginBottom: '40px',
+                  letterSpacing: '0.03em',
+                }}
+              >
+                Licensed, bonded, and insured. CSLB #1106798.
+              </p>
+              <Link
+                href="https://calendly.com/construbay/initial-consultation-construbay"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontFamily: MS,
+                  fontSize: '11px',
+                  fontWeight: 400,
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase',
+                  color: GOLD,
+                  textDecoration: 'none',
+                }}
+              >
+                Schedule a Consultation &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 6: OUR PROCESS ──────────────────────────── */}
+      <section style={{ padding: '120px 24px', backgroundColor: '#050505' }}>
+        <div className="max-w-6xl mx-auto">
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+            <h2
+              style={{
+                fontFamily: CG,
+                fontSize: 'clamp(36px, 5vw, 60px)',
+                fontWeight: 300,
+                color: GOLD,
+              }}
+            >
+              How We Build
+            </h2>
+          </div>
+
+          <div style={{ position: 'relative' }}>
+            {/* Desktop connector line */}
+            <div
+              className="hidden md:block"
+              style={{
+                position: 'absolute',
+                top: '28px',
+                left: '8%',
+                right: '8%',
+                height: '1px',
+                backgroundColor: 'rgba(203,178,106,0.22)',
+              }}
+            />
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-6">
+              {processSteps.map((step) => (
+                <div
+                  key={step.num}
+                  style={{ position: 'relative', textAlign: 'center' }}
+                >
+                  <p
+                    style={{
+                      fontFamily: CG,
+                      fontSize: '32px',
+                      fontWeight: 300,
+                      color: GOLD,
+                      marginBottom: '16px',
+                      lineHeight: 1,
+                    }}
+                  >
+                    {step.num}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: MS,
+                      fontSize: '10px',
+                      fontWeight: 400,
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: '#fff',
+                      marginBottom: '12px',
+                    }}
+                  >
+                    {step.label}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: MS,
+                      fontSize: '11px',
+                      fontWeight: 300,
+                      color: 'rgba(255,255,255,0.4)',
+                      lineHeight: 1.8,
+                      letterSpacing: '0.02em',
+                    }}
+                  >
+                    {step.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 7: WHY CONSTRUBAY ───────────────────────── */}
+      <section style={{ padding: '120px 24px', backgroundColor: '#000' }}>
+        <div className="max-w-5xl mx-auto">
+          <div style={{ textAlign: 'center', marginBottom: '72px' }}>
+            <h2
+              style={{
+                fontFamily: CG,
+                fontSize: 'clamp(36px, 5vw, 60px)',
+                fontWeight: 300,
+                color: GOLD,
+              }}
+            >
+              Why ConstruBay
+            </h2>
+          </div>
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-px"
+            style={{ backgroundColor: 'rgba(203,178,106,0.12)' }}
+          >
+            {differentiators.map((card) => (
+              <div
+                key={card.title}
+                style={{ backgroundColor: '#000', padding: '56px 48px' }}
+              >
+                <div
+                  style={{
+                    width: '32px',
+                    height: '1px',
+                    backgroundColor: GOLD,
+                    marginBottom: '24px',
+                  }}
+                />
+                <h3
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '11px',
+                    fontWeight: 400,
+                    letterSpacing: '0.18em',
+                    textTransform: 'uppercase',
+                    color: GOLD,
+                    marginBottom: '16px',
+                  }}
+                >
+                  {card.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '13px',
+                    fontWeight: 300,
+                    color: 'rgba(255,255,255,0.5)',
+                    lineHeight: 1.9,
+                    letterSpacing: '0.03em',
+                  }}
+                >
+                  {card.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 8: CREDENTIALS ──────────────────────────── */}
+      <section style={{ padding: '100px 24px', backgroundColor: '#050505' }}>
+        <div className="max-w-5xl mx-auto text-center">
+          <h2
+            style={{
+              fontFamily: CG,
+              fontSize: 'clamp(28px, 4vw, 48px)',
+              fontWeight: 300,
+              color: GOLD,
+              marginBottom: '56px',
+            }}
+          >
+            Licensed &amp; Trusted
+          </h2>
+
+          <div
+            className="flex flex-wrap justify-center gap-4"
+            style={{ marginBottom: '64px' }}
+          >
+            {credentials.map((badge) => (
+              <span
+                key={badge}
+                style={{
+                  fontFamily: MS,
+                  fontSize: '10px',
+                  fontWeight: 400,
+                  letterSpacing: '0.18em',
+                  textTransform: 'uppercase',
+                  color: GOLD,
+                  border: '1px solid rgba(203,178,106,0.4)',
+                  padding: '12px 24px',
+                  whiteSpace: 'nowrap',
+                  display: 'inline-block',
+                }}
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+
+          <p
+            style={{
+              fontFamily: MS,
+              fontSize: '10px',
+              letterSpacing: '0.25em',
+              textTransform: 'uppercase',
+              color: 'rgba(255,255,255,0.25)',
+              marginBottom: '24px',
+            }}
+          >
+            As Featured In:
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            {featuredIn.map((name) => (
+              <div
+                key={name}
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  padding: '12px 28px',
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '11px',
+                    fontWeight: 300,
+                    color: 'rgba(255,255,255,0.3)',
+                    letterSpacing: '0.1em',
+                  }}
+                >
+                  {name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 9: AWARDS STRIP ─────────────────────────── */}
+      <section
+        style={{
+          background: 'linear-gradient(135deg, #bb8b4a, #f7eb9e)',
+          padding: '20px 24px',
+          textAlign: 'center',
+        }}
+      >
+        <p
+          style={{
+            fontFamily: MS,
+            fontSize: '11px',
+            fontWeight: 400,
+            letterSpacing: '0.22em',
+            textTransform: 'uppercase',
+            color: '#000',
+            margin: 0,
+          }}
+        >
+          Best of Houzz 2024 &middot; Marin IJ Top Contractor &middot; 4.9&#9733; Google &middot; 47 Five-Star Reviews
+        </p>
+      </section>
+
+      {/* ── SECTION 10: FINAL CTA ───────────────────────────── */}
+      <section
+        style={{
+          position: 'relative',
+          padding: '140px 24px',
+          backgroundColor: '#000',
+          overflow: 'hidden',
+          textAlign: 'center',
+        }}
+      >
+        {/* Subtle gold radial glow (CSS only) */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage:
+              'radial-gradient(ellipse at 50% 0%, rgba(203,178,106,0.07) 0%, transparent 60%)',
+            pointerEvents: 'none',
+          }}
+        />
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 1,
+            maxWidth: '720px',
+            margin: '0 auto',
+          }}
+        >
+          <h2
+            style={{
+              fontFamily: CG,
+              fontSize: 'clamp(36px, 5vw, 72px)',
+              fontWeight: 300,
+              lineHeight: 1.1,
+              marginBottom: '24px',
+              background: GOLD_GRADIENT,
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            Ready to Build Something Extraordinary?
+          </h2>
+          <p
+            style={{
+              fontFamily: MS,
+              fontSize: '13px',
+              fontWeight: 300,
+              color: 'rgba(255,255,255,0.55)',
+              letterSpacing: '0.06em',
+              lineHeight: 1.8,
+              marginBottom: '48px',
+            }}
+          >
+            Serving Marin, Sonoma &amp; Napa Counties. Schedule your consultation today.
+          </p>
+          <div
+            style={{
+              display: 'flex',
+              gap: '16px',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              marginBottom: '40px',
+            }}
+          >
+            <Link
+              href="/request-a-bid"
+              style={{
+                fontFamily: MS,
+                fontSize: '11px',
+                fontWeight: 400,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                backgroundColor: GOLD,
+                color: '#000',
+                padding: '18px 48px',
+                textDecoration: 'none',
+                display: 'inline-block',
+              }}
+            >
+              Request a Bid
+            </Link>
+            <a
+              href="tel:4159689494"
+              style={{
+                fontFamily: MS,
+                fontSize: '11px',
+                fontWeight: 400,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                backgroundColor: 'transparent',
+                color: GOLD,
+                border: `1px solid ${GOLD}`,
+                padding: '18px 48px',
+                textDecoration: 'none',
+                display: 'inline-block',
+              }}
+            >
+              Call (415) 968-9494
+            </a>
+          </div>
+          <p
+            style={{
+              fontFamily: MS,
+              fontSize: '10px',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: 'rgba(203,178,106,0.4)',
+            }}
+          >
+            CSLB #1106798 &middot; Licensed &middot; Bonded &middot; Insured
           </p>
         </div>
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className={`${montserrat.className} text-white/40 text-xs tracking-[0.15em] uppercase`}>
-            &copy; {new Date().getFullYear()} ConstruBay &mdash; All rights reserved
-          </p>
-          <p className={`${montserrat.className} text-white/40 text-xs tracking-[0.15em] uppercase`}>
-            CSLB #1106798 &middot; <a href="tel:4159689494" className="hover:text-brand-tan transition-colors">(415) 968-9494</a> &middot; Mill Valley, CA
-          </p>
-        </div>
-      </footer>
-      <style>{`
-        @keyframes scrollPulse {
-          0%, 100% { opacity: 0.2; transform: scaleY(0.3); transform-origin: top; }
-          50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-        }
-      `}</style>
-      <InquiryModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+      </section>
     </>
   );
 }
