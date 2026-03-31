@@ -118,7 +118,7 @@ const jsonLdSchema = {
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5.0",
+        "ratingValue": "4.9",
         "reviewCount": "47",
         "bestRating": "5",
         "worstRating": "1"
@@ -170,6 +170,15 @@ export default function RootLayout({
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-E5R2DP0WG0');`,
+          }}
+        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-6807667762" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-6807667762');`,
           }}
         />
         <script
@@ -263,7 +272,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
             }}>
-              Free Estimate
+              Request a Bid
             </span>
           </a>
           <a
