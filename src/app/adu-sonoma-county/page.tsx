@@ -466,6 +466,31 @@ export default function AduSonomaPage() {
 
       {/* ── SECTION 6: MULTI-STEP FORM ───────────────────────── */}
       <div ref={formRef}>
+        {/* Mini trust header above form */}
+        <div
+          style={{
+            backgroundColor: '#000000',
+            borderBottom: '1px solid rgba(203,178,106,0.3)',
+            padding: '16px 24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <img src="/images/logo.png" alt="ConstruBay" style={{ height: '40px' }} />
+          <a
+            href={PHONE}
+            style={{
+              fontFamily: MS,
+              fontSize: 14,
+              color: GOLD,
+              textDecoration: 'none',
+              letterSpacing: '0.04em',
+            }}
+          >
+            (415) 968-9494
+          </a>
+        </div>
         <section style={{ padding: '100px 24px', backgroundColor: '#000' }}>
           <div style={{ maxWidth: '640px', margin: '0 auto' }}>
             <h2
