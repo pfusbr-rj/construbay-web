@@ -162,20 +162,12 @@ export default function AduSonomaPage() {
           justifyContent: 'space-between',
         }}
       >
-        <span
-          style={{
-            fontFamily: CG,
-            fontSize: 30,
-            fontWeight: 300,
-            letterSpacing: '0.04em',
-            background: GOLD_GRADIENT,
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
-        >
-          ConstruBay
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/logo.png"
+          alt="ConstruBay"
+          style={{ height: '48px', width: 'auto' }}
+        />
         <a
           href={PHONE}
           style={{
