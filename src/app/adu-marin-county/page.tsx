@@ -100,6 +100,25 @@ const labelStyle: React.CSSProperties = {
   marginBottom: '6px',
 };
 
+const sendWhatsAppNotification = async (formData: {
+  firstName: string;
+  phone: string;
+  email: string;
+  address?: string;
+  aduType: string;
+  city: string;
+}) => {
+  const message = `🏗️ NEW ADU LEAD%0A%0A👤 Name: ${formData.firstName}%0A📞 Phone: ${formData.phone}%0A📧 Email: ${formData.email}%0A🏠 ADU Type: ${formData.aduType}%0A📍 City: ${formData.city}%0A🏡 Address: ${formData.address || 'Not provided'}%0A%0A⚡ Respond within 2 hours!`;
+  try {
+    await fetch(
+      `https://api.callmebot.com/whatsapp.php?phone=14159689494&text=${message}&apikey=7905514`,
+      { method: 'GET' }
+    );
+  } catch (error) {
+    console.error('WhatsApp notification failed:', error);
+  }
+};
+
 export default function AduMarinPage() {
   const [step, setStep] = useState(1);
   const [aduType, setAduType] = useState('');
@@ -140,6 +159,14 @@ export default function AduMarinPage() {
           message: `ADU Type: ${aduType} | Timeline: ${timeline} | City: ${city}${form.address ? ` | Address: ${form.address}` : ''}`,
           source: 'adu-marin-county',
         }),
+      });
+      await sendWhatsAppNotification({
+        firstName: form.firstName,
+        phone: form.phone,
+        email: form.email,
+        address: form.address,
+        aduType,
+        city,
       });
     } catch {
       // show thank you regardless of network error
