@@ -204,7 +204,7 @@ export default function AduSonomaPage() {
         {/* Hero background image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
+          src="/images/adu/image1-detached-adu.png"
           alt="Luxury ADU construction by ConstruBay"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
         />
@@ -422,23 +422,23 @@ export default function AduSonomaPage() {
             <div style={{ aspectRatio: '16/9', border: '1px solid rgba(203,178,106,0.22)', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80"
-                alt="Luxury detached ADU built by ConstruBay in Sonoma County"
+                src="/images/adu/image1-detached-adu.png"
+                alt="Luxury detached ADU built by ConstruBay"
                 className="w-full h-full object-cover"
               />
             </div>
             <div style={{ aspectRatio: '16/9', border: '1px solid rgba(203,178,106,0.22)', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
-                alt="Custom home addition and ADU construction by ConstruBay"
+                src="/images/adu/image2-garage-conversition.png"
+                alt="Garage conversion to luxury ADU by ConstruBay"
                 className="w-full h-full object-cover"
               />
             </div>
             <div style={{ aspectRatio: '16/9', border: '1px solid rgba(203,178,106,0.22)', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
+                src="/images/adu/image3-adu-interior.png"
                 alt="High-end ADU interior finishes by ConstruBay"
                 className="w-full h-full object-cover"
               />
