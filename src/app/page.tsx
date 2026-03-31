@@ -398,8 +398,8 @@ export default function HomePage() {
 
       {/* ── SECTION 4: CLIENT STORIES ───────────────────────── */}
       {/* TODO: Replace with real Google Review quotes from Paulo */}
-      <section style={{ padding: '120px 24px', backgroundColor: '#050505' }}>
-        <div className="max-w-6xl mx-auto">
+      <section style={{ padding: '120px 24px 196px', backgroundColor: '#050505' }}>
+        <div className="max-w-6xl mx-auto px-4 md:px-16">
           <div style={{ textAlign: 'center', marginBottom: '72px' }}>
             <h2
               style={{
