@@ -205,43 +205,27 @@ export default function AduMarinPage() {
           justifyContent: 'center',
         }}
       >
-        {/* Background placeholder */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundColor: '#111',
-            border: '2px dashed rgba(203,178,106,0.2)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <span
-            style={{
-              fontFamily: MS,
-              fontSize: 11,
-              letterSpacing: '0.25em',
-              textTransform: 'uppercase',
-              color: 'rgba(203,178,106,0.3)',
-            }}
-          >
-            [ ADU Project Photo ]
-          </span>
-        </div>
+        {/* Hero background image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
+          alt="Luxury ADU construction by ConstruBay"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
+        />
         {/* Dark overlay */}
         <div
           style={{
             position: 'absolute',
             inset: 0,
             background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.88) 100%)',
+            zIndex: 10,
           }}
         />
         {/* Content */}
         <div
           style={{
             position: 'relative',
-            zIndex: 10,
+            zIndex: 20,
             textAlign: 'center',
             padding: '120px 24px 80px',
             maxWidth: '820px',
@@ -439,31 +423,30 @@ export default function AduMarinPage() {
             Our ADU Work
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((n) => (
-              <div
-                key={n}
-                style={{
-                  aspectRatio: '16/9',
-                  backgroundColor: '#111',
-                  border: '2px dashed rgba(203,178,106,0.22)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: MS,
-                    fontSize: 11,
-                    letterSpacing: '0.25em',
-                    textTransform: 'uppercase',
-                    color: 'rgba(203,178,106,0.3)',
-                  }}
-                >
-                  [ ADU Project Photo ]
-                </span>
-              </div>
-            ))}
+            <div style={{ aspectRatio: '16/9', border: '1px solid rgba(203,178,106,0.22)', overflow: 'hidden' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80"
+                alt="Luxury detached ADU built by ConstruBay in Marin County"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div style={{ aspectRatio: '16/9', border: '1px solid rgba(203,178,106,0.22)', overflow: 'hidden' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+                alt="Custom home addition and ADU construction by ConstruBay"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div style={{ aspectRatio: '16/9', border: '1px solid rgba(203,178,106,0.22)', overflow: 'hidden' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
+                alt="High-end ADU interior finishes by ConstruBay"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
