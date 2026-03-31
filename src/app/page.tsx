@@ -41,19 +41,19 @@ const featuredProjects = [
 
 const testimonials = [
   {
-    text: 'Working with ConstruBay transformed our home and exceeded every expectation. Paulo was on-site every day and communicated clearly throughout.',
-    author: 'Sarah M.',
-    project: 'Mill Valley Kitchen Remodel',
+    text: "Paulo was very professional, personable, and communicative — difficult to find with a general contractor. His team arrived promptly every morning, completed all the work quickly, on budget, and with very high quality. I highly recommend Paulo and his team.",
+    author: 'Brian M.',
+    project: 'Home Services · Mill Valley',
   },
   {
-    text: 'From permits to final walkthrough, the team was exceptional. No surprises, no change orders — just beautiful work delivered on time.',
-    author: 'James & Linda T.',
-    project: 'Tiburon Full Home Remodel',
+    text: "Paulo and his team did a great job. The end result looks better than I was expecting — very clean, efficient, and professional. They came right on time and finished in the amount of time they promised. High quality work at a very reasonable price.",
+    author: 'Kathryn R.',
+    project: 'Drywall & Finishing · Marin County',
   },
   {
-    text: "We hired ConstruBay for our ADU and they handled everything — design, permits, construction. The finished space exceeded our every hope.",
-    author: 'Robert K.',
-    project: 'San Rafael ADU Build',
+    text: "We interviewed several companies and went with our gut and chose ConstruBay. They were professional, on-time, and did a great job. So glad we chose them.",
+    author: 'Gwen M.',
+    project: 'Home Renovation · Marin County',
   },
 ];
 
@@ -397,7 +397,6 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 4: CLIENT STORIES ───────────────────────── */}
-      {/* TODO: Replace with real Google Review quotes from Paulo */}
       <section style={{ padding: '120px 24px 196px', backgroundColor: '#050505' }}>
         <div className="max-w-6xl mx-auto px-4 md:px-16">
           <div style={{ textAlign: 'center', marginBottom: '72px' }}>
