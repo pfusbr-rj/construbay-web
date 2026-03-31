@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getBlogPosts } from '@/lib/blog'
 
-const baseUrl = 'https://construbay.com'
+const baseUrl = 'https://www.construbay.com'
 
 type SitemapEntry = {
   path: string
