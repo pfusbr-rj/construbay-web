@@ -6,7 +6,7 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
 
 export const metadata: Metadata = {
   title: 'About Paulo Fernandes | ConstruBay — Luxury Contractor & AI Construction Pioneer, Marin County',
-  description: 'Meet Paulo Fernandes, founder of ConstruBay and creator of PlanPass.ai. 20+ years building luxury homes in Marin, Sonoma & Napa. Now revolutionizing construction with AI bot automation and permit intelligence. CSLB #1106798.',
+  description: 'Paulo Fernandes — licensed GC, founder of ConstruBay, and creator of PlanPass.ai. 15+ years of luxury residential construction in Marin County. CSLB #1106798.',
   keywords: 'Paulo Fernandes, ConstruBay, luxury contractor Marin County, PlanPass.ai, AI construction, permit automation, luxury home remodel Marin, general contractor Mill Valley, construction technology',
   openGraph: {
     title: 'Paulo Fernandes | ConstruBay Founder & Construction Tech Innovator',

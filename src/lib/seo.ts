@@ -4,7 +4,7 @@ import { BlogPost } from './blog';
 
 export function generateCityMetadata(city: City): Metadata {
   const title = `General Contractor in ${city.name}, CA | ConstruBay | CSLB #1106798`;
-  const description = `ConstruBay is ${city.name}'s trusted general contractor for full home remodels, kitchen & bath, ADUs, and additions. CSLB licensed #1106798. Serving ${city.county} County since 2015. Call (415) 968-9494.`;
+  const description = `Licensed general contractor in ${city.name}, CA. Full home remodels, ADUs, kitchen & bath, and additions. CSLB #1106798. Call (415) 968-9494.`;
 
   return {
     title,

@@ -153,7 +153,7 @@ We specialize in [ADU construction throughout Marin County](/adu-builder-marin-c
   {
     slug: 'ai-permits-future-of-construction-marin',
     title: 'AI-Assisted Permitting: Is It the Future for Marin County Remodels?',
-    excerpt: 'Some Bay Area cities are piloting AI permit review tools. Here\'s what that means for Marin homeowners planning remodels — and why the human contractor relationship still matters most.',
+    excerpt: 'AI permit review is coming to Bay Area cities. Here\'s what that means for Marin County homeowners and why the human contractor relationship still matters most.',
     author: 'Paulo Fernandes',
     publishedAt: '2024-09-20',
     category: 'Industry Trends',
@@ -438,7 +438,7 @@ We've worked on several of these projects, and there's a distinct psychology to 
 
 Sonoma County doesn't have as deep a bench of luxury contractors as Marin. Post-fire rebuilds absorbed a lot of capacity, and the ongoing demand for skilled trades — especially electricians, plumbers, and custom cabinet makers — means lead times are longer and the best contractors are booked out 6–12 months.
 
-If you're planning a Sonoma project for 2025, the conversation with your contractor should be happening now. We're currently scheduling projects for Q1–Q2 2025 and would love to discuss your vision.`,
+If you're planning a Sonoma project for 2025, the conversation with your contractor should be happening now. We're currently scheduling projects for Q1–Q2 2025 and would love to [discuss your vision](/services/general-contractor-sonoma-county).`,
   },
 ];
 

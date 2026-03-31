@@ -5,7 +5,23 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/paulo/construbay-web/**)",
+      "Bash(done)",
+      "Bash(for dir:*)",
+      "Bash(do f=\"$dir/page.tsx\")",
+      "Bash(echo \"=== $f ===\")",
+      "Bash(do f=\"$dir/layout.tsx\")",
+      "Bash(do)",
+      "Bash(f=\"$dir/layout.tsx\")",
+      "Bash(for city:*)",
+      "Bash(echo \"=== $city ===\")",
+      "Read(//c/Users/paulo/construbay-web/src/app/$city/**)",
+      "Bash(head -20 grep -rn 'alt={\"\"\"\"\"\"\"\"}' src/app/ src/components/ --include=\"*.tsx\")",
+      "Bash(head -20 grep -rn \"<img \" src/app/ src/components/ --include=\"*.tsx\")",
+      "Bash(head -20 grep -rn \"<Image \" src/app/ src/components/ --include=\"*.tsx\")"
     ]
   }
 }

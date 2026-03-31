@@ -103,7 +103,7 @@ export default function BathroomRemodelingPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/gallery/bathroom02.jpg"
-            alt="Luxury bathroom remodeling Marin County by ConstruBay CSLB #1106798"
+            alt="Spa-style master bathroom remodel with custom stone tile and soaking tub"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.88) 100%)' }} />

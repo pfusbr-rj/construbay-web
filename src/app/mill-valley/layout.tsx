@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "General Contractor Mill Valley CA | ConstruBay | CSLB #1106798",
   description:
-    "Licensed general contractor in Mill Valley, CA. Hillside construction, ADUs, kitchen remodels, and whole house renovations. CSLB #1106798. Serving Tam Valley, Blithedale Canyon, and all Mill Valley neighborhoods.",
+    "Licensed general contractor in Mill Valley, CA. Hillside construction, ADU builder, kitchen remodels, and whole house renovations. CSLB #1106798.",
   alternates: {
     canonical: "https://www.construbay.com/mill-valley",
   },

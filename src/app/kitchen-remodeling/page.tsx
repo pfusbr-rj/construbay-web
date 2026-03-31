@@ -103,7 +103,7 @@ export default function KitchenRemodelingPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/gallery/bagatellos/bagatellos-01.jpg"
-            alt="Luxury kitchen remodeling Marin County by ConstruBay CSLB #1106798"
+            alt="Open-concept kitchen remodel with custom cabinetry and natural stone island"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.88) 100%)' }} />

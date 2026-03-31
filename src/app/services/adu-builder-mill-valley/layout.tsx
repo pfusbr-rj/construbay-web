@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ADU Builder Mill Valley CA | ConstruBay | CSLB #1106798",
   description:
-    "Mill Valley ADU construction. Design, permits, and build by local licensed GC. Hillside specialists. CSLB #1106798. Free ADU assessment.",
+    "ADU construction in Mill Valley, CA. Design-build, full permit management, and hillside expertise from a local licensed GC. CSLB #1106798.",
   alternates: {
     canonical: "https://www.construbay.com/services/adu-builder-mill-valley",
   },
   openGraph: {
     title: "ADU Builder Mill Valley CA | ConstruBay | CSLB #1106798",
     description:
-      "Mill Valley ADU construction. Design, permits, and build by local licensed GC. Hillside specialists. CSLB #1106798. Free ADU assessment.",
+      "ADU construction in Mill Valley, CA. Design-build, full permit management, and hillside expertise from a local licensed GC. CSLB #1106798.",
     url: "https://www.construbay.com/services/adu-builder-mill-valley",
     type: "website",
   },

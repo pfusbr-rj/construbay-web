@@ -162,7 +162,7 @@ export default function HomePage() {
       >
         <Image
           src="/images/hero/hero-bg-1.jpg"
-          alt="Luxury home remodel in Marin County by ConstruBay — CSLB #1106798"
+          alt="Luxury whole-home remodel with open-plan living area and custom millwork in Marin County"
           fill
           className="object-cover"
           priority

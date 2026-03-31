@@ -146,7 +146,7 @@ export default function PermitExpeditingMarinCountyPage() {
           </p>
           <p>
             ConstruBay (CSLB #1106798) offers permit expediting services
-            powered by PlanPass.ai, our proprietary AI plan review technology.
+            powered by PlanPass.ai, our proprietary <Link href="/blog/ai-permit-review-marin-county" className="text-[#C9A84C] underline underline-offset-2">AI plan review technology</Link>.
             We don&apos;t cut corners &mdash; we eliminate the errors and omissions
             that cause delays in the first place, resulting in cleaner
             submissions and faster approvals.

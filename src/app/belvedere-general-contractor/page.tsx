@@ -99,7 +99,7 @@ export default function BelvederePage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={city.heroImage}
-            alt="General contractor in Belvedere, CA — ConstruBay CSLB #1106798"
+            alt="Waterfront estate home in Belvedere, CA overlooking San Francisco Bay"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%)' }} />
