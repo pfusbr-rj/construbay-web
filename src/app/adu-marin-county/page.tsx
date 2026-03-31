@@ -168,9 +168,9 @@ export default function AduMarinPage() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/logo.png"
+          src="/images/svg/logo vector-02.svg"
           alt="ConstruBay"
-          style={{ height: '48px', width: 'auto' }}
+          style={{ height: '52px', width: 'auto' }}
         />
         <a
           href={PHONE}
