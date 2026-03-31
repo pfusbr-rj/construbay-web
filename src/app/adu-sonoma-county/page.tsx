@@ -101,7 +101,7 @@ export default function AduSonomaPage() {
   const [aduType, setAduType] = useState('');
   const [timeline, setTimeline] = useState('');
   const [city, setCity] = useState('');
-  const [form, setForm] = useState({ firstName: '', phone: '', email: '' });
+  const [form, setForm] = useState({ firstName: '', phone: '', email: '', address: '' });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -133,7 +133,7 @@ export default function AduSonomaPage() {
           email: form.email,
           propertyCity: city,
           projectType: 'ADU Construction — Sonoma County',
-          message: `ADU Type: ${aduType} | Timeline: ${timeline} | City: ${city}`,
+          message: `ADU Type: ${aduType} | Timeline: ${timeline} | City: ${city}${form.address ? ` | Address: ${form.address}` : ''}`,
           source: 'adu-sonoma-county',
         }),
       });
@@ -614,6 +614,20 @@ export default function AduSonomaPage() {
                     We&apos;ll contact you within 2 hours to confirm
                     your complimentary site assessment.
                   </p>
+                  {form.address && (
+                    <p
+                      style={{
+                        fontFamily: MS,
+                        fontSize: 12,
+                        fontWeight: 300,
+                        color: 'rgba(255,255,255,0.4)',
+                        marginBottom: '16px',
+                        letterSpacing: '0.03em',
+                      }}
+                    >
+                      Property: {form.address}
+                    </p>
+                  )}
                   <p
                     style={{
                       fontFamily: MS,
@@ -822,6 +836,28 @@ export default function AduSonomaPage() {
                         placeholder="you@email.com"
                         autoComplete="email"
                         style={inputStyle}
+                      />
+                    </div>
+                    <div>
+                      <label style={labelStyle}>Property Address (optional)</label>
+                      <input
+                        type="text"
+                        value={form.address}
+                        onChange={(e) => setForm((p) => ({ ...p, address: e.target.value }))}
+                        placeholder="123 Main St, Santa Rosa"
+                        autoComplete="street-address"
+                        style={{
+                          width: '100%',
+                          background: '#1a1a1a',
+                          border: '1px solid rgba(203,178,106,0.3)',
+                          borderRadius: '6px',
+                          padding: '10px 12px',
+                          fontFamily: MS,
+                          fontSize: 14,
+                          color: '#ffffff',
+                          outline: 'none',
+                          boxSizing: 'border-box' as const,
+                        }}
                       />
                     </div>
                   </div>
@@ -1054,8 +1090,8 @@ export default function AduSonomaPage() {
             lineHeight: 1.7,
           }}
         >
-          Sonoma County ADU permits take 4&ndash;8 months. We accept a limited number of
-          projects per quarter. Start now to be move-in ready by late 2026.
+          ConstruBay takes on a limited number of ADU projects per quarter &mdash;
+          ensuring every client receives uncompromising personal attention from Paulo.
         </p>
       </section>
 
