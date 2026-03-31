@@ -166,14 +166,14 @@ export default function AduSonomaPage() {
         <img
           src="/images/svg/logo vector-02.svg"
           alt="ConstruBay"
-          style={{ height: '52px', width: 'auto' }}
+          style={{ height: '72px', width: 'auto' }}
         />
         <a
           href={PHONE}
           style={{
             fontFamily: MS,
-            fontSize: 14,
-            fontWeight: 400,
+            fontSize: 20,
+            fontWeight: 700,
             color: GOLD,
             textDecoration: 'none',
             letterSpacing: '0.05em',
