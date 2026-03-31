@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: "ConstruBay | Mill Valley's #1 Luxury Contractor",
   description:
-    'Luxury remodeling in Marin County. Fixed-scope contracts, AI permit technology, 5-year warranty. Book your discovery call with Paulo Fernandes.',
+    'Luxury remodeling in Marin County. Fixed-scope contracts, AI permit technology, 10-year warranty. Book your discovery call with Paulo Fernandes.',
 }
 
 const CG = 'Cormorant Garamond'

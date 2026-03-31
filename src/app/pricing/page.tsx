@@ -140,7 +140,7 @@ export default function PricingPage() {
           </p>
           {/* EEAT Trust Bar */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
-            {['CSLB #1106798', 'Licensed & Insured', '5-Year Warranty', '⭐ Nextdoor #1 Contractor'].map(t => (
+            {['CSLB #1106798', 'Licensed & Insured', '10-Year Warranty', '⭐ Nextdoor #1 Contractor'].map(t => (
               <span key={t} style={{ fontFamily: MS, fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.75)', border: '1px solid rgba(203,178,106,0.25)', padding: '0.4rem 0.85rem' }}>
                 {t}
               </span>
