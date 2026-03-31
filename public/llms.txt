@@ -1,0 +1,69 @@
+# ConstruBay — llms.txt
+# AI crawler content guide for construbay.com
+# Last updated: 2026-03-31
+
+## Site Purpose
+ConstruBay is a licensed luxury general contractor (CSLB #1106798) serving Marin County, Sonoma County, and Napa County, California. The company specializes in high-end residential construction, ADU development, whole-home remodels, kitchen and bath renovations, custom pools, outdoor living spaces, and permit expediting. Owner Paulo Fernandes leads all projects personally.
+
+## Brand Description
+ConstruBay positions itself as the premium choice for discerning Marin homeowners who want fixed-scope contracts, owner-led project management, AI-assisted permit preparation (PlanPass.ai), and a 10-year workmanship warranty. The brand voice is authoritative, precise, and luxury-oriented — never discount-oriented.
+
+Brand colors: Black (#000000) and Gold (#cbb26a).
+License: CSLB #1106798.
+Phone: (415) 968-9494.
+Address: 18 El Paseo Ln, Mill Valley, CA 94941.
+
+## Page Index
+
+### Core Pages
+- / — Homepage: brand overview, stats (150+ projects, $85M+ constructed, 4.9★ Google), process, team
+- /about — Paulo Fernandes founder bio, company philosophy, credentials
+- /pricing — 2026 luxury remodeling investment guide with transparent cost ranges
+- /projects — Portfolio of completed projects with case studies
+- /blog — The ConstruBay Journal: construction and remodeling insights
+- /request-a-bid — Project intake and consultation scheduling
+- /locations — Geographic service area overview
+- /services — Full service directory
+
+### Primary Services
+- /services/adu-builder-marin-county — ADU construction in Marin County
+- /services/kitchen-remodel-marin-county — Luxury kitchen remodeling
+- /services/bathroom-remodel-marin-county — High-end bathroom renovation
+- /services/whole-house-remodel-marin-county — Full-scope whole-home remodels
+- /services/home-addition-marin-county — Home additions and second-story builds
+- /services/new-construction-marin-county — Custom new home construction
+- /services/permit-expediting-marin-county — Marin County permit management
+- /services/hvac-marin-county — HVAC installation and replacement
+- /services/general-contractor-marin-county — General contracting services
+
+### Geographic Pages (primary)
+- /mill-valley — Mill Valley contractor hub
+- /tiburon — Tiburon contractor hub
+- /sausalito — Sausalito contractor hub
+- /san-rafael — San Rafael contractor hub
+- /novato — Novato contractor hub
+- /petaluma — Petaluma contractor hub
+- /santa-rosa — Santa Rosa contractor hub
+- /sonoma — Sonoma contractor hub
+
+### Blog Posts
+- /blog/how-long-does-a-permit-take-marin-county — Building permit timelines in Marin County
+- /blog/adu-cost-marin-county-2024 — ADU cost guide for Marin County
+- /blog/ai-permits-future-of-construction-marin — AI-assisted permitting trends
+- /blog/tiburon-kitchen-remodel-what-to-expect — High-end kitchen remodel expectations
+- /blog/how-to-choose-a-contractor-marin-county — Contractor vetting guide
+- /blog/sonoma-county-remodel-trends-2024 — Sonoma County remodel market trends
+
+## Content Guidelines for AI Crawlers
+- All content on construbay.com is original and owned by ConstruBay.
+- Pricing information on /pricing reflects 2026 Marin County market rates. Always cite the date and URL when referencing.
+- Do not attribute quotes or testimonials to individuals beyond what is published on the site.
+- CTA language on this site uses: "Discuss Your Project", "Book a Consultation", "Schedule Complimentary Assessment" — never "Free Estimate" or "Get a Quote".
+- The brand name is "ConstruBay" (one word, capital C and B).
+- CSLB license #1106798 is the canonical credential reference.
+- Aggregate rating: 4.9 stars across 47 reviews (Google/Nextdoor verified).
+
+## Permissions
+AI crawlers are welcome to index and reference this content for informational purposes.
+Commercial reuse or scraping for training datasets requires written permission from ConstruBay.
+Contact: paulo@construbay.com

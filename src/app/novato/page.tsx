@@ -92,7 +92,7 @@ export default function NovatoPage() {
             href="/request-a-bid"
             className="inline-block bg-[#C9A84C] text-white font-bold text-lg px-12 py-[18px] rounded-full hover:opacity-90 transition-opacity"
           >
-            Get a Free Estimate
+            Book a Consultation
           </Link>
           {/* Portuguese callout */}
           <div className="mt-6 inline-block border border-[#C9A84C]/40 rounded-lg px-6 py-3 bg-brand-dark/60">
@@ -269,7 +269,7 @@ export default function NovatoPage() {
             href="/request-a-bid"
             className="inline-block bg-[#C9A84C] text-white font-bold text-lg px-12 py-[18px] rounded-full hover:opacity-90 transition-opacity"
           >
-            Get a Free Estimate
+            Book a Consultation
           </Link>
           <p className="mt-6 text-white/50 text-sm">
             Or call us directly:{" "}

@@ -61,8 +61,8 @@ const localBizSchema = {
   areaServed: ['Marin County', 'Sonoma County', 'Napa County'],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '10',
+    ratingValue: '4.9',
+    reviewCount: '47',
   },
 }
 
@@ -179,6 +179,12 @@ export default function PricingPage() {
                   style={{ display: 'inline-block', backgroundColor: 'transparent', border: '1px solid rgba(203,178,106,0.4)', color: '#cbb26a', fontFamily: MS, fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.6rem 1.25rem', textDecoration: 'none' }}
                 >
                   Get Exact Scope
+                </Link>
+                <Link
+                  href="/request-a-bid"
+                  style={{ display: 'block', backgroundColor: '#cbb26a', color: '#000', fontFamily: MS, fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.85rem 1.25rem', textDecoration: 'none', textAlign: 'center', marginTop: '0.75rem', fontWeight: 400 }}
+                >
+                  Discuss This Plan
                 </Link>
               </div>
             ))}

@@ -92,7 +92,7 @@ export default function SantaRosaPage() {
             href="/request-a-bid"
             className="inline-block bg-[#C9A84C] text-white font-bold text-lg px-12 py-[18px] rounded-full hover:opacity-90 transition-opacity"
           >
-            Get a Free Estimate
+            Book a Consultation
           </Link>
         </div>
       </section>
@@ -265,7 +265,7 @@ export default function SantaRosaPage() {
             href="/request-a-bid"
             className="inline-block bg-[#C9A84C] text-white font-bold text-lg px-12 py-[18px] rounded-full hover:opacity-90 transition-opacity"
           >
-            Get a Free Estimate
+            Book a Consultation
           </Link>
           <p className="mt-6 text-white/50 text-sm">
             Or call us directly:{" "}

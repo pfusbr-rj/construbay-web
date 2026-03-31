@@ -13,7 +13,7 @@ export default function ExitIntentPopup() {
   const [form, setForm] = useState({ firstName: '', email: '' })
   const [submitting, setSubmitting] = useState(false)
 
-  const blocked = pathname.startsWith('/blog') || pathname.startsWith('/projects')
+  const blocked = pathname.startsWith('/blog') || pathname.startsWith('/projects') || pathname.startsWith('/adu-sonoma-county') || pathname.startsWith('/adu-marin-county')
 
   const fire = useCallback(() => {
     if (blocked) return
@@ -25,7 +25,7 @@ export default function ExitIntentPopup() {
   useEffect(() => {
     if (blocked) return
     let ready = false
-    const timer = setTimeout(() => { ready = true }, 8000)
+    const timer = setTimeout(() => { ready = true }, 300000)
 
     const onMouseOut = (e: MouseEvent) => {
       if (!ready) return

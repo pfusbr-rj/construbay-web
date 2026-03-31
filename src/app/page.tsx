@@ -113,6 +113,38 @@ const credentials = [
 
 const featuredIn = ['Houzz', 'Nextdoor', 'Marin IJ', 'Yelp', 'Google'];
 
+const painPoints = [
+  {
+    headline: 'Permit Delays & Compliance Surprises',
+    body: "Marin County's 11 independent building departments each operate on different timelines and review standards. One incomplete submission can add months — and most contractors don't warn you.",
+  },
+  {
+    headline: 'Budget Uncertainty & Hidden Costs',
+    body: "Most contractors quote low to win the job, then escalate with change orders once demolition begins. A fixed-scope contract with line-item pricing eliminates that dynamic entirely.",
+  },
+  {
+    headline: 'Contractor Reliability & Project Timelines',
+    body: "Finding a contractor who shows up daily, communicates proactively, and delivers what was promised is harder than it should be in this market. Owner-led oversight changes that equation.",
+  },
+];
+
+const quickServices = [
+  { label: 'ADU Construction', desc: 'Detached, attached, garage conversions & JADUs. Full permit management.' },
+  { label: 'Kitchen Remodeling', desc: 'Custom cabinetry, stone countertops, professional appliances, gut-to-stud scopes.' },
+  { label: 'Bathroom Renovation', desc: 'Spa-level finishes, heated floors, custom tile, walk-in showers, soaking tubs.' },
+  { label: 'HVAC Systems', desc: 'Full system replacements, heat pump upgrades, zoned installs for new construction.' },
+  { label: 'Skylights & Natural Light', desc: 'Custom and Velux skylight installation with flashing, waterproofing, and permits.' },
+  { label: 'Structural Framing', desc: 'Load-bearing modifications, room additions, second-story builds, seismic upgrades.' },
+];
+
+const comparisonRows = [
+  { feature: 'Transparent Line-Item Pricing', construbay: true },
+  { feature: 'Permit Management & Expediting', construbay: true },
+  { feature: 'Real-Time Project Tracking', construbay: true },
+  { feature: 'Licensed, Bonded & Insured', construbay: true },
+  { feature: 'Written Timeline Guarantees', construbay: true },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -240,6 +272,271 @@ export default function HomePage() {
           >
             CSLB #1106798 &middot; Licensed &middot; Bonded &middot; Insured
           </p>
+        </div>
+      </section>
+
+      {/* ── SECTION 1B: PAIN POINTS ─────────────────────────── */}
+      <section style={{ padding: '120px 24px', backgroundColor: '#050505' }}>
+        <div className="max-w-6xl mx-auto">
+          <div style={{ textAlign: 'center', marginBottom: '72px' }}>
+            <p
+              style={{
+                fontFamily: MS,
+                fontSize: '10px',
+                fontWeight: 400,
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                color: 'rgba(203,178,106,0.6)',
+                marginBottom: '16px',
+              }}
+            >
+              What Marin Homeowners Face
+            </p>
+            <h2
+              style={{
+                fontFamily: CG,
+                fontSize: 'clamp(32px, 4.5vw, 56px)',
+                fontWeight: 300,
+                color: '#ffffff',
+                lineHeight: 1.15,
+              }}
+            >
+              The Problems We Solve
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {painPoints.map((point) => (
+              <div
+                key={point.headline}
+                style={{
+                  borderLeft: `3px solid ${GOLD}`,
+                  backgroundColor: '#0a0a0a',
+                  padding: '40px 36px',
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '12px',
+                    fontWeight: 700,
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: GOLD,
+                    marginBottom: '20px',
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {point.headline}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '13px',
+                    fontWeight: 300,
+                    color: 'rgba(255,255,255,0.55)',
+                    lineHeight: 1.9,
+                    letterSpacing: '0.03em',
+                  }}
+                >
+                  {point.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 1C: QUICK-SCAN SERVICES ─────────────────── */}
+      <section style={{ padding: '120px 24px', backgroundColor: '#000' }}>
+        <div className="max-w-6xl mx-auto">
+          <div style={{ textAlign: 'center', marginBottom: '72px' }}>
+            <p
+              style={{
+                fontFamily: MS,
+                fontSize: '10px',
+                fontWeight: 400,
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                color: 'rgba(203,178,106,0.6)',
+                marginBottom: '16px',
+              }}
+            >
+              What We Build
+            </p>
+            <h2
+              style={{
+                fontFamily: CG,
+                fontSize: 'clamp(32px, 4.5vw, 56px)',
+                fontWeight: 300,
+                color: GOLD,
+              }}
+            >
+              Core Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px"
+            style={{ backgroundColor: 'rgba(203,178,106,0.1)' }}
+          >
+            {quickServices.map((svc) => (
+              <div
+                key={svc.label}
+                style={{ backgroundColor: '#000', padding: '36px 40px' }}
+              >
+                <div
+                  style={{
+                    width: '24px',
+                    height: '2px',
+                    backgroundColor: GOLD,
+                    marginBottom: '20px',
+                  }}
+                />
+                <p
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    color: '#ffffff',
+                    marginBottom: '10px',
+                  }}
+                >
+                  {svc.label}
+                </p>
+                <p
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '12px',
+                    fontWeight: 300,
+                    color: 'rgba(255,255,255,0.45)',
+                    lineHeight: 1.7,
+                    letterSpacing: '0.02em',
+                  }}
+                >
+                  {svc.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '56px' }}>
+            <Link
+              href="/services"
+              style={{
+                fontFamily: MS,
+                fontSize: '11px',
+                fontWeight: 400,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: GOLD,
+                textDecoration: 'none',
+              }}
+            >
+              View All Services &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 1D: WHY CONSTRUBAY MATRIX ───────────────── */}
+      <section style={{ padding: '120px 24px', backgroundColor: '#050505' }}>
+        <div className="max-w-4xl mx-auto">
+          <div style={{ textAlign: 'center', marginBottom: '72px' }}>
+            <p
+              style={{
+                fontFamily: MS,
+                fontSize: '10px',
+                fontWeight: 400,
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                color: 'rgba(203,178,106,0.6)',
+                marginBottom: '16px',
+              }}
+            >
+              The Difference
+            </p>
+            <h2
+              style={{
+                fontFamily: CG,
+                fontSize: 'clamp(32px, 4.5vw, 56px)',
+                fontWeight: 300,
+                color: '#ffffff',
+              }}
+            >
+              ConstruBay vs. Typical Contractors
+            </h2>
+          </div>
+
+          {/* Table header */}
+          <div
+            className="grid grid-cols-3"
+            style={{
+              borderBottom: '1px solid rgba(203,178,106,0.25)',
+              paddingBottom: '16px',
+              marginBottom: '0',
+            }}
+          >
+            <p style={{ fontFamily: MS, fontSize: '9px', fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>
+              Feature
+            </p>
+            <p style={{ fontFamily: MS, fontSize: '9px', fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: GOLD, textAlign: 'center' }}>
+              ConstruBay
+            </p>
+            <p style={{ fontFamily: MS, fontSize: '9px', fontWeight: 400, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', textAlign: 'center' }}>
+              Typical Contractor
+            </p>
+          </div>
+
+          {/* Table rows */}
+          {comparisonRows.map((row, i) => (
+            <div
+              key={row.feature}
+              className="grid grid-cols-3"
+              style={{
+                padding: '20px 0',
+                borderBottom: i < comparisonRows.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                alignItems: 'center',
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: MS,
+                  fontSize: '12px',
+                  fontWeight: 300,
+                  color: 'rgba(255,255,255,0.6)',
+                  letterSpacing: '0.03em',
+                }}
+              >
+                {row.feature}
+              </p>
+              <div style={{ textAlign: 'center' }}>
+                <span
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '18px',
+                    fontWeight: 700,
+                    color: GOLD,
+                  }}
+                >
+                  ✓
+                </span>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <span
+                  style={{
+                    fontFamily: MS,
+                    fontSize: '18px',
+                    fontWeight: 400,
+                    color: 'rgba(255,255,255,0.2)',
+                  }}
+                >
+                  ✗
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

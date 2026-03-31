@@ -3,6 +3,9 @@ import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { generateBlogMetadata } from '@/lib/seo';
 import KeyTakeaways from '@/components/KeyTakeaways';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
+import HowToSchema from '@/components/seo/HowToSchema';
 import type { Metadata } from 'next';
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
@@ -80,31 +83,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://www.construbay.com',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Blog',
-        item: 'https://www.construbay.com/blog',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: post.title,
-        item: `https://www.construbay.com/blog/${post.slug}`,
-      },
-    ],
-  };
-
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -138,10 +116,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.construbay.com' },
+        { name: 'Blog', url: 'https://www.construbay.com/blog' },
+        { name: post.title, url: `https://www.construbay.com/blog/${post.slug}` },
+      ]} />
+      {post.faqs && post.faqs.length > 0 && <FAQSchema items={post.faqs} />}
+      {post.isHowTo && post.howToSteps && post.howToSteps.length > 0 && (
+        <HowToSchema name={post.title} description={post.excerpt} steps={post.howToSteps} />
+      )}
 
       <main style={{ backgroundColor: '#000000', minHeight: '100vh', paddingTop: '140px' }}>
 
@@ -242,6 +225,51 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <article>
             {renderContent(post.content)}
           </article>
+
+          {/* FAQs */}
+          {post.faqs && post.faqs.length > 0 && (
+            <div style={{ marginTop: '64px' }}>
+              <h2 className={cormorant.className} style={{
+                fontSize: 'clamp(22px, 3vw, 32px)',
+                fontWeight: '300',
+                color: '#ffffff',
+                marginBottom: '32px',
+                lineHeight: 1.3,
+              }}>
+                Frequently Asked Questions
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+                {post.faqs.map((faq, i) => (
+                  <div key={i} style={{
+                    borderTop: '1px solid rgba(203,178,106,0.15)',
+                    paddingTop: '24px',
+                    paddingBottom: '24px',
+                  }}>
+                    <p className={montserrat.className} style={{
+                      fontSize: '13px',
+                      fontWeight: '400',
+                      color: '#ffffff',
+                      marginBottom: '10px',
+                      lineHeight: 1.5,
+                      letterSpacing: '0.02em',
+                    }}>
+                      {faq.question}
+                    </p>
+                    <p className={montserrat.className} style={{
+                      fontSize: '13px',
+                      fontWeight: '300',
+                      color: 'rgba(255,255,255,0.6)',
+                      lineHeight: 1.9,
+                      letterSpacing: '0.03em',
+                    }}>
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+                <div style={{ borderTop: '1px solid rgba(203,178,106,0.15)' }} />
+              </div>
+            </div>
+          )}
 
           {/* Tags */}
           <div style={{

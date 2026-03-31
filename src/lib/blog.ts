@@ -10,6 +10,9 @@ export interface BlogPost {
   coverImage: string;
   readTime: number;
   keyTakeaways?: string[];
+  faqs?: { question: string; answer: string }[];
+  isHowTo?: boolean;
+  howToSteps?: { name: string; text: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -28,6 +31,20 @@ export const blogPosts: BlogPost[] = [
       'Pre-application meetings with the building department save 3-4 weeks',
       'Incomplete permit submissions add 6+ weeks to approval timeline',
       'Hiring a contractor familiar with local departments cuts delays significantly',
+    ],
+    faqs: [
+      {
+        question: 'How long does a building permit take in Mill Valley?',
+        answer: 'Mill Valley permits have improved since hiring additional plan checkers in 2023. ADUs are taking 8–12 weeks for initial review. Simple kitchen remodels with no structural work can sometimes be processed over-the-counter. Complex projects in hillside or fire hazard zones take longer, and incomplete applications can add 3–4 weeks per correction round.',
+      },
+      {
+        question: 'What causes building permit delays in Marin County?',
+        answer: 'The most common cause is incomplete applications — missing soils reports, incomplete Title 24 energy compliance forms, or unclear structural notes trigger correction notices that add 3–4 weeks per round. Discretionary review requirements (variances, design review, conditional use permits) add months and require public notice. Fire hazard zone requirements for hillside Wildland-Urban Interface properties add additional review layers.',
+      },
+      {
+        question: 'Which Marin County city has the fastest building permit process?',
+        answer: 'San Rafael has the highest permit volume in the county and has invested in digital submission infrastructure, with standard residential permits running 6–8 weeks. Their online eTrakit portal makes status tracking straightforward. Mill Valley is also relatively efficient for simple projects without discretionary review, especially following recent staffing increases.',
+      },
     ],
     content: `Getting a building permit in Marin County is one of the most common frustrations homeowners face when planning a remodel. Unlike some Bay Area counties where permits move on a predictable schedule, Marin's 11 cities and unincorporated areas each run their own building departments — meaning the experience in Mill Valley can be completely different from San Rafael.
 
@@ -76,6 +93,20 @@ If you're planning an [ADU or addition in Marin County](/adu-builder-marin-count
       'ADU permit process in Marin County averages 4-6 months',
       'ADUs increase property value by 15-20% on average',
       'Detached ADUs command higher rental rates than attached units',
+    ],
+    faqs: [
+      {
+        question: 'How much does a detached ADU cost in Marin County?',
+        answer: 'A detached ADU in Marin County ranges from $280,000 to $480,000 depending on size, site conditions, and finish level. Labor typically represents 35–45% of the total budget. Hillside lots requiring grading, retaining walls, or engineered foundations add significant cost compared to flat parcels in communities like Corte Madera or Terra Linda.',
+      },
+      {
+        question: 'What is the cheapest type of ADU to build in Marin County?',
+        answer: 'A Junior ADU (JADU), carved from existing space within your primary home, is the most affordable option at $80,000 to $160,000. Garage conversions range from $120,000 to $220,000 and California law now requires cities to approve these ministerially with minimal restrictions, making them a predictable and cost-efficient choice.',
+      },
+      {
+        question: 'Do ADUs increase property value in Marin County?',
+        answer: 'Yes. ADUs increase property value by an estimated 15–20% on average. A well-built ADU in Mill Valley or Tiburon can command $3,500–$5,500 per month in rent. At $4,500 per month, a $350,000 ADU investment pays itself off in approximately 6.5 years, while permanently adding equity and providing flexibility for rental income, multigenerational living, or future sale value.',
+      },
     ],
     content: `The ADU market in Marin County has matured significantly since California's 2020 ADU reform laws. What was once a complex, expensive, unpredictable process has become more standardized — but costs remain significantly higher here than in most of California.
 
@@ -135,6 +166,20 @@ We specialize in [ADU construction throughout Marin County](/adu-builder-marin-c
       'Schedule trades minimum 8 weeks in advance',
       'Budget 15% contingency for owner-requested changes',
     ],
+    faqs: [
+      {
+        question: 'Are any Marin County cities using AI to review building permits?',
+        answer: 'As of late 2024, no Marin County city has adopted a full AI permit review system. San Rafael has expanded its eTrakit digital portal significantly, and there is industry conversation about AI integration, but the county\'s 11 independent building departments make system-wide adoption a slow process. The more immediate application is pre-submission tools that contractors use to check plans before submitting.',
+      },
+      {
+        question: 'How does AI permitting software work?',
+        answer: 'AI permitting tools like Symbium and Archistar ingest building plans and cross-reference them against applicable codes — including the International Building Code, local amendments, Title 24 energy standards, and fire codes. They flag non-compliant elements and generate correction notices automatically, compressing weeks of plan check calendar time into hours for straightforward project types like standard garage conversions or deck permits.',
+      },
+      {
+        question: 'Can AI replace a contractor\'s knowledge of the Marin permit process?',
+        answer: 'No. AI tools fall short on discretionary judgment — hillside neighbor objections, design review board preferences for specific window proportions, site-specific fire marshal concerns for WUI lots, and the informal expectations of individual plan checkers. The most effective approach combines AI pre-submission analysis with deep local contractor relationships, which is how ConstruBay approaches permit management through PlanPass.ai.',
+      },
+    ],
     content: `There's a quiet revolution happening in municipal building departments across California. Cities like San Jose and Sacramento have begun piloting AI-assisted plan review tools that can flag code compliance issues in minutes rather than weeks. The question for Marin homeowners: is this coming here, and should you care?
 
 ## What AI Permit Review Actually Does
@@ -176,6 +221,20 @@ That's been the ConstruBay approach from day one: combine the best available too
       'Custom cabinetry requires 12 weeks fabrication lead time',
       'Kitchen renovation delivers highest ROI of any room remodel',
       'Professional appliances require dedicated electrical circuits',
+    ],
+    faqs: [
+      {
+        question: 'How much does a high-end kitchen remodel cost in Tiburon?',
+        answer: 'A complete kitchen remodel in Tiburon ranges from $120,000 for a mid-range finish package to $400,000 or more for a bespoke architectural kitchen. The variance is primarily driven by cabinetry and appliances — a Thermador or Sub-Zero appliance package alone can run $45,000–$80,000, and custom cabinetry from a local maker adds another $60,000–$120,000 for a large kitchen.',
+      },
+      {
+        question: 'How long does a kitchen remodel take in Tiburon?',
+        answer: 'Plan for 6–9 months from design start to completion for a high-end kitchen in Tiburon. The design phase takes 6–10 weeks, permitting 8–14 weeks, and construction 10–16 weeks. Custom cabinetry requires 12 weeks of fabrication lead time, and countertop templating and fabrication adds 3–4 weeks after cabinets are installed. Rushing the design phase is the most common cause of regret on Tiburon kitchen projects.',
+      },
+      {
+        question: 'Do I need design review approval for a kitchen remodel in Tiburon?',
+        answer: 'Interior kitchen remodels typically do not trigger Tiburon\'s Design Review Board, which focuses on exterior changes visible from public areas. However, any kitchen remodel involving structural changes, electrical, plumbing, or gas modifications requires a building permit from the Town of Tiburon Community Development Department. Expect 8–14 weeks for permit approval on a typical high-end kitchen scope.',
+      },
     ],
     content: `Tiburon kitchens are a different category of project. The views, the clientele, the expectation of finish quality — everything pushes toward the high end. After completing several kitchen renovations in Tiburon and neighboring Belvedere, here's what we've learned about what makes these projects succeed.
 
@@ -226,6 +285,43 @@ If you're planning a [kitchen remodel in Tiburon](/tiburon-kitchen-remodel) or a
       'Always get a fixed-price contract to avoid budget surprises',
       'Permits add 8-12 weeks to your project timeline in Mill Valley',
       'Kitchen and primary suite deliver highest ROI in Marin market',
+    ],
+    isHowTo: true,
+    howToSteps: [
+      {
+        name: 'Verify the contractor\'s CSLB license',
+        text: 'Check cslb.ca.gov before any conversation goes further. Confirm the license is active, covers Class B for general contracting, has no formal complaints or disciplinary actions, and has workers\' compensation insurance on file. A contractor who resists providing their license number is a red flag.',
+      },
+      {
+        name: 'Get three bids and compare scope, not just price',
+        text: 'Request line-item breakdowns from each bidder covering labor by trade, materials (allowances vs. specified items), permits and fees, overhead and profit percentage, and explicit exclusions. The gap between the highest and lowest bid on a complex Marin remodel can be $200,000 — representing either scope differences or a contractor who will run short and return for more.',
+      },
+      {
+        name: 'Check references with targeted questions',
+        text: 'Ask references: Did the project come in at the original budget, or were there change orders and how were they handled? Was the job site clean and were subcontractors supervised? Were there any problems, and how did the contractor resolve them? Would you hire them again for a larger project? The last question tells you everything.',
+      },
+      {
+        name: 'Review the contract in full detail',
+        text: 'Any reputable contractor will present a detailed contract. It should specify: a detailed scope of work with attached plans and specifications, a payment schedule tied to milestones rather than calendar dates, the change order process and markup rate, lien release requirements for all subcontractors, warranty terms of at minimum 1 year on workmanship, and a dispute resolution process.',
+      },
+      {
+        name: 'Watch for red flags before signing',
+        text: 'Be alert to: large upfront payment demands (California law limits deposits to 10% or $1,000, whichever is less), no physical office or address, excessive eagerness to start without asking questions about your project, and vague or evasive answers about which subcontractors will be used. Transient contractors have nothing to lose if a project goes sideways.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do I verify a contractor\'s license in California?',
+        answer: 'Verify any contractor\'s license at cslb.ca.gov before any conversation goes further. Confirm the license is active (not suspended or expired), covers Class B for general contracting, has no formal complaints or disciplinary actions on file, and has active workers\' compensation insurance. A contractor who resists providing their license number is a red flag. ConstruBay\'s license is CSLB #1106798 — check it anytime.',
+      },
+      {
+        question: 'What should a contractor contract include in California?',
+        answer: 'A proper construction contract should include: a detailed scope of work with attached plans and specifications (not vague descriptions), a payment schedule tied to construction milestones rather than calendar dates, the change order process and markup rate, lien release requirements for all subcontractors and material suppliers, warranty terms of at minimum 1 year on workmanship, and a dispute resolution process. If a contractor hands you a one-page agreement, walk away.',
+      },
+      {
+        question: 'How many bids should I get for a home remodel in Marin County?',
+        answer: 'Three bids is the right number — fewer and you lack sufficient data, more and you waste everyone\'s time. When comparing bids, never treat them as single numbers. Request line-item breakdowns covering labor by trade, materials with allowances vs. specified items, permits and fees, the contractor\'s overhead and profit percentage, and explicit exclusions. The gap between the highest and lowest bid on a complex Marin remodel can reach $200,000.',
+      },
     ],
     content: `Marin County has a contractor problem. Not a shortage — there are plenty of people willing to take your money. The problem is finding one who will do what they said, when they said it, for what they quoted.
 
@@ -288,7 +384,7 @@ Any reputable contractor will present a detailed contract. If they hand you a on
 
 **Vague answers about subcontractors.** Who is doing your electrical? Your tile? If the GC can't name them, they may be using whoever's available rather than a trusted team.
 
-We're happy to answer any of these questions about our own company. That's the standard every [general contractor in Marin County](/marin-county-general-contractor) should be held to. When you're ready, [request a free estimate](/request-a-bid) — we'll walk through your project, your scope, and our process before you sign anything.`,
+We're happy to answer any of these questions about our own company. That's the standard every [general contractor in Marin County](/marin-county-general-contractor) should be held to. When you're ready, [discuss your project with us](/request-a-bid) — we'll walk through your scope, our process, and what to expect before you sign anything.`,
   },
   {
     slug: 'sonoma-county-remodel-trends-2024',
@@ -305,6 +401,20 @@ We're happy to answer any of these questions about our own company. That's the s
       'Professional photography increases lead generation by 40%',
       'Drone shots provide context and scale for exterior transformations',
       'Staged after photos outperform unstaged by 3x in engagement',
+    ],
+    faqs: [
+      {
+        question: 'What are the most popular home improvements in Sonoma County right now?',
+        answer: 'The leading categories in 2024 are outdoor-indoor living spaces (retractable walls, outdoor kitchens, expansive decking), energy upgrades tied to major remodels (solar, battery backup, heat pump HVAC), and kitchen-centric renovations in the $200,000–$400,000 range with professional-grade appliances, butler\'s pantries, and direct garden access. Multigenerational ADUs for parents or adult children are also a major category driven by Sonoma\'s larger lot sizes.',
+      },
+      {
+        question: 'How does post-fire rebuilding affect construction in Sonoma County?',
+        answer: 'The 2017 and 2019 wildfires continue to shape Sonoma County construction years later. Many homeowners rebuilding after the Tubbs and Kincade fires found that their insurance settlements fell short as construction costs rose, and are now supplementing with personal funds. These rebuild projects — often $800,000 to $2M or more — prioritize fire-resistant materials, Class A roofing, fiber cement or stucco siding, and construction practices that exceed standard code requirements.',
+      },
+      {
+        question: 'Is it hard to find a contractor for a luxury project in Sonoma County?',
+        answer: 'Yes. Sonoma County does not have as deep a bench of luxury contractors as Marin County. Post-fire rebuilds absorbed significant trade capacity, and skilled electricians, plumbers, and custom cabinet makers currently have 6–12 month lead times. If you are planning a Sonoma project, the conversation with your contractor should begin at least 6 months before your intended start date.',
+      },
     ],
     content: `Sonoma County's remodeling market tells a story in two parts: the continued recovery from the 2017 and 2019 fires, and a broader renovation wave driven by homeowners who bought or stayed through the pandemic years and are now ready to invest in their spaces.
 

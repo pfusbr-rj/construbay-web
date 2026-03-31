@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Caveat } from "next/font/google";
+import { headers } from "next/headers";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SocialSidebar from "@/components/SocialSidebar";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | ConstruBay",
   },
   description:
-    "ConstruBay — luxury general contractor serving Marin, Sonoma & Napa Counties. ADU construction, whole home remodels, kitchen & bath. Fixed-scope contracts. Free estimate. CSLB #1106798.",
+    "ConstruBay — luxury general contractor serving Marin, Sonoma & Napa Counties. ADU construction, whole home remodels, kitchen & bath. Fixed-scope contracts. CSLB #1106798.",
   alternates: {
     canonical: "https://www.construbay.com",
   },
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "ConstruBay",
     title: "Luxury General Contractor Mill Valley CA | ConstruBay | CSLB #1106798",
     description:
-      "ConstruBay — luxury general contractor serving Marin, Sonoma & Napa Counties. ADU construction, whole home remodels, kitchen & bath. Fixed-scope contracts. Free estimate. CSLB #1106798.",
+      "ConstruBay — luxury general contractor serving Marin, Sonoma & Napa Counties. ADU construction, whole home remodels, kitchen & bath. Fixed-scope contracts. CSLB #1106798.",
   },
   robots: {
     index: true,
@@ -128,7 +130,7 @@ const jsonLdSchema = {
           "@type": "Review",
           "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
           "author": { "@type": "Person", "name": "The Mathews" },
-          "reviewBody": "Quick to respond! They gave us a free estimate in a timely manner. Hired them for several projects on our home. They do great work, clean, friendly, fun to work with on a daily basis."
+          "reviewBody": "Quick to respond! They scheduled a complimentary assessment in a timely manner. Hired them for several projects on our home. They do great work, clean, friendly, fun to work with on a daily basis."
         },
         {
           "@type": "Review",
@@ -153,11 +155,55 @@ const jsonLdSchema = {
   ]
 };
 
-export default function RootLayout({
+const BASE_URL = 'https://www.construbay.com'
+
+const SEGMENT_NAMES: Record<string, string> = {
+  'about': 'About',
+  'adu': 'ADU Construction',
+  'blog': 'Blog',
+  'design-build': 'Design-Build',
+  'for-architects': 'For Architects',
+  'for-homeowners': 'For Homeowners',
+  'full-home-remodeling': 'Full Home Remodeling',
+  'investments': 'Investments',
+  'kitchen-remodeling': 'Kitchen Remodeling',
+  'bathroom-remodeling': 'Bathroom Remodeling',
+  'locations': 'Locations',
+  'outdoor-living': 'Outdoor Living',
+  'pricing': 'Pricing',
+  'projects': 'Projects',
+  'request-a-bid': 'Request a Bid',
+  'services': 'Services',
+}
+
+function segmentToName(segment: string): string {
+  return SEGMENT_NAMES[segment] ??
+    segment.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+}
+
+function pathnameToBreadcrumbs(pathname: string): { name: string; url: string }[] {
+  const segments = pathname.split('/').filter(Boolean)
+  const items: { name: string; url: string }[] = [{ name: 'Home', url: BASE_URL }]
+  let accumulated = ''
+  for (const segment of segments) {
+    accumulated += `/${segment}`
+    items.push({ name: segmentToName(segment), url: `${BASE_URL}${accumulated}` })
+  }
+  return items
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = headers().get('x-pathname') ?? '/'
+  const segments = pathname.split('/').filter(Boolean)
+  // Blog post pages (/blog/[slug]) render their own breadcrumb with the actual post title.
+  // All other pages get a path-derived breadcrumb from root layout.
+  const isBlogPost = segments.length === 2 && segments[0] === 'blog'
+  const breadcrumbItems = pathnameToBreadcrumbs(pathname)
+
   return (
     <html lang="en">
       <head>
@@ -187,6 +233,7 @@ gtag('config', 'AW-6807667762');`,
             __html: JSON.stringify(jsonLdSchema),
           }}
         />
+        {!isBlogPost && <BreadcrumbSchema items={breadcrumbItems} />}
       </head>
       <Script
         id="gtm-head"

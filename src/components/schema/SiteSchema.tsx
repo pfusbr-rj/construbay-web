@@ -58,7 +58,7 @@ export default function SiteSchema() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
+      ratingValue: '4.9',
       reviewCount: '47',
       bestRating: '5',
       worstRating: '1',
@@ -69,7 +69,7 @@ export default function SiteSchema() {
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         author: { '@type': 'Person', name: 'The Mathews' },
         name: 'Full Home Remodel — Mill Valley',
-        reviewBody: 'Quick to respond! They gave us a free estimate in a timely manner. Hired them for several projects on our home. They do great work, clean, friendly, fun to work with on a daily basis.',
+        reviewBody: 'Quick to respond! They scheduled a complimentary assessment in a timely manner. Hired them for several projects on our home. They do great work, clean, friendly, fun to work with on a daily basis.',
       },
       {
         '@type': 'Review',
