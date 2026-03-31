@@ -1189,6 +1189,385 @@ Explore our [general contractor services in Marin County](/marin-county-general-
 
 [Schedule a Complimentary Assessment](https://calendly.com/construbay/initial-consultation-construbay)`,
   },
+  {
+    slug: 'detached-vs-attached-adu-marin-county',
+    title: 'Detached vs Attached ADU in Marin County: Which Is Right for You?',
+    excerpt: 'Detached and attached ADUs serve different goals, cost differently, and move through the permit process differently. Here\'s how to decide which is right for your Marin County property in 2026.',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-03-12',
+    category: 'ADUs',
+    tags: ['ADU', 'detached ADU', 'attached ADU', 'Marin County', 'accessory dwelling unit', '2026'],
+    coverImage: '/images/blog/adu-cost-hero.jpg',
+    readTime: 8,
+    isHowTo: false,
+    keyTakeaways: [
+      'Detached ADUs offer more design flexibility and command higher rents — at a higher build cost',
+      'Attached ADUs cost less to build but tie the unit physically to the primary residence',
+      'Garage conversions are technically attached or detached depending on your garage configuration — and are the most permitting-friendly option under California law',
+      'Site conditions — lot size, topography, utility access — often determine the practical choice more than preference',
+      'Design Review Board requirements in Mill Valley, Tiburon, and Sausalito apply differently to detached vs attached structures',
+    ],
+    faqs: [
+      {
+        question: 'Is a detached ADU or attached ADU better for rental income in Marin County?',
+        answer: 'Detached ADUs consistently command higher rents in Marin County because tenants value privacy, separate entrance, and the sense of a standalone dwelling. A well-finished detached ADU in Mill Valley or Tiburon rents for $3,800–$5,500/month. An attached ADU of similar size and finish typically rents for $3,200–$4,500/month — still strong returns, but lower than a detached unit. If rental income is the primary goal and your lot supports it, a detached ADU is the better long-term investment.',
+      },
+      {
+        question: 'Which type of ADU is easier to permit in Marin County?',
+        answer: 'Garage conversions — whether of attached or detached garages — are the most permitting-friendly ADU type under California law, which requires cities to approve them ministerially with minimal restrictions. Among new construction options, attached ADUs that do not alter exterior massing significantly are often simpler than detached structures in Design Review Board jurisdictions. Detached ADUs visible from public streets in Mill Valley, Tiburon, Sausalito, Ross, and Belvedere require Design Review Board approval, which adds 8–12 weeks to the permit timeline.',
+      },
+      {
+        question: 'Can I build both a detached ADU and an attached ADU on the same Marin County property?',
+        answer: 'California law generally allows one ADU and one Junior ADU (JADU) per single-family parcel, regardless of configuration. A detached ADU plus a JADU within the primary residence is the most common combination. Two full-size ADUs on a single parcel typically require an SB 9 lot split, which creates additional regulatory complexity. ConstruBay evaluates multi-unit ADU feasibility as part of every initial site assessment.',
+      },
+    ],
+    content: `When Marin County homeowners start exploring ADUs, the first question is often: detached or attached? The short answer is that the right choice depends on your lot, your goals, your budget, and your specific city\'s regulatory requirements. There is no universally correct answer — but there is usually a clearly better answer for any given property.
+
+This guide covers the practical differences between detached and attached ADUs in Marin County in 2026, so you can make the decision with accurate information rather than assumptions.
+
+## Key Differences at a Glance
+
+A detached ADU is a freestanding structure separate from the primary residence — built in the backyard, on a portion of the lot, or as a standalone cottage. An attached ADU is a unit connected to the primary home, either as an addition or as a converted portion of the existing structure (including garage conversions of attached garages).
+
+The differences that matter most in practice are: construction cost, rental income potential, permitting requirements, impact on the primary residence, and site suitability.
+
+## Cost Comparison
+
+**Detached ADU — $290,000 to $500,000+**
+A standalone structure requires its own foundation, exterior envelope, roof, and all utility connections. Site preparation — grading, utility runs from the street or main building, and access paths — adds cost that attached ADUs avoid. On hillside lots in Mill Valley or Tiburon, foundation engineering and retaining walls can add $40,000–$90,000 above flat-lot benchmarks.
+
+**Attached ADU (Addition) — $200,000 to $360,000**
+An addition shares the primary home\'s existing foundation perimeter and may share a wall, reducing exterior envelope and structural costs. Utility connections are shorter and less complex. The lower cost reflects genuine structural efficiencies — not a reduction in finish quality.
+
+**Garage Conversion ADU — $130,000 to $240,000**
+Converting an existing garage — whether attached or detached — is the most cost-effective path to a permitted ADU. The structure already exists. The roof, walls, and slab require modification rather than new construction. California law requires cities to approve garage conversions ministerially, making them the most predictable permit path as well.
+
+**Junior ADU (JADU) — $90,000 to $175,000**
+Carved from within the existing primary home footprint, JADUs are the lowest-cost option. They are limited to 500 square feet, require owner-occupancy of the primary or junior unit, and do not require new construction.
+
+## Permit Differences
+
+This is where the distinction between detached and attached ADUs becomes most practically significant in Marin County.
+
+**Garage conversions** have the fewest permitting barriers under state law. Cities cannot require Design Review for garage conversions in most circumstances, and the ministerial approval path means neighbor objections carry no weight. This makes garage conversions the fastest permit path — typically 3–5 months in most Marin jurisdictions.
+
+**Attached additions** that do not significantly alter exterior massing often avoid Design Review requirements in jurisdictions that would otherwise require it for detached structures. An addition tucked behind the primary home\'s roofline, using matching exterior materials, may proceed through standard building permit review without triggering Design Review Board involvement.
+
+**Detached ADUs** in visible locations within Design Review Board jurisdictions — Mill Valley, Tiburon, Sausalito, Ross, and Belvedere — require Design Review Board approval. The board evaluates massing, materials, roofline, and compatibility with the neighborhood character. This adds 8–12 weeks to the permit timeline and requires early engagement with the Design Review process.
+
+In San Rafael and Novato — cities without Design Review Board requirements for residential ADUs — detached ADUs move through a standard building permit process similar to attached structures.
+
+## Which Is Right for Your Property
+
+**Choose a detached ADU if:**
+Your lot has adequate size and setback compliance for a freestanding structure. You are prioritizing rental income and want to maximize tenant privacy. Your city\'s Design Review requirements are manageable. The lot topography does not create prohibitive site preparation costs.
+
+**Choose an attached ADU if:**
+Your lot is narrow, constrained, or has limited backyard area. You want lower build cost. You prefer direct interior connection to the ADU for multigenerational family use. Your site conditions (hillside, access, utilities) make standalone construction significantly more expensive.
+
+**Choose a garage conversion if:**
+You have an existing detached or attached garage with adequate ceiling height (typically 9 feet minimum for livable conversion). You want the fastest permit path. You are working within a tighter budget. You are in a Design Review jurisdiction where a detached new structure would require board approval.
+
+**Consider a JADU if:**
+Your existing home has a spare bedroom suite, ground-floor room, or sufficient square footage to carve out a 500 sq ft unit. Budget is the primary constraint. You plan to occupy the property yourself and are comfortable with the owner-occupancy requirement.
+
+## Site Conditions Often Make the Decision
+
+In practice, many Marin homeowners discover that their lot effectively decides the question for them. A hillside lot with no flat backyard area and limited setback clearance cannot support a detached ADU without significant earthwork. A home with an existing two-car detached garage sitting largely unused is an obvious garage conversion candidate. A property with a large, flat, south-facing backyard that receives excellent light is a natural detached ADU site.
+
+The pre-design site feasibility assessment — evaluating parcel dimensions, setback compliance, utility capacity, topography, and applicable local requirements — is not optional. It is the foundation of every decision that follows.
+
+## Why ConstruBay
+
+ConstruBay has designed and built every ADU type across the full range of Marin County conditions and jurisdictions. Our process begins with a complimentary site feasibility assessment that maps your lot against the requirements of your specific city and delivers a clear recommendation — detached, attached, garage conversion, or JADU — before you spend money on architectural drawings.
+
+We bring the same fixed-scope contract approach to every ADU type: transparent line-item pricing, no change-order surprises, and owner-led project management from feasibility through Certificate of Occupancy.
+
+Explore our [ADU builder services in Marin County](/services/adu-builder-marin-county) and our full-service [permit management and expediting](/services/permit-expediting-marin-county) for homeowners who want professional oversight of the entire process. CSLB #1106798.
+
+[Schedule a Complimentary Assessment](https://calendly.com/construbay/initial-consultation-construbay)`,
+  },
+  {
+    slug: 'kitchen-island-ideas-marin-county',
+    title: 'Kitchen Island Ideas for Marin County Homes: Design + Cost Guide 2026',
+    excerpt: 'A custom kitchen island is the most-requested feature in Marin County luxury kitchen remodels. Here\'s what the best islands look like, what they cost, and what to avoid.',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-03-19',
+    category: 'Remodeling',
+    tags: ['kitchen island', 'kitchen remodel', 'Marin County', 'luxury kitchen', 'design', '2026'],
+    coverImage: '/images/blog/kitchen-tiburon-hero.jpg',
+    readTime: 7,
+    isHowTo: false,
+    keyTakeaways: [
+      'A custom waterfall island with imported stone is the defining feature of a Marin luxury kitchen remodel',
+      'Island costs range from $12,000 for a simple prep island to $65,000+ for a fully custom architectural island',
+      'Minimum clearance around a working kitchen island is 42 inches — 48 inches for professional-grade kitchens',
+      'Seating overhangs, prep sinks, integrated appliances, and electrical add both function and cost',
+      'Stone selection for the island countertop should be made in person at the slab yard — photos are insufficient',
+    ],
+    faqs: [
+      {
+        question: 'How much does a custom kitchen island cost in Marin County?',
+        answer: 'A custom kitchen island in a Marin County luxury remodel ranges from $12,000 for a simple prep island with quartz countertop and painted base to $65,000+ for a fully custom architectural island with waterfall-edge imported marble, integrated prep sink, dishwasher, and custom millwork base. The most common Tier 2 kitchen island — custom millwork base, waterfall-edge quartzite or Calacatta marble, integrated electrical, and seating overhang — runs $22,000–$38,000 installed.',
+      },
+      {
+        question: 'What is the best stone for a kitchen island countertop in Marin County?',
+        answer: 'Quartzite is consistently our top recommendation for kitchen island countertops in Marin County. It offers the aesthetic warmth and veining of marble with significantly better resistance to etching and staining — important in a working kitchen where acidic foods and liquids are present daily. Calacatta marble is the most visually dramatic option and performs well in lower-traffic kitchens or secondary prep areas. Porcelain slab panels have improved dramatically and are an excellent choice for waterfall edges where seamless continuity is desired without the weight and cost of stone.',
+      },
+      {
+        question: 'How large should a kitchen island be in a Marin County home?',
+        answer: 'The right island size depends on your kitchen\'s square footage and layout. The minimum clearance around a working island is 42 inches on all sides — 48 inches is preferred for professional-grade kitchens where two cooks work simultaneously. Most luxury kitchen islands in Marin County range from 4 feet by 7 feet to 5 feet by 9 feet. Islands that feel generous in a showroom can feel overwhelming in a kitchen with insufficient clearance. ConstruBay models every island in the context of the full kitchen layout before finalizing dimensions.',
+      },
+    ],
+    content: `In every luxury kitchen remodel we complete in Marin County, the island is the centerpiece of the conversation. It is where design ambition is most visible, where material investment has the greatest impact, and where the decisions made at the design stage have the most lasting consequences. It is also where the most common and costly mistakes happen.
+
+This guide covers island styles, costs, space requirements, and material selection for luxury Marin County kitchens in 2026.
+
+## Popular Island Styles in Marin County Luxury Kitchens
+
+**The Waterfall Island**
+The waterfall configuration — where the countertop material wraps vertically down one or both ends of the island to the floor — is the most requested island style in Marin County luxury kitchens. It works because it transforms the island from a piece of furniture into a piece of architecture. The vertical stone face draws the eye, anchors the composition, and creates a focal point visible from the adjacent living or dining space.
+
+Waterfall islands are most effective with book-matched stone slabs — where two consecutive slabs from the same block are opened like a book so that the veining mirrors across the seam. Book-matching requires selecting two matching slabs at the yard and adds $3,000–$8,000 to the stone cost but delivers a result that standard non-matched stone cannot replicate.
+
+**The Contrasting Island**
+Many Marin County kitchens combine perimeter cabinetry in a light painted finish with an island in a contrasting tone — a deep navy, a warm charcoal, or an unlacquered brass-accented base. This approach creates visual depth and allows the island to read as a distinct element rather than a continuation of the perimeter. The contrast is most effective when the countertop material also shifts — a lighter stone on the perimeter, a more dramatic veined stone on the island.
+
+**The Integrated Appliance Island**
+Islands that incorporate a prep sink, a dishwasher drawer, a warming drawer, or a secondary refrigerator drawer serve as a second workstation in the kitchen — particularly valuable when two cooks work simultaneously. The functional additions require careful planning: drain locations, electrical circuits, and appliance rough-in specifications must be finalized before permit submission and cabinetry fabrication begins.
+
+**The Seating-Forward Island**
+When the kitchen opens to a dining or living area, an island with a generous seating overhang on the social side — 12 to 15 inches — creates a natural gathering point. Counter-height seating (36 inches) with backless stools integrates more seamlessly with most kitchen designs than bar-height (42-inch) configurations. The overhang requires careful structural support planning within the base cabinetry, particularly for islands with waterfall ends where the overhang meets a vertical stone face.
+
+## Cost Breakdown
+
+Island costs in a Marin County kitchen remodel vary significantly based on configuration, size, stone selection, and integrated features:
+
+**Base island — $12,000 to $18,000**
+Painted or stained wood base in a standard configuration, quartz countertop, no integrated appliances, simple seating overhang. Quality craftsmanship, clean lines, but no architectural ambition.
+
+**Mid-tier custom island — $22,000 to $38,000**
+Custom millwork base in a painted or two-tone finish, waterfall-edge quartzite or Calacatta marble countertop, integrated electrical with pop-up outlets, seating overhang, and prep sink with dishwasher drawer. This is the most common configuration in Tier 2 Marin kitchen remodels.
+
+**Architectural island — $40,000 to $65,000+**
+Book-matched imported stone in a waterfall configuration, fully custom base millwork with specialty hardware, integrated prep sink and dishwasher, secondary refrigeration, concealed electrical, and a seating configuration designed as part of the kitchen\'s overall spatial composition. At this level, the island is a bespoke piece of architecture.
+
+## Space Requirements
+
+The most common mistake in island design is sizing the island for the ideal kitchen rather than the actual kitchen. An island that looks appropriately scaled on a floor plan can feel cramped when installed if clearances are insufficient.
+
+The minimum functional clearance between an island and any perimeter counter or appliance is 42 inches. For kitchens where two people cook simultaneously, 48 inches is the preferred minimum. For kitchens with a range or cooktop on the island itself, building codes in most Marin jurisdictions require 42-inch minimum clearance, but 48 inches is strongly recommended for comfort and safety.
+
+Islands in kitchens with less than 42 inches of clearance on any side should not be installed. A smaller island executed well — or no island at all with a well-designed layout — is a better outcome than an oversized island that makes the kitchen difficult to use.
+
+## Material Selection: What Works Best
+
+**Quartzite** is the first material we recommend for working kitchen islands. The visual character of quartzite — complex veining, warm whites and grays, occasional crystalline depth — rivals the best marble. The physical properties are far better suited to daily kitchen use. Quartzite does not etch from citrus or vinegars. It resists heat better than marble. It scratches less readily. For a countertop that will be used intensively for decades, quartzite\'s durability makes it the right call for most clients.
+
+**Calacatta marble** is visually the most dramatic option and is appropriate for clients who understand that marble requires more maintenance and is comfortable with the natural patina it develops over time. We recommend marble most often for clients who prioritize aesthetics above durability, for secondary prep islands that receive less direct use, or for waterfall faces where the visual impact is worth the maintenance trade-off.
+
+**Porcelain slab panels** have become a serious option in recent years. Large-format porcelain (up to 12 feet in length) in marble-look programs from manufacturers like Neolith, Dekton, and Lapitec offers near-zero maintenance with a convincing stone aesthetic. Porcelain is particularly effective for waterfall ends where seamless continuity is desired without the weight penalty of stone slabs. The seam lines require careful planning and skilled installation, but the result is excellent.
+
+**Quartz** (engineered stone) remains a cost-effective option for clients who want consistent patterning and low maintenance at a lower cost than natural stone. Brands like Calacatta-series Silestone, Eternal series Silestone, and Cambria\'s natural stone series have improved significantly. For Tier 1 kitchens where the budget does not support imported stone, quality quartz is a defensible choice.
+
+## Why ConstruBay
+
+ConstruBay has designed and installed custom kitchen islands throughout Marin County. Every island we build is designed in the context of the full kitchen layout — we do not design islands in isolation from the perimeter cabinetry, the appliance placement, or the sightlines from adjacent living spaces. We have established relationships with the stone yards and cabinet fabricators who produce the best work in the region, and we coordinate stone selection appointments as a standard part of the design process.
+
+Our [kitchen remodeling services in Marin County](/services/kitchen-remodel-marin-county) cover the full project from design coordination through final punch list, delivered under a fixed-scope contract. Our [general contractor services](/marin-county-general-contractor) ensure complete accountability across every trade on your project. CSLB #1106798.
+
+[Schedule a Complimentary Assessment](https://calendly.com/construbay/initial-consultation-construbay)`,
+  },
+  {
+    slug: 'best-bathroom-tile-marin-county',
+    title: 'Best Bathroom Tile for Marin County Homes: Stone, Marble, or Porcelain?',
+    excerpt: 'Stone, marble, and porcelain each perform differently in a luxury bathroom. Here\'s how to choose the right tile material for your Marin County home — and what it will cost.',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-03-26',
+    category: 'Remodeling',
+    tags: ['bathroom tile', 'marble', 'stone', 'porcelain', 'Marin County', 'bathroom remodel', '2026'],
+    coverImage: '/images/blog/blog-04.png',
+    readTime: 7,
+    isHowTo: false,
+    keyTakeaways: [
+      'Marble delivers the strongest visual impact but requires sealing and accepts etching as part of its patina',
+      'Quartzite offers marble-like aesthetics with significantly better durability — our most recommended natural stone',
+      'Large-format porcelain has become a legitimate luxury tile choice, especially for heated floors and steam showers',
+      'Grout joint size and tile format are as important as material choice in achieving a luxury result',
+      'Heated floor systems require specific tile thickness and installation coordination — specify early',
+    ],
+    faqs: [
+      {
+        question: 'What is the best tile for a luxury bathroom in Marin County?',
+        answer: 'For a luxury primary bathroom in Marin County, the best tile depends on the space and usage. For shower walls, honed marble (Calacatta or Statuario) delivers the strongest luxury signal and ages gracefully with proper sealing. For shower floors, a natural stone mosaic or a textured porcelain provides slip resistance. For the main bathroom floor with radiant heat, large-format quartzite or premium porcelain provides excellent heat conductivity, minimal grout lines, and long-term durability. The most cohesive results use the same stone family throughout the primary surfaces.',
+      },
+      {
+        question: 'How much does tile installation cost for a bathroom remodel in Marin County?',
+        answer: 'Tile installation cost in Marin County ranges from $18–$32 per square foot for domestic porcelain or ceramic with standard installation. Quality natural stone installation — marble, quartzite, or travertine — runs $35–$65 per square foot installed, including setting materials, waterproofing membrane, and labor. Book-matched stone slab panels installed as wall tile run $80–$160 per square foot. Complex pattern work, mosaic field tile, and herringbone or chevron layouts command a labor premium of 20–35% above standard installation rates.',
+      },
+      {
+        question: 'Does marble tile hold up well in a Marin County bathroom?',
+        answer: 'Marble in a properly waterproofed, correctly installed, and routinely sealed bathroom holds up well for decades. The key variables are installation quality — waterproofing must be continuous behind all wet surfaces — and maintenance discipline. Marble etches from acidic products (some soaps, cleaners, and personal care products) and should be sealed annually in high-use showers. Many clients who understand these properties prefer the natural patina marble develops over time. For clients who want zero maintenance, quartzite or premium porcelain is a better fit.',
+      },
+    ],
+    content: `Tile selection is where a luxury bathroom remodel either succeeds or falls short. The right material, installed correctly at the right scale, creates a bathroom that feels considered and permanent. The wrong material — or the right material installed poorly — reads immediately as a shortcut.
+
+In Marin County\'s luxury residential market, tile selection carries particular weight because buyers at this price tier are sophisticated observers. They know the difference between Calacatta marble and a porcelain facsimile. They notice grout joint width. They recognize when large-format tile has been laid without attention to layout lines and symmetry.
+
+This guide covers the materials we work with most often, their honest trade-offs, and what they cost to install correctly in Marin County in 2026.
+
+## Material Comparison: Stone, Marble, and Porcelain
+
+**Marble**
+Marble is the material that defines luxury bathroom aesthetics in Marin County. Its natural veining — the complex, organic patterns of Calacatta, Statuario, Arabescato, and Carrara varieties — cannot be fully replicated by any manufactured product. In a primary bathroom with good natural light, marble-clad walls have a visual depth and warmth that buyers recognize and respond to emotionally.
+
+The honest trade-offs: marble is a calcite-based stone that etches from acidic contact. Citrus, vinegar, and many personal care products will dull the polished surface over time. In a shower used daily with standard shampoos and cleansers, etching is a gradual and inevitable process. For many clients, this natural aging — the patina that develops — is part of what they love about marble. For clients who expect a pristine surface with zero maintenance, it is a source of ongoing frustration.
+
+Marble should be installed over a fully continuous waterproofing membrane (Schluter Kerdi or equivalent) in wet areas. It requires annual sealing in high-use showers. The setting material must be white non-sanded grout on polished surfaces to prevent scratch contamination.
+
+Installed cost: $35–$80 per square foot depending on tile size, marble variety, and layout complexity.
+
+**Quartzite**
+Quartzite is a metamorphic rock that begins as sandstone and is transformed under heat and pressure into a material with the visual character of marble and the physical properties of granite. The veining patterns in quartzite — particularly in varieties like Super White, Taj Mahal, Calacatta Macauba, and Azul Macaubas — are stunning. The durability is superior to marble in every measurable way.
+
+Quartzite does not etch from acidic contact. It resists heat, scratching, and staining better than marble. In a bathroom used daily by multiple occupants, quartzite\'s performance advantage over marble is significant and compounds over time.
+
+The trade-off is aesthetic: quartzite does not quite achieve the precise luminosity of the finest Calacatta marble. For clients who want the best possible durability with a marble-adjacent aesthetic, quartzite is the right answer. It is the material we recommend most often for primary bathrooms.
+
+Installed cost: $40–$90 per square foot depending on variety and format.
+
+**Travertine**
+Travertine is a sedimentary limestone with a warm, earthy aesthetic that reads as more casual and Mediterranean than the crisp luxury of marble or quartzite. It is appropriate for certain design contexts — Spanish Colonial and Tuscan-influenced homes in the Sonoma County wine country aesthetic, for instance — but can feel mismatched in the refined, light-filled bathrooms typical of Marin County\'s Craftsman and mid-century homes.
+
+Travertine requires filling of its natural voids (unfilled travertine collects debris and moisture in wet areas) and sealing. It is softer than marble and scratches more readily. We recommend travertine selectively, when it is specifically appropriate to the design context.
+
+Installed cost: $25–$55 per square foot.
+
+**Large-Format Porcelain**
+The gap between natural stone and high-quality porcelain has narrowed meaningfully over the past decade. Large-format porcelain panels (24x48, 24x24, and slab-format up to 12 feet long) from manufacturers like Iris Ceramica, Emil Group, Atlas Concorde, and Fondovalle now produce surfaces that are genuinely difficult to distinguish from stone in photographs — and that perform significantly better in wet applications.
+
+Porcelain does not etch, does not require sealing, resists staining completely, and is fully impervious to moisture when properly installed. For steam showers — where the constant temperature and humidity cycling creates conditions that accelerate natural stone deterioration — porcelain is often the technically superior choice.
+
+The visual gap compared to natural stone is most apparent at close range, in raking light, and in large open formats where the repetition of a digitally-printed pattern becomes visible. In a well-designed bathroom with varied surfaces, this is a non-issue for most clients.
+
+Installed cost: $22–$65 per square foot for premium large-format porcelain.
+
+## Cost Per Square Foot Installed in Marin County 2026
+
+Domestic ceramic or porcelain, standard installation: $18–$32/sq ft
+Premium large-format porcelain: $28–$55/sq ft
+Calacatta or Statuario marble: $45–$85/sq ft
+Quartzite (Super White, Taj Mahal, premium varieties): $50–$95/sq ft
+Book-matched stone slab panels, wall installation: $85–$160/sq ft
+Mosaic tile (natural stone or glass): $55–$120/sq ft installed
+
+Labor premiums for complex patterns (herringbone, chevron, geometric) add 20–35% to installation cost.
+
+## What Delivers the Best Result in a Luxury Marin Bathroom
+
+The three decisions that most affect the final quality of a tiled bathroom are: material selection, tile format and layout planning, and grout joint specification.
+
+**Format and layout.** Large-format tile — 24x24 minimum, 24x48 or larger preferred — reads as intentional and luxurious. Small tile (4x4, 6x6) reads as dated regardless of material quality. The layout must be centered on the dominant visual axis of each surface. A shower with tile that is clearly offset from center or that terminates awkwardly at a corner was not properly planned.
+
+**Grout joint specification.** The thinnest possible grout joint consistent with the tile format and substrate conditions reads as luxury. 1/16-inch rectified tile with tight joints creates a surface that approaches the seamless quality of stone slab. 3/8-inch grout joints with standard-format tile create a grid pattern that dominates the visual field. The choice of grout color — matching the tile or creating contrast — is a design decision, not an afterthought.
+
+**Heated floor coordination.** Radiant heated floors require electric heat mat installation before tile setting. The mat thickness affects the setting bed height and must be coordinated with the door threshold, shower pan height, and adjacent flooring transitions before any tile work begins. This is a detail that must be specified in the permit drawings, not decided on-site.
+
+## Why ConstruBay
+
+ConstruBay manages tile selection, specification, and installation as an integrated part of every bathroom remodel. We do not subcontract design decisions to a tile supplier. We work with our clients to specify materials that are appropriate to the design, the usage, and the long-term maintenance expectations — and we install them correctly, over properly waterproofed substrates, with the grout joint discipline and layout precision that luxury results require.
+
+Our [bathroom remodeling services in Marin County](/services/bathroom-remodel-marin-county) cover the full project from design through final inspection under a fixed-scope contract. Our [kitchen and bathroom remodeling experience](/services/kitchen-remodel-marin-county) across hundreds of Marin County projects means we bring specific knowledge of what works in this market. CSLB #1106798.
+
+[Schedule a Complimentary Assessment](https://calendly.com/construbay/initial-consultation-construbay)`,
+  },
+  {
+    slug: 'san-rafael-home-remodeling',
+    title: 'San Rafael Home Remodeling: What Homeowners Need to Know in 2026',
+    excerpt: 'San Rafael is Marin County\'s largest and most active building permit jurisdiction. Here\'s what makes it distinct — and what luxury homeowners need to know before starting a remodel in 2026.',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-02',
+    category: 'City Guides',
+    tags: ['San Rafael', 'home remodeling', 'Marin County', 'general contractor', 'permits', '2026'],
+    coverImage: '/images/blog/blog-01.png',
+    readTime: 8,
+    isHowTo: false,
+    keyTakeaways: [
+      'San Rafael processes more building permits than any other Marin County city — and has invested in digital permit infrastructure',
+      'Standard residential remodel permits in San Rafael run 5–9 weeks in 2026',
+      'San Rafael has no Design Review Board requirement for most residential remodels — a meaningful time advantage',
+      'Terra Linda, Glenwood, and Dominican neighborhoods are active luxury remodel markets with strong renovation ROI',
+      'ConstruBay has completed kitchen, bathroom, ADU, and whole-home remodel projects throughout San Rafael',
+    ],
+    faqs: [
+      {
+        question: 'How long do building permits take in San Rafael?',
+        answer: 'San Rafael processes more building permits than any other Marin County city and has invested significantly in its digital permit infrastructure through the eTrakit portal. Standard residential remodel permits — kitchens, bathrooms, and interior alterations without structural changes — are processing in 5–9 weeks in 2026. Projects involving structural modifications, ADUs, or major additions take 10–16 weeks. San Rafael does not have a Design Review Board requirement for most residential projects, which eliminates the 8–12 week design review cycle that adds to timelines in Mill Valley and Tiburon.',
+      },
+      {
+        question: 'Do I need a permit for a kitchen or bathroom remodel in San Rafael?',
+        answer: 'Yes. Any kitchen or bathroom remodel involving electrical work, plumbing modifications, structural changes, or mechanical system modifications requires a permit from the City of San Rafael Building Division. Cabinet-only replacements without touching electrical, plumbing, or structure may not require a permit — but this is the exception, not the rule. ConstruBay evaluates permit requirements for every San Rafael project and handles all applications through the city\'s eTrakit digital submission portal.',
+      },
+      {
+        question: 'What types of home remodeling projects are most popular in San Rafael?',
+        answer: 'San Rafael\'s most active remodeling categories in 2026 are kitchen and primary bathroom renovations in the Terra Linda, Glenwood, and Dominican neighborhoods; ADU and garage conversion projects across the city\'s residential zones; and whole-home remodels in mid-century homes that have not been updated since original construction. The city\'s strong rental market and proximity to Highway 101 make ADUs particularly attractive investments for San Rafael homeowners.',
+      },
+    ],
+    content: `San Rafael is Marin County\'s seat of government, its largest city, and its highest-volume permit jurisdiction. For homeowners planning a remodel, this translates into a building department with more staff, better digital infrastructure, and a higher-volume workflow than any other city in the county. It also means a remodeling market that is active, competitive, and growing.
+
+This guide covers what luxury homeowners in San Rafael need to know before starting a remodel in 2026 — from the permit process to the neighborhoods where renovation investment delivers the strongest returns.
+
+## The San Rafael Permit Process
+
+San Rafael\'s building department processes more residential permits than any other Marin County jurisdiction. The city has invested in its eTrakit digital submission portal, which allows contractors and homeowners to submit applications, track review status, respond to correction notices, and schedule inspections online. This digital infrastructure meaningfully reduces the friction of routine permit management.
+
+Standard residential remodel permits in San Rafael are processing in 5–9 weeks in 2026 — faster than most other Marin County cities. Projects involving structural modifications, ADUs, or major additions take longer: 10–16 weeks for projects with multiple department sign-offs.
+
+San Rafael does not have a Design Review Board requirement for standard residential remodels. This is a significant distinction from Mill Valley, Tiburon, Sausalito, Ross, and Belvedere — where exterior modifications to existing homes frequently require a public hearing and board approval before the building permit can be issued. In San Rafael, a kitchen remodel, bathroom renovation, or ADU addition goes directly into building department plan check without a discretionary review layer. For homeowners on a schedule, this saves 8–12 weeks.
+
+The primary causes of permit delays in San Rafael are the same as everywhere else in Marin: incomplete applications and plan check correction cycles. A missing structural calculation, an incomplete Title 24 energy report, or a plumbing plan that conflicts with the floor plan triggers a correction notice and resets the queue. ConstruBay\'s PlanPass.ai pre-submission analysis eliminates these issues before they reach the plan checker.
+
+## Popular Remodeling Projects in San Rafael
+
+**Kitchen and Bathroom Remodels**
+The kitchen and bathroom remodel market in San Rafael is concentrated in the Terra Linda, Glenwood, Dominican, and Lucas Valley neighborhoods — areas with large lots, well-built mid-century and contemporary homes, and buyers who expect updated interiors. Most of these homes were built between 1960 and 1990 and have original or first-generation kitchens that have not been updated to current standards.
+
+A well-executed kitchen remodel in Terra Linda or Dominican — custom cabinetry, stone countertops, professional appliances, and a thoughtful layout — returns an estimated 70–80% of project cost at resale and meaningfully accelerates time on market. Primary bathroom renovations in the same neighborhoods deliver similar returns when executed at a quality level appropriate to the home\'s price tier.
+
+**ADUs and Garage Conversions**
+San Rafael\'s residential neighborhoods are active ADU markets. The city has zoned relatively broadly for ADU development, and its proximity to Highway 101, SMART rail, and major employment centers in San Rafael, Novato, and the Highway 101 corridor makes rental units highly desirable. Well-finished one-bedroom ADUs in Terra Linda and Lucas Valley currently rent for $2,800–$3,800/month.
+
+Garage conversions are the most active ADU category in San Rafael because California law limits restrictions on them, the city\'s relatively flat residential neighborhoods include many properties with suitable detached garages, and the cost-to-rental-return ratio is compelling. ConstruBay has completed garage conversion ADUs throughout San Rafael and can conduct a complimentary feasibility assessment of any property.
+
+**Whole-Home Remodels**
+San Rafael\'s large supply of mid-century homes — many built in the 1960s and 1970s — represents a significant opportunity for comprehensive renovation. These homes often have good bones: solid construction, generous square footage, and lots that are larger and flatter than those in Mill Valley or Tiburon. Buyers who purchase them at a discount relative to their potential and invest in a thorough renovation — opening floor plans, replacing mechanical systems, updating all finishes — consistently achieve strong returns in San Rafael\'s active buyer market.
+
+**Home Additions**
+Adding square footage to an existing San Rafael home — a primary suite wing, a second story, or a family room extension — is a viable project in many of the city\'s residential neighborhoods where lot coverage limits allow it. San Rafael\'s permitting process for additions is straightforward compared to cities with discretionary design review, and the city\'s flat topography simplifies foundation engineering relative to hillside Marin jurisdictions.
+
+## Costs for San Rafael Remodeling Projects in 2026
+
+**Kitchen remodel:** $90,000 – $175,000 depending on scope and finish level
+**Primary bathroom remodel:** $75,000 – $130,000
+**Secondary bathroom remodel:** $40,000 – $68,000
+**Garage conversion ADU:** $130,000 – $235,000
+**Detached ADU:** $270,000 – $460,000
+**Home addition (per sq ft):** $450 – $650 per square foot of new conditioned space
+
+These ranges reflect completed ConstruBay projects in San Rafael. Site conditions, existing system conditions, and finish selections are the primary sources of variance within each range.
+
+## Why ConstruBay for San Rafael Projects
+
+ConstruBay has completed kitchen, bathroom, ADU, and whole-home remodel projects throughout San Rafael\'s residential neighborhoods. We are a licensed Marin County general contractor (CSLB #1106798) based in Mill Valley, and we operate exclusively in Marin and Sonoma Counties. Every project is owner-led by Paulo Fernandes from the initial site assessment through final inspection.
+
+Our familiarity with the San Rafael building department — the eTrakit portal, the plan check process, and the inspection scheduling system — means we navigate the permit process efficiently. Our PlanPass.ai pre-submission platform ensures clean applications that move through plan check without unnecessary correction cycles.
+
+We deliver every San Rafael project under a fixed-scope contract with transparent line-item pricing. The number you approve is the number you pay. No change-order surprises, no budget drift, no scope creep.
+
+Explore our [general contractor services in Marin County](/marin-county-general-contractor) and our [kitchen remodeling services](/services/kitchen-remodel-marin-county) for more detail on how we approach San Rafael projects. CSLB #1106798.
+
+[Schedule a Complimentary Assessment](https://calendly.com/construbay/initial-consultation-construbay)`,
+  },
 ];
 
 export function getAllPosts(): BlogPost[] {
