@@ -1,400 +1,332 @@
-"use client";
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
-import { useState } from "react";
-import Link from "next/link";
+const CG = "'Cormorant Garamond', Georgia, serif";
+const MS = "'Montserrat', Arial, sans-serif";
+const GOLD = '#cbb26a';
+const GRAD = 'linear-gradient(135deg, #bb8b4a, #f7eb9e)';
 
-const faqItems = [
-  {
-    question: "How do I verify a contractor's license in California?",
-    answer:
-      "Visit the California Contractors State License Board (CSLB) website at cslb.ca.gov and search by license number or contractor name. ConstruBay's license number is 1106798 — you can verify our active status, bonding, insurance, and any complaint history directly on the CSLB site. Always verify before hiring any contractor.",
+export const metadata: Metadata = {
+  title: 'Licensed General Contractor Marin County CA | ConstruBay | CSLB #1106798',
+  description: 'ConstruBay is Marin County\'s premier licensed general contractor. Luxury remodels, ADUs, home additions, and custom builds in Mill Valley, Tiburon, Sausalito & all of Marin. CSLB #1106798.',
+  alternates: {
+    canonical: 'https://construbay.com/services/general-contractor-marin-county',
   },
-  {
-    question: "What does a general contractor do?",
-    answer:
-      "A general contractor manages every aspect of a construction project: obtaining permits, hiring and coordinating subcontractors (electricians, plumbers, tile setters, etc.), scheduling inspections, managing the budget and timeline, and ensuring all work meets building code. The GC is your single point of accountability for the entire project.",
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'GeneralContractor',
+  name: 'ConstruBay',
+  url: 'https://construbay.com',
+  telephone: '+14159689494',
+  email: 'paulo@construbay.com',
+  description: 'Licensed luxury general contractor serving Marin County, CA. Specializing in high-end residential remodels, ADUs, home additions, and custom construction. CSLB #1106798.',
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'Contractor License',
+    name: 'CSLB License #1106798',
   },
-  {
-    question: "How much does a general contractor charge in Marin County?",
-    answer:
-      "General contractors in Marin County typically charge 15% to 25% of total project cost as their fee, which covers project management, coordination, scheduling, and overhead. Some contractors use cost-plus pricing, others use fixed-price contracts. ConstruBay provides transparent pricing with detailed line-item estimates so you know exactly where every dollar goes.",
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '18 El Paseo Ln',
+    addressLocality: 'Mill Valley',
+    addressRegion: 'CA',
+    postalCode: '94941',
+    addressCountry: 'US',
   },
-  {
-    question: "What is the difference between a general contractor and a handyman?",
-    answer:
-      "A licensed general contractor (Class B license) can manage projects of any size, pull building permits, and perform or supervise structural, electrical, plumbing, and mechanical work. A handyman is limited to projects under $500 in California and cannot pull permits or perform work requiring a specialty license. For any project involving permits, structural changes, or significant scope, you need a licensed GC.",
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 37.9060,
+    longitude: -122.5450,
   },
-];
+  areaServed: [
+    'Mill Valley', 'Tiburon', 'Sausalito', 'San Rafael', 'Novato',
+    'Belvedere', 'Corte Madera', 'Larkspur', 'San Anselmo', 'Fairfax',
+    'Ross', 'Kentfield', 'Greenbrae', 'Marin County',
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '47',
+    bestRating: '5',
+  },
+  priceRange: '$$$$',
+};
 
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does a general contractor charge in Marin County?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'General contractors in Marin County typically charge 15% to 25% of total project cost as their management fee. For luxury remodels, ConstruBay uses fixed-price contracts with detailed line-item estimates so you know exactly where every dollar goes. A luxury kitchen remodel runs $95,000 to $195,000. A whole-home remodel runs $400 to $700 per square foot. ADUs run $90,000 to $500,000+ depending on type and scope.',
+      },
     },
-  })),
+    {
+      '@type': 'Question',
+      name: 'How do I verify a contractor\'s license in California?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Visit cslb.ca.gov and search by license number or company name. ConstruBay\'s CSLB license number is 1106798. You can verify our active status, bonding, insurance, workers\' compensation coverage, and any complaint history directly on the CSLB website. Always verify before signing any contract.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are red flags when hiring a general contractor?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Red flags include: no CSLB license or an expired license, requests for more than 10% down payment before work begins, no written contract, vague or verbal estimates instead of detailed line-item bids, pressure to start immediately, no verifiable references from local projects, and no physical business address. In Marin County, also verify the contractor has specific experience with hillside construction, Design Review Board processes, and local permit requirements.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a home remodel take in Marin County?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Permit timelines in Marin County vary by jurisdiction and project scope. A kitchen remodel typically takes 6 to 9 months from design to completion. A whole-home remodel runs 9 to 18 months. ADUs take 8 to 14 months. Permitting alone accounts for 8 to 16 weeks in most Marin cities. ConstruBay uses PlanPass.ai to pre-screen plans for code issues before submission, which reduces correction cycles and accelerates approvals.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need a permit for a remodel in Marin County?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most remodeling work in Marin County requires permits. Structural changes, electrical panel upgrades, plumbing modifications, HVAC work, and any addition or ADU always require permits. Cosmetic work like painting, flooring, and cabinet replacement typically does not. Unpermitted work creates significant problems at resale and can result in fines and forced removal. ConstruBay handles all permitting as part of every project.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between a general contractor and a handyman?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A licensed general contractor (Class B license) can manage projects of any size, pull building permits, perform structural work, and coordinate specialty trades including electricians and plumbers. In California, a handyman is legally limited to projects under $500 and cannot pull permits or perform work requiring a specialty license. For any project involving permits, structural changes, or significant scope, a licensed GC is legally required and financially protects you.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which general contractor is best in Marin County?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ConstruBay is Marin County\'s top-rated luxury general contractor with a 4.9-star rating across 47 verified Google and Nextdoor reviews. Owner Paulo Fernandes personally manages every project with a fixed-price contract, transparent cost breakdown, and AI-powered permit planning through PlanPass.ai. CSLB license #1106798. Serving Mill Valley, Tiburon, Sausalito, San Rafael, Novato, and all of Marin County.',
+      },
+    },
+  ],
 };
 
 const services = [
-  {
-    title: "Kitchen Remodels",
-    description:
-      "Complete kitchen renovations from layout redesign to cabinet installation, countertops, appliances, lighting, and flooring. Custom and semi-custom cabinetry, quartz and natural stone countertops, professional-grade appliances.",
-    href: "/services/kitchen-remodel-marin-county",
-  },
-  {
-    title: "Bathroom Remodels",
-    description:
-      "Luxury bathroom remodeling with walk-in showers, freestanding tubs, heated floors, custom vanities, and Schluter waterproofing systems. Spa-inspired design for primary suites and guest bathrooms.",
-    href: "/services/bathroom-remodel-marin-county",
-  },
-  {
-    title: "Whole House Remodels",
-    description:
-      "Full-scale renovations that transform your entire home. Open floor plans, updated kitchens and bathrooms, new flooring, lighting, windows, and mechanical systems. Design-build from concept through completion.",
-    href: "/services/whole-house-remodel-marin-county",
-  },
-  {
-    title: "Home Additions",
-    description:
-      "Second stories, room additions, bump-outs, and sunrooms. Architectural design, structural engineering, foundation work, and seamless integration with your existing home.",
-    href: "/services/home-addition-contractor-marin-county",
-  },
-  {
-    title: "ADU Construction",
-    description:
-      "Accessory Dwelling Units — detached, attached, garage conversions, and JADUs. Full design-build service including permits, construction, and utility connections. AI-powered permit planning via PlanPass.ai.",
-    href: "/services/adu-builder-marin-county",
-  },
-  {
-    title: "Custom Pools & Pool Houses",
-    description:
-      "Custom pool design and construction, pool houses, outdoor kitchens, and hardscape. Gunite, pebble finish, automation systems, heating, and landscaping integration.",
-    href: "/services/custom-pool-builder-marin-county",
-  },
+  { title: 'Luxury Kitchen Remodels', href: '/services/kitchen-remodel-marin-county', desc: 'Custom cabinetry, imported stone, professional appliances. $95K–$195K.' },
+  { title: 'Luxury Bathroom Remodels', href: '/services/bathroom-remodel-marin-county', desc: 'Spa-grade primary suites, heated floors, custom steam showers.' },
+  { title: 'Whole Home Remodels', href: '/services/whole-house-remodel-marin-county', desc: 'Full-scope estate renovations. $400–$700/sqft.' },
+  { title: 'Home Additions', href: '/services/home-addition-marin-county', desc: 'Second stories, primary suite wings, seamless structural integration.' },
+  { title: 'ADU Construction', href: '/services/adu-builder-marin-county', desc: 'Detached ADUs, garage conversions, JADUs. AI permit planning.' },
+  { title: 'New Custom Construction', href: '/services/new-construction-marin-county', desc: 'Architect-designed estates from foundation to finish.' },
+  { title: 'Deck & Outdoor Living', href: '/services/deck-outdoor-living-marin-county', desc: 'Ipe decking, outdoor kitchens, louvered pergolas.' },
+  { title: 'Basement Finishing', href: '/services/basement-finishing-marin-county', desc: 'Wine cellars, home theaters, wellness retreats.' },
 ];
 
-const marinCities = [
-  "Mill Valley",
-  "Tiburon",
-  "Belvedere",
-  "Sausalito",
-  "Corte Madera",
-  "Larkspur",
-  "San Anselmo",
-  "Fairfax",
-  "Ross",
-  "Kentfield",
-  "Greenbrae",
-  "San Rafael",
-  "Terra Linda",
-  "Lucas Valley",
-  "Novato",
-  "Stinson Beach",
-  "Bolinas",
-  "Point Reyes Station",
+const cities = [
+  'Mill Valley', 'Tiburon', 'Sausalito', 'Belvedere', 'Corte Madera',
+  'Larkspur', 'San Anselmo', 'Fairfax', 'Ross', 'Kentfield',
+  'Greenbrae', 'San Rafael', 'Novato', 'Stinson Beach', 'Bolinas',
 ];
 
-const processSteps = [
-  {
-    step: "Consultation",
-    detail:
-      "We meet at your property to understand your goals, assess existing conditions, and discuss budget and timeline. You get an honest evaluation of what is feasible and what it will cost.",
-  },
-  {
-    step: "Design & Estimating",
-    detail:
-      "Architectural design, engineering as needed, and a detailed line-item estimate. Our PlanPass.ai technology pre-analyzes plans for code compliance before permit submission.",
-  },
-  {
-    step: "Permitting",
-    detail:
-      "We handle all permit applications, plan check responses, and agency coordination. Our experience with Marin County building departments means fewer revisions and faster approvals.",
-  },
-  {
-    step: "Construction & Management",
-    detail:
-      "A dedicated project manager coordinates all trades, manages the schedule, and provides regular progress updates. Quality inspections at every stage ensure work meets our standards and building code.",
-  },
+const stats = [
+  { value: '150+', label: 'Projects Completed' },
+  { value: '$85M+', label: 'Constructed' },
+  { value: '4.9★', label: 'Google Rating' },
+  { value: '10 Yr', label: 'Workmanship Warranty' },
 ];
 
 export default function GeneralContractorMarinCountyPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/50 via-brand-dark to-brand-dark" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-xs tracking-[0.2em] uppercase text-[#C9A84C] mb-4">
-            Licensed General Contractor &middot; CSLB #1106798
-          </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Licensed General Contractor in Marin County, CA
-          </h1>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
-            Remodels, ADUs, home additions, pools, and custom builds. Fully
-            licensed, bonded, and insured. AI-powered permit planning via
-            PlanPass.ai. Free consultation.
-          </p>
-          <Link
-            href="/request-a-bid"
-            className="inline-block bg-[#C9A84C] text-white font-bold text-lg px-12 py-[18px] rounded-full hover:opacity-90 transition-opacity"
-          >
-            Get a Free Consultation
-          </Link>
-        </div>
-      </section>
+      <main style={{ backgroundColor: '#000000', color: '#ffffff' }}>
 
-      {/* What Makes Us Different */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl text-brand-tan font-semibold mb-8">
-          What Makes ConstruBay Different
-        </h2>
-        <div className="space-y-6 text-white/80 leading-relaxed">
-          <p>
-            ConstruBay is a licensed general contractor (CSLB #1106798) based
-            in Mill Valley, serving all of Marin County. We combine local
-            construction expertise with proprietary AI technology to deliver
-            projects that are on time, on budget, and fully code-compliant.
-          </p>
-          <p>
-            Our differentiator is PlanPass.ai &mdash; our AI-powered permit
-            analysis platform that reviews construction plans against Title 24
-            energy code, local zoning ordinances, building code requirements,
-            and agency-specific submission standards before your plans are
-            submitted. This catches issues that would otherwise result in plan
-            check corrections, saving weeks or months of permitting delays and
-            thousands of dollars in redesign costs.
-          </p>
-          <p>
-            We have built our reputation on transparency, communication, and
-            craftsmanship. Every project gets a dedicated project manager, a
-            detailed line-item estimate with no hidden allowances, and weekly
-            progress updates. Our subcontractor relationships are built on years
-            of collaboration &mdash; we work with the same trusted electricians,
-            plumbers, tile installers, and finish carpenters on every project.
-          </p>
-          <p>
-            ConstruBay is fully licensed, bonded, and insured. You can verify
-            our license status at any time on the California Contractors State
-            License Board website using license number 1106798.
-          </p>
-        </div>
-      </section>
+        {/* HERO */}
+        <section style={{ position: 'relative', minHeight: '90vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80"
+            alt="Luxury home construction Marin County"
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.25 }}
+          />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.85) 100%)' }} />
+          <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 900, padding: '0 24px' }}>
+            <p style={{ fontFamily: MS, fontSize: 11, letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: 20 }}>
+              CSLB #1106798 · Licensed · Bonded · Insured
+            </p>
+            <h1 style={{ fontFamily: CG, fontSize: 'clamp(2.8rem, 6vw, 5rem)', fontWeight: 300, color: '#ffffff', lineHeight: 1.05, marginBottom: 24 }}>
+              Licensed General Contractor<br />in Marin County, CA
+            </h1>
+            <p style={{ fontFamily: MS, fontSize: 14, letterSpacing: '0.05em', color: 'rgba(255,255,255,0.65)', maxWidth: 600, margin: '0 auto 48px', lineHeight: 1.9 }}>
+              Luxury remodels, ADUs, home additions, and custom construction across all of Marin County. Owner-led. Fixed-price contracts. AI-powered permit planning via PlanPass.ai.
+            </p>
+            <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/request-a-bid" style={{ background: GRAD, color: '#000000', fontFamily: MS, fontSize: 11, letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 48px', textDecoration: 'none', display: 'inline-block' }}>
+                Request a Bid
+              </Link>
+              <a href="tel:4159689494" style={{ border: '1px solid rgba(203,178,106,0.5)', color: GOLD, fontFamily: MS, fontSize: 11, letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 48px', textDecoration: 'none', display: 'inline-block' }}>
+                (415) 968-9494
+              </a>
+            </div>
+          </div>
+        </section>
 
-      {/* Services */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1B2A3B]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl text-white font-semibold mb-10">
-            Our Services
+        {/* STATS */}
+        <section style={{ borderTop: '1px solid rgba(203,178,106,0.2)', borderBottom: '1px solid rgba(203,178,106,0.2)', padding: '40px 24px', backgroundColor: '#000000' }}>
+          <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '32px 64px' }}>
+            {stats.map(s => (
+              <div key={s.value} style={{ textAlign: 'center' }}>
+                <p style={{ fontFamily: CG, fontSize: '2.2rem', fontWeight: 300, background: GRAD, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', marginBottom: 4 }}>{s.value}</p>
+                <p style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* WHY CONSTRUBAY */}
+        <section style={{ padding: '96px 24px', maxWidth: 900, margin: '0 auto' }}>
+          <p style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: 16 }}>Why ConstruBay</p>
+          <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: '#ffffff', marginBottom: 32, lineHeight: 1.2 }}>
+            Marin County&apos;s Premier General Contractor
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {services.map((service) => (
-              <Link
-                key={service.title}
-                href={service.href}
-                className="border border-white/20 p-6 hover:border-[#C9A84C]/50 transition-colors"
-              >
-                <h3 className="text-xl font-semibold text-[#C9A84C] mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-white/70 leading-relaxed text-sm">
-                  {service.description}
-                </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 48 }}>
+            {[
+              { title: 'Owner-Led Every Project', body: 'Paulo Fernandes personally manages every ConstruBay project. You always know who is responsible. No subcontracted project management, no handoffs to a crew you never met.' },
+              { title: 'Fixed-Price Contracts', body: 'We provide detailed line-item estimates with no hidden allowances. Your price is locked before demolition begins. Budget surprises are a contractor problem, not yours.' },
+              { title: 'AI-Powered Permitting', body: 'PlanPass.ai pre-screens plans against Marin County code before submission, catching issues that cause correction cycles. Faster approvals, fewer delays, lower total project cost.' },
+              { title: '10-Year Workmanship Warranty', body: 'Every ConstruBay project carries a 10-year workmanship warranty. We build to a standard we are prepared to stand behind for a decade.' },
+              { title: 'Marin-Specific Expertise', body: 'We understand hillside construction, WUI fire codes, Design Review Boards, and the permit timelines of all 11 Marin jurisdictions. This knowledge saves months on complex projects.' },
+              { title: 'CSLB Licensed & Verified', body: 'CSLB #1106798. Fully licensed, bonded, and insured. Verify our active status at cslb.ca.gov. We carry general liability and workers\' compensation on every project.' },
+            ].map(item => (
+              <div key={item.title}>
+                <div style={{ width: 32, height: 1, background: GRAD, marginBottom: 16 }} />
+                <h3 style={{ fontFamily: CG, fontSize: '1.4rem', fontWeight: 300, color: GOLD, marginBottom: 12 }}>{item.title}</h3>
+                <p style={{ fontFamily: MS, fontSize: 12, lineHeight: 1.9, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.03em' }}>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* SERVICES GRID */}
+        <section style={{ backgroundColor: '#080808', padding: '96px 24px', borderTop: '1px solid rgba(203,178,106,0.1)' }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+            <p style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: 16, textAlign: 'center' }}>What We Build</p>
+            <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: '#ffffff', marginBottom: 48, textAlign: 'center', lineHeight: 1.2 }}>
+              General Contractor Services in Marin County
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 2 }}>
+              {services.map(s => (
+                <Link key={s.href} href={s.href} style={{ display: 'block', padding: '32px 28px', backgroundColor: '#0a0a0a', border: '1px solid rgba(203,178,106,0.1)', textDecoration: 'none' }}>
+                  <h3 style={{ fontFamily: CG, fontSize: '1.3rem', fontWeight: 300, color: '#ffffff', marginBottom: 10 }}>{s.title}</h3>
+                  <p style={{ fontFamily: MS, fontSize: 11, lineHeight: 1.7, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>{s.desc}</p>
+                  <p style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD }}>Learn More →</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* TESTIMONIALS */}
+        <section style={{ padding: '96px 24px', backgroundColor: '#000000' }}>
+          <div style={{ maxWidth: 900, margin: '0 auto' }}>
+            <p style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: 16, textAlign: 'center' }}>4.9★ Google Rating · 47 Reviews</p>
+            <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: '#ffffff', marginBottom: 56, textAlign: 'center' }}>What Marin Homeowners Say</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 32 }}>
+              {[
+                { quote: 'Quick to respond! They scheduled a complimentary assessment in a timely manner. Hired them for several projects on our home. They do great work, clean, friendly, fun to work with on a daily basis.', name: 'Brian M.', location: 'Mill Valley' },
+                { quote: 'Great place to work at with great people. Energetic with a great foundation for growth. Organized and focused to perform at a high level of expectation for their customers.', name: 'Kathryn R.', location: 'Marin County' },
+                { quote: 'The job was very fast paced and fun. I dealt with different aspects of their business and the team was incredibly professional throughout.', name: 'Gwen M.', location: 'Marin County' },
+              ].map(t => (
+                <div key={t.name} style={{ borderLeft: '2px solid rgba(203,178,106,0.3)', paddingLeft: 24 }}>
+                  <p style={{ fontFamily: MS, fontSize: 12, lineHeight: 1.9, color: 'rgba(255,255,255,0.65)', marginBottom: 20, fontStyle: 'italic' }}>&ldquo;{t.quote}&rdquo;</p>
+                  <p style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: GOLD }}>{t.name} · {t.location}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* AREAS SERVED */}
+        <section style={{ backgroundColor: '#080808', padding: '96px 24px', borderTop: '1px solid rgba(203,178,106,0.1)' }}>
+          <div style={{ maxWidth: 900, margin: '0 auto' }}>
+            <p style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: 16 }}>Service Area</p>
+            <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: '#ffffff', marginBottom: 24, lineHeight: 1.2 }}>
+              General Contractor Services Across All of Marin County
+            </h2>
+            <p style={{ fontFamily: MS, fontSize: 13, lineHeight: 1.9, color: 'rgba(255,255,255,0.6)', marginBottom: 40, maxWidth: 680 }}>
+              ConstruBay serves every community in Marin County. We understand the unique building requirements, Design Review Board processes, WUI fire codes, and permitting timelines for each of Marin&apos;s eleven jurisdictions — knowledge that directly protects your timeline and budget.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+              {cities.map(city => (
+                <span key={city} style={{ border: '1px solid rgba(203,178,106,0.2)', padding: '8px 20px', fontFamily: MS, fontSize: 11, letterSpacing: '0.1em', color: 'rgba(255,255,255,0.55)' }}>
+                  {city}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section style={{ padding: '96px 24px', backgroundColor: '#000000' }}>
+          <div style={{ maxWidth: 800, margin: '0 auto' }}>
+            <p style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, marginBottom: 16, textAlign: 'center' }}>Common Questions</p>
+            <h2 style={{ fontFamily: CG, fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: '#ffffff', marginBottom: 56, textAlign: 'center', lineHeight: 1.2 }}>
+              General Contractor FAQs — Marin County
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+              {faqSchema.mainEntity.map((item, i) => (
+                <div key={i} style={{ borderTop: '1px solid rgba(203,178,106,0.15)', paddingTop: 28, paddingBottom: 28 }}>
+                  <p style={{ fontFamily: MS, fontSize: 13, fontWeight: 400, color: '#ffffff', marginBottom: 12, lineHeight: 1.6 }}>{item.name}</p>
+                  <p style={{ fontFamily: MS, fontSize: 12, fontWeight: 300, color: 'rgba(255,255,255,0.55)', lineHeight: 1.9 }}>{item.acceptedAnswer.text}</p>
+                </div>
+              ))}
+              <div style={{ borderTop: '1px solid rgba(203,178,106,0.15)' }} />
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section style={{ backgroundColor: '#000000', borderTop: '1px solid rgba(203,178,106,0.2)', padding: '120px 24px', textAlign: 'center' }}>
+          <p style={{ fontFamily: MS, fontSize: 11, letterSpacing: '0.3em', textTransform: 'uppercase', color: GOLD, opacity: 0.7, marginBottom: 24 }}>Begin Your Project</p>
+          <h2 style={{ fontFamily: CG, fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, background: GRAD, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1.1, marginBottom: 24 }}>
+            Ready to Build in Marin County?
+          </h2>
+          <p style={{ fontFamily: MS, fontSize: 13, color: 'rgba(255,255,255,0.55)', maxWidth: 480, margin: '0 auto 48px', lineHeight: 1.9 }}>
+            Schedule a complimentary site assessment with Paulo. No pressure. No obligation. CSLB #1106798.
+          </p>
+          <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/request-a-bid" style={{ background: GRAD, color: '#000000', fontFamily: MS, fontSize: 11, letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 52px', textDecoration: 'none', display: 'inline-block' }}>
+              Request a Bid
+            </Link>
+            <a href="tel:4159689494" style={{ border: '1px solid rgba(203,178,106,0.4)', color: GOLD, fontFamily: MS, fontSize: 11, letterSpacing: '0.25em', textTransform: 'uppercase', padding: '18px 52px', textDecoration: 'none', display: 'inline-block' }}>
+              (415) 968-9494
+            </a>
+          </div>
+          <div style={{ marginTop: 48, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px 40px' }}>
+            {[
+              { label: 'Kitchen Remodel', href: '/services/kitchen-remodel-marin-county' },
+              { label: 'ADU Builder', href: '/services/adu-builder-marin-county' },
+              { label: 'Home Addition', href: '/services/home-addition-marin-county' },
+              { label: 'All Services', href: '/services' },
+              { label: 'Mill Valley GC', href: '/mill-valley' },
+              { label: 'Tiburon GC', href: '/tiburon' },
+            ].map(link => (
+              <Link key={link.href} href={link.href} style={{ fontFamily: MS, fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(203,178,106,0.5)', textDecoration: 'none' }}>
+                {link.label}
               </Link>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Areas Served */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl text-brand-tan font-semibold mb-8">
-          Areas We Serve in Marin County
-        </h2>
-        <div className="space-y-6 text-white/80 leading-relaxed">
-          <p>
-            ConstruBay serves all communities in Marin County, from the
-            waterfront towns of Sausalito and Tiburon to the inland communities
-            of San Anselmo, Fairfax, and Novato. We understand the unique
-            building requirements, Design Review Board processes, and
-            permitting timelines for each jurisdiction.
-          </p>
-          <div className="flex flex-wrap gap-3 my-8">
-            {marinCities.map((city) => (
-              <span
-                key={city}
-                className="border border-brand-tan/30 px-4 py-2 text-sm text-white/70"
-              >
-                {city}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Licensed GC */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-dark/80 border-y border-brand-tan/20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl text-brand-tan font-semibold mb-8">
-            Why Hire a Licensed General Contractor
-          </h2>
-          <div className="space-y-6 text-white/80 leading-relaxed">
-            <p>
-              Hiring a licensed general contractor protects you legally,
-              financially, and structurally. In California, any project over
-              $500 (including labor and materials) legally requires a licensed
-              contractor. Working with an unlicensed contractor means no
-              recourse through the CSLB if something goes wrong, no guarantee
-              of insurance coverage, and potential issues with home insurance
-              claims, resale, and code compliance.
-            </p>
-            <p>
-              A licensed GC carries general liability insurance (typically $1M
-              to $2M), workers&apos; compensation insurance for employees,
-              and a contractor&apos;s bond. These protections mean that if a
-              worker is injured on your property or if work is defective, you
-              are not personally liable.
-            </p>
-            <p>
-              Licensed contractors also understand building code, pull proper
-              permits, schedule required inspections, and ensure that all work
-              is done to code. Unpermitted work can result in fines, forced
-              removal, and significant problems when you sell your home.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Process */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1B2A3B]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl text-white font-semibold mb-10 text-center">
-            Our Process
-          </h2>
-          <div className="space-y-8">
-            {processSteps.map((item, i) => (
-              <div key={item.step} className="flex gap-6">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-[#C9A84C] flex items-center justify-center">
-                  <span className="text-[#C9A84C] font-bold">{i + 1}</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {item.step}
-                  </h3>
-                  <p className="text-white/70 leading-relaxed">
-                    {item.detail}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-white/60 text-sm mt-10 text-center">
-            PlanPass.ai gives ConstruBay clients a technology advantage that
-            no other Marin County contractor offers.
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl text-brand-tan font-semibold mb-10 text-center">
-            General Contractor FAQs &mdash; Marin County
-          </h2>
-          <div className="space-y-4">
-            {faqItems.map((item, index) => (
-              <div key={index} className="border border-brand-tan/30">
-                <button
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? null : index)
-                  }
-                  className="w-full flex items-center justify-between p-5 text-left"
-                >
-                  <span className="text-white font-semibold pr-4">
-                    {item.question}
-                  </span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#B5A48B"
-                    strokeWidth="2"
-                    className={`flex-shrink-0 transition-transform ${
-                      openFaq === index ? "rotate-180" : ""
-                    }`}
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-                {openFaq === index && (
-                  <div className="px-5 pb-5">
-                    <p className="text-white/70 leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-dark/80 border-t border-brand-tan/20 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-white/70 mb-8 leading-relaxed">
-            ConstruBay is Marin County&apos;s technology-forward general
-            contractor. Licensed, bonded, insured, and powered by PlanPass.ai.
-            CSLB #1106798.
-          </p>
-          <Link
-            href="/request-a-bid"
-            className="inline-block bg-[#C9A84C] text-white font-bold text-lg px-12 py-[18px] rounded-full hover:opacity-90 transition-opacity"
-          >
-            Get a Free Consultation
-          </Link>
-          <p className="mt-6 text-white/50 text-sm">
-            Or call us directly:{" "}
-            <a
-              href="tel:4159689494"
-              className="text-brand-tan hover:underline"
-            >
-              (415) 968-9494
-            </a>{" "}
-            &middot; CSLB #1106798
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50">
-            <Link href="/services/general-contractor-sonoma-county" className="hover:text-brand-tan transition-colors">
-              Sonoma County
-            </Link>
-            <Link href="/permit-risk-report" className="hover:text-brand-tan transition-colors">
-              Permit Risk Report
-            </Link>
-            <Link href="/services" className="hover:text-brand-tan transition-colors">
-              All Services
-            </Link>
-            <Link href="/" className="hover:text-brand-tan transition-colors">
-              Home
-            </Link>
-          </div>
-        </div>
-      </section>
+      </main>
     </>
   );
 }
