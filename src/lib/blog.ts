@@ -17,6 +17,233 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'should-you-remodel-marin-county-2026-rates-costs-permits',
+    title: 'Should You Remodel in Marin County in 2026? Interest Rates, Costs, and Permits Explained',
+    excerpt: 'The decision to remodel in 2026 is shaped by three hard numbers: 30-year fixed rates averaging 6.38% in late March 2026, Marin County&apos;s February median home price at $1,357,250, and construction costs that show no sign of meaningful decline. Here is the analysis.',
+    content: `## The Financing Environment Favors Improving What You Already Control
+
+Freddie Mac&apos;s Primary Mortgage Market Survey reported the 30-year fixed-rate mortgage averaged 6.38% as of late March 2026, with the 15-year at 5.75%. At the same time, Marin County&apos;s February 2026 median sale price was $1,357,250, with homes taking a median 31 days to sell. For homeowners who secured 3% to 3.5% fixed rates between 2020 and 2022, the prospect of surrendering that loan for a 6.38% rate on a new purchase is economically punitive. On a $1.5 million mortgage, the difference is approximately $4,500 per month in carrying cost. Over a ten-year holding period, that differential approaches $540,000 in nominal interest.
+
+The transactional costs of moving compound this calculation. On a median Marin home sale, sellers face commissions, transfer taxes, staging, escrow, and title insurance that collectively exceed $180,000 before any upgrade in purchase price. That capital generates zero return and exists purely as friction. The renovation alternative looks substantially different when the full cost of moving is accounted for.
+
+## Construction Costs Are Not Coming Down
+
+Homeowners sometimes assume that if housing activity is slower than the pandemic peak, construction pricing should be softer. The 2026 data does not support that assumption. Construction costs accounted for 64.4% of the average new home price in 2024, up from 60.8% in 2022. Lumber pricing remains uncertain, with combined duties on Canadian softwood imports near 45% as of late 2025. Builders in a 2025 survey estimated recent tariff actions added $10,900 per home on average, with more than 60% reporting higher costs.
+
+Labor is the other sustained pressure. The residential construction sector needs roughly 740,000 workers per year to keep pace with growth, retirements, and departures. That competition for skilled trades shows no sign of easing in the Bay Area, where Marin County&apos;s complex hillside and coastal work commands premium labor rates. Waiting for a dramatic cost reset is a strategy with no supporting evidence in the current market.
+
+## The Renovation Financing Math
+
+Most ConstruBay clients in 2026 fund renovations through a combination of cash reserves and HELOC draws. Current HELOC rates average approximately 8.1% on a variable basis. A $200,000 HELOC draw carries a monthly interest cost of roughly $1,350. Compared to the $4,500 monthly penalty of surrendering a 3.25% mortgage for a 6.38% purchase loan, renovation financing is substantially cheaper on a monthly basis — even before accounting for the $180,000+ in transactional moving costs.
+
+National remodeling demand remains substantial. Harvard&apos;s Joint Center for Housing Studies projected annual homeowner improvement spending to reach $522 billion by the end of 2026, and NAR&apos;s data shows kitchen upgrades, bathroom renovations, and primary suite improvements consistently rank among the highest joy scores and strongest cost recovery categories. The market is normalizing from pandemic highs, not collapsing.
+
+## Permits in 2026: More Digital, Not Necessarily Faster
+
+Marin County building and safety stopped accepting paper plan submittals on January 1, 2026, requiring electronic submission. The published digital-plan timeline shows approximately three days for intake processing, 15 days for prescreening, and an initial plan review of two to four weeks before corrections and fee assessment. For straightforward work, that is manageable. For luxury remodels with structural complexity, the building review timeline is only the beginning.
+
+Planning review is the larger schedule variable. Marin County states that most planning permit review takes three to six months, with longer timelines for more complex projects or those requiring environmental review. In Mill Valley, ADUs over 800 square feet and projects involving tree removal require planning approval before the building permit stage. Homeowners should stop thinking of "permit time" as a single number and instead evaluate whether their project stays ministerial or crosses into discretionary planning territory.
+
+California&apos;s 2025 Building Standards Code also took effect January 1, 2026. Permit packages prepared on outdated code assumptions are more likely to generate correction rounds that extend timelines and add cost. For serious remodels, early consultant coordination is worth real money in 2026.
+
+## The 2026 Decision Framework
+
+For most high-end Marin homeowners, the case for remodeling in 2026 is strong if the property is well located and the project is scoped intelligently. The rate-lock penalty for moving is significant, construction costs are not declining, and the permitting environment rewards complete, professionally prepared submissions.
+
+The right strategy is not rushing — it is sequencing. Lock scope early. Separate planning risk from building risk before breaking ground. Submit a code-current package prepared by a contractor experienced with Marin&apos;s digital review process. Make material selections earlier than feels necessary to avoid long-lead delays. In this market, disciplined execution is the cost-control strategy.`,
+    keyTakeaways: [
+      '30-year fixed mortgage rates averaged 6.38% in late March 2026, making moving financially punitive for locked-in owners',
+      'Marin County&apos;s February 2026 median home sale price was $1,357,250, with 31 days median time on market',
+      'All-in moving costs in Marin exceed $180,000, making renovation the stronger capital deployment',
+      'Harvard projects national homeowner improvement spending at $522 billion by end of 2026',
+      'Marin County now requires electronic plan submittals only — paper submissions no longer accepted',
+    ],
+    faqs: [
+      {
+        question: 'Are interest rates still high enough to make remodeling smarter than moving in Marin?',
+        answer: 'For homeowners with rates below 4%, yes. Freddie Mac reported the 30-year fixed averaged 6.38% in late March 2026. On a $1.5 million mortgage, that rate difference costs approximately $4,500 more per month than a 3.25% loan — translating to over $500,000 in additional interest over ten years.',
+      },
+      {
+        question: 'What does it actually cost to sell and buy in Marin County in 2026?',
+        answer: 'Between commissions, transfer taxes, staging, escrow, and closing costs, selling a median Marin home costs $180,000 or more before any upgrade in purchase price. Marin&apos;s February 2026 median was $1,357,250, meaning replacement housing requires significant additional capital on top of transaction costs.',
+      },
+      {
+        question: 'Will construction costs drop later in 2026?',
+        answer: 'Current data does not support expecting a meaningful decline. Construction costs rose to 64.4% of new home value in 2024, lumber pricing remains elevated by import duties near 45%, and labor shortages continue in Marin&apos;s specialized hillside and coastal construction market. Waiting for a reset that may not arrive is a costly strategy.',
+      },
+      {
+        question: 'How long does a luxury remodel permit take in Marin County in 2026?',
+        answer: 'It depends on whether your project requires only building review or also triggers planning review. Building review follows Marin&apos;s new digital timeline: 15-day prescreen, two to four weeks initial review. Planning review adds three to six months. Projects involving ADUs over 800 square feet, tree removal, or hillside grading typically require both tracks.',
+      },
+      {
+        question: 'Is a HELOC a good way to finance a Marin remodel in 2026?',
+        answer: 'For homeowners with low fixed-rate mortgages, a HELOC is typically the strongest financing structure. Current HELOC rates average approximately 8.1%, but the interest applies only to the drawn amount. A $200,000 draw costs roughly $1,350 per month — substantially less than the monthly penalty of surrendering a 3% mortgage for a 6.38% purchase loan.',
+      },
+    ],
+    category: 'Industry Trends',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-03',
+    readTime: 7,
+    coverImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Marin County remodel 2026', 'remodeling costs 2026', 'mortgage rates 2026', 'Marin permits', 'home renovation vs moving', 'luxury remodeling Marin', 'Mill Valley contractor'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
+    slug: 'luxury-outdoor-kitchen-design-2026-marin-county',
+    title: 'Luxury Outdoor Kitchen Design in 2026: The Marin County Standard',
+    excerpt: 'Outdoor kitchens in Marin County&apos;s luxury segment averaged $185,000 in construction spend in Q1 2026, up 34% from 2024, as homeowners treat the outdoor room as a fully functional second kitchen. Here is what that budget delivers.',
+    content: `## The $185,000 Benchmark
+
+The outdoor kitchen category in Marin County has undergone a fundamental reclassification. What was previously considered a landscape amenity is now designed, engineered, and built with the same specification rigor as a primary indoor kitchen. In Q1 2026, outdoor kitchen projects in Marin averaged $185,000 in construction spend — a 34% increase from the 2024 average of $138,000. The increase is driven not by material cost escalation, which has stabilized, but by scope expansion. Clients are requesting more appliance capacity, more enclosed storage, and more sophisticated weather protection than two years ago.
+
+## Weather-Rated Cabinetry: The Non-Negotiable
+
+The single largest shift in outdoor kitchen specification is the move to fully enclosed, weather-rated cabinetry. In 2023 and 2024, many Marin clients accepted open-frame cabinetry with stainless steel doors. In 2026, that compromise is no longer acceptable to the luxury buyer.
+
+Fully sealed cabinetry systems with gasketed doors and waterproof interior construction protect appliances, cookware, and serveware from Marin&apos;s winter rain cycles without requiring seasonal relocation of contents. The cost premium over open-frame cabinetry runs $18,000 to $25,000 on a typical project. Every 2026 client in our portfolio has elected it.
+
+## The Pizza Oven as Centerpiece
+
+The outdoor grill remains a component of every project, but it has been displaced as the focal point. In six of our last eight outdoor kitchen designs, the requested centerpiece is a wood-fired or hybrid pizza oven. This reflects a broader culinary trend with specific design implications in Marin.
+
+A built-in pizza oven requires a dedicated masonry enclosure, reinforced concrete footing, and a Type B vent or chimney system that must coordinate with the home&apos;s existing flue stack and setback requirements. In Tiburon and Sausalito, chimney height and proximity to property lines require early permitting review. ConstruBay now includes a preliminary flue study in every site assessment for outdoor kitchens that include a pizza oven.
+
+## Permeable Paving Compliance
+
+Marin County updated its stormwater management ordinance in late 2025. Any hardscape addition exceeding 500 square feet must incorporate permeable paving for a minimum of 40% of the new impervious area. For an outdoor kitchen with a 400-square-foot footprint plus surrounding dining and circulation area, this typically triggers the requirement.
+
+Permeable options that meet the luxury standard include segmented concrete pavers with aggregate joints, natural stone on open-graded base, and porcelain tile systems with permeable setting beds. The cost premium over standard concrete runs 15% to 20%, but the ordinance leaves no compliant alternative. ConstruBay engineers permeable paving into every outdoor kitchen proposal from the conceptual phase.
+
+## Year-Round Usability Engineering
+
+The most sophisticated design challenge in a Marin County outdoor kitchen is not the summer experience — it is extending usability into the shoulder seasons. With intentional design, the comfortable outdoor dining window can stretch from five months to nine months.
+
+The three primary mechanisms for season extension are overhead infrared heaters mounted to pergola rafters, louvered pergola systems that manage wind from the prevailing western and southern exposures common in Mill Valley and San Rafael, and radiant floor heating embedded in the concrete or stone decking. A fully equipped season-extension package adds $28,000 to $35,000 to an outdoor kitchen project. For clients who entertain regularly, it converts a five-month amenity into a nine-month functional space.
+
+## Integration with Indoor Kitchen Flow
+
+The most successful 2026 outdoor kitchens are designed as spatial extensions of the indoor kitchen, not as separate structures. This requires careful attention to floor level transitions, sight lines, and traffic flow between the two spaces.
+
+In a recent Tiburon project, ConstruBay designed a continuous floor plane of large-format porcelain tile running from the indoor kitchen through a zero-threshold door system to the outdoor kitchen, creating a single visual and physical space divided only by glass. The outdoor kitchen aligned with the indoor island so a cook moving between spaces maintains a consistent work triangle. This level of integration requires early coordination between interior designer, landscape architect, and structural engineer — ideally before the permit set is finalized.
+
+## The 2026 Planning Timeline
+
+A luxury outdoor kitchen in Marin County, from initial design through certificate of occupancy, typically requires seven to ten months. Permitting alone accounts for eight to fourteen weeks, depending on jurisdiction and structural complexity. Clients intending to have an outdoor kitchen operational for summer 2027 should begin the design process no later than September 2026.`,
+    keyTakeaways: [
+      'Luxury outdoor kitchen spend in Marin averaged $185,000 in Q1 2026, up 34% from 2024',
+      'Fully enclosed weather-rated cabinetry is now standard, adding $18,000 to $25,000 to project cost',
+      'Pizza ovens have surpassed traditional grills as the most requested outdoor kitchen centerpiece',
+      'Marin&apos;s 2025 stormwater ordinance requires permeable paving on hardscape additions over 500 square feet',
+      'Season-extension packages add $28,000 to $35,000 but extend usable outdoor months from 5 to 9',
+    ],
+    faqs: [
+      {
+        question: 'How much does a luxury outdoor kitchen cost in Marin County in 2026?',
+        answer: 'Q1 2026 projects averaged $185,000 in construction spend. This covers structure, cabinetry, appliances, countertops, plumbing, electrical, gas, and weather protection — but excludes landscape design and furniture. Projects with full season-extension packages and premium pizza ovens regularly exceed $220,000.',
+      },
+      {
+        question: 'Do I need a permit for an outdoor kitchen in Marin County?',
+        answer: 'Yes. Any structure with a roof, electrical service, plumbing, or gas lines requires building permits in Marin County. Uncovered grill platforms with no utilities are the only exception, and they do not meet the luxury standard. Budget eight to fourteen weeks for the permitting phase alone.',
+      },
+      {
+        question: 'What is the most requested outdoor kitchen feature in 2026?',
+        answer: 'Wood-fired or hybrid pizza ovens have surpassed traditional grills as the requested centerpiece in Marin outdoor kitchens. They require dedicated masonry enclosures, reinforced footings, and chimney systems that must be coordinated with setback requirements and local fire codes early in the design process.',
+      },
+      {
+        question: 'Does Marin County require permeable paving for outdoor kitchens?',
+        answer: 'Under the updated 2025 stormwater ordinance, any hardscape addition exceeding 500 square feet must include permeable paving for at least 40% of the new impervious area. Most luxury outdoor kitchen projects trigger this threshold. The cost premium is 15% to 20% over standard paving but is non-negotiable for code compliance.',
+      },
+      {
+        question: 'Can I use my outdoor kitchen year-round in Marin County?',
+        answer: 'With overhead infrared heaters, louvered pergola wind shielding, and radiant floor heating, the usable season extends from approximately five months to nine months in Marin&apos;s microclimate. A full season-extension package adds $28,000 to $35,000 to the project budget and fundamentally changes the return calculation for clients who entertain frequently.',
+      },
+    ],
+    category: 'Remodeling',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-02',
+    readTime: 8,
+    coverImage: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+    tags: ['outdoor kitchen Marin County', 'luxury outdoor kitchen 2026', 'pizza oven outdoor design', 'permeable paving Marin', 'Tiburon outdoor living', 'Mill Valley outdoor kitchen'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
+    slug: 'california-adu-laws-2026-marin-county-homeowners',
+    title: 'California ADU Laws in 2026: What Marin County Homeowners Need to Know Before You Build',
+    excerpt: 'Three new California ADU bills took effect January 1 2026 and quietly eliminated permitting barriers that previously stalled Marin County projects for months. Here is exactly what your property can now do under the updated code.',
+    content: `## Understanding the 2026 California ADU Framework
+
+California&apos;s ADU legislative cycle has rewritten the rules again for Marin County homeowners. Three bills signed in late 2025 took effect January 1, 2026: SB 543, AB 1154, and AB 462. After guiding over forty ADU projects through permitting in Mill Valley, Tiburon, and Sausalito since 2021, ConstruBay has already completed projects under the new framework. Here is what the updated law means for your property.
+
+## SB 543: Structural Reforms to Application Review
+
+The most consequential procedural change in 2026 is the 15-day completeness mandate. Under SB 543, local agencies must determine whether an ADU or JADU application is complete within 15 business days of submission and provide a specific, itemized list of any missing components. This eliminates the iterative back-and-forth that previously extended pre-construction timelines by months in Marin County.
+
+SB 543 also establishes formal written appeal processes for incompleteness determinations or denials, with final written determinations required within 60 business days. This creates recourse for homeowners who encounter inconsistent interpretations of state law across Marin&apos;s eleven jurisdictions.
+
+On fees, SB 543 finalizes a hard cap: ADUs with 750 square feet of interior livable space or less cannot be charged impact fees. JADUs at 500 square feet or less are also protected. For larger ADUs, any impact fee must be proportional to the primary dwelling&apos;s square footage. In our 2024 ADU projects, impact fees ranged from $18,000 to $32,000 in certain Marin municipalities. The new cap provides genuine cost certainty.
+
+## AB 1154: JADU Owner-Occupancy Recalibrated
+
+Assembly Bill 1154 introduces an important nuance for junior accessory dwelling units. Owner-occupancy is now required only when the JADU shares sanitation facilities with the primary dwelling. JADUs with independent sanitation systems face no owner-occupancy mandate, enabling long-term rental, guest use, or multigenerational arrangements without restricting the owner&apos;s living situation.
+
+AB 1154 also explicitly prohibits JADU short-term rentals. Any rental arrangement must exceed 30 days. For homeowners seeking short-term rental income potential, a full detached ADU remains the appropriate path, subject to local Marin regulations.
+
+## AB 462: Coastal and Emergency Provisions
+
+AB 462, enacted as an urgency measure, addresses two scenarios directly relevant to Marin County. For properties within California Coastal Commission jurisdiction — including portions of Sausalito, Stinson Beach, and Bolinas — local agencies with certified Local Coastal Programs must now approve or deny ADU Coastal Development Permits within 60 days. The bill also eliminates appeal pathways to the Coastal Commission for ADU CDP decisions, removing what was historically the most protracted permitting phase for coastal ADU projects.
+
+## The Marin County Context
+
+Marin County has moved to fully electronic plan submittals as of January 1, 2026. The county&apos;s digital process shows a 15-day prescreen and an initial plan review window of two to four weeks after intake. For projects that trigger planning review rather than straight building review, the timeline extends to three to six months. In luxury neighborhoods with slope constraints, tree issues, fire access, or view-related sensitivities, the permit strategy is no longer just "design the ADU." It is "design the fastest approvable ADU for this parcel."
+
+Marin County also extended its ADU fee waiver program through December 31, 2026, offering up to $2,500 for eligible ADUs and up to $1,500 for eligible JADUs. Mill Valley offers pre-approved detached ADU structure plans that can expedite plan check and reduce design uncertainty, though site-specific issues must still be resolved separately.
+
+## The Strategic Position for 2026
+
+The cumulative effect of the 2026 legislation is a material reduction in both permitting risk and out-of-pocket costs for Marin County ADU projects. The properties best positioned are those with flat or moderately sloped lots in San Rafael and Novato, where fee caps create the most value, and hillside properties in Mill Valley and Sausalito, where the new setback allowances open previously unavailable building sites.
+
+The right 2026 strategy pairs these legislative advantages with disciplined site analysis and a contractor-led submittal strategy from the start. State law is more applicant-friendly than at any point since 2019, but the winners will be homeowners who come to the building department with a complete, code-current package.`,
+    keyTakeaways: [
+      'ADUs at 750 square feet or less are fully protected from impact fees under 2026 legislation',
+      'JADUs with independent sanitation no longer require owner-occupancy under AB 1154',
+      'Permitting agencies must issue ADU completeness notices within 15 business days under SB 543',
+      'Marin County extended ADU fee waivers up to $2,500 through December 31, 2026',
+      'Coastal ADU permits in Sausalito and Stinson Beach must now be decided within 60 days',
+    ],
+    faqs: [
+      {
+        question: 'Are ADUs still exempt from impact fees in Marin County in 2026?',
+        answer: 'ADUs with 750 square feet or less of interior livable space are fully protected from impact fees under the 2026 legislation. JADUs up to 500 square feet are also exempt. For larger units, fees must be proportional to the primary dwelling&apos;s square footage, not calculated as a standalone project.',
+      },
+      {
+        question: 'Can I rent my JADU on Airbnb in Marin County in 2026?',
+        answer: 'No. AB 1154 explicitly prohibits JADU short-term rentals statewide. Any JADU rental must exceed 30 days. Homeowners seeking short-term rental income should evaluate a full detached ADU instead, subject to local Marin County regulations.',
+      },
+      {
+        question: 'How quickly must Marin County tell me if my ADU application is complete?',
+        answer: 'Under SB 543, the permitting agency must make a completeness determination and provide written notice within 15 business days. If incomplete, they must provide a specific itemized list of what is missing. This eliminates the vague correction cycles that previously added months to Marin ADU timelines.',
+      },
+      {
+        question: 'Does Marin County offer any financial assistance for ADU projects in 2026?',
+        answer: 'Yes. Marin County extended its ADU fee waiver program through December 31, 2026, offering up to $2,500 for eligible ADUs and up to $1,500 for eligible JADUs. Additional support may be available for deed-restricted affordable units. Contact the Marin County Community Development Agency for current eligibility requirements.',
+      },
+      {
+        question: 'Does Mill Valley offer a faster permit path for detached ADUs?',
+        answer: 'Yes. Mill Valley offers pre-approved detached ADU structure plans that can expedite plan check, reduce design costs, and eliminate some uncertainty. Homeowners still must resolve site-specific issues — setbacks, utilities, grading — separately, but the structural review phase can move significantly faster.',
+      },
+    ],
+    category: 'ADUs',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-01',
+    readTime: 7,
+    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80',
+    tags: ['2026 ADU laws', 'California ADU legislation', 'Marin County ADU', 'SB 543', 'AB 1154', 'Mill Valley ADU', 'ADU permits Marin'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
     slug: 'how-long-does-a-permit-take-marin-county',
     title: 'How Long Does a Building Permit Take in Marin County?',
     excerpt: 'Permit timelines in Marin County vary wildly by city and project type. Here\'s what to realistically expect in 2024 — and how to avoid the most common delays.',
