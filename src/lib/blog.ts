@@ -621,7 +621,7 @@ We're happy to answer any of these questions about our own company. That's the s
     publishedAt: '2024-06-01',
     category: 'Industry Trends',
     tags: ['Sonoma County', 'remodel trends', '2024', 'home renovation', 'wine country'],
-    coverImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     keyTakeaways: [
       'Post-fire rebuilds in Sonoma County often exceed insurance settlements as construction costs rise',
@@ -1016,7 +1016,7 @@ If you\'re evaluating contractors for a major Marin County remodel, we\'d welcom
     publishedAt: '2026-02-12',
     category: 'Permits & Planning',
     tags: ['ADU permit', 'Marin County', 'permit process', 'accessory dwelling unit', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80',
     readTime: 9,
     isHowTo: true,
     howToSteps: [
