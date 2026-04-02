@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2024-11-15',
     category: 'Permits & Planning',
     tags: ['permits', 'Marin County', 'building permit', 'timeline', 'contractor tips'],
-    coverImage: '/images/blog/blog-01.png',
+    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     keyTakeaways: [
       'Mill Valley building permits average 8-12 weeks processing time',
@@ -86,7 +86,7 @@ If you're planning an [ADU or addition in Marin County](/adu-builder-marin-count
     publishedAt: '2024-10-28',
     category: 'ADUs',
     tags: ['ADU', 'cost', 'Marin County', 'accessory dwelling unit', 'budget'],
-    coverImage: '/images/blog/blog-02.png',
+    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80',
     readTime: 9,
     keyTakeaways: [
       'California ADU laws changed in 2024 allowing larger structures',
@@ -158,7 +158,7 @@ We specialize in [ADU construction throughout Marin County](/adu-builder-marin-c
     publishedAt: '2024-09-20',
     category: 'Industry Trends',
     tags: ['AI', 'permits', 'technology', 'future of construction', 'Marin County'],
-    coverImage: '/images/blog/blog-03.png',
+    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     readTime: 6,
     keyTakeaways: [
       'Full home remodel in Marin County averages 6-10 months total',
@@ -214,7 +214,7 @@ That's been the ConstruBay approach from day one: combine the best available too
     publishedAt: '2024-08-12',
     category: 'Kitchen & Bath',
     tags: ['kitchen remodel', 'Tiburon', 'Marin County', 'luxury remodel', 'cost guide'],
-    coverImage: '/images/blog/blog-04.png',
+    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     keyTakeaways: [
       'Marin County kitchen remodels average $275,000 - $385,000',
@@ -278,7 +278,7 @@ If you're planning a [kitchen remodel in Tiburon](/tiburon-kitchen-remodel) or a
     publishedAt: '2024-07-08',
     category: 'Homeowner Guides',
     tags: ['choosing a contractor', 'Marin County', 'general contractor', 'vetting', 'homeowner tips'],
-    coverImage: '/images/blog/blog-05.png',
+    coverImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80',
     readTime: 10,
     keyTakeaways: [
       'Luxury remodels in Marin County average $400-700 per square foot',
@@ -394,7 +394,7 @@ We're happy to answer any of these questions about our own company. That's the s
     publishedAt: '2024-06-01',
     category: 'Industry Trends',
     tags: ['Sonoma County', 'remodel trends', '2024', 'home renovation', 'wine country'],
-    coverImage: '/images/blog/blog-06.png',
+    coverImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     keyTakeaways: [
       'Before photos are essential for documenting ROI and insurance',
@@ -448,7 +448,7 @@ If you're planning a Sonoma project for 2025, the conversation with your contrac
     publishedAt: '2026-01-15',
     category: 'ADUs',
     tags: ['ADU', 'cost', 'Marin County', 'accessory dwelling unit', 'Bay Area', '2026'],
-    coverImage: '/images/blog/adu-cost-hero.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80',
     readTime: 9,
     isHowTo: false,
     keyTakeaways: [
@@ -537,7 +537,7 @@ As your [ADU builder in Marin County](/services/adu-builder-marin-county), we ma
     publishedAt: '2026-01-22',
     category: 'Remodeling',
     tags: ['kitchen remodel', 'Marin County', 'luxury kitchen', 'Bay Area', 'renovation cost', '2026'],
-    coverImage: '/images/blog/kitchen-tiburon-hero.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
@@ -625,7 +625,7 @@ Our [luxury kitchen remodeling services in Marin County](/services/kitchen-remod
     publishedAt: '2026-01-29',
     category: 'Remodeling',
     tags: ['bathroom remodel', 'Marin County', 'luxury bathroom', 'Bay Area', 'renovation cost', '2026'],
-    coverImage: '/images/blog/blog-04.png',
+    coverImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     isHowTo: false,
     keyTakeaways: [
@@ -704,7 +704,7 @@ Our [bathroom remodeling services in Marin County](/services/bathroom-remodel-ma
     publishedAt: '2026-02-05',
     category: 'Contractor Tips',
     tags: ['contractor', 'Marin County', 'home remodeling', 'general contractor', 'luxury renovation', '2026'],
-    coverImage: '/images/blog/choose-contractor-hero.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
@@ -788,7 +788,7 @@ If you\'re evaluating contractors for a major Marin County remodel, we\'d welcom
     publishedAt: '2026-02-12',
     category: 'Permits & Planning',
     tags: ['ADU permit', 'Marin County', 'permit process', 'accessory dwelling unit', '2026'],
-    coverImage: '/images/blog/permit-guide-hero.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     readTime: 9,
     isHowTo: true,
     howToSteps: [
@@ -913,7 +913,7 @@ As your [ADU builder in Marin County](/services/adu-builder-marin-county), we ho
     publishedAt: '2026-02-19',
     category: 'Remodeling',
     tags: ['kitchen remodel', 'timeline', 'Marin County', 'kitchen renovation', '2026'],
-    coverImage: '/images/blog/kitchen-tiburon-hero.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
@@ -1021,7 +1021,7 @@ If you\'re planning a kitchen remodel and want to understand exactly what the ti
     publishedAt: '2026-02-26',
     category: 'Remodeling',
     tags: ['bathroom remodel', 'ROI', 'Marin County', 'master bathroom', 'luxury renovation', '2026'],
-    coverImage: '/images/blog/blog-04.png',
+    coverImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     isHowTo: false,
     keyTakeaways: [
@@ -1121,7 +1121,7 @@ Our [bathroom remodeling services](/services/bathroom-remodel-marin-county) cove
     publishedAt: '2026-03-05',
     category: 'City Guides',
     tags: ['Mill Valley', 'home remodeling', 'luxury renovation', 'Marin County', 'general contractor', '2026'],
-    coverImage: '/images/blog/blog-05.png',
+    coverImage: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
@@ -1197,7 +1197,7 @@ Explore our [general contractor services in Marin County](/marin-county-general-
     publishedAt: '2026-03-12',
     category: 'ADUs',
     tags: ['ADU', 'detached ADU', 'attached ADU', 'Marin County', 'accessory dwelling unit', '2026'],
-    coverImage: '/images/blog/adu-cost-hero.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
@@ -1295,7 +1295,7 @@ Explore our [ADU builder services in Marin County](/services/adu-builder-marin-c
     publishedAt: '2026-03-19',
     category: 'Remodeling',
     tags: ['kitchen island', 'kitchen remodel', 'Marin County', 'luxury kitchen', 'design', '2026'],
-    coverImage: '/images/blog/kitchen-tiburon-hero.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     isHowTo: false,
     keyTakeaways: [
@@ -1386,7 +1386,7 @@ Our [kitchen remodeling services in Marin County](/services/kitchen-remodel-mari
     publishedAt: '2026-03-26',
     category: 'Remodeling',
     tags: ['bathroom tile', 'marble', 'stone', 'porcelain', 'Marin County', 'bathroom remodel', '2026'],
-    coverImage: '/images/blog/blog-04.png',
+    coverImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     isHowTo: false,
     keyTakeaways: [
@@ -1489,7 +1489,7 @@ Our [bathroom remodeling services in Marin County](/services/bathroom-remodel-ma
     publishedAt: '2026-04-02',
     category: 'City Guides',
     tags: ['San Rafael', 'home remodeling', 'Marin County', 'general contractor', 'permits', '2026'],
-    coverImage: '/images/blog/blog-01.png',
+    coverImage: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
