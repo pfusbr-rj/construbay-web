@@ -283,6 +283,11 @@ export default function ServicesPage() {
           >
             Schedule a Private Consultation
           </Link>
+          <p style={{ fontFamily: MS, fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', marginTop: 24 }}>
+            <Link href="/services/general-contractor-marin-county" style={{ color: GOLD, textDecoration: 'none' }}>
+              Licensed General Contractor in Marin County &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 

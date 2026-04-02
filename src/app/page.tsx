@@ -1225,6 +1225,20 @@ export default function HomePage() {
             style={{
               fontFamily: MS,
               fontSize: '10px',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              color: 'rgba(203,178,106,0.4)',
+              marginBottom: '12px',
+            }}
+          >
+            <Link href="/services/general-contractor-marin-county" style={{ color: 'rgba(203,178,106,0.6)', textDecoration: 'none' }}>
+              Licensed General Contractor in Marin County &rarr;
+            </Link>
+          </p>
+          <p
+            style={{
+              fontFamily: MS,
+              fontSize: '10px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: 'rgba(203,178,106,0.4)',

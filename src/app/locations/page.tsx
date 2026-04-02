@@ -61,6 +61,12 @@ export default function LocationsPage() {
           </div>
         ))}
 
+        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+          <Link href="/services/general-contractor-marin-county" className={montserrat.className} style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#cbb26a', textDecoration: 'none' }}>
+            Licensed General Contractor in Marin County &rarr;
+          </Link>
+        </div>
+
         <div style={{ textAlign: 'center', padding: '64px 0', borderTop: '1px solid rgba(203,178,106,0.15)' }}>
           <h2 className={cormorant.className} style={{ fontSize: '40px', fontWeight: 300, color: '#ffffff', marginBottom: '24px' }}>
             Don&apos;t See Your City?

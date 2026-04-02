@@ -274,6 +274,11 @@ export default function MillValleyPage() {
             </a>{" "}
             &middot; CSLB #1106798
           </p>
+          <p className="mt-4 text-sm">
+            <Link href="/services/general-contractor-marin-county" className="text-brand-tan hover:underline">
+              Hire a Licensed General Contractor in Mill Valley &rarr;
+            </Link>
+          </p>
         </div>
       </section>
     </>
