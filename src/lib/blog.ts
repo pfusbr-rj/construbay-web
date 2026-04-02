@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2024-11-15',
     category: 'Permits & Planning',
     tags: ['permits', 'Marin County', 'building permit', 'timeline', 'contractor tips'],
-    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1568992688065-536aad8a12f6?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     keyTakeaways: [
       'Mill Valley building permits average 8-12 weeks processing time',
@@ -86,7 +86,7 @@ If you're planning an [ADU or addition in Marin County](/adu-builder-marin-count
     publishedAt: '2024-10-28',
     category: 'ADUs',
     tags: ['ADU', 'cost', 'Marin County', 'accessory dwelling unit', 'budget'],
-    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80',
     readTime: 9,
     keyTakeaways: [
       'California ADU laws changed in 2024 allowing larger structures',
@@ -158,7 +158,7 @@ We specialize in [ADU construction throughout Marin County](/adu-builder-marin-c
     publishedAt: '2024-09-20',
     category: 'Industry Trends',
     tags: ['AI', 'permits', 'technology', 'future of construction', 'Marin County'],
-    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
     readTime: 6,
     keyTakeaways: [
       'Full home remodel in Marin County averages 6-10 months total',
@@ -538,7 +538,7 @@ As your [ADU builder in Marin County](/services/adu-builder-marin-county), we ma
     publishedAt: '2026-01-22',
     category: 'Remodeling',
     tags: ['kitchen remodel', 'Marin County', 'luxury kitchen', 'Bay Area', 'renovation cost', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
@@ -705,7 +705,7 @@ Our [bathroom remodeling services in Marin County](/services/bathroom-remodel-ma
     publishedAt: '2026-02-05',
     category: 'Contractor Tips',
     tags: ['contractor', 'Marin County', 'home remodeling', 'general contractor', 'luxury renovation', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
@@ -789,7 +789,7 @@ If you\'re evaluating contractors for a major Marin County remodel, we\'d welcom
     publishedAt: '2026-02-12',
     category: 'Permits & Planning',
     tags: ['ADU permit', 'Marin County', 'permit process', 'accessory dwelling unit', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80',
     readTime: 9,
     isHowTo: true,
     howToSteps: [
@@ -1022,7 +1022,7 @@ If you\'re planning a kitchen remodel and want to understand exactly what the ti
     publishedAt: '2026-02-26',
     category: 'Remodeling',
     tags: ['bathroom remodel', 'ROI', 'Marin County', 'master bathroom', 'luxury renovation', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     isHowTo: false,
     keyTakeaways: [
@@ -1198,7 +1198,7 @@ Explore our [general contractor services in Marin County](/marin-county-general-
     publishedAt: '2026-03-12',
     category: 'ADUs',
     tags: ['ADU', 'detached ADU', 'attached ADU', 'Marin County', 'accessory dwelling unit', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
@@ -1296,7 +1296,7 @@ Explore our [ADU builder services in Marin County](/services/adu-builder-marin-c
     publishedAt: '2026-03-19',
     category: 'Remodeling',
     tags: ['kitchen island', 'kitchen remodel', 'Marin County', 'luxury kitchen', 'design', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     isHowTo: false,
     keyTakeaways: [
@@ -1387,7 +1387,7 @@ Our [kitchen remodeling services in Marin County](/services/kitchen-remodel-mari
     publishedAt: '2026-03-26',
     category: 'Remodeling',
     tags: ['bathroom tile', 'marble', 'stone', 'porcelain', 'Marin County', 'bathroom remodel', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1620626011761-996317702149?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     isHowTo: false,
     keyTakeaways: [
@@ -1490,7 +1490,7 @@ Our [bathroom remodeling services in Marin County](/services/bathroom-remodel-ma
     publishedAt: '2026-04-02',
     category: 'City Guides',
     tags: ['San Rafael', 'home remodeling', 'Marin County', 'general contractor', 'permits', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
     readTime: 8,
     isHowTo: false,
     keyTakeaways: [
