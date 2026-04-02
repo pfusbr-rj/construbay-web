@@ -397,10 +397,11 @@ We're happy to answer any of these questions about our own company. That's the s
     coverImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     keyTakeaways: [
-      'Before photos are essential for documenting ROI and insurance',
-      'Professional photography increases lead generation by 40%',
-      'Drone shots provide context and scale for exterior transformations',
-      'Staged after photos outperform unstaged by 3x in engagement',
+      'Post-fire rebuilds in Sonoma County often exceed insurance settlements as construction costs rise',
+      'Outdoor-indoor living spaces are the top renovation priority for Sonoma County homeowners',
+      'Skilled trades in Sonoma County are booked 6–12 months out due to post-fire rebuild demand',
+      'ADUs in Sonoma are commonly built for multigenerational family use, not just rental income',
+      'Energy upgrades — solar, battery backup, heat pump HVAC — are standard additions to major Sonoma remodels',
     ],
     faqs: [
       {
