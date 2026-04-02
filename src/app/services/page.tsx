@@ -191,6 +191,17 @@ const processSteps = [
 ];
 
 export default function ServicesPage() {
+  const imageMap: Record<string, string> = {
+    'new-construction': 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+    'full-remodel': 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80',
+    'kitchen': 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
+    'bathroom': 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
+    'adu': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80',
+    'addition': 'https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80',
+    'basement': 'https://images.unsplash.com/photo-1585128792020-803d29415281?auto=format&fit=crop&w=1200&q=80',
+    'deck': 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+  };
+
   return (
     <main style={{ backgroundColor: "#000000", color: "#ffffff" }}>
       {/* SECTION 1 — HERO */}
@@ -286,7 +297,7 @@ export default function ServicesPage() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`/images/services/${service.slug}.jpg`}
+                src={imageMap[service.slug] || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'}
                 alt={service.alt}
                 style={{
                   position: "absolute",
