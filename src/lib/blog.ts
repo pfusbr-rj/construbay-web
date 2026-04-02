@@ -1387,7 +1387,7 @@ Our [kitchen remodeling services in Marin County](/services/kitchen-remodel-mari
     publishedAt: '2026-03-26',
     category: 'Remodeling',
     tags: ['bathroom tile', 'marble', 'stone', 'porcelain', 'Marin County', 'bathroom remodel', '2026'],
-    coverImage: 'https://images.unsplash.com/photo-1620626011761-996317702149?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1629079447777-1e605162dc8d?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
     isHowTo: false,
     keyTakeaways: [
