@@ -63,95 +63,62 @@ export const metadata: Metadata = {
 
 const jsonLdSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.construbay.com/#contractor",
-      "name": "ConstruBay",
-      "description": "Licensed general contractor specializing in luxury residential construction, ADUs, custom pools, and home remodels in Marin and Sonoma Counties. CSLB #1106798.",
-      "url": "https://www.construbay.com",
-      "telephone": "+14159689494",
-      "email": "paulo@construbay.com",
-      "license": "CSLB #1106798",
-      "priceRange": "$$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "18 El Paseo Ln",
-        "addressLocality": "Mill Valley",
-        "addressRegion": "CA",
-        "postalCode": "94941",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 37.9061,
-        "longitude": -122.5450
-      },
-      "areaServed": [
-        {"@type": "City", "name": "Mill Valley"},
-        {"@type": "City", "name": "Tiburon"},
-        {"@type": "City", "name": "Sausalito"},
-        {"@type": "City", "name": "San Rafael"},
-        {"@type": "City", "name": "Novato"},
-        {"@type": "City", "name": "Petaluma"},
-        {"@type": "City", "name": "Santa Rosa"},
-        {"@type": "City", "name": "Sebastopol"},
-        {"@type": "City", "name": "Sonoma"},
-        {"@type": "County", "name": "Marin County"},
-        {"@type": "County", "name": "Sonoma County"}
-      ],
-      "openingHours": "Mo-Fr 08:00-18:00",
-      "sameAs": [
-        "https://www.facebook.com/construbay",
-        "https://www.instagram.com/construbaymarin",
-        "https://www.yelp.com/biz/construbay-mill-valley",
-        "https://www.houzz.com/professionals/construbay"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Construction Services",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ADU Construction"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full Home Remodel"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Pool Construction"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen Remodeling"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permit Expediting"}}
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "47",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "The Mathews" },
-          "reviewBody": "Quick to respond! They scheduled a complimentary assessment in a timely manner. Hired them for several projects on our home. They do great work, clean, friendly, fun to work with on a daily basis."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Lars & Mary Williams" },
-          "reviewBody": "Great place to work at with great people. Energetic with a great foundation for growth. Organized and focused to perform at a high level of expectation for their customers."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Chris Parks" },
-          "reviewBody": "The job was very fast paced and fun. I dealt with different aspects of their business and the team was incredibly professional throughout."
-        }
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.construbay.com/#website",
-      "url": "https://www.construbay.com",
-      "name": "ConstruBay"
+  "@type": "GeneralContractor",
+  "@id": "https://construbay.com/#organization",
+  "name": "ConstruBay",
+  "legalName": "ConstruBay Inc.",
+  "url": "https://construbay.com",
+  "logo": "https://construbay.com/construbay-logo.svg",
+  "image": "https://construbay.com/construbay-logo.svg",
+  "description": "Licensed luxury general contractor serving Marin, Sonoma, and Napa Counties. Specializing in ADUs, whole-home remodels, custom kitchens, luxury bathrooms, and home additions. CSLB #1106798.",
+  "telephone": "+14159689494",
+  "email": "paulo@construbay.com",
+  "foundingDate": "2018",
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Contractor License",
+    "name": "CSLB License #1106798",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "California Contractors State License Board",
+      "url": "https://www.cslb.ca.gov"
     }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18 El Paseo Ln",
+    "addressLocality": "Mill Valley",
+    "addressRegion": "CA",
+    "postalCode": "94941",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.9060,
+    "longitude": -122.5450
+  },
+  "areaServed": [
+    { "@type": "County", "name": "Marin County", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "County", "name": "Sonoma County", "containedInPlace": { "@type": "State", "name": "California" } },
+    { "@type": "County", "name": "Napa County", "containedInPlace": { "@type": "State", "name": "California" } }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "priceRange": "$$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/construbaymarin",
+    "https://www.facebook.com/construbay"
   ]
 };
 
