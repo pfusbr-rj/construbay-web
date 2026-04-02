@@ -80,14 +80,17 @@ export default function Header() {
 
               {servicesOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50"
-                  style={{
-                    backgroundColor: '#0a0a0a',
-                    border: '1px solid rgba(203,178,106,0.25)',
-                    minWidth: '230px',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
-                  }}
+                  className="absolute top-full left-1/2 -translate-x-1/2 z-50"
+                  style={{ paddingTop: '8px' }}
                 >
+                  <div
+                    style={{
+                      backgroundColor: '#0a0a0a',
+                      border: '1px solid rgba(203,178,106,0.25)',
+                      minWidth: '230px',
+                      boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
+                    }}
+                  >
                   {tier1Services.map((service) => (
                     <Link
                       key={service.href}
@@ -126,6 +129,7 @@ export default function Header() {
                   >
                     View All Services &rarr;
                   </Link>
+                  </div>
                 </div>
               )}
             </div>
