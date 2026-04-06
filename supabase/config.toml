@@ -1,0 +1,17 @@
+# Supabase project configuration
+# https://supabase.com/docs/guides/cli/config
+
+[project]
+id = "mlidhhprnxqajfsaqamu"
+
+# Edge Function cron schedules
+# All functions run every Sunday at 8:00 PM UTC
+
+[functions.sync-photos]
+schedule = "0 20 * * 0"
+
+[functions.sync-documents]
+schedule = "0 20 * * 0"
+
+[functions.sync-invoices]
+schedule = "0 20 * * 0"
