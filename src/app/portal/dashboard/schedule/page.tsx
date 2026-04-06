@@ -56,14 +56,27 @@ export default function SchedulePage() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data: projects } = await supabase.from('projects').select('id').limit(1)
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session) { setLoading(false); return }
+
+      const { data: projects, error: projError } = await supabase
+        .from('projects')
+        .select('id')
+        .limit(1)
+
+      console.log('projects:', projects, 'error:', projError)
+
       if (!projects || projects.length === 0) { setLoading(false); return }
+
       const projectId = projects[0].id
-      const { data } = await supabase
+      const { data, error: milError } = await supabase
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
         .order('sort_order', { ascending: true })
+
+      console.log('milestones:', data, 'error:', milError)
+
       if (data) setMilestones(data as Milestone[])
       setLoading(false)
     }
