@@ -1,39 +1,45 @@
 'use client'
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import { createPortalClient } from '@/lib/supabase-client'
+import { useFormState, useFormStatus } from 'react-dom'
+import { loginAction } from './actions'
 
 const CG = 'Cormorant Garamond, serif'
 const MS = 'Montserrat, sans-serif'
 const GOLD = '#cbb26a'
 const GOLD_GRAD = 'linear-gradient(135deg, #bb8b4a, #f7eb9e)'
 
+type ActionState = { error: string } | null
+
+async function formAction(prev: ActionState, formData: FormData): Promise<ActionState> {
+  return loginAction(formData)
+}
+
+function SubmitButton() {
+  const { pending } = useFormStatus()
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      style={{
+        width: '100%',
+        padding: '14px',
+        background: pending ? 'rgba(187,139,74,0.3)' : GOLD_GRAD,
+        border: 'none',
+        color: '#000000',
+        fontFamily: MS,
+        fontSize: '11px',
+        fontWeight: 400,
+        letterSpacing: '0.25em',
+        textTransform: 'uppercase',
+        cursor: pending ? 'not-allowed' : 'pointer',
+      }}
+    >
+      {pending ? 'Signing In...' : 'Sign In'}
+    </button>
+  )
+}
+
 export default function PortalLoginPage() {
-  const router = useRouter()
-  const [supabase] = useState(() => createPortalClient())
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) router.push('/portal/dashboard')
-    })
-  }, [supabase, router])
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setError('')
-    setLoading(true)
-    const { error: authError } = await supabase.auth.signInWithPassword({ email, password })
-    if (authError) {
-      setError(authError.message)
-      setLoading(false)
-    } else {
-      router.push('/portal/dashboard')
-    }
-  }
+  const [state, action] = useFormState(formAction, null)
 
   const inputStyle: React.CSSProperties = {
     width: '100%',
@@ -116,13 +122,12 @@ export default function PortalLoginPage() {
           padding: '40px',
           backgroundColor: 'rgba(255,255,255,0.02)',
         }}>
-          <form onSubmit={handleSubmit}>
+          <form action={action}>
             <div style={{ marginBottom: '24px' }}>
               <label style={labelStyle}>Email Address</label>
               <input
                 type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                name="email"
                 required
                 autoComplete="email"
                 style={inputStyle}
@@ -133,15 +138,14 @@ export default function PortalLoginPage() {
               <label style={labelStyle}>Password</label>
               <input
                 type="password"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
+                name="password"
                 required
                 autoComplete="current-password"
                 style={inputStyle}
               />
             </div>
 
-            {error && (
+            {state?.error && (
               <div style={{
                 marginBottom: '24px',
                 fontFamily: MS,
@@ -153,29 +157,11 @@ export default function PortalLoginPage() {
                 border: '1px solid rgba(203,178,106,0.2)',
                 backgroundColor: 'rgba(203,178,106,0.05)',
               }}>
-                {error}
+                {state.error}
               </div>
             )}
 
-            <button
-              type="submit"
-              disabled={loading}
-              style={{
-                width: '100%',
-                padding: '14px',
-                background: loading ? 'rgba(187,139,74,0.3)' : GOLD_GRAD,
-                border: 'none',
-                color: '#000000',
-                fontFamily: MS,
-                fontSize: '11px',
-                fontWeight: 400,
-                letterSpacing: '0.25em',
-                textTransform: 'uppercase',
-                cursor: loading ? 'not-allowed' : 'pointer',
-              }}
-            >
-              {loading ? 'Signing In...' : 'Sign In'}
-            </button>
+            <SubmitButton />
           </form>
         </div>
 
