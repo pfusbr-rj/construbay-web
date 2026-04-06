@@ -1,5 +1,6 @@
 'use client'
-import { useFormState, useFormStatus } from 'react-dom'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { loginAction } from './actions'
 
 const CG = 'Cormorant Garamond, serif'
@@ -7,39 +8,26 @@ const MS = 'Montserrat, sans-serif'
 const GOLD = '#cbb26a'
 const GOLD_GRAD = 'linear-gradient(135deg, #bb8b4a, #f7eb9e)'
 
-type ActionState = { error: string } | null
-
-async function formAction(prev: ActionState, formData: FormData): Promise<ActionState> {
-  return loginAction(formData)
-}
-
-function SubmitButton() {
-  const { pending } = useFormStatus()
-  return (
-    <button
-      type="submit"
-      disabled={pending}
-      style={{
-        width: '100%',
-        padding: '14px',
-        background: pending ? 'rgba(187,139,74,0.3)' : GOLD_GRAD,
-        border: 'none',
-        color: '#000000',
-        fontFamily: MS,
-        fontSize: '11px',
-        fontWeight: 400,
-        letterSpacing: '0.25em',
-        textTransform: 'uppercase',
-        cursor: pending ? 'not-allowed' : 'pointer',
-      }}
-    >
-      {pending ? 'Signing In...' : 'Sign In'}
-    </button>
-  )
-}
-
 export default function PortalLoginPage() {
-  const [state, action] = useFormState(formAction, null)
+  const router = useRouter()
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setError('')
+    setLoading(true)
+    const formData = new FormData(e.currentTarget)
+    const result = await loginAction(formData)
+    if (result.success) {
+      await new Promise(r => setTimeout(r, 500))
+      router.refresh()
+      router.push('/portal/dashboard')
+    } else {
+      setError(result.error ?? 'Login failed')
+      setLoading(false)
+    }
+  }
 
   const inputStyle: React.CSSProperties = {
     width: '100%',
@@ -122,7 +110,7 @@ export default function PortalLoginPage() {
           padding: '40px',
           backgroundColor: 'rgba(255,255,255,0.02)',
         }}>
-          <form action={action}>
+          <form onSubmit={handleSubmit}>
             <div style={{ marginBottom: '24px' }}>
               <label style={labelStyle}>Email Address</label>
               <input
@@ -145,7 +133,7 @@ export default function PortalLoginPage() {
               />
             </div>
 
-            {state?.error && (
+            {error && (
               <div style={{
                 marginBottom: '24px',
                 fontFamily: MS,
@@ -157,11 +145,29 @@ export default function PortalLoginPage() {
                 border: '1px solid rgba(203,178,106,0.2)',
                 backgroundColor: 'rgba(203,178,106,0.05)',
               }}>
-                {state.error}
+                {error}
               </div>
             )}
 
-            <SubmitButton />
+            <button
+              type="submit"
+              disabled={loading}
+              style={{
+                width: '100%',
+                padding: '14px',
+                background: loading ? 'rgba(187,139,74,0.3)' : GOLD_GRAD,
+                border: 'none',
+                color: '#000000',
+                fontFamily: MS,
+                fontSize: '11px',
+                fontWeight: 400,
+                letterSpacing: '0.25em',
+                textTransform: 'uppercase',
+                cursor: loading ? 'not-allowed' : 'pointer',
+              }}
+            >
+              {loading ? 'Signing In...' : 'Sign In'}
+            </button>
           </form>
         </div>
 
