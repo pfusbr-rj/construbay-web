@@ -102,7 +102,14 @@ export default function InvoicesPage() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data: projects } = await supabase.from('projects').select('id').limit(1)
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+
+      if (sessionError || !session) {
+        window.location.href = '/portal/login'
+        return
+      }
+
+      const { data: projects } = await supabase.from('projects').select('id').eq('client_id', session.user.id).limit(1)
       if (!projects || projects.length === 0) { setLoading(false); return }
       const projectId = projects[0].id
       const { data } = await supabase

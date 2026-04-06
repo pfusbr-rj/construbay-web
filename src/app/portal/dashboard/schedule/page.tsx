@@ -56,26 +56,31 @@ export default function SchedulePage() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session) { setLoading(false); return }
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+
+      if (sessionError || !session) {
+        console.log('No session found, redirecting to login')
+        window.location.href = '/portal/login'
+        return
+      }
 
       const { data: projects, error: projError } = await supabase
         .from('projects')
         .select('id')
+        .eq('client_id', session.user.id)
         .limit(1)
 
-      console.log('projects:', projects, 'error:', projError)
-
-      if (!projects || projects.length === 0) { setLoading(false); return }
+      if (projError || !projects || projects.length === 0) {
+        setLoading(false)
+        return
+      }
 
       const projectId = projects[0].id
-      const { data, error: milError } = await supabase
+      const { data } = await supabase
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
         .order('sort_order', { ascending: true })
-
-      console.log('milestones:', data, 'error:', milError)
 
       if (data) setMilestones(data as Milestone[])
       setLoading(false)

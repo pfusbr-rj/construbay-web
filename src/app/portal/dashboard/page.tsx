@@ -48,7 +48,19 @@ export default function DashboardOverview() {
 
   useEffect(() => {
     async function fetchData() {
-      const { data: projects } = await supabase.from('projects').select('*').limit(1)
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+
+      if (sessionError || !session) {
+        window.location.href = '/portal/login'
+        return
+      }
+
+      const { data: projects } = await supabase
+        .from('projects')
+        .select('*')
+        .eq('client_id', session.user.id)
+        .limit(1)
+
       if (projects && projects.length > 0) {
         const proj = projects[0] as Project
         setProject(proj)
