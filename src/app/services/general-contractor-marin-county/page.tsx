@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Licensed General Contractor Marin County CA | ConstruBay | CSLB #1106798',
   description: 'ConstruBay is Marin County\'s premier licensed general contractor. Luxury remodels, ADUs, home additions, and custom builds in Mill Valley, Tiburon, Sausalito & all of Marin. CSLB #1106798.',
   alternates: {
-    canonical: 'https://construbay.com/services/general-contractor-marin-county',
+    canonical: 'https://www.construbay.com/services/general-contractor-marin-county',
   },
 };
 

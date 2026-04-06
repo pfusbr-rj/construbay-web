@@ -5,7 +5,7 @@ import TestimonialCard from '@/components/TestimonialCard'
 export const metadata: Metadata = {
   title: 'Kitchen Remodeling in Sonoma County | ConstruBay CSLB #1106798',
   description: 'Luxury kitchen remodeling in Sonoma County. Petaluma, Sebastopol, Santa Rosa. Custom cabinetry, premium appliances, stone countertops. Fixed-price contracts. CSLB #1106798.',
-  alternates: { canonical: 'https://construbay.com/kitchen-remodel-sonoma-county' },
+  alternates: { canonical: 'https://www.construbay.com/kitchen-remodel-sonoma-county' },
 }
 
 const CG = 'Cormorant Garamond'

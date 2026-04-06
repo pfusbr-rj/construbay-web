@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://construbay.com/adu',
+    canonical: 'https://www.construbay.com/adu',
   },
 }
 

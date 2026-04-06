@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
 export const metadata: Metadata = {
   title: 'Service Areas | ConstruBay — General Contractor Marin, Sonoma & Napa County',
   description: 'ConstruBay serves Marin County, Sonoma County and Napa County. Licensed luxury general contractor CSLB #1106798 serving Mill Valley, Tiburon, San Rafael, Sausalito and more.',
-  alternates: { canonical: 'https://construbay.com/locations' },
+  alternates: { canonical: 'https://www.construbay.com/locations' },
 };
 
 export default function LocationsPage() {

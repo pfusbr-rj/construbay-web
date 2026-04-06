@@ -5,7 +5,7 @@ import TestimonialCard from '@/components/TestimonialCard'
 export const metadata: Metadata = {
   title: 'Luxury Home Remodeling in Napa County | ConstruBay CSLB #1106798',
   description: 'Luxury home remodeling and general contractor in Napa County. Napa, St. Helena, Yountville, Calistoga. Fixed-price contracts. CSLB #1106798.',
-  alternates: { canonical: 'https://construbay.com/luxury-home-remodel-napa-county' },
+  alternates: { canonical: 'https://www.construbay.com/luxury-home-remodel-napa-county' },
 }
 
 const CG = 'Cormorant Garamond'

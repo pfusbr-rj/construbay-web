@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Construction & Remodeling Blog | ConstruBay — Marin County',
   description: 'Expert insights on home remodeling, ADUs, permits, and contractor selection in Marin, Sonoma, and Napa counties. Written by ConstruBay founder Paulo Fernandes.',
   alternates: {
-    canonical: 'https://construbay.com/blog',
+    canonical: 'https://www.construbay.com/blog',
   },
 };
 

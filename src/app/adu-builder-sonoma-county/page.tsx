@@ -5,7 +5,7 @@ import TestimonialCard from '@/components/TestimonialCard'
 export const metadata: Metadata = {
   title: 'ADU Builder in Sonoma County | ConstruBay CSLB #1106798',
   description: 'Licensed ADU builder in Sonoma County. Petaluma, Sebastopol, Santa Rosa. Design, permits, and construction. Fixed-price contracts. CSLB #1106798.',
-  alternates: { canonical: 'https://construbay.com/adu-builder-sonoma-county' },
+  alternates: { canonical: 'https://www.construbay.com/adu-builder-sonoma-county' },
 }
 
 const CG = 'Cormorant Garamond'

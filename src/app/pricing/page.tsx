@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: '2026 Marin County Luxury Remodeling Cost Guide | ConstruBay',
   description: 'Transparent pricing ranges for luxury remodeling in Marin County. Kitchen, bathroom, full home, ADU, outdoor living. Fixed-scope contracts. CSLB #1106798.',
-  alternates: { canonical: 'https://construbay.com/pricing' },
+  alternates: { canonical: 'https://www.construbay.com/pricing' },
 }
 
 const CG = 'Cormorant Garamond'
