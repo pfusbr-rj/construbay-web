@@ -70,8 +70,6 @@ export default function SchedulePage() {
     fetchData()
   }, [supabase])
 
-  const activeIndex = milestones.findIndex(m => m.status === 'In Progress')
-
   return (
     <div style={{ padding: '40px 32px 60px', maxWidth: '680px' }}>
       <div style={{ marginBottom: '40px' }}>
