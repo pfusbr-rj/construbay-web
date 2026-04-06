@@ -41,7 +41,7 @@ function InfoRow({ label, value }: { label: string; value: React.ReactNode }) {
 }
 
 export default function DashboardOverview() {
-  const [supabase] = useState(() => createPortalClient())
+  const supabase = createPortalClient()
   const [project, setProject] = useState<Project | null>(null)
   const [nextMilestone, setNextMilestone] = useState<Milestone | null>(null)
   const [loading, setLoading] = useState(true)
@@ -78,7 +78,7 @@ export default function DashboardOverview() {
       setLoading(false)
     }
     fetchData()
-  }, [supabase])
+  }, [])
 
   if (loading) {
     return (

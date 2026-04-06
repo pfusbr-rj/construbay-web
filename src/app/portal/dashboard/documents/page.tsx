@@ -32,7 +32,7 @@ function DownloadIcon() {
 }
 
 export default function DocumentsPage() {
-  const [supabase] = useState(() => createPortalClient())
+  const supabase = createPortalClient()
   const [docs, setDocs] = useState<Document[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -57,7 +57,7 @@ export default function DocumentsPage() {
       setLoading(false)
     }
     fetchData()
-  }, [supabase])
+  }, [])
 
   const grouped = DOC_TYPE_ORDER.reduce<Record<string, Document[]>>((acc, type) => {
     const typeDocs = docs.filter(d => d.doc_type === type)

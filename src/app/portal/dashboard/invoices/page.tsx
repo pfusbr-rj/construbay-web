@@ -96,7 +96,7 @@ function MetricCard({ label, value, highlight }: { label: string; value: string;
 }
 
 export default function InvoicesPage() {
-  const [supabase] = useState(() => createPortalClient())
+  const supabase = createPortalClient()
   const [invoices, setInvoices] = useState<Invoice[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -121,7 +121,7 @@ export default function InvoicesPage() {
       setLoading(false)
     }
     fetchData()
-  }, [supabase])
+  }, [])
 
   const totalBilled = invoices.reduce((sum, inv) => sum + (inv.amount || 0), 0)
   const totalPaid = invoices.filter(inv => inv.status === 'Paid').reduce((sum, inv) => sum + (inv.amount || 0), 0)

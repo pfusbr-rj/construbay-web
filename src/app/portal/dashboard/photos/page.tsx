@@ -20,7 +20,7 @@ function formatDate(d: string | null) {
 }
 
 export default function PhotosPage() {
-  const [supabase] = useState(() => createPortalClient())
+  const supabase = createPortalClient()
   const [photos, setPhotos] = useState<Photo[]>([])
   const [activePhase, setActivePhase] = useState('All')
   const [phases, setPhases] = useState<string[]>([])
@@ -51,7 +51,7 @@ export default function PhotosPage() {
       setLoading(false)
     }
     fetchData()
-  }, [supabase])
+  }, [])
 
   const filtered = activePhase === 'All' ? photos : photos.filter(p => p.phase === activePhase)
 

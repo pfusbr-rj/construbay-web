@@ -50,13 +50,16 @@ function StatusBadge({ status }: { status: string }) {
 }
 
 export default function SchedulePage() {
-  const [supabase] = useState(() => createPortalClient())
+  const supabase = createPortalClient()
   const [milestones, setMilestones] = useState<Milestone[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchData() {
       const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+
+      console.log('Session:', session?.user?.id)
+      console.log('Session error:', sessionError)
 
       if (sessionError || !session) {
         console.log('No session found, redirecting to login')
@@ -86,7 +89,7 @@ export default function SchedulePage() {
       setLoading(false)
     }
     fetchData()
-  }, [supabase])
+  }, [])
 
   return (
     <div style={{ padding: '40px 32px 60px', maxWidth: '680px' }}>
