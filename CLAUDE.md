@@ -91,6 +91,96 @@ About: EEAT credentials, Organization JSON-LD, 3-column credentials grid
 4. Some new pages need real photos
 5. Sitemap needs submission to Google Search Console
 
+## CLIENT PORTAL — SUPABASE SCHEMA
+Run these SQL commands manually in Supabase → SQL Editor:
+
+```sql
+-- projects table
+create table projects (
+  id uuid primary key default gen_random_uuid(),
+  client_id uuid references auth.users(id),
+  name text,
+  address text,
+  scope text,
+  current_phase text,
+  start_date date,
+  estimated_completion date,
+  warranty_expiry date,
+  pm_name text,
+  pm_phone text,
+  created_at timestamptz default now()
+);
+alter table projects enable row level security;
+create policy "client sees own projects" on projects for select using (auth.uid() = client_id);
+
+-- photos table
+create table project_photos (
+  id uuid primary key default gen_random_uuid(),
+  project_id uuid references projects(id),
+  url text,
+  phase text,
+  caption text,
+  taken_at date,
+  created_at timestamptz default now()
+);
+alter table project_photos enable row level security;
+create policy "client sees own photos" on project_photos for select using (
+  project_id in (select id from projects where client_id = auth.uid())
+);
+
+-- documents table
+create table project_documents (
+  id uuid primary key default gen_random_uuid(),
+  project_id uuid references projects(id),
+  label text,
+  doc_type text,
+  file_url text,
+  uploaded_at timestamptz default now()
+);
+alter table project_documents enable row level security;
+create policy "client sees own docs" on project_documents for select using (
+  project_id in (select id from projects where client_id = auth.uid())
+);
+
+-- invoices table
+create table project_invoices (
+  id uuid primary key default gen_random_uuid(),
+  project_id uuid references projects(id),
+  invoice_number text,
+  amount numeric,
+  status text,
+  due_date date,
+  paid_date date,
+  file_url text,
+  created_at timestamptz default now()
+);
+alter table project_invoices enable row level security;
+create policy "client sees own invoices" on project_invoices for select using (
+  project_id in (select id from projects where client_id = auth.uid())
+);
+
+-- milestones table
+create table project_milestones (
+  id uuid primary key default gen_random_uuid(),
+  project_id uuid references projects(id),
+  phase_name text,
+  status text,
+  target_date date,
+  completed_date date,
+  sort_order int
+);
+alter table project_milestones enable row level security;
+create policy "client sees own milestones" on project_milestones for select using (
+  project_id in (select id from projects where client_id = auth.uid())
+);
+```
+
+Also set these env vars in Vercel (and .env.local for dev):
+- NEXT_PUBLIC_SUPABASE_URL
+- NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+---
+
 ## HOW TO UPDATE THIS FILE
 At the end of every session, paste this into CC:
 "Update CLAUDE.md: add [pages built] to the pages list, move them out of 'still to build', update session date to [date], add any new known issues: [issues]. Then git add -A && git commit -m 'update CLAUDE.md session [date]' && git push origin main"
