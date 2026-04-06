@@ -21,7 +21,9 @@
       "Read(//c/Users/paulo/construbay-web/src/app/$city/**)",
       "Bash(head -20 grep -rn 'alt={\"\"\"\"\"\"\"\"}' src/app/ src/components/ --include=\"*.tsx\")",
       "Bash(head -20 grep -rn \"<img \" src/app/ src/components/ --include=\"*.tsx\")",
-      "Bash(head -20 grep -rn \"<Image \" src/app/ src/components/ --include=\"*.tsx\")"
+      "Bash(head -20 grep -rn \"<Image \" src/app/ src/components/ --include=\"*.tsx\")",
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }
