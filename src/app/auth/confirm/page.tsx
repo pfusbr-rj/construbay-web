@@ -8,13 +8,34 @@ export default function AuthConfirmPage() {
 
   useEffect(() => {
     const supabase = createPortalClient()
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === 'SIGNED_IN' && session) {
-        subscription.unsubscribe()
-        router.push('/portal/dashboard')
+
+    async function handleHash() {
+      const hash = window.location.hash
+      if (!hash) {
+        router.push('/portal/login')
+        return
       }
-    })
-    return () => subscription.unsubscribe()
+
+      const params = new URLSearchParams(hash.substring(1))
+      const accessToken = params.get('access_token')
+      const refreshToken = params.get('refresh_token')
+
+      if (accessToken && refreshToken) {
+        const { error } = await supabase.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken,
+        })
+        if (error) {
+          router.push('/portal/login')
+        } else {
+          router.push('/portal/dashboard')
+        }
+      } else {
+        router.push('/portal/login')
+      }
+    }
+
+    handleHash()
   }, [router])
 
   return (
