@@ -110,8 +110,6 @@ export default function SchedulePage() {
         {milestones.map((milestone, idx) => {
           const isActive = milestone.status === 'In Progress'
           const isCompleted = milestone.status === 'Completed'
-          const isFirst = idx === 0 && activeIndex === -1
-
           let dotBg = 'rgba(255,255,255,0.15)'
           let dotBorder = 'rgba(255,255,255,0.15)'
           if (isCompleted) { dotBg = '#4ade80'; dotBorder = '#4ade80' }
