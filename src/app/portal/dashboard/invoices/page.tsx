@@ -121,6 +121,7 @@ export default function InvoicesPage() {
       setLoading(false)
     }
     fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const totalBilled = invoices.reduce((sum, inv) => sum + (inv.amount || 0), 0)

@@ -51,6 +51,7 @@ export default function PhotosPage() {
       setLoading(false)
     }
     fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const filtered = activePhase === 'All' ? photos : photos.filter(p => p.phase === activePhase)

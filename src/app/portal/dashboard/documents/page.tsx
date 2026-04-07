@@ -57,6 +57,7 @@ export default function DocumentsPage() {
       setLoading(false)
     }
     fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const grouped = DOC_TYPE_ORDER.reduce<Record<string, Document[]>>((acc, type) => {

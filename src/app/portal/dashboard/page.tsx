@@ -78,6 +78,7 @@ export default function DashboardOverview() {
       setLoading(false)
     }
     fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (loading) {
