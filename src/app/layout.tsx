@@ -102,13 +102,6 @@ const jsonLdSchema = {
     { "@type": "County", "name": "Sonoma County", "containedInPlace": { "@type": "State", "name": "California" } },
     { "@type": "County", "name": "Napa County", "containedInPlace": { "@type": "State", "name": "California" } }
   ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "47",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "priceRange": "$$$",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
