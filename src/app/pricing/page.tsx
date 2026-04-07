@@ -59,11 +59,6 @@ const localBizSchema = {
   },
   priceRange: '$$$$',
   areaServed: ['Marin County', 'Sonoma County', 'Napa County'],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '47',
-  },
 }
 
 const services = [

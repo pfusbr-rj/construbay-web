@@ -45,12 +45,6 @@ const localBusinessSchema = {
     'Belvedere', 'Corte Madera', 'Larkspur', 'San Anselmo', 'Fairfax',
     'Ross', 'Kentfield', 'Greenbrae', 'Marin County',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '47',
-    bestRating: '5',
-  },
   priceRange: '$$$$',
 };
 
