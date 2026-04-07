@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import FaqSchema from '@/components/schema/FaqSchema'
 
 export const metadata: Metadata = {
   title: '2026 Marin County Luxury Remodeling Cost Guide | ConstruBay',
@@ -12,36 +13,30 @@ const MS = 'Montserrat'
 
 const faqItems = [
   {
-    q: 'How much does a kitchen remodel cost in Mill Valley?',
-    a: 'Kitchen remodels in Mill Valley typically range from $85,000 to $175,000 depending on size, layout changes, and finish level. Our fixed-scope contracts guarantee this number does not change after signing.',
+    question: 'How much does a kitchen remodel cost in Mill Valley?',
+    answer: 'Kitchen remodels in Mill Valley typically range from $85,000 to $175,000 depending on size, layout changes, and finish level. Our fixed-scope contracts guarantee this number does not change after signing.',
   },
   {
-    q: 'Do you show prices upfront?',
-    a: 'We show honest ranges based on real projects. Every client receives a fixed-scope proposal before any work begins — no surprises, no change orders.',
+    question: 'Do you show prices upfront?',
+    answer: 'We show honest ranges based on real projects. Every client receives a fixed-scope proposal before any work begins — no surprises, no change orders.',
   },
   {
-    q: 'How does PlanPass.ai affect my project cost?',
-    a: 'PlanPass.ai analyzes your property\'s permit risk before we start. This prevents costly surprises from the building department, which is where most Marin projects blow their budgets.',
+    question: 'How does PlanPass.ai affect my project cost?',
+    answer: 'PlanPass.ai analyzes your property\'s permit risk before we start. This prevents costly surprises from the building department, which is where most Marin projects blow their budgets.',
   },
   {
-    q: 'What is included in the price?',
-    a: 'Design, permit handling, material procurement, construction, project management, and our 5-year workmanship warranty.',
+    question: 'What is included in the price?',
+    answer: 'Design, permit handling, material procurement, construction, project management, and our 5-year workmanship warranty.',
   },
   {
-    q: 'Do you serve Sonoma and Napa Counties?',
-    a: 'Yes. We serve Marin, Sonoma, and Napa Counties including Petaluma, Sebastopol, Santa Rosa, and Napa.',
+    question: 'Do you serve Sonoma and Napa Counties?',
+    answer: 'Yes. We serve Marin, Sonoma, and Napa Counties including Petaluma, Sebastopol, Santa Rosa, and Napa.',
+  },
+  {
+    question: 'What exactly is a fixed-scope contract?',
+    answer: 'A fixed-scope contract defines every line item before construction begins — materials, labor, trade partners, and contingencies. Once signed, the number does not change unless you request additional work. ConstruBay pioneered this model for Marin County luxury projects because it eliminates the change-order surprises that typically add 15–30% to a project\'s final cost.',
   },
 ]
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqItems.map(f => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
-}
 
 const localBizSchema = {
   '@context': 'https://schema.org',
@@ -117,7 +112,6 @@ const testimonials = [
 export default function PricingPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
 
       <main style={{ background: '#000', color: '#fff', minHeight: '100vh' }}>
@@ -289,10 +283,10 @@ export default function PricingPage() {
           {faqItems.map((faq, i) => (
             <div key={i} style={{ borderBottom: '1px solid rgba(203,178,106,0.15)', padding: '1.75rem 0' }}>
               <p style={{ fontFamily: CG, fontSize: '1.25rem', color: '#fff', marginBottom: '0.75rem' }}>
-                {faq.q}
+                {faq.question}
               </p>
               <p style={{ fontFamily: MS, fontSize: '0.8rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.9 }}>
-                {faq.a}
+                {faq.answer}
               </p>
             </div>
           ))}
@@ -325,6 +319,7 @@ export default function PricingPage() {
         </section>
 
       </main>
+      <FaqSchema items={faqItems} />
     </>
   )
 }

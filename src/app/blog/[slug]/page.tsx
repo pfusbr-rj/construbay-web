@@ -1,15 +1,14 @@
 import { notFound } from 'next/navigation';
-import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import { generateBlogMetadata } from '@/lib/seo';
-import KeyTakeaways from '@/components/KeyTakeaways';
+import KeyTakeaways from '@/components/blog/KeyTakeaways';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import FAQSchema from '@/components/seo/FAQSchema';
-import HowToSchema from '@/components/seo/HowToSchema';
+import FaqSchema from '@/components/schema/FaqSchema';
+import HowToSchema from '@/components/schema/HowToSchema';
 import type { Metadata } from 'next';
 
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'] });
-const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
+const CG = 'Cormorant Garamond, serif';
+const MS = 'Montserrat, sans-serif';
 
 export async function generateStaticParams() {
   return getAllPosts().map(post => ({ slug: post.slug }));
@@ -47,7 +46,8 @@ function renderContent(content: string) {
   for (const line of lines) {
     if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={key++} className={cormorant.className} style={{
+        <h2 key={key++} style={{
+          fontFamily: CG,
           fontSize: 'clamp(24px, 3vw, 34px)',
           fontWeight: '300',
           color: '#ffffff',
@@ -62,7 +62,8 @@ function renderContent(content: string) {
       elements.push(<div key={key++} style={{ height: '16px' }} />);
     } else {
       elements.push(
-        <p key={key++} className={montserrat.className} style={{
+        <p key={key++} style={{
+          fontFamily: MS,
           fontSize: '14px',
           fontWeight: '300',
           color: 'rgba(255,255,255,0.65)',
@@ -121,7 +122,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         { name: 'Blog', url: 'https://www.construbay.com/blog' },
         { name: post.title, url: `https://www.construbay.com/blog/${post.slug}` },
       ]} />
-      {post.faqs && post.faqs.length > 0 && <FAQSchema items={post.faqs} />}
+      {/* FaqSchema — TO BE FILLED PER POST via post.faqs */}
+      {post.faqs && post.faqs.length > 0 && <FaqSchema items={post.faqs} />}
+      {/* HowToSchema — TO BE FILLED PER POST via post.howToSteps */}
       {post.isHowTo && post.howToSteps && post.howToSteps.length > 0 && (
         <HowToSchema name={post.title} description={post.excerpt} steps={post.howToSteps} />
       )}
@@ -149,7 +152,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             padding: '48px',
             maxWidth: '800px',
           }}>
-            <p className={montserrat.className} style={{
+            <p style={{
+              fontFamily: MS,
               fontSize: '10px',
               letterSpacing: '0.3em',
               textTransform: 'uppercase',
@@ -158,7 +162,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             }}>
               {post.category}
             </p>
-            <h1 className={cormorant.className} style={{
+            <h1 style={{
+              fontFamily: CG,
               fontSize: 'clamp(28px, 4vw, 52px)',
               fontWeight: '300',
               color: '#ffffff',
@@ -188,15 +193,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', border: '1px solid rgba(203,178,106,0.3)' }}
             />
             <div>
-              <p className={montserrat.className} style={{ fontSize: '12px', color: 'rgba(255,255,255,0.7)', marginBottom: '2px' }}>
+              <p style={{ fontFamily: MS, fontSize: '12px', color: 'rgba(255,255,255,0.7)', marginBottom: '2px' }}>
                 {post.author}
               </p>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                <span className={montserrat.className} style={{ fontSize: '10px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.1em' }}>
+                <span style={{ fontFamily: MS, fontSize: '10px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.1em' }}>
                   {new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                 </span>
                 <span style={{ color: 'rgba(203,178,106,0.3)', fontSize: '10px' }}>·</span>
-                <span className={montserrat.className} style={{ fontSize: '10px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.1em' }}>
+                <span style={{ fontFamily: MS, fontSize: '10px', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.1em' }}>
                   {post.readTime} min read
                 </span>
               </div>
@@ -210,15 +215,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             padding: '1.5rem',
             marginBottom: '2rem',
           }}>
-            <p style={{ color: '#cbb26a', fontFamily: 'Montserrat, sans-serif', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Written by</p>
-            <p style={{ color: '#ffffff', fontFamily: 'Cormorant Garamond, serif', fontSize: '1.3rem', marginBottom: '0.25rem' }}>Paulo Fernandes</p>
-            <p style={{ color: '#cbb26a', fontFamily: 'Montserrat, sans-serif', fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Licensed General Contractor — CSLB #1106798</p>
-            <p style={{ color: '#aaaaaa', fontFamily: 'Montserrat, sans-serif', fontSize: '0.75rem', lineHeight: '1.6' }}>Founder of ConstruBay and PlanPass.ai. 15+ years of luxury residential construction experience in Marin County, California.</p>
+            <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Written by</p>
+            <p style={{ color: '#ffffff', fontFamily: CG, fontSize: '1.3rem', marginBottom: '0.25rem' }}>Paulo Fernandes</p>
+            <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Licensed General Contractor — CSLB #1106798</p>
+            <p style={{ color: '#aaaaaa', fontFamily: MS, fontSize: '0.75rem', lineHeight: '1.6' }}>Founder of ConstruBay and PlanPass.ai. 15+ years of luxury residential construction experience in Marin County, California.</p>
           </div>
 
-          {/* Key Takeaways */}
+          {/* Key Takeaways — TO BE FILLED PER POST via post.keyTakeaways */}
           {post.keyTakeaways && post.keyTakeaways.length > 0 && (
-            <KeyTakeaways items={post.keyTakeaways} />
+            <KeyTakeaways takeaways={post.keyTakeaways} />
           )}
 
           {/* Article body */}
@@ -229,7 +234,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           {/* FAQs */}
           {post.faqs && post.faqs.length > 0 && (
             <div style={{ marginTop: '64px' }}>
-              <h2 className={cormorant.className} style={{
+              <h2 style={{
+                fontFamily: CG,
                 fontSize: 'clamp(22px, 3vw, 32px)',
                 fontWeight: '300',
                 color: '#ffffff',
@@ -245,7 +251,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     paddingTop: '24px',
                     paddingBottom: '24px',
                   }}>
-                    <p className={montserrat.className} style={{
+                    <p style={{
+                      fontFamily: MS,
                       fontSize: '13px',
                       fontWeight: '400',
                       color: '#ffffff',
@@ -255,7 +262,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     }}>
                       {faq.question}
                     </p>
-                    <p className={montserrat.className} style={{
+                    <p style={{
+                      fontFamily: MS,
                       fontSize: '13px',
                       fontWeight: '300',
                       color: 'rgba(255,255,255,0.6)',
@@ -279,7 +287,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             gap: '8px',
           }}>
             {post.tags.map(tag => (
-              <span key={tag} className={montserrat.className} style={{
+              <span key={tag} style={{
+                fontFamily: MS,
                 fontSize: '9px',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
@@ -299,7 +308,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             padding: '40px',
             backgroundColor: '#000000',
           }}>
-            <p className={montserrat.className} style={{
+            <p style={{
+              fontFamily: MS,
               fontSize: '10px',
               letterSpacing: '0.3em',
               textTransform: 'uppercase',
@@ -308,7 +318,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             }}>
               Free Download
             </p>
-            <h3 className={cormorant.className} style={{
+            <h3 style={{
+              fontFamily: CG,
               fontSize: '28px',
               fontWeight: '300',
               color: '#ffffff',
@@ -317,7 +328,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             }}>
               The Marin County Remodel Guide
             </h3>
-            <p className={montserrat.className} style={{
+            <p style={{
+              fontFamily: MS,
               fontSize: '12px',
               fontWeight: '300',
               color: 'rgba(255,255,255,0.5)',
@@ -329,11 +341,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </p>
             <a
               href="/request-a-bid"
-              className={montserrat.className}
               style={{
                 display: 'inline-block',
                 backgroundColor: '#cbb26a',
                 color: '#000000',
+                fontFamily: MS,
                 fontSize: '11px',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
@@ -353,7 +365,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             border: '1px solid rgba(203,178,106,0.2)',
             textAlign: 'center',
           }}>
-            <p className={montserrat.className} style={{
+            <p style={{
+              fontFamily: MS,
               fontSize: '10px',
               letterSpacing: '0.3em',
               textTransform: 'uppercase',
@@ -362,7 +375,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             }}>
               Ready to Build?
             </p>
-            <h3 className={cormorant.className} style={{
+            <h3 style={{
+              fontFamily: CG,
               fontSize: '32px',
               fontWeight: '300',
               color: '#ffffff',
@@ -370,7 +384,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             }}>
               Let&apos;s Talk About Your Project
             </h3>
-            <p className={montserrat.className} style={{
+            <p style={{
+              fontFamily: MS,
               fontSize: '12px',
               fontWeight: '300',
               color: 'rgba(255,255,255,0.5)',
@@ -381,11 +396,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </p>
             <a
               href="tel:4159689494"
-              className={montserrat.className}
               style={{
                 display: 'inline-block',
                 border: '1px solid #cbb26a',
                 color: '#cbb26a',
+                fontFamily: MS,
                 fontSize: '11px',
                 letterSpacing: '0.25em',
                 textTransform: 'uppercase',
@@ -401,8 +416,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div style={{ marginTop: '48px' }}>
             <a
               href="/blog"
-              className={montserrat.className}
               style={{
+                fontFamily: MS,
                 fontSize: '10px',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
