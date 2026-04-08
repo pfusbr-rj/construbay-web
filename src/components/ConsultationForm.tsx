@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { fireFormSubmitConversion } from "@/lib/gtag";
 
 const projectTypes = [
   "New Construction",
@@ -77,6 +78,7 @@ export default function ConsultationForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Failed to submit");
+      fireFormSubmitConversion();
       setSubmitted(true);
       setStep(4);
     } catch {

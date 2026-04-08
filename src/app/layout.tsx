@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import SocialSidebar from "@/components/SocialSidebar";
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import PhoneClickTracker from "@/components/PhoneClickTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -247,6 +248,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             alt=""
           />
         </noscript>
+        <PhoneClickTracker />
         <SocialSidebar />
 
         <Header />
