@@ -3,12 +3,6 @@ import { useState, useEffect } from 'react'
 import TestimonialCard from '@/components/TestimonialCard'
 import AduSchema from '@/components/schema/AduSchema'
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-  }
-}
-
 const LOGO = '/images/logo.png'
 const WA_LINK = 'https://wa.me/14159689494?text=Hi%2C%20I%27m%20interested%20in%20building%20an%20ADU%20on%20my%20property.%20Can%20we%20chat%3F'
 const CALENDLY_URL = 'https://calendly.com/construbay/adu-planning-session-design-permits-budget'
