@@ -32,7 +32,7 @@
 - Database: Supabase Pro ($25/mo)
 - Email: Resend (leads@construbay.com → paulo@construbay.com)
 - Hosting: Vercel (auto-deploy on push to main)
-- Analytics: GA4 (G-E5R2DP0WG0) + GTM (GTM-CONSTRUBAY — placeholder, needs real ID)
+- Analytics: GA4 (G-E5R2DP0WG0) + Google Ads (AW-16562885363) + GTM (GTM-CONSTRUBAY — placeholder, needs real ID)
 - CMS: Sanity.io (project: cnkiklp4, dataset: production)
 
 ## CRITICAL BUILD RULES — NEVER BREAK

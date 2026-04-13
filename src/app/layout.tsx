@@ -179,13 +179,13 @@ gtag('js', new Date());
 gtag('config', 'G-E5R2DP0WG0');`,
           }}
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-6807667762" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16562885363" />
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'AW-6807667762');`,
+gtag('config', 'AW-16562885363');`,
           }}
         />
         <script
