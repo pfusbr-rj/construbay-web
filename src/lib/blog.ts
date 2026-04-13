@@ -1796,6 +1796,120 @@ Explore our [general contractor services in Marin County](/marin-county-general-
 
 [Schedule a Complimentary Assessment](https://calendly.com/construbay/initial-consultation-construbay)`,
   },
+  // Week 3 — Post 3 (Wednesday April 23)
+  {
+    slug: 'best-bathroom-materials-marin-county',
+    title: 'Tile, Stone, or Marble: Best Bathroom Materials for Marin County Homes',
+    excerpt: 'Compare tile, natural stone, and marble for Marin County bathroom remodels. Costs, durability, and what luxury buyers actually want in 2026. Expert advice from ConstruBay.',
+    content: `## Porcelain Tile: The Practical Choice
+
+Modern large-format porcelain — 24x48 inch slabs, 48x48 inch panels, and full-height wall slabs up to 120 inches — achieves a visual weight and surface continuity that rivals natural stone at a fraction of the maintenance cost. Water absorption rates below 0.5 percent make porcelain ideal for shower floors, walls, and heated floor systems. Installation cost for premium large-format porcelain in Marin County runs $18–$40 per square foot installed.
+
+## Natural Stone: The Luxury Standard
+
+Natural stone — travertine, limestone, slate, quartzite, and granite — occupies a different position in the Marin County bathroom market. Quartzite has become particularly popular in estate bathrooms: it\'s harder than marble (7–8 on the Mohs scale vs. marble\'s 3–4), resists etching better, and offers similar vein patterns. Super White and Taj Mahal quartzite are the most specified options in the Marin luxury market. Installation runs $30–$60 per square foot.
+
+## Marble: Beauty with Caveats
+
+Marble defines the standard against which all other bathroom surfaces are judged in Marin County\'s estate tier. A primary bathroom with book-matched Calacatta marble shower walls, honed marble floor, and marble slab vanity top communicates a level of material investment that resonates with buyers at the top of the Tiburon and Belvedere market. Marble reacts with acids, shows wear patterns over time, and requires sealing — characteristics of a living material. Installed cost runs $35–$75 per square foot.
+
+## Cost Comparison in Marin County
+
+Porcelain tile: $18–$40 per square foot installed. Natural stone (travertine, quartzite): $28–$60 per square foot. Marble tile: $35–$75 per square foot. For a primary bathroom with approximately 120 square feet of tile surface, moving from porcelain to marble can add $15,000–$35,000 to material and installation costs.
+
+## What Marin County Buyers Actually Want
+
+In Marin County\'s estate tier — properties above $4 million in Tiburon, Belvedere, and Ross — buyers inspect bathroom materials closely. Marble or high-quality quartzite is the standard of care. In the $1.5–$3.5 million range, large-format porcelain in a stone-look pattern with a frameless glass shower, floating vanity, and soaking tub wins the market. ConstruBay recommends material selection relative to the home\'s actual market tier.
+
+## Why ConstruBay for Your Bathroom Remodel
+
+ConstruBay has completed primary and secondary bathroom remodels across Marin County\'s full market range. Licensed general contractor CSLB #1106798. Every project is owner-led by Paulo Fernandes under a fixed-scope contract. Rating: 4.9/5 from 47 reviews on Google.
+
+[Schedule Complimentary Assessment](https://calendly.com/construbay/initial-consultation-construbay)`,
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-23',
+    category: 'Bathroom Remodel',
+    tags: ['bathroom remodel Marin County', 'bathroom tile Marin', 'marble bathroom Bay Area', 'natural stone bathroom', 'luxury bathroom 2026'],
+    coverImage: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80',
+    readTime: 7,
+    keyTakeaways: [
+      'Large-format porcelain tile is the dominant choice in Marin County bathroom remodels — durable, low-maintenance, and visually competitive with natural stone',
+      'Natural stone elevates estate-tier properties in Tiburon, Belvedere, and Ross where buyers expect material authenticity',
+      'Marble is the luxury benchmark but requires sealing, careful use, and buyer education at resale',
+      'Material selection should match the home\'s actual market tier — over-specifying materials above comparable sales yields cost without return',
+      'Installed costs range from $18/sq ft for porcelain to $75/sq ft for premium marble — a material decision can shift total project cost by $20,000+',
+    ],
+    faqs: [
+      {
+        question: 'What is the most popular bathroom material in Marin County luxury remodels?',
+        answer: 'Large-format porcelain tile — particularly slabs in 24x48 inch or larger formats — is the most widely specified material in Marin County bathroom remodels in 2026. For primary bathrooms in estate-tier homes, natural stone and marble remain the prestige choice.',
+      },
+      {
+        question: 'How much does marble add to a bathroom remodel cost in Marin County?',
+        answer: 'Marble tile installation in Marin County costs $35–$75 per square foot installed, compared to $18–$40 per square foot for high-quality porcelain. A full primary bathroom remodel with Calacatta marble can add $15,000–$35,000 to the project cost.',
+      },
+      {
+        question: 'Is natural stone a good investment for a Marin County bathroom remodel?',
+        answer: 'Yes, when specified correctly for the home\'s price tier. In Tiburon, Belvedere, and Ross — where primary bathroom remodels routinely run $80,000–$150,000 — natural stone is an expected material at resale. In neighborhoods where comparable homes have porcelain bathrooms, marble adds cost without proportional return.',
+      },
+    ],
+  },
+  // Week 3 — Post 4 (Thursday April 24)
+  {
+    slug: 'ai-home-remodeling-marin-county',
+    title: 'How AI Is Changing Home Remodeling in Marin County — And What It Means for You',
+    excerpt: 'AI is transforming how Marin County homeowners design, estimate, and manage remodels in 2026. Learn what the technology actually does — and what it can\'t replace.',
+    content: `## AI in Design: See Your Remodel Before It Starts
+
+Generative AI tools can now produce photo-realistic renders of a proposed kitchen, bathroom, or living space from a description, a reference photo, and a floor plan — in hours rather than weeks. A homeowner considering a waterfall-edge Calacatta marble island against a dark navy cabinet color can see a realistic representation of that combination in their actual kitchen dimensions before committing to the specification. This reduces mid-construction changes, which are the primary source of budget overruns in Marin County remodel projects.
+
+## AI in Estimating: Faster and More Accurate Bids
+
+AI-assisted estimating tools compress the estimating process significantly. Machine learning models trained on historical project data can perform preliminary quantity takeoffs from uploaded drawings and generate preliminary cost ranges that help establish project feasibility before detailed design work is commissioned. For Marin County homeowners, the benefit is faster access to reliable budget ranges early in the project process.
+
+## AI in Project Management: Fewer Surprises
+
+AI-assisted project management platforms can generate daily or weekly project status reports, flag schedule risks before they cause delays, and maintain a complete documented record of every decision, change, and approval. For luxury remodel clients who expect high-level communication from their general contractor, these tools make that standard achievable.
+
+## What This Means for Marin County Homeowners
+
+AI makes good contractors more effective; it does not replace them. You still need a licensed general contractor with real experience in Marin\'s specific permit environment, established relationships with quality local subcontractors, and the judgment to make field decisions when plans and reality diverge. AI improves information flow — it does not replace professional judgment.
+
+## How ConstruBay Uses AI Today
+
+ConstruBay integrates AI tools across its project workflow. The most significant is PlanPass.ai — our proprietary permit review platform that scans permit packages for compliance issues before submission to Marin County building departments, reducing the correction cycles that are the primary source of permit delay. We also use AI-assisted design tools in the early project phase and AI-assisted estimating for preliminary budget framing, validated against actual subcontractor bids.
+
+ConstruBay: licensed Marin County general contractor (CSLB #1106798). Rating: 4.9/5 from 47 reviews on Google.
+
+[Schedule Complimentary Assessment](https://calendly.com/construbay/initial-consultation-construbay)`,
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-24',
+    category: 'Marin Remodeling',
+    tags: ['home remodeling Marin County 2026', 'AI construction Marin County', 'general contractor Marin County', 'luxury remodel Bay Area', 'AI permit review'],
+    coverImage: 'https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=1200&q=80',
+    readTime: 6,
+    keyTakeaways: [
+      'AI design tools let Marin County homeowners see photo-realistic renders of their remodel before breaking ground',
+      'AI-assisted estimating produces faster, more accurate project budgets — without changing underlying Bay Area construction costs',
+      'AI permit review platforms like PlanPass.ai reduce correction cycles and accelerate Marin County plan check timelines',
+      'AI improves the remodeling process but does not replace the licensed general contractor\'s legal responsibility, field judgment, or local relationships',
+      'ConstruBay uses AI tools at every project phase — design through permit — as a standard part of its Marin County remodeling practice',
+    ],
+    faqs: [
+      {
+        question: 'How is AI being used in home remodeling in Marin County in 2026?',
+        answer: 'AI is primarily applied in three areas: design visualization (photo-realistic renders before construction), pre-construction estimating (AI-assisted takeoff and pricing), and permit review (AI platforms that scan permit packages for compliance issues before submission). ConstruBay uses PlanPass.ai, its proprietary AI permit review platform.',
+      },
+      {
+        question: 'Can AI replace a licensed general contractor for a Marin County remodel?',
+        answer: 'No. AI tools assist with design, estimating, and permit preparation — but they do not replace the licensed contractor who is legally responsible for the work, manages subcontractors, makes field decisions, and navigates the specific permit requirements and site conditions that define Marin County construction.',
+      },
+      {
+        question: 'Does AI-assisted estimating make remodels cheaper in Marin County?',
+        answer: 'AI estimating tools improve accuracy and reduce the time required to produce a bid, but they do not change underlying labor and material costs in the Marin County market. A faster, more accurate estimate is valuable — it does not make construction cheaper.',
+      },
+    ],
+  },
 ];
 
 export function getAllPosts(): BlogPost[] {
