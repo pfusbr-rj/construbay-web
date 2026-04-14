@@ -32,7 +32,7 @@
 - Database: Supabase Pro ($25/mo)
 - Email: Resend (leads@construbay.com → paulo@construbay.com)
 - Hosting: Vercel (auto-deploy on push to main)
-- Analytics: GA4 (G-E5R2DP0WG0) + Google Ads (AW-16562885363) + GTM (GTM-CONSTRUBAY — placeholder, needs real ID)
+- Analytics: GA4 (G-E5R2DP0WG0) + Google Ads (AW-16562885363) + GTM (GT-WP5CF89M)
 - CMS: Sanity.io (project: cnkiklp4, dataset: production)
 
 ## CRITICAL BUILD RULES — NEVER BREAK
@@ -85,7 +85,7 @@ About: EEAT credentials, Organization JSON-LD, 3-column credentials grid
 - Individual project case study sub-pages with photos
 
 ## KNOWN ISSUES
-1. GTM ID is placeholder — create account at tagmanager.google.com, replace GTM-CONSTRUBAY
+1. GTM ID set to GT-WP5CF89M — verify container is publishing in Tag Manager
 2. Favicon may need PNG conversion
 3. GBP needs golden hour exterior cover photo
 4. Some new pages need real photos
