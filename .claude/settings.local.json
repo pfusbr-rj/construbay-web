@@ -25,7 +25,10 @@
       "Bash(npm install:*)",
       "Bash(npm uninstall:*)",
       "Bash(gh api:*)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Skill(morning)",
+      "Bash(dir \"C:\\\\Users\\\\paulo\\\\Documents\\\\construbay-web\")",
+      "Bash(dir \"C:\\\\Users\\\\paulo\\\\construbay-web\")"
     ]
   }
 }
