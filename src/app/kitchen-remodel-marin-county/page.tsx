@@ -119,11 +119,6 @@ const sendWhatsAppNotification = async (formData: {
   }
 };
 
-export const metadata = {
-  title: 'Kitchen Remodel Marin County | Luxury Kitchen Contractor | ConstruBay',
-  description: 'Luxury kitchen remodels in Marin County. Fixed-scope contracts, custom cabinetry, AI-accelerated permits. CSLB #1106798. Book your complimentary assessment.',
-};
-
 export default function KitchenRemodelMarinPage() {
   const [step, setStep] = useState(1);
   const [kitchenType, setKitchenType] = useState('');
