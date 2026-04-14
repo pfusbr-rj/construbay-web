@@ -13,9 +13,201 @@ export interface BlogPost {
   faqs?: { question: string; answer: string }[];
   isHowTo?: boolean;
   howToSteps?: { name: string; text: string }[];
+  canonicalUrl?: string;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'whole-home-remodel-cost-sonoma-county',
+    title: 'Whole Home Remodel Cost in Sonoma County (2026)',
+    excerpt: 'A whole-home remodel in Sonoma County costs $200,000 to $500,000 for mid-range quality and $500,000 to $1.2 million-plus for luxury renovations. Here\'s how to plan, phase, and budget for complete home renovation.',
+    content: `## Defining Whole-Home Remodel Scope and Budget
+
+A whole-home remodel in Sonoma County encompasses kitchen, bathrooms, flooring, lighting, mechanical systems, and finishes across the entire occupied footprint. A mid-range renovation — replacing systems, updating finishes, and modernizing without major structural changes — costs $200,000 to $500,000. A luxury whole-home remodel with custom millwork, premium materials, and structural modifications costs $500,000 to $1.2 million or more.
+
+Cost per square foot is the most useful metric for preliminary budgeting. Mid-range whole-home remodels in Sonoma County average $55 to $100 per square foot. Luxury remodels run $150 to $250 per square foot, depending on finishes and extent of structural work.
+
+## Phasing Strategy: The Path to Intelligent Whole-Home Renovation
+
+Almost every successful whole-home remodel in Sonoma County is phased rather than executed as a single continuous project. A two-phase approach — phase one covering the kitchen, primary bathroom, and primary suite; phase two covering secondary bathrooms, secondary spaces, and final finishes — reduces disruption, spreads financial impact across time, and allows mid-course adjustments.
+
+Phase one typically costs 55% to 65% of the total project budget. Phase two costs 35% to 45%. The phase-one focus on the spaces where the household spends the most time delivers immediate return on investment and establishes the design direction that phase two builds upon.
+
+## Cost Breakdown: Systems, Finishes, and Labor
+
+In a whole-home renovation, costs distribute across several major categories. Kitchen and primary bath combined account for 28% to 35% of budget; flooring throughout accounts for 10% to 14%; electrical and mechanical systems account for 11% to 17%; secondary bathrooms account for 10% to 14%; painting, cabinetry, and finish carpentry account for 17% to 23%; and permits, contingency, and overhead account for 8% to 11%.
+
+Labor represents 40% to 50% of total remodel cost in a whole-home project. Material costs account for 35% to 45%. Permits, contingency, and overhead occupy 10% to 15%.
+
+## Permits and Entitlement for Whole-Home Work
+
+Whole-home remodels in Sonoma County almost always require planning review in addition to building permits. Even projects that do not expand the home's footprint trigger planning oversight if they involve significant structural changes, mechanical system replacement, or grading modifications. Planning review timelines in Sonoma County average two to four months.
+
+Building permit review occupies three to six weeks after planning approval. Permits for a whole-home remodel cost $4,000 to $8,000, depending on jurisdiction and total construction value.
+
+## Timeline and Living Disruption
+
+A complete whole-home remodel requires twelve to eighteen months from design through completion. Planning and building permits occupy two to four months; design coordination occupies six to eight weeks; construction occupies eight to twelve months depending on phasing. Most families elect to relocate temporarily during the most intensive construction phases — typically six to eight weeks.`,
+    keyTakeaways: [
+      'Mid-range whole-home remodels in Sonoma County cost $200,000–$500,000; luxury remodels run $500,000–$1.2M+',
+      'Cost per square foot ranges from $55–$100 (mid-range) to $150–$250+ (luxury) depending on scope and finishes',
+      'Phased execution (kitchen/bath first, secondary spaces later) reduces costs and allows mid-project adjustments',
+      'Whole-home permits typically require planning review; allow two to four months for complete entitlement',
+      'Labor efficiency dramatically improves when multiple trades work coordinated scopes versus single-room renovations',
+    ],
+    faqs: [
+      {
+        question: 'What does a whole-home remodel cost in Sonoma County in 2026?',
+        answer: 'A whole-home remodel in Sonoma County costs $200,000 to $500,000 for mid-range quality and $500,000 to $1.2 million-plus for luxury renovations. For a typical 3,500-square-foot home, budget $200,000 to $400,000 for mid-range work. Cost per square foot ranges from $55–$100 for mid-range to $150–$250+ for luxury.',
+      },
+      {
+        question: 'Should I remodel my entire home at once or phase the work?',
+        answer: 'Phasing is almost always the better strategy. A two-phase approach — kitchen, primary bath, and primary suite first; then secondary spaces — reduces contractor mobilization costs, allows you to test finishes before committing to phase two, and spreads financial impact across a longer timeline.',
+      },
+      {
+        question: 'How long does a Sonoma County whole-home remodel take?',
+        answer: 'A comprehensive whole-home remodel requires twelve to eighteen months from design through completion. Permitting occupies two to four months; design coordination occupies six to eight weeks; construction occupies eight to twelve months. Weather delays typically add two to four weeks during winter.',
+      },
+    ],
+    category: 'Cost Guide',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-16',
+    readTime: 9,
+    coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    tags: ['whole home remodel cost Sonoma County', 'full home renovation Sonoma', 'luxury home remodel Santa Rosa 2026', 'whole home remodel timeline', 'Sonoma County contractor'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
+    slug: 'bathroom-remodel-cost-sonoma-county',
+    title: 'Bathroom Remodel Cost in Sonoma County: What to Expect in 2026',
+    excerpt: 'A mid-range bathroom remodel in Sonoma County costs $35,000 to $75,000; luxury bathrooms run $75,000 to $175,000. Here\'s a detailed cost breakdown for tiles, fixtures, labor, and permits.',
+    content: `## Understanding Bathroom Remodel Cost Tiers in Sonoma County
+
+Sonoma County bathroom remodels operate within a well-defined cost spectrum. A mid-range bathroom renovation — new tile, standard fixture upgrades, fresh vanity, plumbing and electrical modernization — costs $35,000 to $75,000. A primary bathroom with higher-end specifications runs $75,000 to $175,000.
+
+Secondary bathrooms — guest baths, half-baths, powder rooms — cost 30% to 50% less than primary bathrooms of equivalent finish level. A guest bathroom refresh runs $18,000 to $35,000 for tile, fixtures, and painting.
+
+## Tile, Materials, and Finishes
+
+Ceramic and porcelain tile are the market standard for bathroom walls and floors in Sonoma County. Ceramic tile costs $4 to $8 per square foot material; porcelain runs $6 to $12 per square foot. For a typical mid-range primary bathroom, allocate approximately 120 to 160 square feet of wall tile and 50 to 70 square feet of floor tile. Labor for tile installation runs $3,500 to $7,500, depending on complexity.
+
+Natural stone tile — marble, granite, travertine, slate — commands premium pricing. Marble runs $12 to $25 per square foot; granite costs $8 to $18 per square foot. Material costs for equivalent square footage of natural stone are two to three times ceramic.
+
+## Fixtures, Vanities, and Hardware
+
+Vanity and sink combinations represent 8% to 12% of a bathroom remodel budget. A mid-range vanity costs $1,500 to $3,000 installed. A luxury vanity with custom millwork and natural stone top runs $4,000 to $8,000. Faucet selection dramatically impacts perceived quality, ranging from $200–$600 for standard to $1,500–$3,500 for high-end designer faucets.
+
+Luxury bathrooms often include spa-quality features: heated towel racks ($1,000–$2,500), heated floors ($3,000–$6,000), rainfall showerheads ($4,000–$9,000), and integrated bidet toilets ($1,200–$3,000).
+
+## Plumbing and Electrical Work
+
+Plumbing modernization accounts for 15% to 20% of bathroom remodel cost. If existing plumbing is in good condition and you are simply replacing fixtures, plumbing work runs $2,500 to $4,500. If the bathroom requires new supply lines or fixtures relocated, plumbing cost escalates to $5,000 to $8,000 or higher.
+
+Electrical work modernizes lighting, ventilation, and convenience circuits. A standard bathroom remodel electrical upgrade costs $1,500 to $3,000. Luxury bathrooms with integrated lighting systems and spa features run $3,500 to $6,000 for electrical.
+
+## Permits and Timelines
+
+Sonoma County bathroom remodel permits cost $1,500 to $2,500. The permit timeline averages four to six weeks for standard bathroom work. The full construction timeline typically requires eight to twelve weeks for a standard mid-range bathroom remodel.`,
+    keyTakeaways: [
+      'Mid-range bathroom remodels in Sonoma County cost $35,000–$75,000; luxury bathrooms run $75,000–$175,000+',
+      'Tile work is the largest labor cost; natural stone tiles command premiums over ceramic',
+      'Premium fixture selection (faucets, showerheads, heated floors) adds 15–25% to total budget',
+      'Primary bathroom renovations cost 30–50% more than secondary bathrooms of equivalent scope',
+      'Permit timelines are four to six weeks for standard bathroom work in Sonoma County',
+    ],
+    faqs: [
+      {
+        question: 'What is the average bathroom remodel cost in Sonoma County in 2026?',
+        answer: 'A mid-range bathroom remodel costs $35,000 to $75,000, covering new tile, fixtures, vanity, and plumbing updates. Luxury renovations run $75,000 to $175,000, incorporating premium materials and spa-quality fixtures. The cost depends on bathroom size and whether you are replacing tile and plumbing infrastructure.',
+      },
+      {
+        question: 'How much does tile work cost in a Sonoma County bathroom?',
+        answer: 'Tile represents 15% to 25% of a bathroom remodel budget. Ceramic or porcelain tile costs $3,000 to $8,000 installed for a mid-range bathroom. Natural stone tile costs $6,000 to $14,000 for equivalent square footage. Labor accounts for 60% to 70% of the tile budget.',
+      },
+      {
+        question: 'What fixtures should I budget for a luxury Sonoma County bathroom?',
+        answer: 'Premium vanity combinations run $3,500 to $7,500; high-end faucets cost $800 to $2,500; luxury toilet fixtures run $1,200 to $3,000; shower systems cost $4,000 to $8,000. In aggregate, fully specified luxury bathrooms budget $12,000 to $25,000 for plumbing fixtures alone.',
+      },
+    ],
+    category: 'Cost Guide',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-15',
+    readTime: 7,
+    coverImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
+    tags: ['bathroom remodel cost Sonoma County', 'bathroom renovation Sonoma', 'luxury bathroom Petaluma', 'bathroom remodel Santa Rosa 2026'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
+    slug: 'kitchen-remodel-cost-sonoma-county',
+    title: 'How Much Does a Kitchen Remodel Cost in Sonoma County? (2026 Guide)',
+    excerpt: 'A mid-range kitchen remodel in Sonoma County costs $75,000 to $150,000; luxury kitchens run $150,000 to $350,000+. Here\'s the complete cost breakdown for Petaluma, Santa Rosa, and Sebastopol.',
+    content: `## Kitchen Remodel Cost Breakdown in Sonoma County
+
+Sonoma County kitchen remodels operate within three clear cost brackets. A mid-range renovation — cabinetry replacement, new countertops, appliance upgrade, electrical and plumbing modernization — runs between $75,000 and $150,000 in 2026. A luxury kitchen with semi-custom or fully custom cabinetry, premium finishes, integrated appliances, and designer-level material selections costs $150,000 to $350,000.
+
+The cost differential between Petaluma, Sebastopol, and Santa Rosa reflects land value and market positioning more than construction methodology. Santa Rosa wine country homes command luxury-tier budgets; Sebastopol and Petaluma tend toward mid-range value propositions.
+
+The cost of labor is the single largest variable in a Sonoma County kitchen remodel. Material costs are consistent across the region and across Marin County. On a $100,000 Sonoma County kitchen, labor typically accounts for 35% to 45% of the total — roughly $35,000 to $45,000.
+
+## Material and Labor Costs in Sonoma County vs. Marin County
+
+Sonoma County labor rates for kitchen trades average 15% to 25% lower than Marin County equivalents. A lead carpenter in Petaluma charging $120 per hour is typical; the equivalent role in Marin runs $145 to $165. Material costs are equivalent across both regions.
+
+The permitting cost in Sonoma County averages $2,500 to $4,000 for a standard kitchen remodel, depending on jurisdiction. Santa Rosa city permits run slightly higher than unincorporated Sonoma County.
+
+## Petaluma, Santa Rosa, and Sebastopol: Market-Specific Pricing
+
+Petaluma kitchen remodels most commonly fall in the $70,000 to $130,000 range, reflecting the city's lower median home values. Petaluma projects tend toward semi-custom cabinetry, solid-surface countertops or quartz, and functional design.
+
+Santa Rosa kitchens are more market-segmented. Downtown and Fountaingrove luxury homes regularly support $180,000 to $300,000 kitchen budgets with wine-country design sensibilities. The wine country influence creates a strong aesthetic preference for warm tones, natural materials, and integrated wine storage.
+
+Sebastopol kitchen remodels range from $65,000 to $140,000, as the community skews toward progressive residential design and sustainability-conscious selections. Homeowners frequently request reclaimed wood accents and integrated composting areas.
+
+## Cabinetry, Countertops, and Appliances: The Cost Drivers
+
+Cabinetry represents 25% to 35% of a typical Sonoma County kitchen remodel cost. Stock cabinetry costs $18,000 to $35,000 installed; semi-custom options run $35,000 to $55,000. Fully custom cabinetry begins at $60,000 and escalates rapidly with bespoke detailing.
+
+Countertops account for 15% to 20% of project cost. Quartz countertops, the market standard, run $3,500 to $6,500 installed for a typical kitchen. Premium natural stone costs $5,500 to $12,000 for the same footprint.
+
+Appliances represent 10% to 15% of remodel cost in mid-range projects. A mid-tier package costs $6,000 to $9,000. Luxury appliance packages cost $12,000 to $22,000.
+
+## Permits, Timelines, and Budget Planning
+
+Sonoma County requires electronic plan submittals for all kitchen remodels and processes permit applications within a published timeline of three to five weeks for standard projects. Complex remodels may extend to six to eight weeks.
+
+The full construction timeline for a Sonoma County kitchen remodel — from design through final inspection — typically requires four to five months. Permitting occupies one month; material procurement occupies four to six weeks; construction occupies six to eight weeks.`,
+    keyTakeaways: [
+      'Mid-range kitchen remodels in Sonoma County cost $75,000–$150,000; luxury kitchens run $150,000–$350,000+',
+      'Sonoma County labor rates are approximately 15–25% lower than Marin County for equivalent work quality',
+      'Petaluma and Sebastopol are the most cost-conscious markets; Santa Rosa commands Marin-adjacent pricing for high-end projects',
+      'Permit timelines in Sonoma County are three to five weeks for standard work, six to eight weeks for complex remodels',
+      'Labor is the largest cost driver; material costs are equivalent across Marin and Sonoma County markets',
+    ],
+    faqs: [
+      {
+        question: 'What is the average cost of a kitchen remodel in Sonoma County in 2026?',
+        answer: 'A mid-range kitchen remodel costs between $75,000 and $150,000. Luxury renovations typically run $150,000 to $350,000 or higher. Petaluma and Sebastopol tend to fall on the lower end; Santa Rosa and wine country homes trend toward the luxury range.',
+      },
+      {
+        question: 'Are Sonoma County kitchen remodels significantly cheaper than Marin County?',
+        answer: 'Sonoma County kitchen remodels are approximately 15% to 25% less expensive than equivalent projects in Marin County, primarily due to lower labor costs in secondary markets. For a $150,000 luxury kitchen in Marin, expect the equivalent scope to cost $112,000 to $128,000 in Sonoma County.',
+      },
+      {
+        question: 'How long do Sonoma County building permits take for a kitchen remodel?',
+        answer: 'Sonoma County typically processes kitchen remodel permits within three to five weeks for standard projects. Complex remodels involving structural changes may extend to six to eight weeks. Planning approval is rarely required for kitchen-only remodels.',
+      },
+    ],
+    category: 'Cost Guide',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-14',
+    readTime: 8,
+    coverImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
+    tags: ['kitchen remodel cost Sonoma County', 'kitchen renovation Sonoma', 'luxury kitchen Petaluma', 'kitchen remodel Santa Rosa 2026', 'Sonoma County contractor'],
+    isHowTo: false,
+    howToSteps: [],
+  },
   {
     slug: 'should-you-remodel-marin-county-2026-rates-costs-permits',
     title: 'Should You Remodel in Marin County in 2026? Interest Rates, Costs, and Permits Explained',
@@ -253,6 +445,7 @@ The right 2026 strategy pairs these legislative advantages with disciplined site
     tags: ['permits', 'Marin County', 'building permit', 'timeline', 'contractor tips'],
     coverImage: 'https://images.unsplash.com/photo-1568992688065-536aad8a12f6?auto=format&fit=crop&w=1200&q=80',
     readTime: 7,
+    canonicalUrl: 'https://www.construbay.com/blog/adu-permit-process-marin-county',
     keyTakeaways: [
       'Mill Valley building permits average 8-12 weeks processing time',
       'Pre-application meetings with the building department save 3-4 weeks',
@@ -315,6 +508,7 @@ If you're planning an [ADU or addition in Marin County](/adu-builder-marin-count
     tags: ['ADU', 'cost', 'Marin County', 'accessory dwelling unit', 'budget'],
     coverImage: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80',
     readTime: 9,
+    canonicalUrl: 'https://www.construbay.com/blog/adu-cost-marin-county',
     keyTakeaways: [
       'California ADU laws changed in 2024 allowing larger structures',
       'ADU permit process in Marin County averages 4-6 months',
@@ -387,6 +581,7 @@ We specialize in [ADU construction throughout Marin County](/adu-builder-marin-c
     tags: ['AI', 'permits', 'technology', 'future of construction', 'Marin County'],
     coverImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
     readTime: 6,
+    canonicalUrl: 'https://www.construbay.com/blog/mill-valley-marin-county-ai-home-construction-permitting',
     keyTakeaways: [
       'Full home remodel in Marin County averages 6-10 months total',
       'Permit phase is typically the longest delay in any project',
@@ -507,6 +702,7 @@ If you're planning a [kitchen remodel in Tiburon](/tiburon-kitchen-remodel) or a
     tags: ['choosing a contractor', 'Marin County', 'general contractor', 'vetting', 'homeowner tips'],
     coverImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80',
     readTime: 10,
+    canonicalUrl: 'https://www.construbay.com/blog/home-remodeling-contractors-marin-county',
     keyTakeaways: [
       'Luxury remodels in Marin County average $400-700 per square foot',
       'Always get a fixed-price contract to avoid budget surprises',

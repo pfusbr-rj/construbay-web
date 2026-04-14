@@ -21,6 +21,16 @@ const nextConfig = {
       { source: '/jobs/:slug', destination: '/', permanent: true },
       { source: '/jobs', destination: '/', permanent: true },
       { source: '/form', destination: '/request-a-bid', permanent: true },
+      { source: '/adu', destination: '/services/adu-builder-marin-county', permanent: true },
+      { source: '/adu-marin-county', destination: '/services/adu-builder-marin-county', permanent: true },
+      { source: '/adu-sonoma-county', destination: '/services/adu-builder-sonoma-county', permanent: true },
+      { source: '/adu-builder-marin-county', destination: '/services/adu-builder-marin-county', permanent: true },
+      { source: '/adu-builder-sonoma-county', destination: '/services/adu-builder-sonoma-county', permanent: true },
+      { source: '/marin-county-adu-builder', destination: '/services/adu-builder-marin-county', permanent: true },
+      { source: '/mill-valley-adu-builder', destination: '/services/adu-builder-mill-valley', permanent: true },
+      { source: '/adu-builder/mill-valley', destination: '/services/adu-builder-mill-valley', permanent: true },
+      { source: '/adu-builder/petaluma', destination: '/services/adu-builder-sonoma-county', permanent: true },
+      { source: '/adu-builder/san-rafael', destination: '/services/adu-builder-marin-county', permanent: true },
     ];
   },
   async headers() {

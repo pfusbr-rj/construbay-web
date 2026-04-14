@@ -1232,7 +1232,7 @@ export default function HomePage() {
             }}
           >
             <Link href="/services/general-contractor-marin-county" style={{ color: 'rgba(203,178,106,0.6)', textDecoration: 'none' }}>
-              Licensed General Contractor in Marin County &rarr;
+              Marin County general contractor &rarr;
             </Link>
           </p>
           <p

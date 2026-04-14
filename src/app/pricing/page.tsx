@@ -143,7 +143,7 @@ export default function PricingPage() {
             Pricing transparency is the number one complaint homeowners have about the construction industry. Custom work means no flat rate — every site, every scope, every finish level is different. What we can guarantee is this: the number in our fixed-scope contract is the number you pay. No change orders that weren&apos;t owner-directed. No last-minute surprises at closeout.
           </p>
           <p style={{ fontFamily: MS, fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', lineHeight: 2 }}>
-            We also use <strong style={{ color: '#cbb26a' }}>PlanPass.ai</strong> — our proprietary AI tool that pre-analyzes permit risk before a shovel goes in the ground. Permit complications are where most Marin projects blow their budgets. PlanPass.ai eliminates that variable, so the number you approve is the number that arrives at the finish line.
+            We also use <strong style={{ color: '#cbb26a' }}>PlanPass.ai</strong> — our proprietary AI tool that pre-analyzes permit risk before a shovel goes in the ground. Permit complications are where most Marin projects blow their budgets. PlanPass.ai eliminates that variable, so the number you approve is the number that arrives at the finish line. As a <Link href="/services/general-contractor-marin-county" style={{ color: '#cbb26a', textDecoration: 'none', borderBottom: '1px solid #cbb26a' }}>Marin County general contractor</Link> serving the region since 2018, we have the expertise to deliver exactly what we promise.
           </p>
         </section>
 

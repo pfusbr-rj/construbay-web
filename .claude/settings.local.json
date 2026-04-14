@@ -29,7 +29,9 @@
       "Skill(morning)",
       "Bash(dir \"C:\\\\Users\\\\paulo\\\\Documents\\\\construbay-web\")",
       "Bash(dir \"C:\\\\Users\\\\paulo\\\\construbay-web\")",
-      "Read(//c/Users/paulo/construbay-web/src/app/services$f/**)"
+      "Read(//c/Users/paulo/construbay-web/src/app/services$f/**)",
+      "Bash(grep -n \"return \\(\" src/app/services/*/page.tsx)",
+      "Bash(Test-Path:*)"
     ]
   }
 }

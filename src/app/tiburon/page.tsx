@@ -269,6 +269,11 @@ export default function TiburonPage() {
             </a>{" "}
             &middot; CSLB #1106798
           </p>
+          <p className="mt-4 text-sm">
+            <Link href="/services/general-contractor-marin-county" className="text-brand-tan hover:underline">
+              Hire a Licensed Marin County General Contractor &rarr;
+            </Link>
+          </p>
         </div>
       </section>
     </>

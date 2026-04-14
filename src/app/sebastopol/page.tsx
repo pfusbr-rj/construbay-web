@@ -147,7 +147,7 @@ export default function SebastopolPage() {
             whole house remodel that brings a rural Freestone home into the
             modern era, ConstruBay provides the licensed expertise (CSLB
             #1106798), environmental sensitivity, and construction management
-            that West County projects demand.
+            that West County projects demand. We also serve <Link href="/services/general-contractor-marin-county" className="text-brand-tan hover:underline">Marin County residents as a licensed general contractor</Link>.
           </p>
         </div>
       </section>

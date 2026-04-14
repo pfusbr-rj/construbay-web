@@ -1,18 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Request a Bid | Construbay",
-  description:
-    "Get a free professional estimate for your home remodeling project from Construbay.",
-  alternates: {
-    canonical: "https://www.construbay.com/request-a-bid",
-  },
-};
+  title: 'Request a Private Consultation | ConstruBay',
+  description: 'Tell us about your project and schedule a private consultation with ConstruBay. CSLB #1106798.',
+  alternates: { canonical: 'https://www.construbay.com/request-a-bid' },
+}
 
-export default function RequestBidLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <>{children}</>;
+export default function RequestBidLayout({ children }: { children: React.ReactNode }) {
+  return children
 }

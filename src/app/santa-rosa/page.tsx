@@ -153,7 +153,7 @@ export default function SantaRosaPage() {
             Valley ranch home, ConstruBay delivers the fire-conscious
             construction expertise and project management that Santa Rosa
             demands. Licensed general contractor CSLB #1106798, building
-            resilient homes throughout Sonoma County.
+            resilient homes throughout Sonoma County and <Link href="/services/general-contractor-marin-county" className="text-brand-tan hover:underline">Marin County</Link>.
           </p>
         </div>
       </section>

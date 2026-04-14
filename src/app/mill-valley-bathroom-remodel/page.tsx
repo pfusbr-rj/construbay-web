@@ -82,7 +82,7 @@ export default function MillValleyBathroomRemodelPage() {
         <section style={{ padding: '8rem 2rem 4rem', maxWidth: '1200px', margin: '0 auto' }}>
           <p style={{ color: '#cbb26a', fontFamily: MS, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem' }}>Bathroom Remodeling · Mill Valley, CA</p>
           <h1 style={{ fontFamily: CG, fontWeight: 300, fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, marginBottom: '1rem' }}>
-            Bathroom Remodel —<br />Mill Valley, California
+            Luxury Bathroom Remodel —<br />Mill Valley, California
           </h1>
           <p style={{ color: '#cbb26a', fontFamily: CG, fontStyle: 'italic', fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', marginBottom: '1.5rem' }}>
             Spa-Quality Bathrooms Built With Intention

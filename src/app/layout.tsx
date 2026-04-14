@@ -23,11 +23,11 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.construbay.com"),
   title: {
-    default: "Luxury General Contractor Mill Valley CA | ConstruBay | CSLB #1106798",
+    default: "Luxury General Contractor in Marin & Sonoma County | ConstruBay",
     template: "%s | ConstruBay",
   },
   description:
-    "ConstruBay — luxury general contractor serving Marin, Sonoma & Napa Counties. ADU construction, whole home remodels, kitchen & bath. Fixed-scope contracts. CSLB #1106798.",
+    "Luxury kitchen remodels, bathrooms, ADUs, home additions in Marin and Sonoma County. Fixed-price contracts. CSLB #1106798. Schedule your complimentary assessment.",
   alternates: {
     canonical: "https://www.construbay.com",
   },
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.construbay.com",
     siteName: "ConstruBay",
-    title: "Luxury General Contractor Mill Valley CA | ConstruBay | CSLB #1106798",
+    title: "Luxury General Contractor in Marin & Sonoma County | ConstruBay",
     description:
-      "ConstruBay — luxury general contractor serving Marin, Sonoma & Napa Counties. ADU construction, whole home remodels, kitchen & bath. Fixed-scope contracts. CSLB #1106798.",
+      "Luxury kitchen remodels, bathrooms, ADUs, home additions in Marin and Sonoma County. Fixed-price contracts. CSLB #1106798. Schedule your complimentary assessment.",
   },
   robots: {
     index: true,

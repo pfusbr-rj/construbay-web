@@ -112,7 +112,7 @@ export default function KitchenRemodelingPage() {
               Kitchen Remodeling · Marin County
             </p>
             <h1 className={cormorant.className} style={{ fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: '300', color: '#ffffff', lineHeight: 1.1, marginBottom: '16px' }}>
-              Kitchen Remodeling<br />in Marin County
+              Luxury Kitchen Remodeling<br />in Marin County
             </h1>
             <p className={montserrat.className} style={{ fontSize: '13px', fontWeight: '300', color: 'rgba(255,255,255,0.65)', marginBottom: '0' }}>
               Custom Luxury Kitchens in Mill Valley, Tiburon and San Rafael

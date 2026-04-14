@@ -152,7 +152,7 @@ export default function PetalumaPage() {
             a full remodel of a Downtown Victorian, ConstruBay delivers the
             craftsmanship and project management that Petaluma homeowners
             expect. Licensed general contractor CSLB #1106798, serving Petaluma
-            and all of Sonoma County.
+            and all of Sonoma County. We also serve <Link href="/services/general-contractor-marin-county" className="text-brand-tan hover:underline">Marin County as a licensed general contractor</Link>.
           </p>
         </div>
       </section>

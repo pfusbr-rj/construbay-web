@@ -153,7 +153,7 @@ export default function SonomaPage() {
             ultimate wine country entertaining space, ConstruBay delivers the
             craftsmanship, project management, and permit expertise that Sonoma
             Valley demands. Licensed general contractor CSLB #1106798, building
-            the wine country lifestyle throughout Sonoma and Marin Counties.
+            the wine country lifestyle throughout Sonoma and <Link href="/services/general-contractor-marin-county" className="text-brand-tan hover:underline">Marin Counties</Link>.
           </p>
         </div>
       </section>

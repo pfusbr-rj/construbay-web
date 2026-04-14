@@ -35,12 +35,13 @@ export function generateCityMetadata(city: City): Metadata {
 }
 
 export function generateBlogMetadata(post: BlogPost): Metadata {
+  const canonicalUrl = post.canonicalUrl || `https://www.construbay.com/blog/${post.slug}`;
   return {
     title: `${post.title} | ConstruBay Blog`,
     description: post.excerpt,
     keywords: post.tags,
     alternates: {
-      canonical: `https://www.construbay.com/blog/${post.slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: post.title,

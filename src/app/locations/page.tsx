@@ -7,8 +7,8 @@ const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['300', '400'
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['300', '400'] });
 
 export const metadata: Metadata = {
-  title: 'Service Areas | ConstruBay — General Contractor Marin, Sonoma & Napa County',
-  description: 'ConstruBay serves Marin County, Sonoma County and Napa County. Licensed luxury general contractor CSLB #1106798 serving Mill Valley, Tiburon, San Rafael, Sausalito and more.',
+  title: 'Service Areas | Luxury General Contractor Marin & Sonoma County | ConstruBay',
+  description: 'ConstruBay serves Mill Valley, Tiburon, Sausalito, San Rafael, Novato, Petaluma, Santa Rosa and surrounding areas.',
   alternates: { canonical: 'https://www.construbay.com/locations' },
 };
 
