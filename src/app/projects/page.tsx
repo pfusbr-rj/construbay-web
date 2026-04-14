@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { projects } from '@/data/projects';
 import ProjectGrid from '@/components/projects/ProjectGrid';
 
