@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Bathroom Remodel Marin County CA | Luxury Bathroom Renovation | ConstruBay',
-  description: 'Luxury bathroom remodeling in Marin County CA. Custom tile, premium fixtures, spa finishes. $45k-$175k. Fixed-price contracts. CSLB #1106798.',
+  title: 'Luxury Bathroom Remodeling in Mill Valley & Marin County | ConstruBay',
+  description: 'Transform your bathroom with Marin County\'s trusted luxury contractor. Custom tile, spa showers, high-end finishes. CSLB #1106798. Schedule your complimentary assessment today.',
   alternates: { canonical: 'https://www.construbay.com/bathroom-remodel-marin-county' },
 }
 
