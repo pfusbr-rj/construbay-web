@@ -140,6 +140,35 @@ export default function BathroomRemodelPage() {
 
       <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
 
+      {/* SECTION — TESTIMONIALS */}
+      <section style={{ padding: "96px 24px", backgroundColor: "#000000" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <p style={{ fontFamily: MS, fontSize: "11px", letterSpacing: "0.3em", textTransform: "uppercase", color: GOLD, marginBottom: "16px", textAlign: "center", opacity: 0.7 }}>4.9★ Google Rating · 47 Reviews</p>
+          <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: "#ffffff", marginBottom: "56px", textAlign: "center" }}>What Our Clients Say</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "32px" }}>
+            {[
+              { text: "Paulo was very professional, personable, and communicative — difficult to find with a general contractor. His team arrived promptly every morning, completed all the work quickly, on budget, and with very high quality. I highly recommend Paulo and his team.", author: "Brian M.", project: "Primary Suite Remodel · Mill Valley" },
+              { text: "Paulo and his team did a great job. The end result looks better than I was expecting — very clean, efficient, and professional. They came right on time and finished in the amount of time they promised. High quality work at a very reasonable price.", author: "Kathryn R.", project: "Bathroom Renovation · Marin County" },
+              { text: "We interviewed several companies and went with our gut and chose ConstruBay. They were professional, on-time, and did a great job. So glad we chose them.", author: "Gwen M.", project: "Home Renovation · Marin County" },
+            ].map((t) => (
+              <div key={t.author} style={{ backgroundColor: "#111", border: "1px solid rgba(203,178,106,0.15)", padding: "48px 36px" }}>
+                <p style={{ fontFamily: CG, fontSize: "64px", fontWeight: 300, color: GOLD, lineHeight: 0.6, marginBottom: "28px" }}>&ldquo;</p>
+                <p style={{ fontFamily: MS, fontSize: "13px", fontWeight: 300, color: "rgba(255,255,255,0.65)", lineHeight: 1.9, marginBottom: "32px", letterSpacing: "0.03em" }}>{t.text}</p>
+                <div style={{ display: "flex", gap: "4px", marginBottom: "12px" }}>
+                  {[1, 2, 3, 4, 5].map((n) => (
+                    <svg key={n} width="14" height="14" viewBox="0 0 24 24" fill={GOLD}><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                  ))}
+                </div>
+                <p style={{ fontFamily: CG, fontSize: "18px", fontWeight: 300, color: GOLD }}>&mdash; {t.author}</p>
+                <p style={{ fontFamily: MS, fontSize: "10px", fontWeight: 300, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginTop: "4px" }}>{t.project}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div style={{ height: "1px", background: GRAD, margin: "0 48px", opacity: 0.35 }} />
+
       {/* SECTION 7 — FAQ */}
       <section style={{ maxWidth: "800px", margin: "0 auto", padding: "96px 24px" }}>
         <h2 style={{ fontFamily: CG, fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: GOLD, marginBottom: "16px" }}>Frequently Asked Questions</h2>

@@ -28,7 +28,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Skill(morning)",
       "Bash(dir \"C:\\\\Users\\\\paulo\\\\Documents\\\\construbay-web\")",
-      "Bash(dir \"C:\\\\Users\\\\paulo\\\\construbay-web\")"
+      "Bash(dir \"C:\\\\Users\\\\paulo\\\\construbay-web\")",
+      "Read(//c/Users/paulo/construbay-web/src/app/services$f/**)"
     ]
   }
 }
