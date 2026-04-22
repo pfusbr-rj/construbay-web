@@ -13,7 +13,7 @@
  */
 
 export const GADS_CONVERSION = {
-  // Conversion Action 1: Contact Form Submission ($500 value)
+  // Conversion Action 1: Contact Form Submission ($150 value)
   formSubmit:
     process.env.NEXT_PUBLIC_GADS_FORM_CONVERSION ?? "AW-REPLACE_ME/REPLACE_ME",
 
@@ -36,7 +36,7 @@ export function fireFormSubmitConversion(): void {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
   window.gtag("event", "conversion", {
     send_to: GADS_CONVERSION.formSubmit,
-    value: 500.0,
+    value: 150.0,
     currency: "USD",
   });
 }
