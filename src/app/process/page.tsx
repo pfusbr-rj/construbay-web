@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const GOLD = '#C9A84C';
+const GOLD = '#cbb26a';
 
 const PAIN_POINTS = [
   {
@@ -169,7 +169,7 @@ export default function ProcessPage() {
           paddingTop: '10rem',
           paddingBottom: '6rem',
           background:
-            'radial-gradient(ellipse at top, rgba(201,168,76,0.08) 0%, transparent 55%), linear-gradient(180deg, #050505 0%, #000000 100%)',
+            'radial-gradient(ellipse at top, rgba(203,178,106,0.08) 0%, transparent 55%), linear-gradient(180deg, #050505 0%, #000000 100%)',
         }}
       >
         <div
@@ -223,7 +223,7 @@ export default function ProcessPage() {
             A transparent, fixed-scope process designed to remove the two things homeowners hate most about remodels &mdash; surprise costs and missed deadlines.
           </p>
           <div style={{ marginBottom: '2.5rem' }}>
-            <GoldCTA href="/contact" size="lg">
+            <GoldCTA href="/request-a-bid" size="lg">
               Schedule Complimentary Assessment
             </GoldCTA>
           </div>
@@ -278,7 +278,7 @@ export default function ProcessPage() {
                 key={p.title}
                 style={{
                   backgroundColor: '#111111',
-                  border: '1px solid rgba(201,168,76,0.18)',
+                  border: '1px solid rgba(203,178,106,0.18)',
                   padding: '2.25rem 1.75rem',
                 }}
               >
@@ -362,7 +362,7 @@ export default function ProcessPage() {
                 key={step.num}
                 style={{
                   backgroundColor: '#0a0a0a',
-                  border: '1px solid rgba(201,168,76,0.18)',
+                  border: '1px solid rgba(203,178,106,0.18)',
                   padding: '2.5rem',
                 }}
               >
@@ -548,7 +548,7 @@ export default function ProcessPage() {
             <figure
               style={{
                 backgroundColor: '#111111',
-                border: '1px solid rgba(201,168,76,0.18)',
+                border: '1px solid rgba(203,178,106,0.18)',
                 padding: '2.25rem 1.75rem',
               }}
             >
@@ -593,7 +593,7 @@ export default function ProcessPage() {
             <figure
               style={{
                 backgroundColor: '#111111',
-                border: '1px solid rgba(201,168,76,0.18)',
+                border: '1px solid rgba(203,178,106,0.18)',
                 padding: '2.25rem 1.75rem',
               }}
             >
@@ -638,7 +638,7 @@ export default function ProcessPage() {
             <figure
               style={{
                 backgroundColor: '#111111',
-                border: '1px solid rgba(201,168,76,0.18)',
+                border: '1px solid rgba(203,178,106,0.18)',
                 padding: '2.25rem 1.75rem',
               }}
             >
@@ -729,7 +729,7 @@ export default function ProcessPage() {
             >
               The price we lock at contract signing is the price you pay for the scope we agreed on. If we missed something in our scope &mdash; that&apos;s on us, not you. This is the opposite of cost-plus, and it&apos;s the reason homeowners who&apos;ve been burned before choose ConstruBay.
             </p>
-            <GoldCTA href="/contact" size="lg">
+            <GoldCTA href="/request-a-bid" size="lg">
               Discuss Your Project
             </GoldCTA>
           </div>
@@ -770,7 +770,7 @@ export default function ProcessPage() {
                 key={i}
                 style={{
                   backgroundColor: '#111111',
-                  border: '1px solid rgba(201,168,76,0.18)',
+                  border: '1px solid rgba(203,178,106,0.18)',
                   padding: '1.25rem 1.5rem',
                 }}
               >
@@ -821,7 +821,7 @@ export default function ProcessPage() {
         style={{
           padding: '6rem 1.5rem',
           background:
-            'radial-gradient(ellipse at bottom, rgba(201,168,76,0.1) 0%, transparent 55%), #000000',
+            'radial-gradient(ellipse at bottom, rgba(203,178,106,0.1) 0%, transparent 55%), #000000',
           textAlign: 'center',
         }}
       >
@@ -839,7 +839,7 @@ export default function ProcessPage() {
             Ready to See What Your Project Would Look Like on This Timeline?
           </h2>
           <div style={{ marginBottom: '2rem' }}>
-            <GoldCTA href="/contact" size="lg">
+            <GoldCTA href="/request-a-bid" size="lg">
               Schedule Complimentary Assessment
             </GoldCTA>
           </div>
