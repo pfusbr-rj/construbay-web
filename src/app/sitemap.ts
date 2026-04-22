@@ -145,6 +145,12 @@ const staticPages: SitemapEntry[] = [
   { path: '/projects/sycamore-sound-studio', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/projects/plymouth-whole-home-renovation', priority: 0.8, changeFrequency: 'monthly' },
 
+  // Mill Valley flagship blog posts (2026)
+  { path: '/blog/adu-builder-mill-valley-pre-approved-plans-2026', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/blog/kitchen-remodel-cost-mill-valley-2026', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/blog/bathroom-remodel-mill-valley-fog-moisture-2026', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/blog/hillside-remodel-mill-valley-grading-retaining-walls-2026', priority: 0.7, changeFrequency: 'monthly' },
+
   // Static blog posts not in lib/blog.ts (not covered by getBlogPosts)
   { path: '/blog/adu-trends-marin-county-2026', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/blog/ai-agents-construction-marin-county', priority: 0.6, changeFrequency: 'monthly' },
