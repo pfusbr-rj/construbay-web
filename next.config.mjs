@@ -18,7 +18,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      { source: '/adu/marin-county', destination: '/adu-marin-county', permanent: true },
+      { source: '/adu/marin-county', destination: '/services/adu-builder-marin-county', permanent: true },
       { source: '/home', destination: '/', permanent: true },
       { source: '/contact', destination: '/request-a-bid', permanent: true },
       { source: '/jobs/:slug', destination: '/', permanent: true },
