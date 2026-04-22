@@ -135,6 +135,7 @@ export default function Header() {
             </div>
 
             <Link href="/pricing" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Pricing</Link>
+            <Link href="/process" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Process</Link>
             <Link href="/locations" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Locations</Link>
             <Link href="/projects" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">Projects</Link>
             <Link href="/about" className="text-white text-sm tracking-[0.2em] uppercase hover:text-[#cbb26a] transition-colors duration-300">About</Link>
@@ -212,6 +213,7 @@ export default function Header() {
                   dangerouslySetInnerHTML={{ __html: service.label }}
                 />
               ))}
+              <Link href="/process" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Process</Link>
               <Link href="/locations" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Locations</Link>
               <Link href="/projects" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>Projects</Link>
               <Link href="/about" className="text-white text-sm tracking-[0.2em] uppercase" onClick={() => setMenuOpen(false)}>About</Link>

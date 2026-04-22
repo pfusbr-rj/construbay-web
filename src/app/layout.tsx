@@ -132,6 +132,7 @@ const SEGMENT_NAMES: Record<string, string> = {
   'locations': 'Locations',
   'outdoor-living': 'Outdoor Living',
   'pricing': 'Pricing',
+  'process': 'Our Process',
   'projects': 'Projects',
   'request-a-bid': 'Request a Bid',
   'services': 'Services',
