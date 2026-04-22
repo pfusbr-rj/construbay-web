@@ -18,6 +18,70 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'adu-builder-mill-valley-pre-approved-plans-2026',
+    title: 'Building an ADU in Mill Valley in 2026: The Pre-Approved Plan Advantage',
+    excerpt: "Mill Valley's pre-approved ADU Master Plan program expedites permits before the January 2026 code update. Licensed ADU builder breaks down costs, setbacks, height limits, and the $50K Marin Housing grant. CSLB #1106798.",
+    content: `Mill Valley has quietly become one of the most ADU-friendly small cities in Northern California. Between the local ADU fee-waiver program, the Marin Housing Authority's $50,000 grant, and a pre-approved Master Plan catalog that shaves months off plan-check, a homeowner starting the conversation in April 2026 can realistically have a detached unit framed by fall — provided the work begins before the code update window closes.
+
+Read the full article at /blog/adu-builder-mill-valley-pre-approved-plans-2026`,
+    category: 'ADUs',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-22',
+    readTime: 10,
+    coverImage: '/images/blog/hero-adu-mill-valley.png',
+    tags: ['ADU builder Mill Valley', 'Mill Valley ADU Master Plan', 'Marin ADU 2026', 'pre-approved ADU', 'Marin Housing Authority Grant', 'Mill Valley setbacks'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
+    slug: 'kitchen-remodel-cost-mill-valley-2026',
+    title: 'Kitchen Remodel Costs in Mill Valley 2026: Why Marin Prices Run 40–60% Above National Averages',
+    excerpt: 'Real 2026 kitchen remodel pricing in Mill Valley: $50K–$200K+ ranges, cost-per-square-foot breakdowns, fog-belt material selection, and the Southern Marin sewer lateral rule that surprises homeowners. Licensed GC, CSLB #1106798.',
+    content: `The national-average kitchen remodel costs $27,000 to $35,000. In Mill Valley, that number is almost entirely useless. Real kitchen remodel costs in Marin County in 2026 start at $50,000 for a modest refresh and climb past $200,000 for a full luxury gut-renovation — running 40 to 60 percent above the national average.
+
+Read the full article at /blog/kitchen-remodel-cost-mill-valley-2026`,
+    category: 'Cost Guide',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-22',
+    readTime: 10,
+    coverImage: '/images/blog/hero-kitchen-mill-valley-cost.png',
+    tags: ['kitchen remodel Mill Valley', 'kitchen cost Marin 2026', 'Mill Valley kitchen renovation', 'SASM sewer lateral', 'fixed-scope remodel', 'Marin labor rates'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
+    slug: 'bathroom-remodel-mill-valley-fog-moisture-2026',
+    title: 'The Mill Valley Fog Factor: Why Your Bathroom Remodel Needs More Than a Nice Vanity',
+    excerpt: "Mill Valley's fog belt creates moisture challenges national bathroom remodel blogs ignore. Licensed Marin contractor on fog-rated ventilation, thermal-break windows, heated floors, SASM sewer lateral rules, and preventing dry rot. CSLB #1106798.",
+    content: `Pick up any national bathroom remodel guide and you'll read about vanity styles, tile trends, and freestanding tubs. What you won't read: how to design a bathroom that survives twenty years of summer fog rolling over Mt. Tamalpais. Mill Valley's microclimate is one of the most moisture-aggressive residential environments in the Bay Area.
+
+Read the full article at /blog/bathroom-remodel-mill-valley-fog-moisture-2026`,
+    category: 'Kitchen & Bath',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-22',
+    readTime: 9,
+    coverImage: '/images/blog/hero-bathroom-fog-mill-valley.png',
+    tags: ['bathroom remodel Mill Valley', 'Marin fog belt', 'bathroom ventilation CFM', 'thermal break windows', 'dry rot prevention', 'SASM sewer lateral'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
+    slug: 'hillside-remodel-mill-valley-grading-retaining-walls-2026',
+    title: "Hillside Remodels in Mill Valley: What Most Homeowners Don't Know About Grading Permits, Soil Reports & Retaining Walls",
+    excerpt: 'Mill Valley hillside homes have rules no flatland project touches: grading permits, geotechnical reports, retaining wall surcharge design, rainy-season construction bans (Oct 15–Apr 15), and WUI fire safety. Licensed GC, CSLB #1106798.',
+    content: `A Mill Valley hillside remodel is structurally, legally, and operationally a different project from a flat-lot remodel. The house looks similar on Zillow, but a geotechnical engineer walks the site, a grading plan gets submitted, a rainy-season erosion-control plan gets filed, and the project has a set of costs, timeline constraints, and compliance exposures that flatland remodels simply never face.
+
+Read the full article at /blog/hillside-remodel-mill-valley-grading-retaining-walls-2026`,
+    category: 'Permits & Planning',
+    author: 'Paulo Fernandes',
+    publishedAt: '2026-04-22',
+    readTime: 11,
+    coverImage: '/images/blog/hero-hillside-remodel-mill-valley.png',
+    tags: ['hillside remodel Mill Valley', 'grading permit Marin', 'geotechnical report', 'retaining wall permit', 'rainy season grading ban', 'WUI fire hardening'],
+    isHowTo: false,
+    howToSteps: [],
+  },
+  {
     slug: 'whole-home-remodel-cost-sonoma-county',
     title: 'Whole Home Remodel Cost in Sonoma County (2026)',
     excerpt: 'A whole-home remodel in Sonoma County costs $200,000 to $500,000 for mid-range quality and $500,000 to $1.2 million-plus for luxury renovations. Here\'s how to plan, phase, and budget for complete home renovation.',
