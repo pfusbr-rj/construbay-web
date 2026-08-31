@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { captureAttribution, getAttribution } from '@/lib/attribution'
 
 const MS = 'Montserrat, sans-serif'
 const CG = 'Cormorant Garamond, serif'
@@ -11,6 +12,12 @@ export default function GuideForm() {
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
+  // Honeypot: real users never see or fill this. Bots that fill every input do.
+  const [company, setCompany] = useState('')
+
+  useEffect(() => {
+    try { captureAttribution() } catch {}
+  }, [])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -18,10 +25,12 @@ export default function GuideForm() {
     if (!email) { setError('Please enter your email address.'); return }
     setLoading(true)
     try {
+      let attribution = null
+      try { attribution = getAttribution() } catch {}
       const res = await fetch('/api/guide', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ name, email, source: 'free-remodel-guide', company, attribution }),
       })
       const data = await res.json()
       if (!res.ok) { setError(data.error || 'Something went wrong. Please try again.'); return }
@@ -95,6 +104,16 @@ export default function GuideForm() {
           }}
         />
       </div>
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        value={company}
+        onChange={e => setCompany(e.target.value)}
+        style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+      />
       {error && (
         <p style={{ fontFamily: MS, fontSize: '11px', color: '#e57373', margin: 0 }}>{error}</p>
       )}

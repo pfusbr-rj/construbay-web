@@ -1,6 +1,13 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import {
+  captureAttribution,
+  getAttribution,
+  formatAttributionForWhatsApp,
+  type AttributionData,
+} from '@/lib/attribution';
+import { isValidLocation, LOCATION_ERROR_MESSAGE } from '@/lib/validation';
 
 const CG = 'Cormorant Garamond, serif';
 const MS = 'Montserrat, sans-serif';
@@ -105,17 +112,26 @@ const labelStyle: React.CSSProperties = {
   marginBottom: '6px',
 };
 
-const sendWhatsAppNotification = async (formData: {
-  firstName: string;
-  phone: string;
-  email: string;
-  address?: string;
-  remodelType: string;
-  priority: string;
-  budget: string;
-  desiredTimeline?: string;
-}) => {
-  const message = `%F0%9F%94%A8 NEW KITCHEN+BATH LEAD%0A%0A%F0%9F%91%A4 Name: ${formData.firstName}%0A%F0%9F%93%9E Phone: ${formData.phone}%0A%F0%9F%93%A7 Email: ${formData.email}%0A%F0%9F%8F%A0 Remodeling: ${formData.remodelType}%0A%E2%9C%A8 Priority: ${formData.priority}%0A%F0%9F%92%B0 Budget: ${formData.budget}%0A%F0%9F%93%8D Address: ${formData.address || 'Not provided'}%0A%F0%9F%93%85 Timeline: ${formData.desiredTimeline || 'Not provided'}%0A%0A%E2%9A%A1 Respond within 2 hours!`;
+const sendWhatsAppNotification = async (
+  formData: {
+    firstName: string;
+    phone: string;
+    email: string;
+    address?: string;
+    remodelType: string;
+    priority: string;
+    budget: string;
+    desiredTimeline?: string;
+  },
+  attribution?: AttributionData | null
+) => {
+  let attributionPrefix = '';
+  try {
+    attributionPrefix = formatAttributionForWhatsApp(attribution ?? null);
+  } catch {
+    attributionPrefix = '';
+  }
+  const message = `${attributionPrefix}%F0%9F%94%A8 NEW KITCHEN+BATH LEAD%0A%0A%F0%9F%91%A4 Name: ${formData.firstName}%0A%F0%9F%93%9E Phone: ${formData.phone}%0A%F0%9F%93%A7 Email: ${formData.email}%0A%F0%9F%8F%A0 Remodeling: ${formData.remodelType}%0A%E2%9C%A8 Priority: ${formData.priority}%0A%F0%9F%92%B0 Budget: ${formData.budget}%0A%F0%9F%93%8D Address: ${formData.address || 'Not provided'}%0A%F0%9F%93%85 Timeline: ${formData.desiredTimeline || 'Not provided'}%0A%0A%E2%9A%A1 Respond within 2 hours!`;
   try {
     await fetch(
       `https://api.callmebot.com/whatsapp.php?phone=14159689494&text=${message}&apikey=7905514`,
@@ -135,9 +151,13 @@ export default function KitchenBathroomMillValleyPage() {
     firstName: '',
     phone: '',
     email: '',
+    location: 'Mill Valley',
     address: '',
     desiredTimeline: '',
   });
+  const [locationError, setLocationError] = useState('');
+  // Honeypot: real users never see or fill this. Bots that fill every input do.
+  const [company, setCompany] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -145,6 +165,10 @@ export default function KitchenBathroomMillValleyPage() {
 
   const scrollToForm = () =>
     formRef.current?.scrollIntoView({ behavior: 'smooth' });
+
+  useEffect(() => {
+    try { captureAttribution(); } catch {}
+  }, []);
 
   const handleRemodelType = (type: string) => {
     setRemodelType(type);
@@ -163,8 +187,15 @@ export default function KitchenBathroomMillValleyPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!isValidLocation(form.location)) {
+      setLocationError(LOCATION_ERROR_MESSAGE);
+      return;
+    }
+    setLocationError('');
     setSubmitting(true);
     try {
+      let attribution: AttributionData | null = null;
+      try { attribution = getAttribution(); } catch {}
       await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -172,9 +203,12 @@ export default function KitchenBathroomMillValleyPage() {
           fullName: form.firstName,
           phone: form.phone,
           email: form.email,
+          propertyCity: form.location.trim(),
+          company,
           projectType: 'Kitchen & Bathroom Remodeling \u2014 Mill Valley',
           message: `Remodeling: ${remodelType} | Priority: ${priority} | Budget: ${budget}${form.address ? ` | Address: ${form.address}` : ''}${form.desiredTimeline ? ` | Timeline: ${form.desiredTimeline}` : ''}`,
           source: 'kitchen-bathroom-remodel-mill-valley',
+          attribution,
         }),
       });
       await sendWhatsAppNotification({
@@ -186,7 +220,7 @@ export default function KitchenBathroomMillValleyPage() {
         priority,
         budget,
         desiredTimeline: form.desiredTimeline,
-      });
+      }, attribution);
     } catch {
       // show thank you regardless of network error
     } finally {
@@ -908,6 +942,29 @@ export default function KitchenBathroomMillValleyPage() {
                       />
                     </div>
                     <div>
+                      <label style={labelStyle}>Location *</label>
+                      <input
+                        type="text"
+                        required
+                        value={form.location}
+                        onChange={(e) => {
+                          setForm((prev) => ({ ...prev, location: e.target.value }));
+                          if (isValidLocation(e.target.value)) setLocationError('');
+                        }}
+                        onBlur={() =>
+                          setLocationError(isValidLocation(form.location) ? '' : LOCATION_ERROR_MESSAGE)
+                        }
+                        placeholder="City or area"
+                        autoComplete="address-level2"
+                        style={inputStyle}
+                      />
+                      {locationError && (
+                        <p style={{ color: '#f87171', fontSize: 13, margin: '6px 0 0' }}>
+                          {locationError}
+                        </p>
+                      )}
+                    </div>
+                    <div>
                       <label style={labelStyle}>Property Address (optional)</label>
                       <input
                         type="text"
@@ -934,6 +991,16 @@ export default function KitchenBathroomMillValleyPage() {
                       />
                     </div>
                   </div>
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+                  />
                   <button
                     type="submit"
                     disabled={submitting}

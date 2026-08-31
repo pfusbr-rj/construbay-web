@@ -1,23 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { useState, FormEvent } from "react";
+import { useEffect, useState, FormEvent } from "react";
+import { captureAttribution, getAttribution } from "@/lib/attribution";
+import { isValidLocation, LOCATION_ERROR_MESSAGE } from "@/lib/validation";
 
 export default function Footer() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
+    location: "",
     projectType: "",
     timeline: "",
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [locationError, setLocationError] = useState("");
+  // Honeypot: real users never see or fill this. Bots that fill every input do.
+  const [company, setCompany] = useState("");
+
+  useEffect(() => {
+    try { captureAttribution(); } catch {}
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (!isValidLocation(formData.location)) {
+      setLocationError(LOCATION_ERROR_MESSAGE);
+      return;
+    }
+    setLocationError("");
     setSubmitting(true);
     try {
+      let attribution = null;
+      try { attribution = getAttribution(); } catch {}
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -25,13 +42,16 @@ export default function Footer() {
           fullName: formData.fullName,
           phone: formData.phone,
           email: formData.email,
+          propertyCity: formData.location.trim(),
+          company,
           projectType: formData.projectType,
           timeline: formData.timeline,
+          attribution,
         }),
       });
       if (res.ok) {
         setSubmitted(true);
-        setFormData({ fullName: "", email: "", phone: "", projectType: "", timeline: "" });
+        setFormData({ fullName: "", email: "", phone: "", location: "", projectType: "", timeline: "" });
       }
     } catch {
       alert("Something went wrong. Please call us at (415) 968-9494.");
@@ -138,6 +158,25 @@ export default function Footer() {
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-transparent border border-brand-tan/40 text-white placeholder:text-white/40 px-4 py-3 focus:outline-none focus:border-brand-tan transition-colors"
                 />
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Location (city or address)"
+                    required
+                    value={formData.location}
+                    onChange={(e) => {
+                      setFormData({ ...formData, location: e.target.value });
+                      if (isValidLocation(e.target.value)) setLocationError("");
+                    }}
+                    onBlur={() =>
+                      setLocationError(isValidLocation(formData.location) ? "" : LOCATION_ERROR_MESSAGE)
+                    }
+                    className="w-full bg-transparent border border-brand-tan/40 text-white placeholder:text-white/40 px-4 py-3 focus:outline-none focus:border-brand-tan transition-colors"
+                  />
+                  {locationError && (
+                    <p className="text-red-400 text-sm mt-1">{locationError}</p>
+                  )}
+                </div>
                 <select
                   value={formData.projectType}
                   onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
@@ -165,6 +204,16 @@ export default function Footer() {
                   <option value="3 to 6 months" className="bg-brand-dark">3 to 6 months</option>
                   <option value="Just exploring" className="bg-brand-dark">Just exploring</option>
                 </select>
+                <input
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                  className="absolute left-[-9999px] w-px h-px opacity-0"
+                />
                 <button
                   type="submit"
                   disabled={submitting}

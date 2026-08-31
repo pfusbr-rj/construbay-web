@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react'
 import TestimonialCard from '@/components/TestimonialCard'
 import AduSchema from '@/components/schema/AduSchema'
+import { captureAttribution, getAttribution } from '@/lib/attribution'
+import { isValidLocation, LOCATION_ERROR_MESSAGE } from '@/lib/validation'
 
 const LOGO = '/images/logo.png'
 const WA_LINK = 'https://wa.me/14159689494?text=Hi%2C%20I%27m%20interested%20in%20building%20an%20ADU%20on%20my%20property.%20Can%20we%20chat%3F'
@@ -31,6 +33,9 @@ export default function ADULandingPage() {
   const [isMobile, setIsMobile] = useState(false)
   const [form, setForm] = useState({ firstName: '', lastName: '', phone: '', email: '', propertyAddress: '', propertyCity: '', propertyZip: '', aduType: '', timeline: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [locationError, setLocationError] = useState('')
+  // Honeypot: real users never see or fill this. Bots that fill every input do.
+  const [company, setCompany] = useState('')
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768)
@@ -39,20 +44,35 @@ export default function ADULandingPage() {
     return () => window.removeEventListener('resize', check)
   }, [])
 
+  useEffect(() => {
+    try { captureAttribution() } catch {}
+  }, [])
+
   const track = (event: string) => {
     if (typeof window !== 'undefined' && window.gtag) window.gtag('event', event, { event_category: 'conversion' })
   }
-  const set = (k: keyof typeof form) => (v: string) => setForm(p => ({ ...p, [k]: v }))
+  const set = (k: keyof typeof form) => (v: string) => {
+    setForm(p => ({ ...p, [k]: v }))
+    if (k === 'propertyCity' && isValidLocation(v)) setLocationError('')
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!isValidLocation(form.propertyCity)) {
+      setLocationError(LOCATION_ERROR_MESSAGE)
+      setStatus('idle')
+      return
+    }
+    setLocationError('')
     setStatus('loading')
     try {
       const fullName = `${form.firstName} ${form.lastName}`.trim()
       const fullAddress = [form.propertyAddress, form.propertyCity, form.propertyZip].filter(Boolean).join(', ')
+      let attribution = null
+      try { attribution = getAttribution() } catch {}
       const res = await fetch('/api/lead', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fullName, phone: form.phone, email: form.email, propertyCity: form.propertyCity, message: `Property Address: ${fullAddress} | ADU Type: ${form.aduType} | Timeline: ${form.timeline}`, projectType: 'ADU Construction', source: 'adu-landing' }),
+        body: JSON.stringify({ fullName, phone: form.phone, email: form.email, propertyCity: form.propertyCity, company, message: `Property Address: ${fullAddress} | ADU Type: ${form.aduType} | Timeline: ${form.timeline}`, projectType: 'ADU Construction', source: 'adu-landing', attribution }),
       })
       if (res.ok) { track('form_submit'); setStatus('success'); window.location.href = CALENDLY_URL }
       else setStatus('error')
@@ -73,7 +93,7 @@ export default function ADULandingPage() {
       </div>
       <Field label="Property Street Address *"><input style={inputBase} type="text" value={form.propertyAddress} onChange={e => set('propertyAddress')(e.target.value)} placeholder="123 Main Street" required autoComplete="street-address" /></Field>
       <div style={col2(false)}>
-        <Field label="City *"><input style={inputBase} type="text" value={form.propertyCity} onChange={e => set('propertyCity')(e.target.value)} placeholder="Mill Valley..." required /></Field>
+        <Field label="City *"><input style={inputBase} type="text" value={form.propertyCity} onChange={e => set('propertyCity')(e.target.value)} onBlur={() => setLocationError(isValidLocation(form.propertyCity) ? '' : LOCATION_ERROR_MESSAGE)} placeholder="Mill Valley..." required /></Field>
         <Field label="ZIP *"><input style={inputBase} type="text" value={form.propertyZip} onChange={e => set('propertyZip')(e.target.value)} placeholder="94941" required inputMode="numeric" /></Field>
       </div>
       <div style={col2(mob)}>
@@ -90,6 +110,8 @@ export default function ADULandingPage() {
           </select>
         </Field>
       </div>
+      <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" value={company} onChange={e => setCompany(e.target.value)} style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }} />
+      {locationError && <p style={{ fontSize: 12, color: '#f87171', margin: '4px 0 6px' }}>{locationError}</p>}
       {status === 'error' && <p style={{ fontSize: 12, color: '#f87171', margin: '4px 0 6px', textAlign: 'center' }}>Something went wrong — please call (415) 968-9494</p>}
       <button type="submit" disabled={status === 'loading'} style={{ width: '100%', background: grad, color: navy, fontWeight: 800, fontSize: mob ? 16 : 15, padding: mob ? '16px' : '15px', border: 'none', borderRadius: 6, cursor: 'pointer', fontFamily: 'inherit', letterSpacing: 0.3, marginTop: 6 }}>
         {status === 'loading' ? 'Sending...' : '📅 Book My Free Site Visit →'}

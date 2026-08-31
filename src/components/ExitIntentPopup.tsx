@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
+import { captureAttribution, getAttribution } from '@/lib/attribution'
 
 const CG = 'Cormorant Garamond'
 const MS = 'Montserrat'
@@ -11,7 +12,10 @@ export default function ExitIntentPopup() {
   const [visible, setVisible] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [form, setForm] = useState({ firstName: '', email: '' })
+  // Honeypot: real users never see or fill this. Bots that fill every input do.
+  const [company, setCompany] = useState('')
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
   const blocked = pathname.startsWith('/blog') || pathname.startsWith('/projects') || pathname.startsWith('/adu-sonoma-county') || pathname.startsWith('/adu-marin-county')
 
@@ -54,25 +58,42 @@ export default function ExitIntentPopup() {
     }
   }, [blocked, fire])
 
+  useEffect(() => {
+    try { captureAttribution() } catch {}
+  }, [])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError('')
     setSubmitting(true)
     try {
-      await fetch('/api/lead', {
+      let attribution = null
+      try { attribution = getAttribution() } catch {}
+      const res = await fetch('/api/guide', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          fullName: form.firstName,
+          name: form.firstName,
           email: form.email,
-          phone: '',
-          projectType: 'Guide Request',
-          timeline: '',
-          source: 'exit-popup',
+          source: 'exit-intent-popup',
+          company,
+          attribution,
         }),
       })
+      // Only report success when the request actually succeeded. Previously this
+      // set submitted=true unconditionally, hiding every failure from the user.
+      if (!res.ok) {
+        let message = 'Something went wrong. Please try again.'
+        try {
+          const data = await res.json()
+          if (data?.error) message = data.error
+        } catch {}
+        setError(message)
+        return
+      }
       setSubmitted(true)
     } catch {
-      setSubmitted(true)
+      setError('Network error. Please try again.')
     } finally {
       setSubmitting(false)
     }
@@ -163,6 +184,24 @@ export default function ExitIntentPopup() {
                   outline: 'none', boxSizing: 'border-box',
                 }}
               />
+              <input
+                type="text"
+                name="company"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+                style={{
+                  position: 'absolute', left: '-9999px',
+                  width: '1px', height: '1px', opacity: 0,
+                }}
+              />
+              {error && (
+                <p style={{ fontFamily: MS, fontSize: '0.7rem', color: '#e57373', marginBottom: '0.75rem', textAlign: 'center' }}>
+                  {error}
+                </p>
+              )}
               <button
                 type="submit"
                 disabled={submitting}

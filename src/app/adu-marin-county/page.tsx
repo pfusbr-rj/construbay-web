@@ -1,6 +1,13 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import {
+  captureAttribution,
+  getAttribution,
+  formatAttributionForWhatsApp,
+  type AttributionData,
+} from '@/lib/attribution';
+import { isValidLocation, LOCATION_ERROR_MESSAGE } from '@/lib/validation';
 
 const CG = 'Cormorant Garamond, serif';
 const MS = 'Montserrat, sans-serif';
@@ -100,15 +107,24 @@ const labelStyle: React.CSSProperties = {
   marginBottom: '6px',
 };
 
-const sendWhatsAppNotification = async (formData: {
-  firstName: string;
-  phone: string;
-  email: string;
-  address?: string;
-  aduType: string;
-  city: string;
-}) => {
-  const message = `🏗️ NEW ADU LEAD%0A%0A👤 Name: ${formData.firstName}%0A📞 Phone: ${formData.phone}%0A📧 Email: ${formData.email}%0A🏠 ADU Type: ${formData.aduType}%0A📍 City: ${formData.city}%0A🏡 Address: ${formData.address || 'Not provided'}%0A%0A⚡ Respond within 2 hours!`;
+const sendWhatsAppNotification = async (
+  formData: {
+    firstName: string;
+    phone: string;
+    email: string;
+    address?: string;
+    aduType: string;
+    city: string;
+  },
+  attribution?: AttributionData | null
+) => {
+  let attributionPrefix = '';
+  try {
+    attributionPrefix = formatAttributionForWhatsApp(attribution ?? null);
+  } catch {
+    attributionPrefix = '';
+  }
+  const message = `${attributionPrefix}🏗️ NEW ADU LEAD%0A%0A👤 Name: ${formData.firstName}%0A📞 Phone: ${formData.phone}%0A📧 Email: ${formData.email}%0A🏠 ADU Type: ${formData.aduType}%0A📍 City: ${formData.city}%0A🏡 Address: ${formData.address || 'Not provided'}%0A%0A⚡ Respond within 2 hours!`;
   try {
     await fetch(
       `https://api.callmebot.com/whatsapp.php?phone=14159689494&text=${message}&apikey=7905514`,
@@ -124,6 +140,9 @@ export default function AduMarinPage() {
   const [aduType, setAduType] = useState('');
   const [timeline, setTimeline] = useState('');
   const [city, setCity] = useState('');
+  const [locationError, setLocationError] = useState('');
+  // Honeypot: real users never see or fill this. Bots that fill every input do.
+  const [company, setCompany] = useState('');
   const [form, setForm] = useState({ firstName: '', phone: '', email: '', address: '' });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -132,6 +151,10 @@ export default function AduMarinPage() {
 
   const scrollToForm = () =>
     formRef.current?.scrollIntoView({ behavior: 'smooth' });
+
+  useEffect(() => {
+    try { captureAttribution(); } catch {}
+  }, []);
 
   const handleAduType = (type: string) => {
     setAduType(type);
@@ -145,8 +168,15 @@ export default function AduMarinPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!isValidLocation(city)) {
+      setLocationError(LOCATION_ERROR_MESSAGE);
+      return;
+    }
+    setLocationError('');
     setSubmitting(true);
     try {
+      let attribution: AttributionData | null = null;
+      try { attribution = getAttribution(); } catch {}
       await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -155,9 +185,11 @@ export default function AduMarinPage() {
           phone: form.phone,
           email: form.email,
           propertyCity: city,
+          company,
           projectType: 'ADU Construction — Marin County',
           message: `ADU Type: ${aduType} | Timeline: ${timeline} | City: ${city}${form.address ? ` | Address: ${form.address}` : ''}`,
           source: 'adu-marin-county',
+          attribution,
         }),
       });
       await sendWhatsAppNotification({
@@ -167,7 +199,7 @@ export default function AduMarinPage() {
         address: form.address,
         aduType,
         city,
-      });
+      }, attribution);
     } catch {
       // show thank you regardless of network error
     } finally {
@@ -770,21 +802,33 @@ export default function AduMarinPage() {
                       </option>
                     ))}
                   </select>
+                  {locationError && (
+                    <p style={{ color: '#f87171', fontSize: 13, margin: '-12px 0 12px' }}>
+                      {locationError}
+                    </p>
+                  )}
                   <button
-                    onClick={() => { if (city) setStep(4); }}
-                    disabled={!city}
+                    onClick={() => {
+                      if (!isValidLocation(city)) {
+                        setLocationError(LOCATION_ERROR_MESSAGE);
+                        return;
+                      }
+                      setLocationError('');
+                      setStep(4);
+                    }}
+                    disabled={!isValidLocation(city)}
                     style={{
                       width: '100%',
                       padding: '16px',
-                      background: city ? GOLD_GRADIENT : 'rgba(203,178,106,0.15)',
-                      color: city ? '#000' : 'rgba(255,255,255,0.25)',
+                      background: isValidLocation(city) ? GOLD_GRADIENT : 'rgba(203,178,106,0.15)',
+                      color: isValidLocation(city) ? '#000' : 'rgba(255,255,255,0.25)',
                       fontFamily: MS,
                       fontSize: 12,
                       fontWeight: 400,
                       letterSpacing: '0.18em',
                       textTransform: 'uppercase',
                       border: 'none',
-                      cursor: city ? 'pointer' : 'not-allowed',
+                      cursor: isValidLocation(city) ? 'pointer' : 'not-allowed',
                       borderRadius: 2,
                       transition: 'all 0.2s ease',
                     }}
@@ -867,6 +911,16 @@ export default function AduMarinPage() {
                       />
                     </div>
                   </div>
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+                  />
                   <button
                     type="submit"
                     disabled={submitting}
